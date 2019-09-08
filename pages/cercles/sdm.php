@@ -7,6 +7,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
@@ -23,27 +24,56 @@ session_start();
 		<div class="container"> 
 
 		   		<?php
+		   		$name='cercle Sono Danse Musique';
 
 		   		include ("../../model/dao/cercleDAO.php");
-		   		$cercle=selectByName($bdd,'cercle Sono Danse Musique');
+		   		$cercle=selectByName($bdd,$name);
 
 				?>
 
-				<div class="margintop marginbottom" >
-
-							
+				<div class=" col-md-9" >
 
 					<p>
 			   			<?php echo $cercle['description_cercle']; ?> <br>
 			   			<br> 
 
-			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-			   		</div>
+			   			<div align="center">
+			   				<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
+			   			</div>
 
 			  		</p>
 
 				</div>
+
+				<div class = "col-md-3" >
+
+					<ul >	Comité actuel
+
+            			<?php
+
+            				$annee= 181;
+
+            				$comitardsArray=selectLastComite($bdd,$name,$annee);
+            				foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+
+            					?> 
+            					<li >
+            						
+            						<?php echo " $nom_poste: $firstname $lastname";?>
+            						
+            					</li>
+
+            					<?php
+
+            				}
+
+            			?>
+
+            		</ul>
+
+				</div>	
+
+				
 
 				
 		    </div>

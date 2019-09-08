@@ -95,57 +95,7 @@
 
 				$query->closeCursor(); // Termine le traitement de la requête
 	}
-
-
-
-	function selectComite($bdd,$nom_cercle,$annee) {
-
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$query = $bdd->prepare("SELECT tmp_poste, tmp_firstname, tmp_lastname FROM historique where tmp_cercle=? AND tmp_annee=?");
-				$query->execute(array($nom_cercle, $annee));
-
-				// set array
-				$array = array();
-
-				// look through query
-				while($row = $query->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
-
-				$query->closeCursor(); // Termine le traitement de la requête
-	}
-
-		function selectComite2($bdd,$nom_cercle,$annee) {
-
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$query = $bdd->prepare('SELECT tmp_poste, tmp_firstname, tmp_lastname from historique where tmp_annee in (select max(tmp_annee) from historique) and tmp_cercle=? ');
-		        $query -> execute(array($nom_cercle));
-
-				// set array
-				$array = array();
-
-				// look through query
-				while($row = $query->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
-
-				$query->closeCursor(); // Termine le traitement de la requête
-	}
-
 	
-
 	function selectPromo($bdd) {
 
 		////////////////////////////////////////////////stock data into array
@@ -166,5 +116,26 @@
 				return $array;
 
 				$query->closeCursor(); // Termine le traitement de la requête
+	}
+
+	function selectLastComite($bdd,$nom_cercle,$annee) {
+
+		////////////////////////////////////////////////stock data into array
+				// run query
+				$query = $bdd->prepare("SELECT tmp_poste, tmp_firstname, tmp_lastname FROM historique where tmp_cercle=? AND tmp_annee=?");
+				$query->execute(array($nom_cercle, $annee));
+
+				// set array
+				$array = array();
+
+				// look through query
+				while($row = $query->fetch()){
+
+				  // add each row returned into an array
+				  $array[] = $row;
+				 
+
+				}
+				return $array;
 	}
 ?>
