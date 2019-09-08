@@ -49,7 +49,10 @@
             
                 $query = "INSERT INTO statuts(statuts_path, statuts_name) VALUES('../../assets/files/','".$newFileName."')";
                 
-                mysqli_query($conn, $query);            
+                mysqli_query($conn, $query); 
+
+                include("../../model/dao/redirect.php"); 
+                redirect("./statuts.php");           
             }
         }
         

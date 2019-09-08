@@ -49,7 +49,9 @@
                 
                 $query = "INSERT INTO pv(pv_path, pv_name) VALUES('../../assets/files/pv/','".$newFileName."')";
                 
-                mysqli_query($conn, $query);            
+                mysqli_query($conn, $query);    
+                include("../../model/dao/redirect.php"); 
+                redirect("./pv");        
             }
         }
         

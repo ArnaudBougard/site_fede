@@ -1,5 +1,6 @@
+
 <?php
-    if(isset($_POST["btnSubmit"])){     
+    if(isset($_POST["eventform"])){     
         $errors = array();
         
         $extension = array("png",
@@ -12,13 +13,13 @@
         $minwidth=300;
         $minheight = 200;
 
+
         if(isset($_FILES["files"])==false)
         {
             echo "<b>Please, Select the files to upload!!!</b>";
             return;
         }
         
-        $conn = mysqli_connect("localhost","root","","bdd_site_fede");   
         
         foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name)
         {
@@ -28,9 +29,32 @@
             $file_tmp=$_FILES["files"]["tmp_name"][$key];
             
             $ext=pathinfo($file_name,PATHINFO_EXTENSION);
-            $fileinfo = @getimagesize("../../assets/files/pv/".$_FILES["files"]["name"][$key]);
+            $fileinfo = @getimagesize("../../assets/img/events/".$_FILES["files"]["name"][$key]);
             $width = $fileinfo[0];
             $height = $fileinfo[1];
+
+
+            $nom = htmlspecialchars($_POST['nom']);
+            $date =htmlspecialchars($_POST['date']);
+            $description = htmlspecialchars($_POST['description']); 
+            $ouverture =$_POST['ouverture'];
+            $organisateur = $_SESSION['pseudo_utilisateur'];
+
+            echo $nom.$date.$description.$ouverture.$organisateur;
+            echo $ouverture;
+
+            /*if(!empty($nom) AND !empty($date) AND !empty($organisateur) )
+            {
+                array_push($errors, "Champ vide. Name:- ".$file_name);
+                $uploadThisFile = false;
+            }*/
+
+            if(empty($_POST['nom']) AND empty($_POST['nom']) )
+            {
+                array_push($errors, "Champ vide. Name:- ".$file_name);
+                $uploadThisFile = false;
+            }
+            
 
             if(!in_array(strtolower($ext),$extension))
             {
@@ -59,28 +83,29 @@
                 $filename=basename($file_name,$ext);
                 $newFileName=$filename.$ext;                
                 move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/events/".$newFileName);
+                $img="../../assets/img/events/".$newFileName;
+
+                $req = $bdd -> prepare("INSERT INTO evenement(img_evenement, nom_evenement, description_evenement, date_evenement, ouverture_evenement,organisateur) VALUES(?,?,?,?,?,?)");
+                $req->execute(array($img,$nom,$description,$date,$ouverture,$organisateur));
+
+                $req->closeCursor(); // Termine le traitement de la requête
                 
-                $query = "INSERT INTO evenement(img_evenement) VALUES('../../assets/img/events/".$newFileName."')";
+                include("../../model/dao/redirect.php"); 
+                redirect("./createEvent.php");
                 
-                mysqli_query($conn, $query);            
             }
         }
-        
-        mysqli_close($conn);
         
         $count = count($errors);
         
         if($count != 0){
             foreach($errors as $error){
-                echo $error."<br/>";
-                
+                echo $error."<br/>";    
             }
         }  
 
         else {
-
             echo "<h1 style='text-align:center;'> upload réussi</h1>";
-         header( "Refresh:; ../index/createEvent.php", true, 303);
         }
 
     

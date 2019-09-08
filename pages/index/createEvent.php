@@ -11,116 +11,6 @@ session_start();
 		<?php include("../head.php"); ?>
 	</head>
 
-
-
-
-
-
-
-
-
-
-	<?php 
-
-		//Vérification des données 
-		if(isset($_POST['forminscription']))
-		{
-			
-			$nom = htmlspecialchars($_POST['nom']);
-			$date = htmlspecialchars($_POST['date']);
-			$description = htmlspecialchars($_POST['description']); 
-			$ouverture = sha1($_POST['ouverture']);
-			$organisateur = $userinfo['pseudo_utilisateur'];
-			
-
-			if(!empty($nom) AND !empty($date) AND !empty($organisateur) )
-			{	
-				
-				//Vérification adresse mail 
-				if($mail == $mail2)
-				{
-					if(filter_var($mail,FILTER_VALIDATE_EMAIL))
-					{
-						//On vérifie si le mail existe déjà : 
-						$reqmail = $bdd -> prepare('SELECT * FROM utilisateur WHERE email_utilisateur = ?');
-						$reqmail -> execute(array($mail));
-						//On compte le nombre de colonnes contenant le même mail :
-						$mailexist = $reqmail->rowCount();
-						if($mailexist == 0)
-						{
-							//On fait le même avec le pseudo
-							$reqpseudo = $bdd -> prepare('SELECT * FROM utilisateur WHERE pseudo_utilisateur=?');
-							$reqpseudo -> execute(array($pseudo));
-							$pseudoexist = $reqpseudo -> rowCount();
-							if($pseudoexist == 0)
-							{
-								if($mdp == $mdp2)
-								{	
-									//Pour rentrer les données dans la BDD 
-
-									$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur) VALUES(?,?,?)');
-									
-									$req->execute(array($mail,$pseudo,$mdp));
-
-									echo"Inscription validée!";
-									// header( "Refresh:1; ./connexion.php", true, 303);
-
-									/*
-									$req = $bdd -> prepare('INSERT INTO utilisateur(prenom_utilisateur, nom_utilisateur, sexe_utilisateur, date_naissance_utilisateur, email_utilisateur, pseudo_utilisateur, password_utilisateur, spam_utilisateur,promotion_utilisateur) VALUES(?,?,?,?,?,?,?,?,?)');
-									echo"ici";
-									$req->execute(array($prenom,$nom,$sexe,$date,$mail,$pseudo,$mdp,$spam,$promotion));
-									echo"ici";
-									*/
-
-									//On crée une variable de session 
-									//$_SESSION['comptecree'] = '<p class="reussi">Votre compte a bien été créé !</p>'; 
-									
-									//header('Location: ../index/index.php'); 
-
-									/*if (!empty($photo))
-									{
-										  $req=$bdd -> prepare("UPDATE utilisateur SET photo_utilisateur = ? WHERE pseudo_utilisateur = ? ");
-										  $req->execute(array($photo,$pseudo));
-									}*/
-								}
-								else
-								{
-									echo '<p class="erreur">Vos mots de passe ne correspondent pas !</p>';
-								}
-							}
-							else
-							{
-							echo '<p class="erreur">Ce pseudo est déjà utilisé !</p>';
-							}
-						}
-						else
-						{
-							echo '<p class="erreur">Cette adresse mail est déjà utilisée !</p>';
-						}
-					}
-					else
-					{
-						echo '<p class="erreur">L\'adresse mail est invalide.</p>';
-					}	
-				}
-				else
-				{
-					echo '<p class="erreur">Vos adresses mail ne correspondent pas !</p>';
-				}
-			}
-		}
-	?>
-
-
-
-
-
-
-
-
-
-
-
 	<body id="body">
 		<?php include("../network.php"); ?>
 
@@ -130,7 +20,6 @@ session_start();
 
 		<?php include("../navbar.php"); ?>
 
-		
 		<div class="container"> <!-- upload files -->
 			<div class="container">			
 				<div class="page-header">
@@ -140,7 +29,7 @@ session_start();
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadimg.php">
+						<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
 							<div class="form-group">
 								<label for="exampleInputFile">Selectionnez une image pour l'événement qui défilera sur la page d'accueil:</label>
 								<input type="file" id="exampleInputFile" name="files[]" >
@@ -158,18 +47,20 @@ session_start();
 
 								<p>
 		                            <label>Date </label> <br>
-		                            <input class='champ' type='date' id='date' maxlength='25' size='45' required />
+		                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
 	                        	</p>
 	                        	<p>
 									<label>Evénement ouvert à tous?</label> <br>
-									<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required /><label for='1'> Oui </label>
-									<input type="radio" id='ouverture' name='ouverture' value='0' id='non' required /><label for='0'> Non </label>
+									<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' /><label for='1'> Oui </label>
+									<input type="radio" id='ouverture' name='ouverture' value='0' id='non' /><label for='0'> Non </label>
 							
 									<span style="font-size: 1rem"> * oui par défaut</span>
 								</p>
+								<p>
+									<input style="margin-left: 0rem;" type='submit' class='btn-form' name='eventform' value="Submit" />
+								</p>
 							</div>	
 	
-							<button type="submit" class="btn btn-primary" name="btnSubmit" >Submit</button>
 						</form>
 						<br/>
 						
@@ -181,6 +72,7 @@ session_start();
 		</div>
 
 
+		<?php include("uploadimg.php"); ?>
 
 
 		<div class="container">			
