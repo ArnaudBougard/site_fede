@@ -9,7 +9,7 @@
 						<li><a href="../federale/carte.php">Carte Fédé</a></li>
 						<li><a href="../federale/statuts.php">Statuts</a></li>
 						<li><a href="../federale/pv.php">PV réunions</a></li>
-						<li><a href="../federale/organismes.php">Organismes</a></li>
+						<li><a href="../federale/commissions.php">Commissions</a></li>
 					</ul>
 				</li>
 				<li class="dropdown" href="#">

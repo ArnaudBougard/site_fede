@@ -8,11 +8,10 @@ session_start();
 <html lang="fr">
 	<head>
 		<?php include("../head.php"); ?>
-		<link href="./folklore.css" rel="stylesheet">
-
+		<link href="../folklore/folklore.css" rel="stylesheet">
 	</head>
 
-	<body class="bg1" id="body">
+	<body class="bg1">
 		
 		<?php include("../network.php"); ?>
 
@@ -22,13 +21,13 @@ session_start();
 
 		<div class="content">
 			<div class="tab">
-			  <button class="tablinks" onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</button>
-			  <button class="tablinks" onclick="openCity(event, 'Frontalière')">Frontalière</button>
-			  <button class="tablinks" onclick="openCity(event, 'Centrale')">Centrale</button>
-			  <button class="tablinks" onclick="openCity(event, 'Boraine')">Boraine</button>
+			  <button class="tablinks" onclick="openCity(event, 'Web')" id="defaultOpen">Web</button>
+			  <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button>
+			  <button class="tablinks" onclick="openCity(event, 'PMD')">PMD</button>
+			  <button class="tablinks" onclick="openCity(event, 'PIMs')">PIM's</button>
 			</div>
 
-			<div id="Carolo" class="tabcontent">
+			<div id="Web" class="tabcontent">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Carolo</h3> 
@@ -78,7 +77,7 @@ session_start();
 			</div>
 		</div>
 
-			<div id="Frontalière" class="tabcontent">
+			<div id="Historique" class="tabcontent">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Frontalière</h3> 
@@ -111,7 +110,7 @@ session_start();
 				</div>
 			</div>
 
-			<div id="Centrale" class="tabcontent">
+			<div id="PMD" class="tabcontent">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Centrale</h3> 
@@ -141,7 +140,7 @@ session_start();
 				</div>
 			</div>
 
-			<div id="Boraine" class="tabcontent">
+			<div id="PIMs" class="tabcontent">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Boraine</h3> 
