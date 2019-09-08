@@ -177,7 +177,8 @@
 	margin: 0 auto;
 	top: 0px;
 	border: #f8f8f8;
-    box-shadow: 1vw 0px 1vw black;
+    box-shadow: 0vw 0vw 1vw 0vw black;
+    border-radius: 0vw;
 }
 
 nav ul{
