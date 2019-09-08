@@ -37,10 +37,12 @@ session_start();
             <form class='connexionformulaire' method='post' action=''>    
 
             <p>
+                <label>Pseudo : </label><br>
                 <input class='connexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='Pseudo' maxlength='25' size='45' required />
             </p>
 
             <p>
+                <label>Mot de passe : </label><br>
                 <input class='connexionchamp' type='password' id='passco' name='passco' placeholder='Mot de passe' maxlength='25' size='45' required/>
             </p>
 
