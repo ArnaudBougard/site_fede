@@ -161,9 +161,9 @@ session_start();
 													{	
 														//Pour rentrer les données dans la BDD et les afficher
 
-														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur,promotion_utilisateur) VALUES(?,?,?,?)');
+														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur) VALUES(?,?,?)');
 														
-														$req->execute(array($mail,$pseudo,$mdp,$promotion));
+														$req->execute(array($mail,$pseudo,$mdp));
 
 														echo"Inscription validée!";
 

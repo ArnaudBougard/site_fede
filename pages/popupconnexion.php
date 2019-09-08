@@ -11,11 +11,11 @@
         <form class='popupconnexionformulaire' method='post' action=''>    
 
             <p>
-                 <input class='popupconnexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='Pseudo' maxlength='25' size='45' required />
+                 <input class='popupconnexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='PSEUDO' maxlength='25' size='45' required />
             </p>
             <p>
 
-                <input class='popupconnexionchamp' type='password' id='passco' name='passco' placeholder='Mot de passe' maxlength='25' size='45' required/>
+                <input class='popupconnexionchamp' type='password' id='passco' name='passco' placeholder='MOT DE PASSE' maxlength='25' size='45' required/>
             </p>
             <p>
 

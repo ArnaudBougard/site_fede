@@ -24,7 +24,7 @@ session_start();
 
 	</head>
 
-	<body>
+	<body id="body">
 		
 		<?php include("../network.php"); ?>
 

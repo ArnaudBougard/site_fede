@@ -25,7 +25,7 @@ session_start();
 
 	</head>
 
-	<body class="bg1">
+	<body class="bg1" id="body">
 		
 		<?php include("../network.php"); ?>
 
