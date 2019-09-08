@@ -57,7 +57,7 @@
 
 .popup{
     padding: 3rem;
-	border: solid 0.05rem grey;
+	border: solid 0.05rem #1BB4B4;
 	height: 35rem;
 	width: 70rem;
     background-color: black;
@@ -76,25 +76,48 @@
     font-weight: bold;
     font-size : 35px;
     text-align : center;
+    color: #f8f5ef;
 }
 
 .popupconnexionchamp
 {
-    background-color: black;
-    color: grey;
-    border: 1px grey solid;
-    font-size: 15px;
+    /*background-color: black;
+    color: grey;*/
     padding-left:10px;
-}
-
-/*.btn
-{
+    background-color: black;
     color: black;
-    font-weight: bold;
-    background: rgb(225,0,16);
-
+    border: none;
+	font-weight: bold;
+	font-family: Calibri;
+	border-bottom: 2px solid #1BB4B4;
+	text-transform: uppercase;
 }
-*/
+
+.popupconnexionchamp:focus{
+	text-decoration: none;
+	border: 2px solid #1BB4B4;
+}
+
+#lieninscri{
+	color: #f8f5ef;
+	font-size: 1.5rem;
+}
+
+.btn-form2{
+	background-color: #1BB4B4;
+	font-family: Calibri;
+	padding: 1rem 2rem;
+	margin-top: 0.5rem;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.btn-form2:hover{
+	background-color: #039C9C;
+}
 
 /*--------------------*/
 /* HEADER */
@@ -429,6 +452,55 @@ nav a.active{
 .carousel-control{
 	top: 4vw;
 	margin: 2vw; /*Mettre le même que le padding du #myCarousel*/
+}
+
+
+/*---------------------------*/
+/* INSCRIPTION ET CONNEXION  */
+/*---------------------------*/
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.formulaire{
+	margin-top: 1.76rem;
+}
+
+.inscription{
+	margin-top: 3rem;
+}
+
+.champ{
+	background-color: #f8f5ef;
+	color: black;
+	border: none;
+	font-weight: bold;
+	font-family: Calibri;
+	border-bottom: 2px solid #ccc;
+}
+
+.champ:focus{
+	text-decoration: none;
+	border: 2px solid #1BB4B4;
+}
+
+.btn-form{
+	background-color: #1BB4B4;
+	font-family: Calibri;
+	padding: 1rem 2rem;
+	margin-top: 0.5rem;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-left: 11.76rem;
+	color: white;
+}
+
+.btn-form:hover{
+	background-color: #039C9C;
 }
 
 

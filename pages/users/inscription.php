@@ -21,8 +21,6 @@ session_start();
 	<!-- MAIN STYLE -->
 	<link href="../style.css" rel="stylesheet">
 
-	<link href="users.css" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -49,7 +47,6 @@ session_start();
 				</div>	
 
 				<div class='col-md-5 inscription' style="float:left;">
-					<div class="card card-1">
 							<br/><h2>Inscription</h2> <br/>
 
 							<form class='formulaire' method='post' enctype="multipart/form-data">
@@ -222,7 +219,7 @@ session_start();
 
 					</form>
 				</div>
-			</div>
+
 		</div>
 	</div>
 

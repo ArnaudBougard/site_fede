@@ -20,7 +20,7 @@
             <p>
 
                 <br />
-                <input type='submit' class = 'btn' name='formco' value="Se connecter" />
+                <input type='submit' class = 'btn-form2' name='formco' value="Se connecter" />
                 <br />
             </p>   
 
@@ -33,8 +33,9 @@
             ?>
             <br />
             <br />
-            <a href='../users/inscription.php' id="lieninscri">Pas encore inscrit ? N'attendez plus !</a>
-            
+            <center>
+                <a href='../users/inscription.php' id="lieninscri">Pas encore inscrit ? N'attendez plus !</a>
+            </center>            
         </form>
     </div>
 
