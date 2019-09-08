@@ -31,7 +31,33 @@
 
              echo '<li class="networkBarElement" style="float:right; padding-right: 4rem;"><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
                             
-             ?><li class="networkBarElement" style="float:right; padding-right: 4rem;padding-left: 4rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span> Profil</a></li> <?php
+             ?><li class="networkBarElement" style="float:right; padding-right: 4rem;padding-left: 4rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span> Profil</a></li>
+
+
+            <?php 
+
+            function selectstatut($bdd,$mail_user) {
+
+              ////////////////////////////////////////////////stock data into array
+              // run query
+              $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=?");
+              $query->execute(array($mail_user));
+              $statut = $query->rowCount();
+              
+              return $statut;
+
+              $query->closeCursor(); // Termine le traitement de la requête
+            }
+
+            $comitard=selectstatut($bdd,$_SESSION['email_utilisateur']);
+
+            if($comitard!= NULL){ // On ferme l'accolade à la fin du code
+
+            ?>
+             <li class="networkBarElement" style="float:right; padding-right: 4rem;padding-left: 4rem;"><a class="networkBarAnchor" href= "../index/createEvent.php"> <span class="glyphicon glyphicon-user" ></span> créer un événement</a></li>
+
+              <?php
+            }
         }
                                  
         else{

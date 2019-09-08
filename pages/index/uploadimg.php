@@ -73,14 +73,14 @@
         if($count != 0){
             foreach($errors as $error){
                 echo $error."<br/>";
-                header( "Refresh:3; ../index/createEvent.php", true, 303);
+                
             }
         }  
 
         else {
 
-            echo "upload réussi";
-           header( "Refresh:3; ../index/createEvent.php", true, 303);
+            echo "<h1 style='text-align:center;'> upload réussi</h1>";
+         header( "Refresh:; ../index/createEvent.php", true, 303);
         }
 
     

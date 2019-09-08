@@ -153,15 +153,15 @@ session_start();
 												{
 													if($mdp == $mdp2)
 													{	
-														//Pour rentrer les données dans la BDD et les afficher
+														//Pour rentrer les données dans la BDD 
 
 														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur) VALUES(?,?,?)');
 														
 														$req->execute(array($mail,$pseudo,$mdp));
 
 														echo"Inscription validée!";
+														// header( "Refresh:1; ./connexion.php", true, 303);
 
-														sleep ( 1 ) ;
 														/*
 														$req = $bdd -> prepare('INSERT INTO utilisateur(prenom_utilisateur, nom_utilisateur, sexe_utilisateur, date_naissance_utilisateur, email_utilisateur, pseudo_utilisateur, password_utilisateur, spam_utilisateur,promotion_utilisateur) VALUES(?,?,?,?,?,?,?,?,?)');
 														echo"ici";

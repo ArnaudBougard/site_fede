@@ -8,28 +8,13 @@ session_start();
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Site Fédé</title>
-
-		 <!--ICONE FAV, A AJOUTER-->
-		<link rel="shortcut icon" type="image/icon" href="#"/>
-
-		<!-- MAIN STYLE -->
-		<link href="../style.css" rel="stylesheet">
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  		<script language="javascript" type="text/javascript" src="assets/js/functions.js"></script>
-
-		<link rel="shortcut icon" type="image/png" href="../../assets/img/favicon/favico.png"/>
-
+		<?php include("../head.php"); ?>
 
 	</head>
 
 	<body id="body">
 		<?php include("../network.php"); ?>
+		<?php include("../navbar.php"); ?>
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
@@ -74,7 +59,7 @@ session_start();
 			</div>	
 		</div>	
 
-		<?php include("../navbar.php"); ?>
+		
 
 		
 		<div class="title-area">
