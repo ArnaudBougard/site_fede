@@ -33,27 +33,33 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 		 <?php include ("../../controller/warningPopup.php");?>
 
+   
+        <div class="backgroundOverlay" style="display: none;" id="backgroundOverlay2">
 
-    <div class="backgroundOverlay" style="display: none;" id="backgroundOverlay2">
+            <div class="warningpopup" id="popup2">
 
-        <div class="warningpopup" id="popup2">
+                <h2 class="connexionh2" style="color: red;">WARNING</h2>
 
-            <h2 class="connexionh2" style="color: red;">WARNING</h2>
+                <p class="connexionp">Voulez-vous vraiment supprimer votre compte? <br> Il sera irrécupérable!</p> <br />
 
-            <p class="connexionp">Voulez-vous vraiment supprimer votre compte? <br> Il sera irrécupérable!</p> <br />
+                <div align="center"> <a href="../model/dao/deleteUtilisateurDAO.php" class="gras btn btn-danger btn-xl"> <span class="glyphicon glyphicon-warning"></span> Valider</a> </div>
 
-            <div align="center"> <a href="../model/dao/deleteUtilisateurDAO.php" class="gras btn btn-danger btn-xl"> <span class="glyphicon glyphicon-warning"></span> Valider</a> </div>
+            </div>
 
         </div>
 
-    </div>
+        <div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">
+            <div class = "row" >
+                <div class="col-md-7">
+                    <div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
 
-    <div class = container style="padding-top: 3rem">
-        <div class = row>
-            <div class = 'col-lg-3'></div>  
+                        <img class="logo" src='../../assets/img/logoFede.jpg' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
 
-            <div class = 'col-lg-6 profil'>
-                
+                    </div>
+                </div>
+
+                <div class='col-md-5 inscription' style="float:left;">
+                            
                     <h2>Profil de <?php echo $userinfo['prenom_utilisateur']?></h2> <br /> <br />
                     <p>
                         Pseudo : <?php echo $userinfo['pseudo_utilisateur']; ?>
@@ -90,18 +96,17 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
                         
                     
                     </p>
-
-                    
+                </div>
             </div>
         </div>
-    </div>
 
-    
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+            
+            <script src="js/jquery-1.11.3.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
 
-		<?php include("../footer.php"); ?>
-
+        		<?php include("../footer.php"); ?>
+                
+        </div>    
 	</body>
 </html>
 

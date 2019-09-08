@@ -26,11 +26,13 @@ session_start();
 		<div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">
 			<div class = "row" >
 				<div class="col-md-7">
+
 					<div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
 
-						<img class="logo" src='../../assets/img/contourlogo.png' style="width:61.76%;display: block; margin: 0 auto;" alt='Logo du site !'/>
+                    <img class="logo" src='../../assets/img/logoFede.jpg' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
 
-					</div>
+                	</div>
+                	
 				</div>	
 
 				<div class='col-md-5 inscription' style="float:left;">

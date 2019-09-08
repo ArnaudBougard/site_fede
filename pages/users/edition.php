@@ -156,9 +156,10 @@ session_start();
 
                 <div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
 
-                    <img class="logo" src='../../assets/img/contourlogo.jpg' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
+                    <img class="logo" src='../../assets/img/logoFede.jpg' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
 
                 </div>
+                
             </div>  
 
 
