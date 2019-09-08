@@ -1,0 +1,45 @@
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.formulaire{
+	margin-top: 1.76rem;
+}
+
+.inscription{
+	margin-top: 3rem;
+}
+
+.champ{
+	background-color: #f8f5ef;
+	color: black;
+	border: none;
+	font-weight: bold;
+	font-family: Calibri;
+	border-bottom: 2px solid #ccc;
+}
+
+.champ:focus{
+	text-decoration: none;
+	border: 2px solid #1BB4B4;
+}
+
+.btn-form{
+	background-color: #1BB4B4;
+	font-family: Calibri;
+	padding: 1rem 2rem;
+	margin-top: 0.5rem;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-left: 11.76rem;
+	color: white;
+}
+
+.btn-form:hover{
+	background-color: #039C9C;
+}
+
+
