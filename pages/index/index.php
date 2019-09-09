@@ -14,7 +14,7 @@ session_start();
 
 	<body id="body">
 		<?php include("../network.php"); ?>
-		<?php include("../navbar.php"); ?>
+
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
@@ -60,7 +60,7 @@ session_start();
 		</div>	
 
 		
-
+		<?php include("../navbar.php"); ?>
 		
 		<div class="title-area">
 			<h2 class="title">Événements à venir</h2> 
