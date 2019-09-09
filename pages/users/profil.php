@@ -34,7 +34,7 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 		<?php include ("../../controller/warningPopup.php");?>
 
-        <?php include ("./warningDeletePopup.php");?>
+        <?php include ("./warningDeleteUser.php");?>
         
 
         <div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">

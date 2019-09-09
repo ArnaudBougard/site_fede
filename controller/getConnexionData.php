@@ -24,7 +24,9 @@ if(isset($_POST['formco'])){
             $_SESSION['spam_utilisateur'] = $userinfo['spam_utilisateur'];
             $_SESSION['promotion_utilisateur'] = $userinfo['promotion_utilisateur'];
             //On redirige l'utilisateur soit sur son profil, soit sur l'accueil
-            header("location: ../index/index.php");
+            $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
+            include("../../model/redirect.php");
+            redirect($location);
             // Sur son profil, on transite par l'id : 
 
             //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
