@@ -10,6 +10,8 @@ session_start();
 	<head>
 		<?php include("../head.php"); ?>
 
+		<link href="./index.css" rel="stylesheet">
+
 	</head>
 
 	<body id="body">
@@ -61,7 +63,8 @@ session_start();
 
 		
 		<?php include("../navbar.php"); ?>
-		
+
+
 		<div class="title-area">
 			<h2 class="title">Événements à venir</h2> 
 		  	<span class="title-line"></span> 
@@ -78,6 +81,40 @@ session_start();
 
 		    <!-- Wrapper for slides -->
 			<div class="carousel-inner">
+				<?php include("./eventDAO.php"); ?>
+				<?php 
+
+					$eventsCarArray=selectCarousselEvents($bdd);
+					$count=0;
+					if(!empty($eventsCarArray)) {
+						
+        				foreach ($eventsCarArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur)) {
+        					if ($count==0){
+        						$count=1;
+        						?> 
+		        					<div class="item active">
+								    	<img class="CarImg" src=<?php echo "'".$img."'" ?> >
+								    </div>
+								<?php 
+							}
+
+							else {
+								?> 
+		        					<div class="item ">
+								    	<img class="CarImg" src=<?php echo "'".$img."'" ?> >
+								    </div>
+								<?php 
+
+
+							}
+        					
+						}
+					}
+					else{echo "pas d'events à afficher";}
+
+				?>
+
+
 			    <div class="item active">
 			    	<img src="../../assets/img/event1.jpg" alt="Bal">
 			    </div>
@@ -89,7 +126,33 @@ session_start();
 			    <div class="item">
 			        <img src="../../assets/img/event3.jpg" alt="Houdain">
 			    </div>
+
+			
 			</div>
+
+
+
+			<div class="carousel-inner">
+			
+
+
+			    <div class="item active">
+			    	<img src="../../assets/img/event1.jpg" alt="Bal">
+			    </div>
+
+			    <div class="item">
+			    	<img src="../../assets/img/event2.jpg" alt="Crasino">
+			    </div>
+			    
+			    <div class="item">
+			        <img src="../../assets/img/event3.jpg" alt="Houdain">
+			    </div>
+
+			
+			</div>
+
+
+
 
 			    <!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">

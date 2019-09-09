@@ -169,40 +169,40 @@ include("../../controller/getConnexionData.php");
                     <form  class="formulaire" method='post' action=''>
                         
                         <p>
-                            <label>Prénom : </label>
+                            
                             <input class='champ' type='text' id='new_prenom_utilisateur'  name='new_prenom_utilisateur' placeholder='Prénom' maxlength='25' size='45' value='<?php echo $user['prenom_utilisateur'];?>'/>
                         </p>
                         <p>
-                            <label>Nom : </label>
+                            
                             <input class='champ' type='text' id='new_nom_utilisateur' name='new_nom_utilisateur' placeholder='Nom' maxlength='25' size='45' value='<?php echo $user['nom_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Date de naissance : </label>
+                            
                             <input class='champ' type='date' id='new_date_utilisateur' name='new_date_utilisateur' maxlength='25' size='45' value='<?php echo $user['date_naissance_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Mail : </label>
+                            
                             <input class='champ' type='email' id='new_email1' name='new_email1' placeholder='Adresse mail' maxlength='35' size='37' value='<?php echo $user['email_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Confirmation : </label>
+                            
                             <input class='champ' type='email' id='new_email2' name='new_email2' placeholder="Confirmation de l'adresse mail" maxlength='35' size='37' value='<?php echo $user['email_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Promotion : </label>
+                            
                             <input class='champ' id='new_promo_utilisateur' type='number' name='new_promo_utilisateur' placeholder='Ex : 176' maxlength='25' size='45' value='<?php echo $user['promotion_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Pseudo : </label>
+                            
                             <input class='champ' type='text' id='new_pseudo_utilisateur' name='new_pseudo_utilisateur' placeholder='Pseudo' maxlength='25' size='45' value='<?php echo $user['pseudo_utilisateur'];?>' />
                         </p>
                         <p>
-                            <label>Mot de passe : </label>
+                            
                             <input class='champ' type='password' id='new_mdp1' name='new_mdp1' placeholder='Mot de passe' minlength="6" maxlength='25' size='30' />
                             <!-- On ne met pas de value pour le mot de passe sinon ça affiche le mot de passe haché malgré le type password. -->
                         </p>
                         <p>
-                            <label>Confirmation : </label>
+                            
                             <input class='champ' type='password' id='new_mdp2' name='new_mdp2' placeholder='Confirmation du mot de passe' minlength='6' maxlength='25' size='30'/>
                         </p>
                         <!-- <p>
@@ -213,7 +213,7 @@ include("../../controller/getConnexionData.php");
                         </p>
                         -->
                         <p>
-                            <input type='submit' class='btn' name='forminscription' value="Éditer mon profil" />
+                            <input type='submit' class='btn-form2' name='forminscription' value="Éditer mon profil" />
                             <br />
                         </p>
                     </form>

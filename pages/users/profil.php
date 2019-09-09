@@ -72,10 +72,8 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
                         ?>
 
                         <ul style="list-style-type: none; padding-left: 0rem;">
-      
-                            <li class="networkBarElement" > <a href='edition.php'>compléter mon profil </a> </li>
-                            <li class="networkBarElement" > <a href="#" onclick="showWarning('backgroundOverlay2','popup2')" id="openOverlay2"><span class='deco'> Supprimer mon compte</span></a></li>
-
+                            <btn class="btn-form2" style="margin-right:5rem;"> <a href="edition.php " class="gras btn btn-xl"> compléter </a> </btn>
+                            <btn class="btn-form2"> <a href="#" onclick="showWarning('backgroundOverlay2','popup2')" id="openOverlay2" class="gras btn btn-xl"> Supprimer</a> </btn>
                         </ul>
                         <?php
                         }
