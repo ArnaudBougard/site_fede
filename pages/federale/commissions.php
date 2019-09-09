@@ -25,6 +25,7 @@ session_start();
 			  <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button>
 			  <button class="tablinks" onclick="openCity(event, 'PMD')">PMD</button>
 			  <button class="tablinks" onclick="openCity(event, 'PIMs')">PIM's</button>
+			  <button class="tablinks" onclick="openCity(event, 'FPMath')">FPMath</button>
 			</div>
 
 			<div id="Web" class="tabcontent">
@@ -137,6 +138,55 @@ session_start();
 						Alors, si tu es du coin, que tu joues du tambour, de la clarinette ou du trombone, que tu aimes danser sur les airs de Gilles et que tu aimes t'amuser, la Centrale est faite pour toi. Rejoins-nous, nous t'attendons les bras ouverts.
 					</p>	
 
+				</div>
+			</div>
+
+			<div id="FPMath" class="tabcontent">
+				<div class="container">
+					<div class="title-area">
+						<h3 class="title2">La Carolo</h3> 
+				  		<span class="title-line2"></span> 
+					</div>
+
+					<img class="img3" src="../../assets/img/charleroi-blason.gif" alt="bleusaille">
+
+					<p class="text">
+						Si tu habites Charleroi ou ses environs (de Lobbes à Namur, en passant par Chimay ou Arlon...), alors ces quelques lignes te concernent !
+					</p>
+
+					<p class="text">
+						Un comité composé de 5 personnes motivées ainsi que de tous les gais lurons du pays noir sont là pour te faire vivre une tonne d'expériences uniques, le tout dans une ambiance folklorique, joyeuse et conviviale.
+					</p>
+
+					<p class="text">
+						En voici un bref aperçu :
+						<ul class="list">
+							<li>Un souper destiné à accueillir les nouveaux baptisés Carolos, dont nous l'espérons, tu feras bientôt partie</li>
+							<li>Un petit déjeuner suivi d'une dégustation où tu pourras goûter les spécialités de notre belle région</li>
+							<li>Une excursion afin de supporter nos valeureux Zèbres ou nos brillants Spirous</li>
+							<li>Un voyage d’une journée au Pays Noir afin de découvrir son folklore unique avec notamment l’illustre distillerie de Biercée ou les ruines de l’Abbaye D’Aulne</li>
+							<li>Une soirée regroupant tous les étudiants Carolos des différentes Universités telles Mons, Namur, Louvain,…</li>
+						</ul>
+					</p>	
+
+					<p class="text">
+						Si ces quelques lignes te mettent l'eau à la bouche, si tu es prêt à perpétuer avec nous le folklore du pays de Charleroi, alors n'hésite plus et viens rejoindre cette grande famille que sera toujours la Carolo lors des activités de début d’année.
+					</p>
+
+					<h4 class="subtitle">Armoiries de Charleroi</h4>
+					<p class="text">
+						Le coq, emblème de la partie francophone belge et de la France. Sa dextre est posée en chef, en signe d'allégeance.
+					</p>	
+
+					<p class="text">
+						Sur le blason (en partant du haut):
+						<ul class="list">
+							<li>La fleur de lys rappelle le développement donné par la France à la forteresse initiale</li>
+							<li>Les 15 carrés représentent les 15 anciennes communes (Charleroi, Couillet, Dampremy, Gilly, Gosselies, Goutroux, Jumet, Lodelinsart, Marchienne, Marcinelle, Monceau/s/Sambre, Montignies/s/Sambre, Mont/s/Marchienne, Ransart, Roux), qui fusionnées forment l'actuelle ville de Charleroi</li>
+							<li>Les 12 étoiles qui symbolisent le drapeau des Communes d'Europe</li>
+							<li>(Au centre des étoiles) La forteresse de Vauban, berceau de la ville.</li>
+						</ul>
+					</p>		
 				</div>
 			</div>
 

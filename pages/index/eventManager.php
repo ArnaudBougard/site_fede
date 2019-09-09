@@ -62,7 +62,7 @@ session_start();
 								<span style="font-size: 1rem"> * oui par défaut</span>
 							</p>
 							<p>
-								<input style="margin-left: 0rem;" type='submit' class='btn-form' name='eventform' value="Submit" />
+								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Submit" />
 							</p>
 						</div>	
 
@@ -111,7 +111,8 @@ session_start();
 										
 
 										<div class="col-sm-4" >
-											<btn class="btn-form2"> <a href="./eventDelete.php?id= <?php echo $id; ?> " class="gras btn btn-danger btn-xl"> <span class="glyphicon glyphicon-warning"></span> Supprimer <?php echo $nom; ?> </a> 
+
+											<btn class="btn-form2"> <a href="./eventDelete.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
 			        					</div>
 		        					</div>
 		        					<?php
@@ -121,7 +122,7 @@ session_start();
 							else
 							{
 						?>
-							<p>Il n'y a pas de PV enregistré</p>
+							<p>Vous n'avez créé aucun événement (la création doit être validée par un admin)</p>
 						<?php
 							}
 						?>					

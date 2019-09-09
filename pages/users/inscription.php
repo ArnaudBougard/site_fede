@@ -204,7 +204,7 @@ session_start();
 							}
 						?>
 						<div class="btn-form-group">
-							<input type='submit' class='btn-form' name='forminscription' value="S'inscrire" />
+							<input type='submit' class='btn-form2' name='forminscription' value="S'inscrire" />
 						</div>
 
 					</form>
