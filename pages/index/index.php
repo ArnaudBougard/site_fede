@@ -104,18 +104,6 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
-
-		<script>
-			$('#nav ul li a').click( function(){
-			    if ( $(this).hasClass('active') ) {
-			        $(this).removeClass('active');
-			    } else {
-			        $('li a.active').removeClass('active');
-			        $(this).addClass('active');    
-			    }
-			});
-		</script>
-
 	</body>
 
 
