@@ -549,9 +549,22 @@ nav a.active{
 .btn-form:hover{
 	background-color: #039C9C;
 }
+/*--------------------*/
+/* CONTACT */
+/*--------------------*/
 
 
+.bg-black{
+	background-color: #000000 
+}
+.txt-white{
+	color:#fff;
+}
 
+.mt{
+	margin-top: 50px
+}
+	 
 
 /*--------------------*/
 /* FOOTER */
