@@ -1,9 +1,22 @@
+<?php
+      // On recupere l'URL de la page pour ensuite affecter class = "active" aux liens de nav
+      $page = $_SERVER['REQUEST_URI'];
+      $page = str_replace("/site_fede/pages/", "",$page);
+      // ATTENTION : SI BUG AVEC CLASS ACTIVE, VERIFIER CHEMIN D'ACCES DANS LES IF ICI
+?>
 
 		<nav class="navbar navbar-default" id="nav">
 			<ul>
-				<li><a class="active" href="../index/index.php">Accueil</a></li>
+				<li><a <?php if($page == "index/index.php"){echo 'class="active"';} ?> href="../index/index.php">Accueil</a></li>
 				<li class="dropdown" href="">
-					<a href="../federale/apropos.php">La Fédérale</a>
+					<a 
+					<?php 
+					if($page == "federale/apropos.php" or $page == "federale/carte.php" or $page == "federale/statuts.php" 
+						or $page == "federale/pv.php" or $page == "federale/commissons.php"){
+							echo 'class="active"';} ?> 
+					href="../federale/apropos.php">
+						La Fédérale
+					</a>
 					<ul class="dropdown-content">
 						<li><a href="../federale/apropos.php">Qui sommes-nous ?</a></li>
 						<li><a href="../federale/carte.php">Carte Fédé</a></li>
@@ -13,7 +26,13 @@
 					</ul>
 				</li>
 				<li class="dropdown" href="#">
-					<a id="btn_nav" href="../folklore/fetes.php">Folklore</a>
+					<a <?php if($page == "folklore/fetes.php" or $page == "folklore/regionales.php" or $page == "folklore/bleusaille.php"
+					or $page == "folklore/chants.php" ){
+						echo 'class="active"'
+						;} ?> 
+						href="../folklore/fetes.php">
+							Folklore
+					</a>
 					<ul class="dropdown-content">
 						<li><a href="../folklore/fetes.php">Les Fêtes</a></li>
 						<li><a href="../folklore/regionales.php">Régionales</a></li>
@@ -22,7 +41,7 @@
 					</ul>
 				</li>
 				<li class="dropdown" href="#">
-					<a href="../cercles/indexcercles.php">Cercles</a>
+					<a <?php if($page == "cercles/indexcercles.php"){echo 'class="active"';} ?> href="../cercles/indexcercles.php">Cercles</a>
 					<ul class="dropdown-content">
 						<li><a href="../cercles/bar.php">Le Bar Polytech</a></li>
 						<li><a href="../cercles/cap.php">La C.A.P.</a></li>
@@ -51,7 +70,7 @@
 					</ul>
 				</li>-->
 				<li class="dropdown" >
-					<a href="#">Activités</a>
+					<a <?php if($page == "activites/culture.php" or $page == "activites/festivites.php" or $page == "activites/sports.php"){echo 'class="active"';} ?> href="#">Activités</a>
 					<ul class="dropdown-content">
 						<li><a href="../activites/culture.php">Culture</a></li>
 						<li><a href="../activites/festivites.php">Festivités</a></li>
@@ -73,7 +92,7 @@
 					</ul>
 				</li>
 				 -->
-				<li><a href="../contact/contact.php">Contact</a></li>
+				<li><a <?php if($page == "contact/contact.php"){echo 'class="active"';} ?> href="../contact/contact.php">Contact</a></li>
 			</ul>
 			
 			<!--<div class="search-area">
@@ -85,13 +104,6 @@
 		</nav> 
 
 		<script>
-			$('#nav ul li a').click( function(){
-			    if ( $(this).hasClass('active') ) {
-			        $(this).removeClass('active');
-			    } else {
-			        $('li a.active').removeClass('active');
-			        $(this).addClass('active');    
-			    }
-			});
+
 		</script>
 
