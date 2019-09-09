@@ -12,6 +12,7 @@ session_start();
 	<head>
 		
 	<?php include("../head.php"); ?>
+	<link href="./users.css" rel="stylesheet">
 
 	</head>
 
@@ -159,7 +160,6 @@ session_start();
 														
 														$req->execute(array($mail,$pseudo,$mdp));
 
-														include("../../model/redirect.php"); 
 														redirect("./connexion.php");
 														// header( "Refresh:1; ./connexion.php", true, 303);
 

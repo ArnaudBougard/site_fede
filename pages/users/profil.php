@@ -20,6 +20,7 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 <html lang="fr">
 	<head>
 		<?php include("../head.php"); ?>
+        <link href="./users.css" rel="stylesheet">
 
 	</head>
 
@@ -31,22 +32,10 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 		<?php include("../navbar.php"); ?>
 
-		 <?php include ("../../controller/warningPopup.php");?>
+		<?php include ("../../controller/warningPopup.php");?>
 
-   
-        <div class="backgroundOverlay" style="display: none;" id="backgroundOverlay2">
-
-            <div class="warningpopup" id="popup2">
-
-                <h2 class="connexionh2" style="color: red;">WARNING</h2>
-
-                <p class="connexionp">Voulez-vous vraiment supprimer votre compte? <br> Il sera irrécupérable!</p> <br />
-
-                <div align="center"> <a href="../model/dao/deleteUtilisateurDAO.php" class="gras btn btn-danger btn-xl"> <span class="glyphicon glyphicon-warning"></span> Valider</a> </div>
-
-            </div>
-
-        </div>
+        <?php include ("./warningDeletePopup.php");?>
+        
 
         <div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">
             <div class = "row" >
@@ -85,7 +74,6 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
                         <ul style="list-style-type: none; padding-left: 0rem;">
       
                             <li class="networkBarElement" > <a href='edition.php'>compléter mon profil </a> </li>
-                            <li class="networkBarElement" > <a href='deconnexion.php'><span class='deco'> Se déconnecter </span></a>  </li>
                             <li class="networkBarElement" > <a href="#" onclick="showWarning('backgroundOverlay2','popup2')" id="openOverlay2"><span class='deco'> Supprimer mon compte</span></a></li>
 
                         </ul>

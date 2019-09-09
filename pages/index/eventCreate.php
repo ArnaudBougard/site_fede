@@ -90,7 +90,6 @@
 
                 $req->closeCursor(); // Termine le traitement de la requête
 
-                include("../../model/redirect.php"); 
                 redirect("./eventManager.php");
                 
             }

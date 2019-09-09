@@ -60,7 +60,6 @@ session_start();
             }
             else{
 
-                include("../../model/redirect.php"); 
                 redirect("./profil.php");
             }
             
