@@ -112,7 +112,7 @@ session_start();
 
 										<div class="col-sm-4" >
 
-											<btn class="btn-form2"> <a href="./eventDelete.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
+											<btn class="btn-form2"> <a href="./eventDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
 			        					</div>
 		        					</div>
 		        					<?php
