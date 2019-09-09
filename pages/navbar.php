@@ -70,7 +70,7 @@
 					</ul>
 				</li>-->
 				<li class="dropdown" >
-					<a <?php if($page == "activites/culture.php" or $page == "activites/festivites.php" or $page == "activites/sports.php"){echo 'class="active"';} ?> href="#">Activités</a>
+					<a <?php if($page == "activites/culture.php" or $page == "activites/festivites.php" or $page == "activites/sports.php"){echo 'class="active"';} ?> href="../activites/culture.php">Activités</a>
 					<ul class="dropdown-content">
 						<li><a href="../activites/culture.php">Culture</a></li>
 						<li><a href="../activites/festivites.php">Festivités</a></li>

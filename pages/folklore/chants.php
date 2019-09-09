@@ -23,17 +23,28 @@ session_start();
 						<h3 class="title2">Chants</h3> 
 				  		<span class="title-line2"></span> 
 					</div>
-			<ul>
+			<ul style="list-style-type: none;">
 				<?php 
 					$query = $bdd -> query('SELECT * FROM chant ORDER BY nom_chant');
 					while($chants = $query->fetch()){
+						if(!empty($chants['path_chant']))
+						{
+						echo '<div class=" chantdiv col-xs-4">';	
 						echo '<li class="chant">';
-						echo $chants['nom_chant'];
+						echo $chants['nom_chant'];  
+						
+						
+						
 						echo '</li>';
+						?> <audio src="<?php echo $chants['path_chant'] ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
 						echo '<div class="content_chant">';
 						echo $chants['parole_chant'];
 						echo '</div>';
-						echo '<br/>';
+						echo '</div>';
+						}
+						
+						
+
 					}
 				?>
 			</ul>

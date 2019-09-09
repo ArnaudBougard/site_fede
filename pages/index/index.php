@@ -23,14 +23,11 @@ session_start();
 		<!-- HEADER -->
 
 		<div class="header-container">
-<<<<<<< HEAD
 			<img src="../../assets/img/GD3.png" alt="img">
 			
-=======
-			<img src="../../assets/img/houdain9.jpg" alt="img">
+			
 			<div class="header-text">
-				<h1>Bienvenue sur le site Fédé</h1>
-
+				
 				<?php 
 
         	if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
@@ -44,7 +41,6 @@ session_start();
 
              ?>
 			</div>
->>>>>>> 45e7809030082b4ca6029c39a6c34a76081d98c7
 			<div class="header-btn-area">
 
 			<?php 
@@ -75,9 +71,9 @@ session_start();
 		</div>
 		-->
 		
-		<div class="container">
+		<div >
 			<!-- CAROUSSEL-->		
-			<div id="myCarousel" class="carousel slide col-sm-12" data-ride="carousel">
+			<div id="myCarousel" style=" margin:0rem;" class="carousel slide col-sm-12" data-ride="carousel">
 			   <!-- Indicators -->
 				<ol class="carousel-indicators">
 			    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -86,7 +82,7 @@ session_start();
 			   </ol>
 
 			    <!-- Wrapper for slides -->
-				<div class="carousel-inner">
+				<div class="carousel-inner" >
 					<?php include("./eventDAO.php"); ?>
 					<?php 
 
@@ -133,9 +129,12 @@ session_start();
 				</a>
 			</div>
 
+			<div class="col-sm-8" >
+	           
+	        </div>
 
-			<div class="col-sm-12">
-	            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+			<div class="col-sm-4">
+	            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
 	        </div>
 	    </div>
 

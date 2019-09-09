@@ -152,8 +152,8 @@
 .header-container>img{
 	width: 100%;
 	height: auto;
-	filter: brightness(60%);
-	-webkit-filter: brightness(50%);
+	filter: brightness(65%);
+	-webkit-filter: brightness(65%);
 	z-index: 1;
 
 }
@@ -177,7 +177,7 @@
 .header-btn-area {
 	position: absolute;
 	z-index:2;
-	top: 20vw;
+	top: 5vw;
 	width: 100%;
 	text-align: center;
 }
@@ -305,6 +305,8 @@ nav > ul li:hover .dropdown-content{
 	content:" ▼";
 	font-size: 0.76vw;
 }
+
+
 
 .mystyle {
   width: 100%;
@@ -510,7 +512,7 @@ nav a.active{
 }
 
 #myCarousel{
-	margin-bottom: 15vw;
+	
 	padding-top: 30vw;
 	padding: 2vw;
 	position: relative;
