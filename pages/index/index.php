@@ -31,7 +31,7 @@ session_start();
 
         	if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
 
-            	?>  <div class="header-text" style="margin-top: 5rem;"> 
+            	?>  <div class="header-text" style="margin-top: 24rem;"> 
             		<h1> <?php echo $_SESSION["pseudo_utilisateur"]; ?> </h1>
 					</div>';
 

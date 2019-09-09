@@ -460,11 +460,13 @@ nav a.active{
 .bg1{
 	background-color: #f8f5ef;
 	width: 100%;
+	font-family: Calibri;
 }
 
 .bg2{
 	background-color: #EBFFFF;
 	width: 100%;
+	font-family: Calibri;
 }
 
 #content{

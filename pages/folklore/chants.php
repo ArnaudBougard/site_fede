@@ -8,6 +8,7 @@ session_start();
 <html lang="fr">
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="folklore.css" rel="stylesheet">
 
 	</head>
 
@@ -15,41 +16,49 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
 		<?php include("../navbar.php"); ?>
 
-
-		<div class="container"> 
-
-		   		<?php
-
-		   		include ("../../model/cercleDAO.php");
-		   		$cercle=selectByName($bdd,'Fédérale');
-
+		<div class="container">
+					<div class="title-area">
+						<h3 class="title2">Chants</h3> 
+				  		<span class="title-line2"></span> 
+					</div>
+			<ul>
+				<?php 
+					$query = $bdd -> query('SELECT * FROM chant');
+					while($chants = $query->fetch()){
+						echo '<li class="chant">';
+						echo $chants['nom_chant'];
+						echo '</li>';
+						echo '<div class="content_chant">';
+						echo $chants['parole_chant'];
+						echo '</div>';
+						echo '<br/>';
+					}
 				?>
-
-				<div class="margintop marginbottom" >
-
-							
-
-					<p>
-			   			<?php echo $cercle['description_cercle']; ?> <br>
-			   			<br> 
-
-			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-			   		</div>
-
-			  		</p>
-
-				</div>
-
-				
-		    </div>
+			</ul>
+		</div>
 
 
 		<?php include("../footer.php"); ?>
+
+		<script>
+		var c = document.getElementsByClassName("chant");
+		var i;
+
+		for (i = 0; i < c.length; i++) {
+		  c[i].addEventListener("click", function() {
+		    this.classList.toggle("active2");
+		    var content_chant = this.nextElementSibling;
+		    if (content_chant.style.display === "block") {
+		      content_chant.style.display = "none";
+		    } else {
+		      content_chant.style.display = "block";
+		    }
+		  });
+		}
+</script>
+
 
 	</body>
 </html>

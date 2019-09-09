@@ -145,7 +145,8 @@ include("../../controller/getConnexionData.php");
 <head>
     <?php include("../head.php"); ?>
 </head>
-<body>
+
+<body class="bg1">
 
     <?php include ("../network.php") ?>
     <?php include ("../navbar.php") ?>
@@ -170,11 +171,11 @@ include("../../controller/getConnexionData.php");
                         
                         <p>
                             
-                            <input class='champ' type='text' id='new_prenom_utilisateur'  name='new_prenom_utilisateur' placeholder='Prénom' maxlength='25' size='45' value='<?php echo $user['prenom_utilisateur'];?>'/>
+                            <input class='champ' type='text' id='new_prenom_utilisateur'  name='new_prenom_utilisateur' placeholder='PRÉNOM' maxlength='25' size='45' value='<?php echo $user['prenom_utilisateur'];?>'/>
                         </p>
                         <p>
                             
-                            <input class='champ' type='text' id='new_nom_utilisateur' name='new_nom_utilisateur' placeholder='Nom' maxlength='25' size='45' value='<?php echo $user['nom_utilisateur'];?>' />
+                            <input class='champ' type='text' id='new_nom_utilisateur' name='new_nom_utilisateur' placeholder='NOM' maxlength='25' size='45' value='<?php echo $user['nom_utilisateur'];?>' />
                         </p>
                         <p>
                             

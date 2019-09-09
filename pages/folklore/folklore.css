@@ -46,6 +46,13 @@
 	width: 26vw;
 }
 
+.title-line2 {
+	background-color: black;
+	display: inline-block;
+	height: 0.176vw;
+	margin-bottom: 0.3vw;
+	width: 5.3vw;
+}
 
 
 .img3{
@@ -53,4 +60,24 @@
 	width: 15%;
 	margin-right: 2vw;
 	height: auto;
+}
+
+/* CHANTS */
+
+.chant{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.76rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.active2, .chant:hover{
+	color: #1BB4B4;
+}
+
+.content_chant{
+	display: none;
+  	overflow: hidden;
+  	font-size: 1.66rem;
 }

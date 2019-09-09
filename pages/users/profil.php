@@ -24,7 +24,7 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 	</head>
 
-	<body>
+	<body class="bg1">
 		
 		<?php include("../network.php"); ?>
 
@@ -72,8 +72,8 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
                         ?>
 
                         <ul style="list-style-type: none; padding-left: 0rem;">
-                            <btn class="btn-form2" style="margin-right:5rem;"> <a href="edition.php " class="gras btn btn-xl"> compléter </a> </btn>
-                            <btn class="btn-form2"> <a href="#" onclick="showWarning('backgroundOverlay2','popup2')" id="openOverlay2" class="gras btn btn-xl"> Supprimer</a> </btn>
+                            <btn class="btn-form2" style="margin-right:5rem;"> <a href="edition.php " class="gras btn btn-xl">Compléter</a> </btn>
+                            <btn class="btn-form2"> <a href="#" onclick="showWarning('backgroundOverlay2','popup2')" id="openOverlay2" class="gras btn btn-xl">Supprimer</a> </btn>
                         </ul>
                         <?php
                         }
