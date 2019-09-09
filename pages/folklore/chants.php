@@ -25,7 +25,7 @@ session_start();
 					</div>
 			<ul>
 				<?php 
-					$query = $bdd -> query('SELECT * FROM chant');
+					$query = $bdd -> query('SELECT * FROM chant ORDER BY nom_chant');
 					while($chants = $query->fetch()){
 						echo '<li class="chant">';
 						echo $chants['nom_chant'];
