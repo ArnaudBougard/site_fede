@@ -12,3 +12,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="assets/js/functions.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>

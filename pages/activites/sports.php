@@ -23,7 +23,7 @@ session_start();
 
 		   		<?php
 
-		   		include ("../../model/dao/cercleDAO.php");
+		   		include ("../../model/cercleDAO.php");
 		   		$cercle=selectByName($bdd,'Fédérale');
 
 				?>
