@@ -3,8 +3,8 @@ session_start();
 //session_start() est obligatoire sur les pages si on veut récupérer les variables de session enregistrées. 
 
 
- include("../../model/dao/connexionDAO.php"); 
- include("../../controller/getConnexionData.php"); 
+include("../../model/connexionDAO.php"); 
+include("../../controller/getConnexionData.php"); 
 
     if(isset($_SESSION['id_utilisateur'])) // On ferme l'accolade à la fin du code
     {

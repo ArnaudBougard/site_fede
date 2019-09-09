@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<?php include("../../model/dao/connexionDAO.php"); ?>
+<?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ session_start();
 
 		   		<?php
 
-		   		include ("../../model/dao/cercleDAO.php");
+		   		include ("../../model/cercleDAO.php");
 		   		$cercle=selectByName($bdd,'Fédérale');
 
 				?>

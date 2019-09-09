@@ -30,6 +30,11 @@
             {
                 echo $erreur;
             }
+            else{
+
+                include("../../model/redirect.php"); 
+                //redirect(en absolu car le popup est sur des types de pages differents);
+            }
             ?>
             <br />
             <br />

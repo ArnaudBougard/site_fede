@@ -4,7 +4,7 @@
 session_start();
 ?>
 
-<?php include("../../model/dao/connexionDAO.php"); ?>
+<?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
@@ -159,7 +159,8 @@ session_start();
 														
 														$req->execute(array($mail,$pseudo,$mdp));
 
-														echo"Inscription validée!";
+														include("../../model/redirect.php"); 
+														redirect("./connexion.php");
 														// header( "Refresh:1; ./connexion.php", true, 303);
 
 														/*

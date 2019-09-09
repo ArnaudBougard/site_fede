@@ -3,8 +3,8 @@ session_start();
 
 
 
- include("../../model/dao/connexionDAO.php"); 
- include("../../controller/getConnexionData.php"); 
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 
 
 if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'accolade à la fin du code

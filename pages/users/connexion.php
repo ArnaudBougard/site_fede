@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<?php include("../../model/dao/connexionDAO.php"); ?>
+<?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
@@ -57,6 +57,11 @@ session_start();
             if(isset($erreur))
             {
                 echo $erreur;
+            }
+            else{
+
+                include("../../model/redirect.php"); 
+                redirect("./profil.php");
             }
             
             ?>

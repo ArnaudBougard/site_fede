@@ -29,9 +29,9 @@
 
          if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
 
-             echo '<li class="networkBarElement" style="float:right; padding-right: 4rem;"><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
+             echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
                             
-             ?><li class="networkBarElement" style="float:right; padding-right: 4rem;padding-left: 4rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span> Profil</a></li>
+             ?><li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span> Profil</a></li>
 
 
             <?php 
@@ -54,7 +54,7 @@
             if($comitard!= NULL){ // On ferme l'accolade à la fin du code
 
             ?>
-             <li class="networkBarElement" style="float:right; padding-right: 4rem;padding-left: 4rem;"><a class="networkBarAnchor" href= "../index/createEvent.php"> <span class="glyphicon glyphicon-user" ></span> créer un événement</a></li>
+             <li class="networkBarElement" style="float:right; padding-right: 2rem;padding-left: 2rem;"><a class="networkBarAnchor" href= "../index/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
 
               <?php
             }
@@ -62,9 +62,9 @@
                                  
         else{
 
-            echo '<li class="networkBarElement" style="float:right; padding-right: 4rem;"><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
+            echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
 
-            echo '<li class="networkBarElement" style="float:right; padding-right: 4rem;"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
+            echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
           }
 
         ?>

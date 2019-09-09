@@ -89,9 +89,9 @@
                 $req->execute(array($img,$nom,$description,$date,$ouverture,$organisateur));
 
                 $req->closeCursor(); // Termine le traitement de la requête
-                
-                include("../../model/dao/redirect.php"); 
-                redirect("./createEvent.php");
+
+                include("../../model/redirect.php"); 
+                redirect("./eventManager.php");
                 
             }
         }

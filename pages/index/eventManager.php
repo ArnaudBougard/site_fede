@@ -2,8 +2,9 @@
 session_start();
 ?>
 
-<?php include("../../model/dao/connexionDAO.php"); ?>
+<?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
+<?php include("./eventDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -72,43 +73,42 @@ session_start();
 		</div>
 
 
-		<?php include("uploadimg.php"); ?>
+		<?php include("eventCreate.php"); ?>
 
 
 		<div class="container">			
 			<div class="page-header">
-				<h1>Tous les événements </h1>
+				<h1>mes événements </h1>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<br/>
+
 					<?php 
-						$conn = mysqli_connect("localhost","root","","bdd_site_fede");
-						
-						$query = "SELECT * FROM evenement ORDER BY `nom_evenement` DESC";
-						
-						$result = mysqli_query($conn, $query);
-						
-						if(mysqli_num_rows($result) > 0)
-						{
-							while($event = mysqli_fetch_assoc($result))
-							{
-								
-								?>	
-								<div >
+
+						$eventsArray=selectMyEvents($bdd,$_SESSION['pseudo_utilisateur']);
+
+						if(!empty($eventsArray)) {
+	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur)) {
+
+	        					?> 
+	        					
+	        					<div >
 									<p>
-			                        Nom : <?php echo $event["nom_evenement"]; ?>
+			                        Nom de l'événement : <?php echo $nom; ?>
 			                        <br /> <br />
-			                        Description : <?php echo $event["description_evenement"]; ?>
+			                        Description : <?php echo $description; ?>
 			                        <br /> <br />
-			                        Date : <?php echo $event["date_evenement"]; ?>
+			                        Date : <?php echo $date; ?>
 			                        <br /> <br />
-									 <img style="height:98%; width: 97%;" src=<?php echo "'".$event["img_evenement"]."'" ?>> 
+									 <img style="height:98%; width: 97%;" src=<?php echo "'".$img."'" ?>> 
 									</p>
 								</div>
-								<?php
-							}
-						}
+	        					
+	        					<?php
+
+	        				}
+	        			}
 						else
 						{
 					?>
