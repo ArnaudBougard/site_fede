@@ -18,32 +18,41 @@ session_start();
 
 		<?php include("../navbar.php"); ?>
 
+		<?php include("./chantDAO.php"); ?>
+
 		<div class="container">
 					<div class="title-area">
 						<h3 class="title2">Chants</h3> 
 				  		<span class="title-line2"></span> 
 					</div>
 			<ul style="list-style-type: none;">
+
 				<?php 
-					$query = $bdd -> query('SELECT * FROM chant ORDER BY nom_chant');
-					while($chants = $query->fetch()){
-						if(!empty($chants['path_chant']))
-						{
-						echo '<div class=" chantdiv col-xs-4">';	
-						echo '<li class="chant">';
-						echo $chants['nom_chant'];  
-						
-						
-						
-						echo '</li>';
-						?> <audio src="<?php echo $chants['path_chant'] ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
-						echo '<div class="content_chant">';
-						echo $chants['parole_chant'];
-						echo '</div>';
-						echo '</div>';
+					$chants = selectChants($bdd);
+					if(!empty($chants)) {
+        				foreach ($chants as list($id,$paroles,$description,$nom,$path)) {
+
+							if(!empty($path))
+							{
+							echo '<div class=" chantdiv col-xs-4">';	
+							echo '<li class="chant">';
+							echo $nom;  
+							
+							
+							
+							echo '</li>';
+							?> <audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
+							echo '<div class="content_chant">';
+							echo $paroles;
+							echo '</div>';
+							echo '</div>';
+							}
 						}
-						
-						
+					}
+					else{
+						?>
+							<p>Il n'y a aucun chant </p>
+						<?php
 
 					}
 				?>
