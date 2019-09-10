@@ -17,8 +17,8 @@ session_start();
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
 		<?php include("../navbar.php"); ?>
-		<div class="container" style="padding-top: 2rem;">
-			<div class="row cardRow">
+		<div class="cardContainer" >
+			<div class="row cardRow" style="padding-top: 2rem;">
 				<div class="col-md-3">
 	    			<div class="card">
 						<a href="magellan"><img class="imgTileIndex" src="../../assets/img/tuileMagellan" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMagellan'"></a>      				
