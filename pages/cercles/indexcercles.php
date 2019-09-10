@@ -2,100 +2,106 @@
 session_start();
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
+<?php include("../../model/dao/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
-
 	<head>
-		<?php include("../head.php"); ?>
-	</head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Site Fédé</title>
 
-	<body>
-		
+		 <!--ICONE FAV, A AJOUTER-->
+		<link rel="shortcut icon" type="image/icon" href="#"/>
+
+		<!-- MAIN STYLE -->
+		<link href="../style.css" rel="stylesheet">
+		<link href="folklore.css" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  		<script language="javascript" type="text/javascript" src="assets/js/functions.js"></script>
+
+	</head>
+	<body class="bg1">
 		<?php include("../network.php"); ?>
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
 		<?php include("../navbar.php"); ?>
-		<?php include ("../../model/cercleDAO.php"); ?>
-
-
-		<div class="content">
-			<div class="tab col-md-2">
-			  <button class="tablinks" onclick="openCity(event, 'bar')" id="defaultOpen">Bar Polytech</button>
-			  <button class="tablinks" onclick="openCity(event, 'cap')">  C.A.P.</button>
-			  <button class="tablinks" onclick="openCity(event, 'cpv')">  C.P.V.</button>
-			  <button class="tablinks" onclick="openCity(event, 'culture')">  Cercle Culturel</button>
-			  <button class="tablinks" onclick="openCity(event, 'magellan')">  Magellan</button>
-			  <button class="tablinks" onclick="openCity(event, 'mm')">  Mons-Mines</button>
-			  <button class="tablinks" onclick="openCity(event, 'mutu')">  Mutuelle d'édition</button>
-			  <button class="tablinks" onclick="openCity(event, 'peyresq')">  Peyresq</button>
-			  <button class="tablinks" onclick="openCity(event, 'radio')" >  Radio Extra</button>
-			  <button class="tablinks" onclick="openCity(event, 'scientifique')">  Cercle Scientifique</button>
-			  <button class="tablinks" onclick="openCity(event, 'sdm')">  Sono Danse Musique</button>
-			  <button class="tablinks" onclick="openCity(event, 'sports')">  Cercle des Sports</button>
+		<div class="row">
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="magellan"><img src="../../assets/img/tuileMagellan" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMagellan'"></a>      				
+    			</div>
 			</div>
-			<?php $name='Bar Polytech'; ?>
-			<div id="bar" class="tabcontent col-md-10"> <?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='CAP'; ?>
-			<div id="cap" class="tabcontent col-md-10 "><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='CPV'; ?>
-			<div id="cpv" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='cercle Culturel'; ?>
-			<div id="culture" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='Magellan'; ?>
-			<div id="magellan" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='Mons-Mines'; ?>
-			<div id="mm" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name="mutuelle d'édition"; ?>
-			<div id="mutu" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='Peyresq'; ?>
-			<div id="peyresq" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='Radio Extra'; ?>
-			<div id="radio" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='Scientifique'; ?>
-			<div id="scientifique" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='cercle sono danse musique'; ?>
-			<div id="sdm" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
-			<?php $name='cercle des sports'; ?>
-			<div id="sports" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="scientifique"><img src="../../assets/img/tuileScientifique" class="card-img-top" alt="Scientifique" onmouseover="src='../../assets/img/Scientifique'" onmouseout="src='../../assets/img/tuileScientifique'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="radio"><img src="../../assets/img/tuileRadio" class="card-img-top" alt="Radio" onmouseover="src='../../assets/img/logo_radio'" onmouseout="src='../../assets/img/tuileRadio'"></a>      				
+    			</div>
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="bar"><img src="../../assets/img/tuileBar" class="card-img-top" alt="Bar" onmouseover="src='../../assets/img/Capture'" onmouseout="src='../../assets/img/tuileBar'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="peyresq"><img src="../../assets/img/tuilePeyresq" class="card-img-top" alt="Peyresq" onmouseover="src='../../assets/img/Peyresq'" onmouseout="src='../../assets/img/tuilePeyresq'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="mutu"><img src="../../assets/img/tuileMutu" class="card-img-top" alt="Mutu" onmouseover="src='../../assets/img/Mutu'" onmouseout="src='../../assets/img/tuileMutu'"></a>      				
+    			</div>
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="culture"><img src="../../assets/img/tuileQ" class="card-img-top" alt="Culturel" onmouseover="src='../../assets/img/Culturel'" onmouseout="src='../../assets/img/tuileQ'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="mm"><img src="../../assets/img/tuileMM" class="card-img-top" alt="MonsMines" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMM'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="sdm"><img src="../../assets/img/tuileSDM" class="card-img-top" alt="SDM" onmouseover="src='../../assets/img/SonoDanceMusique'" onmouseout="src='../../assets/img/tuileSDM'"></a>      				
+    			</div>
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="sports"><img src="../../assets/img/tuileSports" class="card-img-top" alt="Sports" onmouseover="src='../../assets/img/Sports'" onmouseout="src='../../assets/img/tuileSports'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="cpv"><img src="../../assets/img/tuileCPV" class="card-img-top" alt="CPV" onmouseover="src='../../assets/img/CPV'" onmouseout="src='../../assets/img/tuileCPV'"></a>      				
+    			</div>
+			</div>
+			<div class="col-md-4">
+    			<div class="card">
+					<a href="cap"><img src="../../assets/img/tuileCAP" class="card-img-top" alt="CAP" onmouseover="src='../../assets/img/CAP'" onmouseout="src='../../assets/img/tuileCAP'"></a>      				
+    			</div>
+			</div>
+		
 		</div>
 
-		<script>
-		function openCity(evt, cityName) {
-		  var i, tabcontent, tablinks;
-		  tabcontent = document.getElementsByClassName("tabcontent");
-		  for (i = 0; i < tabcontent.length; i++) {
-		    tabcontent[i].style.display = "none";
-		  }
-		  tablinks = document.getElementsByClassName("tablinks");
-		  for (i = 0; i < tablinks.length; i++) {
-		    tablinks[i].className = tablinks[i].className.replace(" active", "");
-		  }
-		  document.getElementById(cityName).style.display = "block";
-		  evt.currentTarget.className += " active";
-		}
-
-		// Get the element with id="defaultOpen" and click on it
-		document.getElementById("defaultOpen").click();
-		</script>
-
-
-				<?php include("../footer.php"); ?>
-
 	</body>
-</html>
