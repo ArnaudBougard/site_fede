@@ -4,7 +4,7 @@ function selectMyEvents($bdd,$organisateur) {
 
 		////////////////////////////////////////////////stock data into array
 				// run query
-				$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? ORDER BY `nom_evenement` DESC");
+				$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? ORDER BY `id_evenement` DESC");
 		        $req->execute(array($organisateur));
 
 				// set array

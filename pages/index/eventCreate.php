@@ -35,6 +35,8 @@
 
 
             $nom = htmlspecialchars($_POST['nom']);
+            $lieu = htmlspecialchars($_POST['lieu']);
+            $linkFB = htmlspecialchars($_POST['link']);
             $date =htmlspecialchars($_POST['date']);
             $description = htmlspecialchars($_POST['description']); 
             $ouverture =$_POST['ouverture'];
@@ -87,8 +89,8 @@
                 move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/events/".$newFileName);
                 $img="../../assets/img/events/".$newFileName;
 
-                $req = $bdd -> prepare("INSERT INTO evenement(img_evenement, nom_evenement, description_evenement, date_evenement, ouverture_evenement,organisateur) VALUES(?,?,?,?,?,?)");
-                $req->execute(array($img,$nom,$description,$date,$ouverture,$organisateur));
+                $req = $bdd -> prepare("INSERT INTO evenement(img_evenement, nom_evenement, description_evenement, date_evenement, ouverture_evenement,organisateur,lieu_evenement,link_evenement) VALUES(?,?,?,?,?,?,?,?)");
+                $req->execute(array($img,$nom,$description,$date,$ouverture,$organisateur,$lieu,$linkFB));
 
                 $req->closeCursor(); // Termine le traitement de la requête
 

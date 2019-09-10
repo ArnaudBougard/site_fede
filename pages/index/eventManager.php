@@ -55,11 +55,18 @@ session_start();
 	                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
                         	</p>
                         	<p>
+	                            <label>Lieu </label> <br>
+	                            <input class='champ' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
+                        	</p>
+                        	<p>
 								<label>Evénement ouvert à tous?</label> <br>
 								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required/><label for='1'> Oui </label>
 								<input type="radio" id='ouverture' name='ouverture' value='0' id='non' required/><label for='0'> Non </label>
-						
 							</p>
+							<p>
+	                            <label>Lien événement facebook </label> <br>
+	                            <input class='champ' type='text' id='link' name='link' placeholder='copier/coller' maxlength='40' size='45'/> * facultatif
+                        	</p>
 							<p>
 								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Submit" />
 							</p>
@@ -88,7 +95,7 @@ session_start();
 							$eventsArray=selectMyEvents($bdd,$_SESSION['pseudo_utilisateur']);
 
 							if(!empty($eventsArray)) {
-		        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu)) {
+		        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
 
 		        					?> 
 		        					<div class="container" style="margin-bottom: 5rem;"> 
@@ -106,6 +113,13 @@ session_start();
 					                        <br /> <br />
 					                        Lieu : <?php echo $lieu; ?>
 					                        <br /> <br />
+					                        <?php 
+					                        	if(!empty($link)){
+					                        		?>
+							                        <a href="<?php echo $link; ?>" > Event Facebook </a>
+							                        <br /> <br />
+							                        <?php
+							                    } ?>
 					                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 					                        <br /> <br />
 											</p>
