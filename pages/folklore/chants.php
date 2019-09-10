@@ -87,8 +87,8 @@ session_start();
 							
 							
 							echo '</li>';
-							?> <audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
 							echo '<div class="content_chant">';
+							?> <audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
 							echo $paroles;
 							echo '</div>';
 							echo '</div>';
