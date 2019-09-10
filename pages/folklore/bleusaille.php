@@ -89,8 +89,6 @@ session_start();
 					<ul class="list">
 						<li>Le premier jour sera organisé une petite visite de Mons ainsi qu’une soirée présentant les différents cercles de notre Faculté.</li>
 						<li>Le deuxième jour aura lieu le Parrainage où tu pourras acquérir des parrains qui t’aideront tout au long de ces 2 semaines.</li>
-						<li>Le deuxième jour aura lieu le Parrainage où tu pourras acquérir des parrains qui t’aideront tout au long de ces 2 semaines.</li>
-						<li>Tu pourras exprimer toute ta verve et ton humour lors de la soirée des bleus devant bon nombre d'étudiants, d'anciens et de professeurs de la Faculté.</li>
 						<li>Tu pourras exprimer toute ta verve et ton humour lors de la soirée des bleus devant bon nombre d'étudiants, d'anciens et de professeurs de la Faculté.</li>
 					</ul>	
 				</p>
