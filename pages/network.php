@@ -30,8 +30,12 @@
          if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
 
              echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
+
+
                             
-             ?><li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span> Profil</a></li>
+             ?><li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
+
+
 
 
             <?php 

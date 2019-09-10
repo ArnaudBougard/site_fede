@@ -59,7 +59,6 @@ session_start();
 								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required/><label for='1'> Oui </label>
 								<input type="radio" id='ouverture' name='ouverture' value='0' id='non' required/><label for='0'> Non </label>
 						
-								<span style="font-size: 1rem"> * oui par défaut</span>
 							</p>
 							<p>
 								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Submit" />
