@@ -31,77 +31,79 @@ session_start();
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
 		<?php include("../navbar.php"); ?>
-		<div class="row">
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="magellan"><img src="../../assets/img/tuileMagellan" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMagellan'"></a>      				
-    			</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="magellan"><img style="width: 100%; height: auto;" src="../../assets/img/tuileMagellan" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMagellan'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="scientifique"><img style="width: 100%; height: auto;"src="../../assets/img/tuileScientifique" class="card-img-top" alt="Scientifique" onmouseover="src='../../assets/img/Scientifique'" onmouseout="src='../../assets/img/tuileScientifique'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="radio"><img style="width: 100%; height: auto;" src="../../assets/img/tuileRadio" class="card-img-top" alt="Radio" onmouseover="src='../../assets/img/logo_radio'" onmouseout="src='../../assets/img/tuileRadio'"></a>      				
+	    			</div>
+				</div>
+			
+			
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="bar"><img style="width: 100%; height: auto;" src="../../assets/img/tuileBar" class="card-img-top" alt="Bar" onmouseover="src='../../assets/img/Capture'" onmouseout="src='../../assets/img/tuileBar'"></a>      				
+	    			</div>
+				</div>
 			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="scientifique"><img src="../../assets/img/tuileScientifique" class="card-img-top" alt="Scientifique" onmouseover="src='../../assets/img/Scientifique'" onmouseout="src='../../assets/img/tuileScientifique'"></a>      				
-    			</div>
+			<div class="row">
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="peyresq"><img style="width: 100%; height: auto;" src="../../assets/img/tuilePeyresq" class="card-img-top" alt="Peyresq" onmouseover="src='../../assets/img/Peyresq'" onmouseout="src='../../assets/img/tuilePeyresq'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="mutu"><img style="width: 100%; height: auto;" src="../../assets/img/tuileMutu" class="card-img-top" alt="Mutu" onmouseover="src='../../assets/img/Mutu'" onmouseout="src='../../assets/img/tuileMutu'"></a>      				
+	    			</div>
+				</div>
+			
+			
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="culture"><img style="width: 100%; height: auto;"  src="../../assets/img/tuileQ" class="card-img-top" alt="Culturel" onmouseover="src='../../assets/img/Culturel'" onmouseout="src='../../assets/img/tuileQ'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="mm"><img style="width: 100%; height: auto;" src="../../assets/img/tuileMM" class="card-img-top" alt="MonsMines" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMM'"></a>      				
+	    			</div>
+				</div>
 			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="radio"><img src="../../assets/img/tuileRadio" class="card-img-top" alt="Radio" onmouseover="src='../../assets/img/logo_radio'" onmouseout="src='../../assets/img/tuileRadio'"></a>      				
-    			</div>
+			<div class="row">
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="sdm"><img style="width: 100%; height: auto;" src="../../assets/img/tuileSDM" class="card-img-top" alt="SDM" onmouseover="src='../../assets/img/SonoDanceMusique'" onmouseout="src='../../assets/img/tuileSDM'"></a>      				
+	    			</div>
+				</div>
+			
+			
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="sports"><img style="width: 100%; height: auto;" src="../../assets/img/tuileSports" class="card-img-top" alt="Sports" onmouseover="src='../../assets/img/Sports'" onmouseout="src='../../assets/img/tuileSports'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="cpv"><img style="width: 100%; height: auto;" src="../../assets/img/tuileCPV" class="card-img-top" alt="CPV" onmouseover="src='../../assets/img/CPV'" onmouseout="src='../../assets/img/tuileCPV'"></a>      				
+	    			</div>
+				</div>
+				<div class="col-md-3">
+	    			<div class="card">
+						<a href="cap"><img style="width: 100%; height: auto;" 	src="../../assets/img/tuileCAP" class="card-img-top" alt="CAP" onmouseover="src='../../assets/img/CAP'" onmouseout="src='../../assets/img/tuileCAP'"></a>      				
+	    			</div>
+				</div>
 			</div>
-		
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="bar"><img src="../../assets/img/tuileBar" class="card-img-top" alt="Bar" onmouseover="src='../../assets/img/Capture'" onmouseout="src='../../assets/img/tuileBar'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="peyresq"><img src="../../assets/img/tuilePeyresq" class="card-img-top" alt="Peyresq" onmouseover="src='../../assets/img/Peyresq'" onmouseout="src='../../assets/img/tuilePeyresq'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="mutu"><img src="../../assets/img/tuileMutu" class="card-img-top" alt="Mutu" onmouseover="src='../../assets/img/Mutu'" onmouseout="src='../../assets/img/tuileMutu'"></a>      				
-    			</div>
-			</div>
-		
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="culture"><img src="../../assets/img/tuileQ" class="card-img-top" alt="Culturel" onmouseover="src='../../assets/img/Culturel'" onmouseout="src='../../assets/img/tuileQ'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="mm"><img src="../../assets/img/tuileMM" class="card-img-top" alt="MonsMines" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMM'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="sdm"><img src="../../assets/img/tuileSDM" class="card-img-top" alt="SDM" onmouseover="src='../../assets/img/SonoDanceMusique'" onmouseout="src='../../assets/img/tuileSDM'"></a>      				
-    			</div>
-			</div>
-		
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="sports"><img src="../../assets/img/tuileSports" class="card-img-top" alt="Sports" onmouseover="src='../../assets/img/Sports'" onmouseout="src='../../assets/img/tuileSports'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="cpv"><img src="../../assets/img/tuileCPV" class="card-img-top" alt="CPV" onmouseover="src='../../assets/img/CPV'" onmouseout="src='../../assets/img/tuileCPV'"></a>      				
-    			</div>
-			</div>
-			<div class="col-md-4">
-    			<div class="card">
-					<a href="cap"><img src="../../assets/img/tuileCAP" class="card-img-top" alt="CAP" onmouseover="src='../../assets/img/CAP'" onmouseout="src='../../assets/img/tuileCAP'"></a>      				
-    			</div>
-			</div>
-		
 		</div>
 
 	</body>
