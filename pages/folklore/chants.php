@@ -70,64 +70,65 @@ session_start();
 
 			<?php include("chantCreate.php"); ?>
 
-			<input type="text" id="search" onkeyup="search_chant()" placeholder="Rechercher un chant...">
+			<div class="container">
+					<input type="text" id="search" onkeyup="search_chant()" placeholder="Rechercher un chant...">
 
-			<ul id="chants" style="list-style-type: none;">
+					<ul id="chants" style="list-style-type: none;">
 
-				<?php 
-					$chants = selectChants($bdd);
-					if(!empty($chants)) {
-        				foreach ($chants as list($id,$paroles,$description,$nom,$path)) {
+						<?php 
+							$chants = selectChants($bdd);
+							if(!empty($chants)) {
+		        				foreach ($chants as list($id,$paroles,$description,$nom,$path)) {
 
-							if(!empty($path))
-							{
-							?>
-							
-								<div class=" chantdiv col-xs-4 dropdown">
-									<li class="chant"><span data-toggle="dropdown" class="dropdown-toggle"> <?php echo $nom;  ?>  </span></li>
+									if(!empty($path))
+									{
+									?>
 									
-										<div class="content_chant dropdown-menu">
-										<audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> 
-										<?php echo $paroles; ?>
+										<div class=" chantdiv col-xs-4 dropdown" >
+											<li class="chant"><span data-toggle="dropdown" class="dropdown-toggle"> <?php echo $nom;  ?>  </span></li>
+											
+												<div class="content_chant dropdown-menu" id="drop">
+												<audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> 
+												<?php echo $paroles; ?>
+												</div>
+												
 										</div>
-										
-								</div>
-							
-							<?php
+									
+									<?php
+									}
+								}
 							}
-						}
-					}
-					else{
-						?>
-							<p>Il n'y a aucun chant </p>
-						<?php
+							else{
+								?>
+									<p>Il n'y a aucun chant </p>
+								<?php
 
-					}
-				?>
-			</ul>
-		</div>
+							}
+						?>
+					</ul>
+			</div>
 
 
 		<?php include("../footer.php"); ?>
 
 		<script>
-		var c = document.getElementsByClassName("chant");
-		var i;
+			var c = document.getElementsByClassName("chant");
+			var i;
 
-		for (i = 0; i < c.length; i++) {
-		  c[i].addEventListener("click", function() {
-		    this.classList.toggle("active2");
-		    var content_chant = this.nextElementSibling;
-		    if (content_chant.style.display === "block") {
-		      content_chant.style.display = "none";
-		    } else {
-		      content_chant.style.display = "block";
-		    }
-		  });
-		}
+			for (i = 0; i < c.length; i++) {
+			  c[i].addEventListener("click", function() {
+			    this.classList.toggle("active2");
+			    var content_chant = this.nextElementSibling;
+			    if (content_chant.style.display === "block") {
+			      content_chant.style.display = "none";
+			    } else {
+			      content_chant.style.display = "block";
+			    }
+			  });
+			}
 
-		function search_chant() {
-			    var input, filter, ul, li, a, i, txtValue;
+			function search_chant() {
+				var input, filter, ul, li, a, i, txtValue;
 			    input = document.getElementById("search");
 			    filter = input.value.toUpperCase();
 			    ul = document.getElementById("chants");
@@ -139,9 +140,9 @@ session_start();
 			        } else {
 			            li[i].style.display = "none";
 			        }
-			    }
+		   	 	}
 			}
-</script>
+		</script>
 
 
 	</body>
