@@ -47,7 +47,7 @@ session_start();
 
 							<p> 
 								<label>Description </label><br>
-								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='50' size='60'  />
+								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='80' size='82'  />
 							</p>
 
 							<p>
@@ -88,7 +88,7 @@ session_start();
 							$eventsArray=selectMyEvents($bdd,$_SESSION['pseudo_utilisateur']);
 
 							if(!empty($eventsArray)) {
-		        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur)) {
+		        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu)) {
 
 		        					?> 
 		        					<div class="container" style="margin-bottom: 5rem;"> 
@@ -103,6 +103,8 @@ session_start();
 					                        Description : <?php echo $description; ?>
 					                        <br /> <br />
 					                        Date : <?php echo $date; ?>
+					                        <br /> <br />
+					                        Lieu : <?php echo $lieu; ?>
 					                        <br /> <br />
 					                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 					                        <br /> <br />

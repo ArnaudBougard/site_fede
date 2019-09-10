@@ -17,7 +17,7 @@
 				$count=0;
 				if(!empty($eventsCarArray)) {
 					
-    				foreach ($eventsCarArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur)) {
+    				foreach ($eventsCarArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu)) {
     					if ($count==0){
     						$count=1;
     						?> 
