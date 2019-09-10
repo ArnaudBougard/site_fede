@@ -87,5 +87,6 @@
 .content_chant{
 	display: none;
   	overflow: hidden;
-  	font-size: 1.66rem;
+  	font-size: 1.66rem; 
+  	padding:1rem;
 }
