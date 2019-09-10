@@ -70,11 +70,14 @@
 					</ul>
 				</li>-->
 				<li class="dropdown" >
-					<a <?php if($page == "activites/culture.php" or $page == "activites/festivites.php" or $page == "activites/sports.php"){echo 'class="active"';} ?> href="../activites/culture.php">Activités</a>
+					<a <?php if($page == "activites/game.php" or $page == "activites/voyageQ.php" or $page == "activites/ski.php" or $page == "activites/peyresq.php" or $page == "activites/isw.php"){echo 'class="active"';} ?> href="#">Événements majeurs</a>
 					<ul class="dropdown-content">
-						<li><a href="../activites/culture.php">Culture</a></li>
-						<li><a href="../activites/festivites.php">Festivités</a></li>
-						<li><a href="../activites/sports.php">Sport</a></li>
+
+						<li><a href="../activites/isw.php">International Student Week</a></li>
+						<li><a href="../activites/game.php">Le Game: LAN Party</a></li>
+						<li><a href="../activites/voyageQ.php">Voyage Q</a></li>
+						<li><a href="../activites/ski.php">Séjour au Ski</a></li>
+						<li><a href="../activites/peyresq.php">Peyresq</a></li>
 					</ul>
 				</li>
 				<!-- <li class="dropdown" href="#">

@@ -9,8 +9,6 @@ session_start();
 <html lang="fr">
 	<head>
 		<?php include("../head.php"); ?>
-		
-		<link href="folklore.css" rel="stylesheet">
 
 	</head>
 
