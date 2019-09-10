@@ -3,7 +3,7 @@
 <title>Site Fédé</title>
 
  <!--ICONE FAV, A AJOUTER-->
-<link rel="icon" type="image/png" href="../../assets/img/favicon/favico.PNG"  />
+<link rel="icon" type="image/png" href="../../assets/img/favicon/logofede.PNG"  />
 
 
 <!-- MAIN STYLE -->

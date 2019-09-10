@@ -37,7 +37,7 @@ session_start();
 					<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
 						<div class="form-group">
 							<label for="exampleInputFile">Selectionnez une image pour l'événement qui défilera sur la page d'accueil:</label>
-							<input type="file" id="exampleInputFile" name="files[]" >
+							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
 							<p class="help-block"><span class="label label-info">Note:</span> Please, select png jpg or jpeg files</p>
 
 							<p> 
@@ -47,7 +47,7 @@ session_start();
 
 							<p> 
 								<label>Description </label><br>
-								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='50' size='60'  required />
+								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='50' size='60'  />
 							</p>
 
 							<p>
@@ -56,8 +56,8 @@ session_start();
                         	</p>
                         	<p>
 								<label>Evénement ouvert à tous?</label> <br>
-								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' /><label for='1'> Oui </label>
-								<input type="radio" id='ouverture' name='ouverture' value='0' id='non' /><label for='0'> Non </label>
+								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required/><label for='1'> Oui </label>
+								<input type="radio" id='ouverture' name='ouverture' value='0' id='non' required/><label for='0'> Non </label>
 						
 								<span style="font-size: 1rem"> * oui par défaut</span>
 							</p>
@@ -104,6 +104,8 @@ session_start();
 					                        Description : <?php echo $description; ?>
 					                        <br /> <br />
 					                        Date : <?php echo $date; ?>
+					                        <br /> <br />
+					                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 					                        <br /> <br />
 											</p>
 										</div>

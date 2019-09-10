@@ -21,10 +21,56 @@ session_start();
 		<?php include("./chantDAO.php"); ?>
 
 		<div class="container">
-					<div class="title-area">
-						<h3 class="title2">Chants</h3> 
-				  		<span class="title-line2"></span> 
-					</div>
+			<div class="title-area">
+				<h3 class="title2">Chants</h3> 
+		  		<span class="title-line2"></span> 
+			</div>
+
+
+			<div class="page-header">
+				<h1>Upload chant</h1>
+				<h2 >Seuls les MDC peuvent upload un chant</h2>
+				
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
+						<div class="form-group">
+							<label for="exampleInputFile">Selectionnez une image pour l'événement qui défilera sur la page d'accueil:</label>
+							<input type="file" id="exampleInputFile" name="files[]" accept="audio/*">
+							<p class="help-block"><span class="label label-info">Note:</span> Please, select WAV, WMA, MP3, m4a or MP4 files</p>
+
+							<p> 
+								<label>Nom</label><br>
+								<input class='champ' type='text' id='nom' name='nom' placeholder='80 Chasseurs' maxlength='35' size='40'  required />
+							</p>
+
+							<p> 
+								<label>Paroles </label><br>
+								<input class='champ' type='text' id='parole' name='parole' placeholder='Obligatoire' maxlength='2000' size='auto' required/>
+							</p>
+
+							<p> 
+								<label>Description </label><br>
+								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='50' size='60' />
+							</p>
+
+
+							<p>
+								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='chantform' value="Submit" />
+							</p>
+						</div>	
+
+					</form>
+					<br/>
+					
+					
+				</div>
+			</div>
+
+			<?php include("chantCreate.php"); ?>
+
+
 			<ul style="list-style-type: none;">
 
 				<?php 

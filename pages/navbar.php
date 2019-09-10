@@ -19,7 +19,7 @@
 					</a>
 					<ul class="dropdown-content">
 						<li><a href="../federale/apropos.php">Qui sommes-nous ?</a></li>
-						<li><a href="../federale/carte.php">Carte Fédé</a></li>
+						<li><a href="../federale/adhesion.php">Adhésion</a></li>
 						<li><a href="../federale/statuts.php">Statuts</a></li>
 						<li><a href="../federale/pv.php">PV réunions</a></li>
 						<li><a href="../federale/commissions.php">Commissions</a></li>
