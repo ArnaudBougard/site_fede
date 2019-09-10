@@ -80,18 +80,19 @@ session_start();
 
 							if(!empty($path))
 							{
-							echo '<div class=" chantdiv col-xs-4">';	
-							echo '<li class="chant">';
-							echo $nom;  
+							?>
 							
+								<div class=" chantdiv col-xs-4 dropdown">
+									<li class="chant"><span data-toggle="dropdown" class="dropdown-toggle"> <?php echo $nom;  ?>  </span></li>
+									
+										<div class="content_chant dropdown-menu">
+										<audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> 
+										<?php echo $paroles; ?>
+										</div>
+										
+								</div>
 							
-							
-							echo '</li>';
-							echo '<div class="content_chant">';
-							?> <audio src="<?php echo $path ?>" controls>Veuillez mettre à jour votre navigateur !</audio> <?php
-							echo $paroles;
-							echo '</div>';
-							echo '</div>';
+							<?php
 							}
 						}
 					}
