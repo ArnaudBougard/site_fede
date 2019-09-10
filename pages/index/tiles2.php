@@ -1,4 +1,4 @@
-<div class="container" style="padding-top:2rem;">
+<div class="tilesContainer" >
   <section class="cms-boxes">
     <div class="container-fluid">
 
@@ -8,9 +8,9 @@
         
         if(!empty($FutureEvents)) {
           
-            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu)) {
+            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
                 ?> 
-                    <div class="col-md-4 cms-boxes-outer">
+                    <div class="col-md-3 cms-boxes-outer">
                       <div class="cms-boxes-items cms-features" style=" background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
 
                         <!-- <div class="boxes-align"> -->
@@ -24,6 +24,13 @@
 
                                 <p><?php echo$date; ?></p>
                                 <p><?php echo$lieu; ?></p>
+                                <?php 
+                                    if(!empty($link)){
+                                      ?>
+                                      <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
+                                      <br /> <br />
+                                      <?php
+                                  } ?>
                               
                             </div>
 
