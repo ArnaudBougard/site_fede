@@ -6,8 +6,7 @@
 
 
 .Tileh2{
-
-
+color:black;
 }
 
 
@@ -27,10 +26,9 @@ section.cms-boxes .cms-boxes-outer .cms-boxes-items {
   width: 100%;
 }
 section.cms-boxes .cms-boxes-outer .cms-boxes-items p {
-  color: #fff;
+  color: black;
 }
 section.cms-boxes .cms-features {
-  background-color: #1BB4B4;
 }
 section.cms-boxes .boxes-align {
   display: table-cell;
@@ -39,12 +37,16 @@ section.cms-boxes .boxes-align {
 section.cms-boxes .small-box, 
 section.cms-boxes .large-box {
   max-width: 350px;
-  margin: 0 auto;
+  margin: 5%;
+  padding:0;
   text-align: center;
+  width:90%; 
+  height:90% ; 
+  background:rgba(255,255,255,0.7);
 }
 section.cms-boxes .cms-boxes-items h2 {
   font-size: 35px;
-  color: #fff;
+  color: black;
   font-weight: 400;
   line-height: 37px;
   text-align: center;
@@ -52,11 +54,9 @@ section.cms-boxes .cms-boxes-items h2 {
   text-transform: uppercase;
 }
 section.cms-boxes .cms-security {
-  background-color: #1BB4B4;
 }
 section.cms-boxes .cms-security, 
 section.cms-boxes .cms-documentation {
-  background-color: #1BB4B4;
 }
 section.cms-boxes .cms-scalability {
   background: url(https://www.solodev.com/assets/tiles/scalability.jpg) 0 0 no-repeat;
@@ -67,9 +67,10 @@ section.cms-boxes .cms-built {
   background-size: cover;
 }
 section.cms-boxes .cms-security, section.cms-boxes .cms-documentation {
-  background-color: #1BB4B4;
+  background:rgba(255,255,255,0.7);
 }
-section.cms-boxes .cms-boxes-items:hover {
-  opacity: .2;
-  cursor: pointer;
+section .small-box:hover {
+
+   background:rgba(255,255,255,0);
+
 }
