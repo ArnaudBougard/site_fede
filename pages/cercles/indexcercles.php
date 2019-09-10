@@ -18,7 +18,7 @@ session_start();
 
 		<?php include("../navbar.php"); ?>
 		<div class="container" style="padding-top: 2rem;">
-			<div class="row">
+			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
 						<a href="magellan"><img class="imgTileIndex" src="../../assets/img/tuileMagellan" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMagellan'"></a>      				
@@ -42,7 +42,7 @@ session_start();
 	    			</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
 						<a href="peyresq"><img class="imgTileIndex " src="../../assets/img/tuilePeyresq" class="card-img-top" alt="Peyresq" onmouseover="src='../../assets/img/Peyresq'" onmouseout="src='../../assets/img/tuilePeyresq'"></a>      				
@@ -66,7 +66,7 @@ session_start();
 	    			</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
 						<a href="sdm"><img class="imgTileIndex " src="../../assets/img/tuileSDM" class="card-img-top" alt="SDM" onmouseover="src='../../assets/img/SonoDanceMusique'" onmouseout="src='../../assets/img/tuileSDM'"></a>      				
