@@ -70,8 +70,9 @@ session_start();
 
 			<?php include("chantCreate.php"); ?>
 
+			<input type="text" id="search" onkeyup="search_chant()" placeholder="Rechercher un chant...">
 
-			<ul style="list-style-type: none;">
+			<ul id="chants" style="list-style-type: none;">
 
 				<?php 
 					$chants = selectChants($bdd);
@@ -124,6 +125,22 @@ session_start();
 		    }
 		  });
 		}
+
+		function search_chant() {
+			    var input, filter, ul, li, a, i, txtValue;
+			    input = document.getElementById("search");
+			    filter = input.value.toUpperCase();
+			    ul = document.getElementById("chants");
+			    li = ul.getElementsByTagName("li");
+			    for (i = 0; i < li.length; i++) {
+			        txtValue = li[i].textContent || li[i].innerText;
+			        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			            li[i].style.display = "";
+			        } else {
+			            li[i].style.display = "none";
+			        }
+			    }
+			}
 </script>
 
 
