@@ -23,7 +23,7 @@ session_start();
 		<!-- HEADER -->
 
 		<div class="header-container">
-			<img src="../../assets/img/GD3.png" alt="img">
+			<img src="../../assets/img/GD4.bmp" alt="img">
 			
 			
 			<div class="header-text">

@@ -152,8 +152,8 @@
 .header-container>img{
 	width: 100%;
 	height: auto;
-	filter: brightness(65%);
-	-webkit-filter: brightness(65%);
+	filter: brightness(80%);
+	-webkit-filter: brightness(80%);
 	z-index: 1;
 
 }
@@ -175,6 +175,7 @@
 }
 
 .header-btn-area {
+
 	position: absolute;
 	z-index:2;
 	top: 5vw;
@@ -185,10 +186,10 @@
 	margin: 0% 1.5%;
 }
 .header-btn{
-	border: 2px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 2px;
 	color: #fff;	
-	font-size: 1.2vw;	
+	font-size: 1.6vw;	
 	font-weight: bold;
 	font-family: 'Calibri';
 	text-transform: uppercase;
