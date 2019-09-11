@@ -5,11 +5,11 @@
 <?php include("../popupconnexion.php"); ?>
 
 
-<div  class="networkBar <!--col-sm-10 --> hidden-xs" >
+<div  class="networkBar hidden-xs" >
   
-    <ul style="list-style-type: none; padding-top: 1.2rem;">
+    <ul class="networkul">
       
-        <li style="font-weight: bold; float: left; padding-right: 2rem; color:white;" >Polytech NETWORK  </li>
+        <li style="font-weight: bold; float: left;padding-right: 1.5vw; color:white; font-size: 1.1vw" >Polytech NETWORK  </li>
 
          <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
 
@@ -29,11 +29,11 @@
 
          if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
 
-             echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
+             echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
 
 
                             
-             ?><li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
+             ?><li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
 
 
 
@@ -58,7 +58,7 @@
             if($comitard!= NULL){ // On ferme l'accolade à la fin du code
 
             ?>
-             <li class="networkBarElement" style="float:right; padding-right: 2rem;padding-left: 2rem;"><a class="networkBarAnchor" href= "../index/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
+             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../index/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
 
               <?php
             }
@@ -66,9 +66,9 @@
                                  
         else{
 
-            echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
+            echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
 
-            echo '<li class="networkBarElement" style="float:right; padding-right: 2rem;"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
+            echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
           }
 
         ?>

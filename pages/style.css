@@ -7,13 +7,22 @@
 /*--------------------*/
 /* NETWORK */
 /*--------------------*/
+
+
+
 .networkBar{
-	height:4rem; 
+	height:2.5vw; 
+	padding-top: 0.5vw;
 	background-color: black;
-	padding:none;
-	margin:none;
 	font-family: Calibri;
 }
+
+
+.networkul {
+list-style-type: none; 
+padding-left: 3vw;
+}
+
 
 .networkBar a{	
 	color:white ;
@@ -28,11 +37,18 @@
 .networkBarElement{
 	float: left;
 	display: block;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	font-size: 1.3rem;
-
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	font-size: 1vw;
 }
+
+.rightElement{
+
+	float:right !important; 
+	padding-right: 1.5vw;
+	padding-left: 1.5vw;
+}
+
 
 .networkBarAnchor:hover,
 .networkBarAnchor:visited{
@@ -404,6 +420,31 @@ nav a.active{
 	width: 22vw;
 }
 
+.title-line3 {
+	background-color: black;
+	display: inline-block;
+	height: 0.176vw;
+	margin-bottom: 0.3vw;
+	width: 17.6vw;
+}
+
+.title-line4 {
+	background-color: black;
+	display: inline-block;
+	height: 0.176vw;
+	margin-bottom: 0.3vw;
+	width: 26vw;
+}
+
+.title-line2 {
+	background-color: black;
+	display: inline-block;
+	height: 0.176vw;
+	margin-bottom: 0.3vw;
+	width: 5.3vw;
+}
+
+
 .bg1{
 	background-color: #f8f5ef;
 	width: 100%;
@@ -446,6 +487,15 @@ nav a.active{
 	padding-bottom: 0.3vw;
 	text-align: left;
 	font-weight: bold;
+}
+
+
+.title2 {
+	color: black;
+	font-size: 3vw;
+	margin-bottom: 0;
+	padding-bottom: 0.3vw;
+	text-align: center;
 }
 
 /*--------------------*/

@@ -60,7 +60,6 @@ session_start();
             }
             else{
 
-                redirect("./profil.php");
             }
             
             ?>
