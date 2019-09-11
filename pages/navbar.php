@@ -7,12 +7,12 @@
 
 		<nav class="navbar navbar-default" id="nav">
 			<ul>
-				<li><a <?php if($page == "index/index.php"){echo 'class="active"';} ?> href="../index/index.php">Accueil</a></li>
+				<li><a <?php if($page == "index/index.php" or $page == "index/"){echo 'class="active"';} ?> href="../index/index.php">Accueil</a></li>
 				<li class="dropdown" href="">
 					<a 
 					<?php 
-					if($page == "federale/apropos.php" or $page == "federale/carte.php" or $page == "federale/statuts.php" 
-						or $page == "federale/pv.php" or $page == "federale/commissons.php"){
+					if($page == "federale/apropos.php" or $page == "federale/adhesion.php" or $page == "federale/statuts.php" 
+						or $page == "federale/pv.php" or $page == "federale/commissions.php"){
 							echo 'class="active"';} ?> 
 					href="../federale/apropos.php">
 						La Fédérale
@@ -41,7 +41,7 @@
 					</ul>
 				</li>
 				<li class="dropdown" href="#">
-					<a <?php if($page == "cercles/indexcercles.php"){echo 'class="active"';} ?> href="../cercles/indexcercles.php">Cercles</a>
+					<a <?php if($page == "cercles/indexcercles.php" or $page == "cercles/bar.php" or $page == "cercles/cap.php" or $page == "cercles/cpv.php" or $page == "cercles/culture.php" or $page == "cercles/magellan.php" or $page == "cercles/mm.php" or $page == "cercles/mutu.php" or $page == "cercles/peyresq.php" or $page == "cercles/radio.php" or $page == "cercles/scientifique.php" or $page == "cercles/sdm.php" or $page == "cercles/sports.php" ){echo 'class="active"';} ?> href="../cercles/indexcercles.php">Cercles</a>
 					<ul class="dropdown-content">
 						<li><a href="../cercles/bar.php">Le Bar Polytech</a></li>
 						<li><a href="../cercles/cap.php">La C.A.P.</a></li>
