@@ -21,72 +21,72 @@ session_start();
 			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="magellan.php"><img class="imgTileIndex" src="../../assets/img/tuileMagellan.PNG" class="card-img-top" alt="Magellan" onmouseover="src='../../assets/img/MonsMines.PNG'" onmouseout="src='../../assets/img/tuileMagellan.PNG'"></a>      				
+						<a href="magellan.php"><img class="imgTileIndex" src="../../assets/img/tuileMagellan.PNG" class="card-img-top" alt="Magellan"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="scientifique.php"><img class="imgTileIndex " src="../../assets/img/tuileScientifique.PNG" class="card-img-top" alt="Scientifique" onmouseover="src='../../assets/img/Scientifique.PNG'" onmouseout="src='../../assets/img/tuileScientifique.PNG'"></a>      				
+						<a href="scientifique.php"><img class="imgTileIndex " src="../../assets/img/tuileScientifique.PNG" class="card-img-top" alt="Scientifique"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="radio.php"><img class="imgTileIndex " src="../../assets/img/tuileRadio.PNG" class="card-img-top" alt="Radio" onmouseover="src='../../assets/img/logo_radio.jpg'" onmouseout="src='../../assets/img/tuileRadio.PNG'"></a>      				
+						<a href="radio.php"><img class="imgTileIndex" src="../../assets/img/tuileRadio.PNG" class="card-img-top" alt="Radio"></a>      				
 	    			</div>
 				</div>
 			
 			
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="bar.php"><img class="imgTileIndex "src="../../assets/img/tuileBar.PNG" class="card-img-top" alt="Bar" onmouseover="src='../../assets/img/Capture'" onmouseout="src='../../assets/img/tuileBar.PNG'"></a>      				
+						<a href="bar.php"><img class="imgTileIndex "src="../../assets/img/tuileBar.PNG" class="card-img-top" alt="Bar"></a>      				
 	    			</div>
 				</div>
 			</div>
 			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="peyresq.php"><img class="imgTileIndex " src="../../assets/img/tuilePeyresq.PNG" class="card-img-top" alt="Peyresq" onmouseover="src='../../assets/img/Peyresq'" onmouseout="src='../../assets/img/tuilePeyresq.PNG'"></a>      				
+						<a href="peyresq.php"><img class="imgTileIndex " src="../../assets/img/tuilePeyresq.PNG" class="card-img-top" alt="Peyresq"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="mutu.php"><img class="imgTileIndex " src="../../assets/img/tuileMutu.PNG" class="card-img-top" alt="Mutu" onmouseover="src='../../assets/img/Mutu'" onmouseout="src='../../assets/img/tuileMutu.PNG'"></a>      				
+						<a href="mutu.php"><img class="imgTileIndex " src="../../assets/img/tuileMutu.PNG" class="card-img-top" alt="Mutu"></a>      				
 	    			</div>
 				</div>
 			
 			
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="culture.php"><img class="imgTileIndex " src="../../assets/img/tuileQ.PNG" class="card-img-top" alt="Culturel" onmouseover="src='../../assets/img/Culturel'" onmouseout="src='../../assets/img/tuileQ.PNG'"></a>      				
+						<a href="culture.php"><img class="imgTileIndex " src="../../assets/img/tuileQ.PNG" class="card-img-top" alt="Culturel"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="mm.php"><img class="imgTileIndex " src="../../assets/img/tuileMM.PNG" class="card-img-top" alt="MonsMines" onmouseover="src='../../assets/img/MonsMines'" onmouseout="src='../../assets/img/tuileMM.PNG'"></a>      				
+						<a href="mm.php"><img class="imgTileIndex " src="../../assets/img/tuileMM.PNG" class="card-img-top" alt="MonsMines" ></a>      				
 	    			</div>
 				</div>
 			</div>
 			<div class="row cardRow">
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="sdm.php"><img class="imgTileIndex " src="../../assets/img/tuileSDM.PNG" class="card-img-top" alt="SDM" onmouseover="src='../../assets/img/SonoDanceMusique'" onmouseout="src='../../assets/img/tuileSDM.PNG'"></a>      				
+						<a href="sdm.php"><img class="imgTileIndex " src="../../assets/img/tuileSDM.PNG" class="card-img-top" alt="SDM"></a>      				
 	    			</div>
 				</div>
 			
 			
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="sports.php"><img class="imgTileIndex " src="../../assets/img/tuileSports.PNG" class="card-img-top" alt="Sports" onmouseover="src='../../assets/img/Sports'" onmouseout="src='../../assets/img/tuileSports.PNG'"></a>      				
+						<a href="sports.php"><img class="imgTileIndex " src="../../assets/img/tuileSports.PNG" class="card-img-top" alt="Sports"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="cpv.php"><img class="imgTileIndex " src="../../assets/img/tuileCPV.PNG" class="card-img-top" alt="CPV" onmouseover="src='../../assets/img/CPV'" onmouseout="src='../../assets/img/tuileCPV.PNG'"></a>      				
+						<a href="cpv.php"><img class="imgTileIndex " src="../../assets/img/tuileCPV.PNG" class="card-img-top" alt="CPV"></a>      				
 	    			</div>
 				</div>
 				<div class="col-md-3">
 	    			<div class="card">
-						<a href="cap.php"><img class="imgTileIndex " 	src="../../assets/img/tuileCAP.PNG" class="card-img-top" alt="CAP" onmouseover="src='../../assets/img/CAP'" onmouseout="src='../../assets/img/tuileCAP.PNG'"></a>      				
+						<a href="cap.php"><img class="imgTileIndex " 	src="../../assets/img/tuileCAP.PNG" class="card-img-top" alt="CAP"></a>      				
 	    			</div>
 				</div>
 			</div>
