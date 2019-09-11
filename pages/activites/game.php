@@ -48,7 +48,7 @@ session_start();
 					</p>
 				</div>
 
-				<div class="col-md-5"> 
+				<div class="col-md-5 gameDiv"> 
 					<img class="img2" src="../../assets/img/game2.jpg" alt="bleusaille">
 				</div>
 
@@ -68,7 +68,7 @@ session_start();
 
 				
 				<div class="col-md-12 gameDiv"> 
-					<p class="text">En quelques mots, le Game c’est : de l’amusement assuré et des souvenirs inoubliables! Intéressé? Visite <a href="http://www.the-games.be">The-Games.be</a>
+					<p class="text">En quelques mots, le Game c’est : de l’amusement assuré et des souvenirs inoubliables! Intéressé? Visite <a href="http://www.the-games.be" target="_blank">The-Games.be</a>
 					</p>
 				</div>
 

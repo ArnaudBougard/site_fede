@@ -241,6 +241,7 @@ padding-left: 3vw;
 	border: #f8f8f8;
     box-shadow: 0vw 0vw 1vw 0vw black;
     border-radius: 0vw;
+    height: 3.45vw;
 }
 
 nav ul{
@@ -272,13 +273,13 @@ nav a{
 	font-family: Calibri;
 	font-weight: bold;
 	padding: 1vw 1vw;
-	border-bottom: 3px solid transparent;
+	border-bottom: 0.2vw solid transparent;
 }
 
 nav a:hover{
 	color: #1BB4B4;
 	text-decoration: none;
-	border-bottom: 3px solid #1BB4B4;
+	border-bottom: 0.2vw solid #1BB4B4;
 
 	/*background-color: #1BB4B4;
 	color: white;
