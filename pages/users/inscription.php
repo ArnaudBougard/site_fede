@@ -69,15 +69,15 @@ session_start();
 									<input class='champ' type='date' id='date_naissance_utilisateur' name='date_naissance_utilisateur' maxlength='25' size='45' required />
 								</p> -->
 								<div class="input-group">
-									<input class='champ' type='text' id='pseudo_utilisateur' name='pseudo_utilisateur' placeholder='PSEUDO' maxlength='25' size='50'  required />
+									<input class='champ' type='text' id='pseudo_utilisateur' name='pseudo_utilisateur' autofocus placeholder='PSEUDO' maxlength='25' size='50'  required />
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='35' size='50' required />
+									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='50' size='55' required />
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='35' size='50' required />
+									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='50' size='55' required />
 								</div>
 
 								<!--<input class='champ' id='promotion_utilisateur' type='number' name='promotion_utilisateur' placeholder='Ex : 176' maxlength='25' size='45' />-->
@@ -153,28 +153,17 @@ session_start();
 
 														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur) VALUES(?,?,?)');
 														
-														$req->execute(array($mail,$pseudo,$mdp));
+														$pass=$req->execute(array($mail,$pseudo,$mdp));
+														$req->closeCursor(); // Termine le traitement de la requête
 
-														redirect("./connexion.php");
-														// header( "Refresh:1; ./connexion.php", true, 303);
+														if($pass){
 
-														/*
-														$req = $bdd -> prepare('INSERT INTO utilisateur(prenom_utilisateur, nom_utilisateur, sexe_utilisateur, date_naissance_utilisateur, email_utilisateur, pseudo_utilisateur, password_utilisateur, spam_utilisateur,promotion_utilisateur) VALUES(?,?,?,?,?,?,?,?,?)');
-														echo"ici";
-														$req->execute(array($prenom,$nom,$sexe,$date,$mail,$pseudo,$mdp,$spam,$promotion));
-														echo"ici";
-														*/
+															include("mailSender.php");
 
-														//On crée une variable de session 
-														//$_SESSION['comptecree'] = '<p class="reussi">Votre compte a bien été créé !</p>'; 
-														
-														//header('Location: ../index/index.php'); 
-
-														/*if (!empty($photo))
-														{
-															  $req=$bdd -> prepare("UPDATE utilisateur SET photo_utilisateur = ? WHERE pseudo_utilisateur = ? ");
-															  $req->execute(array($photo,$pseudo));
-														}*/
+															//redirect("./mailConfirm.php");
+														}
+														else{echo "la requête a échoué, contactez votre administrateur";}
+													
 													}
 													else
 													{
