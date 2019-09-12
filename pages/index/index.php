@@ -22,7 +22,7 @@ session_start();
 	</head>
 
 	<body id="body">
-		<?php include("./eventDAO.php"); ?>
+		<?php include("../events/eventDAO.php"); ?>
 		
 		<?php include("../network.php"); ?>
 
@@ -40,9 +40,9 @@ session_start();
 		-->
 
 
-	    <?php include("./futureEvents.php"); ?>
+	    <?php include("../events/futureEvents.php"); ?>
 
-	    <?php include("./pastEvents.php"); ?>
+	    <?php include("../events/pastEvents.php"); ?>
 
 		<?php include("../footer.php"); ?>
 

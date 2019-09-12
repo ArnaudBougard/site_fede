@@ -34,7 +34,7 @@
                   
                     <p class="tile-text"><?php echo$description; ?></p>
                     <p class="tile-text">
-                      <btn class="btn-form2"> <a href="./eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                      <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
                     </p>
                   </div>
 

@@ -82,7 +82,7 @@
                 array_push($errors, "File name already exists! Name:- ". $file_name);
                 $uploadThisFile = false;
             }
-            
+    
             if($uploadThisFile){
                 $filename=basename($file_name,$ext);
                 $newFileName=$filename.$ext;                

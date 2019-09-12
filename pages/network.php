@@ -58,7 +58,9 @@
             if($comitard!= NULL){ // On ferme l'accolade à la fin du code
 
             ?>
-             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../index/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
+             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
+
+             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Pending</a></li>
 
               <?php
             }
