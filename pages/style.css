@@ -163,7 +163,7 @@ padding-left: 3vw;
 
 .header-container>img{
 	width: 100%;
-	height: 12vw;
+	height: auto;
 	filter: brightness(80%);
 	-webkit-filter: brightness(80%);
 	z-index: 1;
@@ -190,7 +190,7 @@ padding-left: 3vw;
 
 	position: absolute;
 	z-index:2;
-	top: 5vw;
+	top: 12.6vw;
 	width: 100%;
 	text-align: center;
 }
@@ -201,7 +201,7 @@ padding-left: 3vw;
 	border: 3px solid #fff;
 	border-radius: 2px;
 	color: #fff;	
-	font-size: 1.6vw;	
+	font-size: 1.176vw;	
 	font-weight: bold;
 	font-family: 'Calibri';
 	text-transform: uppercase;
@@ -576,6 +576,7 @@ nav a.active{
 	color: #f8f5ef;
 	box-shadow: 0vw 0vw 1vw 0vw black;
 	font-family: Calibri;
+	margin-top: 2rem;
 }
 
 .footerli {
