@@ -11,6 +11,7 @@
 
 
 .networkBar{
+	
 	height:2.5vw; 
 	padding-top: 0.5vw;
 	background-color: black;
@@ -19,8 +20,10 @@
 
 
 .networkul {
-list-style-type: none; 
-padding-left: 3vw;
+	
+	margin: 0 ;
+	list-style-type: none; 
+	padding-left: 3vw;
 }
 
 
