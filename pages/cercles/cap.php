@@ -12,7 +12,7 @@ session_start();
 		<?php include("../head.php"); ?>
 	</head>
 
-	<body>
+	<body class="bg1">
 		
 		<?php include("../network.php"); ?>
 
@@ -22,7 +22,7 @@ session_start();
 		<?php include ("../../model/cercleDAO.php"); ?>
 
 
-		<div class="content">
+		<div class="row">
 			<div class="tab col-md-2">
 			  <button class="tablinks" onclick="openCity(event, 'bar')">Bar Polytech</button>
 			  <button class="tablinks" onclick="openCity(event, 'cap')"  id="defaultOpen">  C.A.P.</button>

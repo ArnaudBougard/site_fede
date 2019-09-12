@@ -559,15 +559,31 @@ nav a.active{
 /*--------------------*/
 
 
-.bg-black{
-	background-color: #000000 
-}
-.txt-white{
-	color:#fff;
+
+.contact-title{
+	font-size: 3vw;
 }
 
-.mt{
-	margin-top: 50px
+.container-fluid{
+	text-align: center;
+}
+
+.btn-contact{
+	background-color: #1BB4B4;
+	font-family: Calibri;
+	padding: 1rem 2rem;
+	margin-top: 0.5rem;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-left: 17.6vw;
+	color: white;
+	
+}
+
+.btn-contact:hover{
+	background-color: #039C9C;
 }
 	 
 
