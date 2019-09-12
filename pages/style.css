@@ -28,7 +28,7 @@
 
 
 .networkBar a{	
-	color:#f8f5ef ;
+	color:#f8f5ef ; /*  beige */
 	text-decoration: none;
 }
 
@@ -38,7 +38,7 @@
 
 .networkBarElement a:hover{	
 	text-decoration: none;
-	color: #1BB4B4;
+	color: #1BB4B4; /*  turquoise */
 }
 
 .networkBarElement{

@@ -21,6 +21,14 @@
 
 }
 
+p {
+text-align: center;
+font-family: Calibri;
+font-size: 30px;
+color:black;
+
+}
+
 
 /*--------------------*/
 /* Metro4: On a pris juste le code css concernant les tiles;  */ 
@@ -61,8 +69,8 @@
   height: 150px;
 }
 .tile-large {
-  width: 310px;
-  height: 310px;
+  width: 305px;
+  height: 305px;
 }
 .tile-app {
   width: 44px;
@@ -142,7 +150,8 @@
 .tile-wide:hover,
 .tile-large:hover,
 .tile-app:hover {
-  outline: rgba(29, 29, 29, 0.1) solid 4px;
+  /*outline: rgba(29, 29, 29, 0.1) solid 4px;*/
+   outline: #1BB4B4 solid 6px;" 
 }
 .tile-small .icon {
   max-width: 50%;

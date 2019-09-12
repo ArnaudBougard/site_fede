@@ -92,5 +92,30 @@ function selectAllEvents($bdd) {
 			$req->closeCursor(); // Termine le traitement de la requête
 }
 
+function selectEventById($bdd,$id) {
+
+	////////////////////////////////////////////////stock data into array
+			// run query
+
+			$req = $bdd -> prepare("SELECT * FROM evenement where id_evenement=?");
+	        $req->execute(array($id));
+
+			// set array
+			$array = array();
+
+			// look through query
+			while($row = $req->fetch()){
+
+			  // add each row returned into an array
+			  $array[] = $row;
+			 
+
+			}
+			return $array;
+			$req->closeCursor(); // Termine le traitement de la requête
+}
+
+
+
 
 ?>

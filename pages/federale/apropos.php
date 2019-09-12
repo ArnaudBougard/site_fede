@@ -22,31 +22,31 @@ session_start();
 
 		<div class="container"> 
 
-		   		<?php
+	   		<?php
 
-		   		include ("../../model/cercleDAO.php");
-		   		$cercle=selectByName($bdd,'Fédérale');
+	   		include ("../../model/cercleDAO.php");
+	   		$cercle=selectByName($bdd,'Fédérale');
 
-				?>
+			?>
 
-				<div class="margintop marginbottom" >
+			<div class="margintop marginbottom" >
 
-							
+						
 
-					<p>
-			   			<?php echo $cercle['description_cercle']; ?> <br>
-			   			<br> 
+				<p>
+		   			<?php echo $cercle['description_cercle']; ?> <br>
+		   			<br> 
 
-			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-			   		</div>
+		   		<div align="center">
+		   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
+		   		</div>
 
-			  		</p>
+		  		</p>
 
-				</div>
+			</div>
 
-				
-		    </div>
+			
+	    </div>
 
 
 		<?php include("../footer.php"); ?>
