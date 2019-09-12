@@ -14,8 +14,6 @@ session_start();
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 		 
-    	
-
     	<?php include("../head.php"); ?>
     	<link href="./index.css" rel="stylesheet">	
 

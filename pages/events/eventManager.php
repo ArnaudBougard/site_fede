@@ -15,24 +15,10 @@ session_start();
 	<body id="body">
 		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<!-- HEADER -->
-
 		<?php include("../navbar.php"); ?>
 
-		<?php include ("../../controller/warningPopup.php");?>
+		<div class="container" style="margin-top: 3vw;">
 
-
-
-
-		<div class="container">
-
-			<div class="page-header">
-				<h1>Créer un événement</h1>
-				<h2 >Tout membre d'un comité peut créer un evenement mais celui-ci doit être validé par la com web (mail de confirmation, lien vers page de confirmation etc))</h2>
-				<h2 >attention img obligatoire de 300x200 minimmum et de qualité correcte. Pas de montage/collage dégueulasse sinon ce sera refusé </h2>
-			</div>
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
@@ -69,7 +55,7 @@ session_start();
 	                            <input class='champ' type='text' id='link' name='link' placeholder='copier/coller' maxlength='40' size='45'/> * facultatif
                         	</p>
 							<p>
-								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Submit" />
+								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Créer un événement" />
 							</p>
 						</div>	
 
