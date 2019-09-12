@@ -1,5 +1,5 @@
 
-<div class="container footer page-header" style="margin-bottom: 2rem;">
+<div class="container footer page-header" style="margin-bottom: 2rem;background-color: red;">
 
 	<div class="col-sm-4 col-xs-12">
   		

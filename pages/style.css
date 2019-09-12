@@ -383,8 +383,7 @@ nav a.active{
 /* Style the tab content */
 .tabcontent {
   float: left;
-  padding: 1vw 1vw;
-  width: 85%;
+  padding-top: 1vw;
   border-left: none;
   margin-bottom: 2vw;
 }

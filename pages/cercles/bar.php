@@ -12,7 +12,7 @@ session_start();
 		<?php include("../head.php"); ?>
 	</head>
 
-	<body>
+	<body class="bg1">
 		
 		<?php include("../network.php"); ?>
 
@@ -21,8 +21,7 @@ session_start();
 		<?php include("../navbar.php"); ?>
 		<?php include ("../../model/cercleDAO.php"); ?>
 
-
-		<div class="content">
+		<div class="row">
 			<div class="tab col-md-2">
 			  <button class="tablinks" onclick="openCity(event, 'bar')" id="defaultOpen">Bar Polytech</button>
 			  <button class="tablinks" onclick="openCity(event, 'cap')">  C.A.P.</button>
@@ -37,8 +36,10 @@ session_start();
 			  <button class="tablinks" onclick="openCity(event, 'sdm')">  Sono Danse Musique</button>
 			  <button class="tablinks" onclick="openCity(event, 'sports')">  Cercle des Sports</button>
 			</div>
+
 			<?php $name='Bar Polytech'; ?>
 			<div id="bar" class="tabcontent col-md-10"> <?php include ("./contenuCercle.php"); ?></div>
+
 
 			<?php $name='CAP'; ?>
 			<div id="cap" class="tabcontent col-md-10 "><?php include ("./contenuCercle.php"); ?></div>
@@ -72,30 +73,29 @@ session_start();
 
 			<?php $name='cercle des sports'; ?>
 			<div id="sports" class="tabcontent col-md-10"><?php include ("./contenuCercle.php"); ?></div>
-
 		</div>
 
 		<script>
-		function openCity(evt, cityName) {
-		  var i, tabcontent, tablinks;
-		  tabcontent = document.getElementsByClassName("tabcontent");
-		  for (i = 0; i < tabcontent.length; i++) {
-		    tabcontent[i].style.display = "none";
-		  }
-		  tablinks = document.getElementsByClassName("tablinks");
-		  for (i = 0; i < tablinks.length; i++) {
-		    tablinks[i].className = tablinks[i].className.replace(" active", "");
-		  }
-		  document.getElementById(cityName).style.display = "block";
-		  evt.currentTarget.className += " active";
-		}
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+			    tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+			    tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
 
-		// Get the element with id="defaultOpen" and click on it
-		document.getElementById("defaultOpen").click();
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
 		</script>
 
 
-				<?php include("../footer.php"); ?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 </html>
