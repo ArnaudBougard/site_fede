@@ -144,6 +144,7 @@ include("../../controller/getConnexionData.php");
 <html>
 <head>
     <?php include("../head.php"); ?>
+    <link href="./users.css" rel="stylesheet">
 </head>
 
 <body class="bg1">
@@ -179,32 +180,30 @@ include("../../controller/getConnexionData.php");
                         </p>
                         <p>
                             
-                            <input class='champ' type='date' id='new_date_utilisateur' name='new_date_utilisateur' maxlength='25' size='45' value='<?php echo $user['date_naissance_utilisateur'];?>' />
+                            <input class='champ' type='text' id='new_pseudo_utilisateur' name='new_pseudo_utilisateur' placeholder='PSEUDO' maxlength='25' size='45' value='<?php echo $user['pseudo_utilisateur'];?>' />
+                        </p>
+                        <div class="row group-champ">
+                                <input class='champ' type='date' id='new_date_utilisateur' name='new_date_utilisateur' maxlength='25' size='45' value='<?php echo $user['date_naissance_utilisateur'];?>' />
+                                <input class='champ champ2' id='new_promo_utilisateur' type='number' name='new_promo_utilisateur' placeholder='PROMOTION' maxlength='25' size='45' value='<?php echo $user['promotion_utilisateur'];?>' />
+                        </div>
+                        <p>
+                            
+                            <input class='champ' type='email' id='new_email1' name='new_email1' placeholder='E-MAIL' maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
                         </p>
                         <p>
                             
-                            <input class='champ' type='email' id='new_email1' name='new_email1' placeholder='Adresse mail' maxlength='35' size='37' value='<?php echo $user['email_utilisateur'];?>' />
+                            <input class='champ' type='email' id='new_email2' name='new_email2' placeholder="CONFIRMATION E-MAIL" maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
                         </p>
+                        
+                        
                         <p>
                             
-                            <input class='champ' type='email' id='new_email2' name='new_email2' placeholder="Confirmation de l'adresse mail" maxlength='35' size='37' value='<?php echo $user['email_utilisateur'];?>' />
-                        </p>
-                        <p>
-                            
-                            <input class='champ' id='new_promo_utilisateur' type='number' name='new_promo_utilisateur' placeholder='Ex : 176' maxlength='25' size='45' value='<?php echo $user['promotion_utilisateur'];?>' />
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='text' id='new_pseudo_utilisateur' name='new_pseudo_utilisateur' placeholder='Pseudo' maxlength='25' size='45' value='<?php echo $user['pseudo_utilisateur'];?>' />
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='password' id='new_mdp1' name='new_mdp1' placeholder='Mot de passe' minlength="6" maxlength='25' size='30' />
+                            <input class='champ' type='password' id='new_mdp1' name='new_mdp1' placeholder='MOT DE PASSE' minlength="6" maxlength='25' size='45' />
                             <!-- On ne met pas de value pour le mot de passe sinon ça affiche le mot de passe haché malgré le type password. -->
                         </p>
                         <p>
                             
-                            <input class='champ' type='password' id='new_mdp2' name='new_mdp2' placeholder='Confirmation du mot de passe' minlength='6' maxlength='25' size='30'/>
+                            <input class='champ' type='password' id='new_mdp2' name='new_mdp2' placeholder='CONFIRMATION MOT DE PASSE' minlength='6' maxlength='25' size='45'/>
                         </p>
                         <!-- <p>
                             <label>S'abonner à la newsletter ? </label>
