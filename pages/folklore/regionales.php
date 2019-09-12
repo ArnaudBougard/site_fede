@@ -21,14 +21,14 @@ session_start();
 		<?php include("../navbar.php"); ?>
 
 		<div class="row">
-			<div class="tab col-md-2">
+			<div class="tab">
 			  <button class="tablinks" onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</button>
 			  <button class="tablinks" onclick="openCity(event, 'Frontalière')">Frontalière</button>
 			  <button class="tablinks" onclick="openCity(event, 'Centrale')">Centrale</button>
 			  <button class="tablinks" onclick="openCity(event, 'Boraine')">Boraine</button>
 			</div>
 
-			<div id="Carolo" class="tabcontent col-md-10">
+			<div id="Carolo" class="tabcontent">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Carolo</h3> 

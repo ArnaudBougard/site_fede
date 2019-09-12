@@ -19,7 +19,7 @@ session_start();
 
 		<?php include("../navbar.php"); ?>
 
-		<div class="content">
+		<div class="row">
 			<div class="tab">
 			  <button class="tablinks" onclick="openCity(event, 'Web')" id="defaultOpen">Web</button>
 			  <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button>
@@ -76,7 +76,7 @@ session_start();
 					</p>		
 				</div>
 			</div>
-		</div>
+		
 
 			<div id="Historique" class="tabcontent">
 				<div class="container">
@@ -204,6 +204,7 @@ session_start();
 				</div>
 			</div>
 
+		</div>
 		</div>
 
 		<script>
