@@ -1,7 +1,4 @@
-
 <?php
-
-
 
 function selectChants($bdd) {
 
@@ -24,7 +21,4 @@ function selectChants($bdd) {
 				return $array;
 				$req->closeCursor(); // Termine le traitement de la requête
 	}
-
-
-
 ?>

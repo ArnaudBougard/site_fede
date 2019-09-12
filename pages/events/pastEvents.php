@@ -1,5 +1,5 @@
 <div class="title-div">
-  <h2>Événements à venir</h2></div>
+  <h2>Événements passés</h2></div>
 <div class="tiles-grid">
    
   

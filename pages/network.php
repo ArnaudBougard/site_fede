@@ -4,8 +4,7 @@
 <!-- javascript du popup + le popup -->
 <?php include("../popupconnexion.php"); ?>
 
-<?php include("../users/userDAO.php"); ?>
-
+<?php include("../../model/userDAO.php"); ?>
 
 <div  class="networkBar hidden-xs" >
   
