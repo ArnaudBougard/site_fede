@@ -4,6 +4,8 @@
 <!-- javascript du popup + le popup -->
 <?php include("../popupconnexion.php"); ?>
 
+<?php include("../users/userDAO.php"); ?>
+
 
 <div  class="networkBar hidden-xs" >
   
@@ -11,7 +13,7 @@
       
         <li style="font-weight: bold; float: left;padding-right: 1.5vw; color:#f8f5ef; font-size: 1.1vw" >Polytech NETWORK  </li>
 
-         <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
+        <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
 
         <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="http://www.the-games.be/"> The-Games</a></li>
 
@@ -35,34 +37,23 @@
                             
              ?><li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
 
-
-
-
             <?php 
 
-            function selectstatut($bdd,$mail_user) {
-
-              ////////////////////////////////////////////////stock data into array
-              // run query
-              $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=?");
-              $query->execute(array($mail_user));
-              $statut = $query->rowCount();
-              
-              return $statut;
-
-              $query->closeCursor(); // Termine le traitement de la requête
-            }
-
-            $comitard=selectstatut($bdd,$_SESSION['email_utilisateur']);
+            $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
 
             if($comitard!= NULL){ // On ferme l'accolade à la fin du code
 
-            ?>
-             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
-
-             <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Pending</a></li>
+              ?>
+              <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
 
               <?php
+              $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
+              if($admin!= NULL){
+                ?>
+                <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Pending</a></li>
+            
+              <?php
+              }
             }
         }
                                  
