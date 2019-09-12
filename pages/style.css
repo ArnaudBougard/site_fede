@@ -25,7 +25,7 @@ padding-left: 3vw;
 
 
 .networkBar a{	
-	color:white ;
+	color:#f8f5ef ;
 	text-decoration: none;
 }
 
@@ -110,13 +110,13 @@ padding-left: 3vw;
 	font-weight: bold;
 	font-family: Calibri;
 	border-bottom: 2px solid #1BB4B4;
-	color: white;
+	color: #f8f5ef;
 }
 
 .popupconnexionchamp:focus{
 	text-decoration: none;
 	border: 2px solid #1BB4B4;
-	color: white;
+	color: #f8f5ef;
 }
 
 #lieninscri{
@@ -253,7 +253,7 @@ nav ul{
 
 nav ul li{
 	float: left;
-	width: 16.6%; /*Diviser 100 par nombre d'onglets visibles"*/
+	width: 16.6666666666666%; /*Diviser 100 par nombre d'onglets visibles"*/
 	text-align: center;
 	position: relative;
 }
@@ -614,7 +614,7 @@ nav a.active{
 
 .link-foot{
 	font-size: 2.5rem;
-	color: #1BB4B4;
+	color: #f8f5ef;
 }
 
 .link-foot:hover{

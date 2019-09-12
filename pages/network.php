@@ -9,7 +9,7 @@
   
     <ul class="networkul">
       
-        <li style="font-weight: bold; float: left;padding-right: 1.5vw; color:white; font-size: 1.1vw" >Polytech NETWORK  </li>
+        <li style="font-weight: bold; float: left;padding-right: 1.5vw; color:#f8f5ef; font-size: 1.1vw" >Polytech NETWORK  </li>
 
          <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
 
