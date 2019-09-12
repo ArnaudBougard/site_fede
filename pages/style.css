@@ -571,6 +571,7 @@ nav a.active{
 .footer{
 	background-color: black;
 	width: 100%;
+	padding: 1rem;
 	padding-bottom: 0.5rem;
 	padding-top: 1rem;
 	color: #f8f5ef;

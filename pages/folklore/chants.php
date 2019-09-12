@@ -73,6 +73,7 @@ session_start();
 			<div class="container">
 					<input type="text" id="search" onkeyup="search_chant()" placeholder="Rechercher un chant...">
 
+					<div class="row">
 					<ul id="chants" style="list-style-type: none;">
 
 						<?php 
@@ -106,10 +107,8 @@ session_start();
 							}
 						?>
 					</ul>
+				</div>
 			</div>
-
-
-		<?php include("../footer.php"); ?>
 
 		<script>
 			var c = document.getElementsByClassName("chant");
@@ -143,8 +142,7 @@ session_start();
 		   	 	}
 			}
 		</script>
-
-
+		<?php include("../footer.php"); ?>
 	</body>
 </html>
 
