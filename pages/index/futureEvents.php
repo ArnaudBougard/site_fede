@@ -1,5 +1,5 @@
 <div class="title-div">
-  <h2>Evénements à venir</h2></div>
+  <h2></h2></div>
 <div class="tiles-grid">
    
   
@@ -22,19 +22,19 @@
                 <div class="slide-back" style="background-color: #f8f5ef;">  
                 <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
                   <div >
-                    <p><?php echo $date; ?></p>
-                    <p><?php echo $lieu; ?></p>
+                    <p class="tile-text"><?php echo $date; ?></p>
+                    <p class="tile-text"><?php echo $lieu; ?></p>
                     <?php 
                         if(!empty($link)){
                           ?>
-                          <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
+                          <p class="tile-text"><a href="<?php echo $link; ?>" > Event Facebook </a></p>
                           <br /> <br />
                           <?php
                       } ?>
                   
-                    <p><?php echo$description; ?></p>
-                    <p>
-                    <btn class="btn-form2"> <a href="./eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                    <p class="tile-text"><?php echo$description; ?></p>
+                    <p class="tile-text">
+                      <btn class="btn-form2"> <a href="./eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
                     </p>
                   </div>
 

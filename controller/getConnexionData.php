@@ -34,7 +34,9 @@ if(isset($_POST['formco'])){
         }
         else
         {
-            $erreur = '<p class="erreur">Identifiant ou mot de passe incorrect !</p>';
+            $erreur = '<p class="erreur">Identifiant ou mot de passe incorrect!</p>';
+            $message = "Identifiant ou mot de passe incorrect!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
     }
     else 

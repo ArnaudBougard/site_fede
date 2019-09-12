@@ -91,7 +91,11 @@
 
 .popupconnexionformulaire p {
     text-align: center;
+    color:white;
 }
+
+
+
 
 
 .popupconnexionh2
@@ -205,14 +209,14 @@
 	margin: 0% 1.5%;
 }
 .header-btn{
-	border: 3px solid #fff;
+	border: 0.2vw solid #fff;
 	border-radius: 2px;
 	color: #fff;	
 	font-size: 1.176vw;	
 	font-weight: bold;
 	font-family: 'Calibri';
 	text-transform: uppercase;
-	padding: 1.4% 1.76%;
+	padding: 1.76vw 1.76vw;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-ms-transition: all 0.5s;

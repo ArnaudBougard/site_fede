@@ -48,7 +48,7 @@ session_start();
 
             <p>
                 <br />
-                <input type='submit' class = 'btn' name='formco' value="Se connecter" />
+                <input type='submit' class = 'btn-form2' name='formco' value="Se connecter" /> <btn class="btn-form2"> <a href="inscription.php " class="gras btn btn-xl"> S'inscrire</a> </btn>
                 <br />
             </p>   
 
@@ -66,7 +66,7 @@ session_start();
 
             <br />
             <br />
-            <a href='inscription.php' id="lieninscri">Pas encore inscrit ? N'attendez plus !</a>
+            
 
         </form>
 

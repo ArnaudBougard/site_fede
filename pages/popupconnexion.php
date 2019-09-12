@@ -27,8 +27,9 @@
             <?php
 
             if(isset($erreur))
-            {
-                echo $erreur;
+            {   
+                ?> <p> <?php echo $erreur;?></p>
+                <?php
             }
             else{
 
@@ -36,10 +37,9 @@
                 //redirect(en absolu car le popup est sur des types de pages differents);
             }
             ?>
-            <br />
-            <br />
+            
             <center>
-                <a href='../users/inscription.php' id="lieninscri">Pas encore inscrit ? N'attendez plus !</a>
+                <a href='../users/inscription.php' id="lieninscri">Pas encore inscrit?</a>
             </center>            
         </form>
     </div>

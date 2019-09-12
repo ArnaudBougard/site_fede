@@ -1,55 +1,53 @@
-<div class="tilesContainer" >
-  <section class="cms-boxes">
-    <div class="container-fluid">
-      <h2>Evénements passés</h2>
-      <?php 
+<div class="title-div">
+  <h2>Événements à venir</h2></div>
+<div class="tiles-grid">
+   
+  
+  <?php 
 
-        $FutureEvents=selectSomePastEvents($bdd);
-        
-        if(!empty($FutureEvents)) {
-          
-            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
-                ?> 
-                    <div class="col-md-3 cms-boxes-outer">
-                      <div class="cms-boxes-items cms-features" style=" background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
+    $FutureEvents=selectSomePastEvents($bdd);
+    
+    if(!empty($FutureEvents)) {
+      
+        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+            ?> 
 
-                        <!-- <div class="boxes-align"> -->
-                          <div class="small-box" >
+              <div data-role="tile" data-size="large"  data-effect="hover-slide-up" >
+               
+                 <div class="title-div"><h2 class="Tileh2"> <?php echo $nom; ?></h2></div>
+                <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
 
-                            <div class="col-sm-12">
-                              <h2 class="Tileh2"><?php echo$nom; ?></h2>
-                            </div>
+                </div>
 
-                            <div class="col-sm-12" >
+                <div class="slide-back" style="background-color: #f8f5ef;">  
+                <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
+                  <div >
+                    <p class="tile-text"><?php echo $date; ?></p>
+                    <p class="tile-text"><?php echo $lieu; ?></p>
+                    <?php 
+                        if(!empty($link)){
+                          ?>
+                          <p class="tile-text"><a href="<?php echo $link; ?>" > Event Facebook </a></p>
+                          <br /> <br />
+                          <?php
+                      } ?>
+                  
+                    <p class="tile-text"><?php echo$description; ?></p>
+                    <p class="tile-text">
+                      <btn class="btn-form2"> <a href="./eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                    </p>
+                  </div>
 
-                                <p><?php echo$date; ?></p>
-                                <p><?php echo$lieu; ?></p>
-                                <?php 
-                                    if(!empty($link)){
-                                      ?>
-                                      <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
-                                      <br /> <br />
-                                      <?php
-                                  } ?>
-                              
-                            </div>
+                </div>
+              
+              </div>  
+                        
+          <?php  
+      }
 
-                            <div class="col-sm-12">
-                              <p><?php echo$description; ?></p>
-                            </div>
+    }
+    else{echo "pas d'events à afficher";}
 
-                          </div>
-                        <!-- </div> -->
-                      </div>
-                    </div>
-              <?php  
-          }
+  ?>
 
-        }
-        else{echo "pas d'events à afficher";}
-
-      ?>
-      <a href="eventArchive.php">Voir tous les événements</a>
-    </div>
-  </section>
 </div>

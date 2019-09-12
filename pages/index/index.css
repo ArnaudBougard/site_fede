@@ -1,8 +1,8 @@
 .title-div{
-  padding-top: 1vw;
-  padding-left: 10vw;
   
   margin-top: 1.76vw;
+  padding-left: 10vw;
+  
   margin-bottom: 1vw;
 
 }
@@ -10,23 +10,21 @@
 .Tileh2{
   color:black;
   text-align: center;
+  margin-top:0 !important;
 }
 
 .tiles-grid {
-  padding-top: 1vw;
   padding-left: 8vw;
   padding-right: 8vw;
-  margin-top: 1.76vw;
   margin-bottom: 4vw;
 
 }
 
-p {
+.tile-text{
 text-align: center;
 font-family: Calibri;
 font-size: 30px;
 color:black;
-
 }
 
 
