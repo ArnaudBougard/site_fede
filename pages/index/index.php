@@ -36,7 +36,9 @@ session_start();
 	    </div>
 		-->
 		
-	    <?php include("./tiles2.php"); ?>
+	    <?php include("./futureEvents.php"); ?>
+
+	    <?php include("./pastEvents.php"); ?>
 
 		<?php include("../footer.php"); ?>
 	</body>
