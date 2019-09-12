@@ -52,10 +52,9 @@ function is_MDC($bdd,$mail_user) {
 }
 
 function is_FEDE($bdd,$mail_user) {
-
   ////////////////////////////////////////////////stock data into array
   // run query
-  $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=? and tmp_cercle='FEDE'");
+  $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=? and tmp_cercle='Fédérale'");
   $query->execute(array($mail_user));
   $exist = $query->rowCount();
   
