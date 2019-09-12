@@ -5,6 +5,7 @@
 
 .formulaire{
 	margin-top: 1.76rem;
+	margin-bottom: 4rem;
 }
 
 .inscription{
@@ -41,6 +42,14 @@
 
 .btn-form:hover{
 	background-color: #039C9C;
+}
+
+.group-champ{
+	margin: 0 0 10px;
+}
+
+.champ2{
+	margin-left: 14px;
 }
 
 

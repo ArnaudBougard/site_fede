@@ -20,15 +20,15 @@ session_start();
 
 		<?php include("../navbar.php"); ?>
 
-		<div class="content">
-			<div class="tab">
+		<div class="row">
+			<div class="tab col-md-2">
 			  <button class="tablinks" onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</button>
 			  <button class="tablinks" onclick="openCity(event, 'Frontalière')">Frontalière</button>
 			  <button class="tablinks" onclick="openCity(event, 'Centrale')">Centrale</button>
 			  <button class="tablinks" onclick="openCity(event, 'Boraine')">Boraine</button>
 			</div>
 
-			<div id="Carolo" class="tabcontent">
+			<div id="Carolo" class="tabcontent col-md-10">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Carolo</h3> 
@@ -76,9 +76,9 @@ session_start();
 					</p>		
 				</div>
 			</div>
-		</div>
+		
 
-			<div id="Frontalière" class="tabcontent">
+			<div id="Frontalière" class="tabcontent col-md-10">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Frontalière</h3> 
@@ -111,7 +111,7 @@ session_start();
 				</div>
 			</div>
 
-			<div id="Centrale" class="tabcontent">
+			<div id="Centrale" class="tabcontent col-md-10">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Centrale</h3> 
@@ -141,7 +141,7 @@ session_start();
 				</div>
 			</div>
 
-			<div id="Boraine" class="tabcontent">
+			<div id="Boraine" class="tabcontent col-md-10">
 				<div class="container">
 					<div class="title-area">
 						<h3 class="title2">La Boraine</h3> 
@@ -155,6 +155,7 @@ session_start();
 				</div>
 			</div>
 
+		</div>
 		</div>
 
 		<script>

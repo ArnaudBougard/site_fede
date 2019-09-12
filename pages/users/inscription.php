@@ -73,11 +73,11 @@ session_start();
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='50' size='55' required />
+									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='50' size='50' required />
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='50' size='55' required />
+									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='50' size='50' required />
 								</div>
 
 								<!--<input class='champ' id='promotion_utilisateur' type='number' name='promotion_utilisateur' placeholder='Ex : 176' maxlength='25' size='45' />-->
