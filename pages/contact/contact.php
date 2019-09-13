@@ -17,8 +17,6 @@ session_start();
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		
-
 		<?php include("../navbar.php"); ?>
 
 
@@ -37,51 +35,98 @@ session_start();
             <h2 class="contact-title">Contact</h2>
           <!--Section description-->
           </div>
-                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
+          <form method="post" name="sentMessage" id="contactForm" novalidate="novalidate" >
+
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Qui souhaitez-vous contacter?</label>
+                <div class="form-group">
+                  <select class="form-control" id="contact" name="contact">
+                    <option>Commission Web (Admins du site fédé)</option>
+                    <option>Fédérale</option>
+                    <option>Cercle des Fêtes</option>
+                    <option>Bar</option>
+                    <option>CAP</option>
+                    <option>Cercle Culturel</option>
+                    <option>Magellan</option>
+                    <option>Mutuelle d'édition</option>
+                    <option>Mons-Mines</option>
+                    <option>Peyresq</option>
+                    <option>CPV</option>
+                    <option>Radio Extra</option>
+                    <option>Scientifique</option>
+                    <option>Cercle Sono Danse Musique</option>
+                    <option>Cercle des Sports</option>
+                    <option>Carolo</option>
+                    <option>Frontalière</option>
+                    <option>Centrale</option>
+                    <option>Boraine</option>
+                  </select>
+                </div>
+                <p class="help-block text-danger"></p>
+              
+              </div>
+            </div>   
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Nom</label>
-                <input class="form-control "  id="name" type="text" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
+                <?php
+                if(isset($_SESSION['id_utilisateur']))
+                  {?>
+                  <input class="form-control "  id="name" name="name" type="text" placeholder="" <?php echo 'value="'.$_SESSION['prenom_utilisateur'].$_SESSION['nom_utilisateur'].'"';?> required="required" data-validation-required-message="Veuillez completer le champ.">
+                  <?php 
+                } 
+                else {
+                  ?> 
+                   <input class="form-control "  id="name" name="name" type="text" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
+                   <?php
+                } ?>
                 <p class="help-block text-danger"></p>
+              
               </div>
             </div>           
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>E-mail</label>
-                <input class="form-control" id="email" type="email" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
+
+                <?php
+                if(isset($_SESSION['id_utilisateur']))
+                  {?>
+                  <input class="form-control" id="email" name="email" type="email" placeholder="" <?php echo 'value="'.$_SESSION['email_utilisateur'].'"';?> required="required" data-validation-required-message="Veuillez completer le champ.">
+                  <?php 
+                } 
+                else {
+                  ?> 
+                  <input class="form-control" id="email" name="email" type="email" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
+                   <?php
+                } ?>
+
+                
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ."></textarea>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn-contact" id="sendMessageButton">Envoyer</button>
+              <input type="submit" class="btn-contact" id="sendMessageButton" name="sendmail" value="Envoyer"></input>
             </div>
           </form>
         </div>
       </div>
     </div>
   </section>
-<!--Section: Contact v.2-->
 
-
-
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-
-
-
-
-		<?php include("../footer.php"); ?>
+  <?php include("./sendMail.php"); ?>
+	<?php include("../footer.php"); ?>
 
 	</body>
 </html>

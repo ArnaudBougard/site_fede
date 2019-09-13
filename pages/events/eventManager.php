@@ -66,6 +66,7 @@ session_start();
 				</div>
 			</div>
 			
+			<?php include("eventCreate.php"); ?>
 		
 			<div class="panel panel-default">
 				<div class="panel-body">
@@ -128,10 +129,6 @@ session_start();
 					?>					
 				</div>
 			</div>
-		
-
-			<?php include("eventCreate.php"); ?>
-
 		
 			<div class="panel panel-default">
 				<div class="panel-body">
