@@ -4,7 +4,7 @@ session_start();
 
 <?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
-<?php include("./eventDAO.php"); ?>
+<?php include("../../model/eventDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,36 +23,40 @@ session_start();
 				<div class="panel-body">
 					<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
 						<div class="form-group">
-							<label for="exampleInputFile">Selectionnez une image pour l'événement qui défilera sur la page d'accueil:</label>
-							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
+
+							<label for="exampleInputFile">Couverture de l'événement *</label>
+							<input type="file" id="exampleInputFile" name="files" accept="image/*">
 							<p class="help-block"><span class="label label-info">Note:</span> Please, select png jpg or jpeg files</p>
 
 							<p> 
-								<label>Nom</label><br>
-								<input class='champ2' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
+								<label>Nom *</label><br> 
+								<input class='champ' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
 							</p>
 
 							<p> 
 								<label>Description </label><br>
-								<input class='champ2' type='text' id='description' name='description' placeholder='Si nécessaire' maxlength='80' size='82'  />
+								<input class='champ' type='text' id='description' name='description' placeholder='Si nécessaire' maxlength='80' size='82'  />
 							</p>
 
 							<p>
-	                            <label>Date </label> <br>
-	                            <input class='champ2' type='date' id='date' name='date' maxlength='25' size='45' required />
+	                            <label>Date *</label> <br>
+	                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
                         	</p>
                         	<p>
-	                            <label>Lieu </label> <br>
-	                            <input class='champ2' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
+	                            <label>Lieu *</label> <br>
+	                            <input class='champ' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
                         	</p>
                         	<p>
-								<label>Evénement ouvert à tous?</label> <br>
+								<label>Evénement ouvert à tous? *</label> <br>
 								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required/><label for='1'> Oui </label>
 								<input type="radio" id='ouverture' name='ouverture' value='0' id='non' required/><label for='0'> Non </label>
 							</p>
 							<p>
 	                            <label>Lien événement facebook </label> <br>
-	                            <input class='champ2' type='text' id='link' name='link' placeholder='Copier/coller' maxlength='40' size='45'/> * facultatif
+	                            <input class='champ' type='text' id='link' name='link' placeholder='copier/coller' maxlength='40' size='45'/>
+                        	</p>
+                        	<span>* obligatoire </span><br>
+	                            
                         	</p>
                         	<br/>
 							<p>
