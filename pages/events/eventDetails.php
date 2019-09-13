@@ -4,7 +4,7 @@ session_start();
 
 <?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
-<?php include("./eventDAO.php"); ?>
+<?php include("../../model/eventDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">

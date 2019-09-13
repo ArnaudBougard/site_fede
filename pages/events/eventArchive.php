@@ -20,7 +20,7 @@ session_start();
 	</head>
 
 	<body id="body">
-		<?php include("./eventDAO.php"); ?>
+		<?php include("../../model/eventDAO.php"); ?>
 		
 		<?php include("../network.php"); ?>
 

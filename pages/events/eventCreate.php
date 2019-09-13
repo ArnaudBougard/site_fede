@@ -14,7 +14,7 @@
         $minheight = 200;
 
 
-        if($_FILES['files']['error']==0) // s'il y a une erreur à l'upload: 
+        if($_FILES['files']['tmp_name'][0]!='') // s'il y a pas d'erreur à l'upload: 
         {
             
             foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name)

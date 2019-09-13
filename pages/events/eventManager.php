@@ -25,7 +25,7 @@ session_start();
 						<div class="form-group">
 
 							<label for="exampleInputFile">Couverture de l'événement *</label>
-							<input type="file" id="exampleInputFile" name="files" accept="image/*">
+							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
 							<p class="help-block"><span class="label label-info">Note:</span> Please, select png jpg or jpeg files</p>
 
 							<p> 
@@ -46,6 +46,7 @@ session_start();
 	                            <label>Lieu *</label> <br>
 	                            <input class='champ' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
                         	</p>
+                        	
                         	<p>
 								<label>Evénement ouvert à tous? *</label> <br>
 								<input type="radio" id='ouverture' name='ouverture' value='1' id='oui' required/><label for='1'> Oui </label>
@@ -55,8 +56,7 @@ session_start();
 	                            <label>Lien événement facebook </label> <br>
 	                            <input class='champ' type='text' id='link' name='link' placeholder='copier/coller' maxlength='40' size='45'/>
                         	</p>
-                        	<span>* obligatoire </span><br>
-	                            
+                        	<span>* obligatoire </span>
                         	</p>
                         	<br/>
 							<p>
