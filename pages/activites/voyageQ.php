@@ -26,52 +26,43 @@ session_start();
 			<div class="container" id="content"> 
 
 				<div class="title-area">
-					<h2 class="title">Le Game</h2> 
+					<h2 class="title">Voyage Q</h2> 
 			  		<span class="title-line2"></span> 
 				</div>
 
 				<div class="col-md-12 gameDiv"> 
 					<p class="text">
-						Le Game est un évènement organisé par le cercle Magellan dont la première édition a eu lieu il y a un peu plus de 20 ans. C’est une LAN-Party, donc un rassemblement de joueurs de jeux vidéo pour se mesurer les uns contre les autres en solo ou en équipe dans une ambiance festive et conviviale, moyennant la modique somme d’environ 20€.
+						Chaque année, le cercle Culturel organise un city-trip de deux à trois jours se déroulant lors d’un weekend du mois de novembre. Ces dernières années, les étudiants sont partis à Amsterdam, Prague, Salzbourg et Hambourg. Ce voyage offre la possibilité aux étudiants de découvrir des villes Européennes à un prix démocratique. Les trajets se font en car et les destinations sont donc à distance raisonnable de Mons. 
 					</p>
 					
-					<img class="img1 " src="../../assets/img/game1.jpg" alt="bleusaille">
+					<img class="img1 " src="../../assets/img/Q1.jpg" alt="bleusaille">
 				</div>
 
 				<div class="col-md-7 "> 
 					<p class="text">
-						Cet évènement se tient généralement en fin février et début mars, pendant un week-end (vendredi fin d’après-midi au dimanche fin de matinée), il est mis en place par une équipe d’environ 40 etudiants. Ces personnes constituent ainsi le staff durant ce week-end festif. 
+						Sur place, le comité Culturel prévoit des activités telles que des visites de Palais, de musées ou de quartiers emblématiques de la ville. Du temps libre est également prévu pendant ce weekend pour pouvoir découvrir la ville par soi-même. 
 
 					<p class="text">
-						Le Game peut rassembler jusqu’à 200 joueurs et plus de 500 visiteurs (hors staff) dans le Stiévenart pour jouer à des jeux tels que LoL, Trackmania, HearthStone, CS:GO, Trackmania, … Les meilleurs joueurs de chaque tournoi sont récompensés de leur participation et de leurs compétences, réflexes ou … chance avec des lots et cashprize. 
+						Durant le voyage, la culture n’est pas la seule chose mise à l’honneur : nous partageons tous ensemble un repas typique du pays offert par le comité organisateur. 
 					</p>
 					</p>
 				</div>
 
 				<div class="col-md-5 gameDiv"> 
-					<img class="img2" src="../../assets/img/game2.jpg" alt="bleusaille">
+					<img class="img2" src="../../assets/img/Q2.jpg" alt="bleusaille">
 				</div>
 
 				<div class="col-md-12 gameDiv"> 
-					<img class="img2" src="../../assets/img/game3.jpg" alt="bleusaille">
+					<img class="img2" src="../../assets/img/Q3.jpg" alt="bleusaille">
 				</div>
 
 				<div class="col-md-12 "> 
 					<p class="text">
-						Dans tous les cas, que l’on soit joueur ou simple visiteur, le coin console permet de se détendre dans une ambiance conviviale et le bar est ouvert 24h/24 afin de rassasier les affamés et les assoiffés. 
+						Le Voyage Culturel est donc une bonne façon pour un étudiant de découvrir une ville, une culture, tout en partageant ce moment avec d’autres étudiants. Si vous avez des questions, n’hésitez pas à contacter le cercle Culturel qui sera ravi de vous répondre. 
 					</p>
-				</div>
-
-				<div class="col-md-12 gameDiv"> 
-					<img class="img2" src="../../assets/img/game4.jpg" alt="bleusaille">
 				</div>
 
 				
-				<div class="col-md-12 gameDiv"> 
-					<p class="text">En quelques mots, le Game c’est : de l’amusement assuré et des souvenirs inoubliables! Intéressé? Visite <a href="http://www.the-games.be" target="_blank">The-Games.be</a>
-					</p>
-				</div>
-
 			</div>
 
 		</div>
