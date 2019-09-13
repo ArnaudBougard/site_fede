@@ -29,21 +29,21 @@ session_start();
 
 							<p> 
 								<label>Nom</label><br>
-								<input class='champ' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
+								<input class='champ2' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
 							</p>
 
 							<p> 
 								<label>Description </label><br>
-								<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='80' size='82'  />
+								<input class='champ2' type='text' id='description' name='description' placeholder='Si nécessaire' maxlength='80' size='82'  />
 							</p>
 
 							<p>
 	                            <label>Date </label> <br>
-	                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
+	                            <input class='champ2' type='date' id='date' name='date' maxlength='25' size='45' required />
                         	</p>
                         	<p>
 	                            <label>Lieu </label> <br>
-	                            <input class='champ' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
+	                            <input class='champ2' type='text' id='lieu' name='lieu' placeholder='Mons, Boulevard Dolez 69, Bar Polytech'  maxlength='40' size='45' required />
                         	</p>
                         	<p>
 								<label>Evénement ouvert à tous?</label> <br>
@@ -52,8 +52,9 @@ session_start();
 							</p>
 							<p>
 	                            <label>Lien événement facebook </label> <br>
-	                            <input class='champ' type='text' id='link' name='link' placeholder='copier/coller' maxlength='40' size='45'/> * facultatif
+	                            <input class='champ2' type='text' id='link' name='link' placeholder='Copier/coller' maxlength='40' size='45'/> * facultatif
                         	</p>
+                        	<br/>
 							<p>
 								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Créer un événement" />
 							</p>

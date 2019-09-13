@@ -558,6 +558,20 @@ nav a.active{
 	border: 2px solid #1BB4B4;
 }
 
+.champ2{
+	background-color: white;
+	color: black;
+	border: none;
+	font-weight: bold;
+	font-family: Calibri;
+	border-bottom: 2px solid #ccc;
+}
+
+.champ2:focus{
+	text-decoration: none;
+	border: 2px solid #1BB4B4;
+}
+
 /*--------------------*/
 /* CONTACT */
 /*--------------------*/
