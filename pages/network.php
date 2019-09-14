@@ -28,14 +28,12 @@
        
         <?php 
 
+
          if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
 
              echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
-
-
-                            
+          
              ?><li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
-
             <?php 
 
             $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
@@ -45,11 +43,15 @@
               ?>
               <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
 
+              <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../news/newsmanager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes News</a></li>
+
               <?php
               $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
               if($admin!= NULL){
                 ?>
-                <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Pending</a></li>
+                <li class="networkBarElement  rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Events Validation</a></li>
+
+                <li class="networkBarElement  rightElement" ><a class="networkBarAnchor" href= "../news/newsValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> News Validation</a></li>
             
               <?php
               }

@@ -37,7 +37,6 @@ session_start();
 						<?php 
 
 							$eventsArray=selectAllPendingEvents($bdd);
-
 							if(!empty($eventsArray)) {
 		        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
 
@@ -76,7 +75,7 @@ session_start();
 
 										<div class="col-sm-4" >
 											<div class="row" style="margin-bottom: 5rem;margin-top: 2rem;">
-												<btn class="btn-form2" > <a href="./eventValidate.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Valider l'event</a> </btn>
+												<btn class="btn-form2" > <a href="./eventValidate.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Valider</a> </btn>
 											</div>
 											<div class="row">
 												<btn class="btn-form2" > <a href="./eventDeleteModeration.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
@@ -91,9 +90,9 @@ session_start();
 							else
 							{
 						?>
-							<p>Vous n'avez créé aucun événement (la création doit être validée par un admin)</p>
+							<p>Il n'y a pas d'événements validés</p>
 						<?php
-							}
+							}	
 						?>					
 					</div>
 				</div>

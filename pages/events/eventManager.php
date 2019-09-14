@@ -25,7 +25,7 @@ session_start();
 						<div class="form-group">
 
 							<label for="exampleInputFile">Couverture de l'événement *</label>
-							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
+							<input type="file" id="exampleInputFile" name="files[]" accept="image/*" required>
 							<p class="help-block"><span class="label label-info">Note:</span> Please, select png jpg or jpeg files</p>
 
 							<p> 
@@ -84,7 +84,7 @@ session_start();
 						$eventsArray=selectMyPendingEvents($bdd,$_SESSION['pseudo_utilisateur']);
 
 						if(!empty($eventsArray)) {
-	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
 
 	        					?> 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
@@ -110,6 +110,8 @@ session_start();
 						                        <?php
 						                    } ?>
 				                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
+				                        <br /> <br />
+				                         Publié le: <?php echo $dateCreation; ?>
 				                        <br /> <br />
 										</p>
 									</div>
@@ -146,7 +148,7 @@ session_start();
 						$eventsArray=selectMyEvents($bdd,$_SESSION['pseudo_utilisateur']);
 
 						if(!empty($eventsArray)) {
-	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
 
 	        					?> 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
@@ -172,6 +174,8 @@ session_start();
 						                        <?php
 						                    } ?>
 				                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
+				                        <br /> <br />
+				                         Publié le: <?php echo $dateCreation; ?>
 				                        <br /> <br />
 										</p>
 									</div>

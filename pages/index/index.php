@@ -20,7 +20,7 @@ session_start();
 	</head>
 
 	<body id="body">
-		<?php include("../events/eventDAO.php"); ?>
+		<?php include("../../model/eventDAO.php"); ?>
 		
 		<?php include("../network.php"); ?>
 
@@ -34,10 +34,44 @@ session_start();
 	    </div>
 		-->
 
+		<div class="row indexContent">
+			<div class="row indexRow">
+				<div class="col-sm-9 tileRow"> 
+					<div class="title-div">
+					  <h2 class="h2index">Bientôt dans vos librairies</h2>
+					</div>
+					<?php include("../events/futureEvents.php"); ?>
+				</div>
+			
+				<div class="col-sm-3"> 
+					<div class="title-div">
+					  <h2 class="h2index">Action de la semaine</h2>
+					</div>
+					<?php include("../events/futureEvents.php"); ?> 
+				</div>
+			</div>
 
-	    <?php include("../events/futureEvents.php"); ?>
+			<div class="row indexRow">
+				<div class="col-sm-9">
+					<?php include("../events/futureEvents.php"); ?>  
+				</div>
 
-	    <?php include("../events/pastEvents.php"); ?>
+				<div class="col-sm-3"> 
+
+				</div>
+			</div>
+
+			<div class="row indexRow">	
+				<div class="col-sm-9"> 
+
+				</div>
+				<div class="col-sm-9"> 
+
+				</div>
+		    </div>
+		</div>
+
+	   
 
 		<?php include("../footer.php"); ?>
 
