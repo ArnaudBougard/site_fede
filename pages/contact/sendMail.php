@@ -1,26 +1,22 @@
 <?php
-  
-if(isset($_POST["sendmail"])){
-	// Check for empty fields
-	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['email']) || empty($_POST['message'])) {
-	  http_response_code(500);
-	  exit();
-	}
+require_once '/home/magellan/vendor/autoload.php';
 
-	$name = strip_tags(htmlspecialchars($_POST['name']));
-	
-	$email = strip_tags(htmlspecialchars($_POST['email']));
-	$contact = strip_tags(htmlspecialchars($_POST['contact']));
-	$message = strip_tags(htmlspecialchars($_POST['message']));
+// Create the Transport
+$transport = (new Swift_SmtpTransport('sin-v3.mailjet.com', 25))
+  ->setUsername('13f037cdb8146b88ab8c8e84673bef65')
+  ->setPassword('69f8900c115413b465058b1db2a6b3aa')
+;
 
-	// Create the email and send the message
-	$to = "mathdel@outlook.com"; // Add your email address inbetween the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
-	$subject = "Formulaire de contact :  $name";
-	$body = "Vous avez reçu une nouvelle demande depuis votre le site Fede.  \n\n"."Voici plus de détails :\n\nName: $name \n \n  Email :  $email\n\nMessage:\n$message";
-	$header = "De : noreply@sitefede.com \n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-	$header .= "Reply-To: $email";	
+// Create the Mailer using your created Transport
+$mailer = new Swift_Mailer($transport);
 
-	if(!mail($to, $subject, $body, $header))
-	  http_response_code(500);
-}
+// Create a message
+$message = (new Swift_Message('Wonderful Subject'))
+  ->setFrom(['161841@student.umons.ac.be' => 'Master of the Universe'])
+  ->setTo(['simon.nicolas.laurent@live.be', 'simon.nicolas.laurent@gmail.com' => 'A name'])
+  ->setBody('Here is the message itself')
+  ;
+
+// Send the message
+$result = $mailer->send($message);
 ?>
