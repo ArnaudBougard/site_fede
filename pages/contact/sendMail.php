@@ -11,7 +11,7 @@
 	$contact = strip_tags(htmlspecialchars($_POST['contact']));
 	$message = strip_tags(htmlspecialchars($_POST['message']));
 
-require_once '/home/magellan/vendor/autoload.php';
+require_once '../../../vendor/autoload.php';
 
 // Create the Transport
 $transport = (new Swift_SmtpTransport('in-v3.mailjet.com', 25))
@@ -39,4 +39,3 @@ $result = $mailer->send($message);
 ?>
 
 
-<!--SELECT tmp_mail FROM historique where tmp_annee = '?'  and tmp_nom = ?-->
