@@ -362,6 +362,7 @@ nav a.active{
 .tab {
   float: left;
   background-color: #f8f5ef;
+  margin-bottom: 0;
 }
 
 /* Style the buttons inside the tab */
@@ -369,14 +370,15 @@ nav a.active{
   display: block;
   background-color: #f8f5ef;
   color: black;
-  padding: 22px 16px;
+  padding: 6% 4%;
   width: 100%;
+  height: 12%;
   border: none;
   outline: none;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 1.1vw;
   padding-left: 3vw;
   padding-right: 3vw;
 }
@@ -396,7 +398,7 @@ nav a.active{
   float: left;
   padding-top: 1vw;
   border-left: none;
-  margin-bottom: 2vw;
+  padding-bottom: 2vw;
 }
 
 .tablinks{

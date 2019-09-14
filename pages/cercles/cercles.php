@@ -24,17 +24,17 @@ session_start();
 		<div class="row">
 			<div class="tab col-md-2">
 			  <button class="tablinks" onclick="openCity(event,'bar')" id="openBar">Bar Polytech</button>
-			  <button class="tablinks" onclick="openCity(event,'cap')" id="openCap">  C.A.P.</button>
-			  <button class="tablinks" onclick="openCity(event,'cpv')" id="openCpv">  C.P.V.</button>
-			  <button class="tablinks" onclick="openCity(event,'culture')" id="openCulture">  Cercle Culturel</button>
-			  <button class="tablinks" onclick="openCity(event,'magellan')" id="openMagellan">  Magellan</button>
-			  <button class="tablinks" onclick="openCity(event,'mutu')" id="openMutu">  Mons-Mines</button>
-			  <button class="tablinks" onclick="openCity(event,'mm')" id="openMm">  Mutuelle d'édition</button>
-			  <button class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">  Peyresq</button>
-			  <button class="tablinks" onclick="openCity(event,'radio')" id="openRadio">  Radio Extra</button>
-			  <button class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">  Cercle Scientifique</button>
-			  <button class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">  Sono Danse Musique</button>
-			  <button class="tablinks" onclick="openCity(event,'sports')" id="openSports">  Cercle des Sports</button>
+			  <button class="tablinks" onclick="openCity(event,'cap')" id="openCap">C.A.P.</button>
+			  <button class="tablinks" onclick="openCity(event,'cpv')" id="openCpv">C.P.V.</button>
+			  <button class="tablinks" onclick="openCity(event,'culture')" id="openCulture">Cercle Culturel</button>
+			  <button class="tablinks" onclick="openCity(event,'magellan')" id="openMagellan">Magellan</button>
+			  <button class="tablinks" onclick="openCity(event,'mutu')" id="openMutu">Mons-Mines</button>
+			  <button class="tablinks" onclick="openCity(event,'mm')" id="openMm">Mutuelle d'édition</button>
+			  <button class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">Peyresq</button>
+			  <button class="tablinks" onclick="openCity(event,'radio')" id="openRadio">Radio Extra</button>
+			  <button class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">Cercle Scientifique</button>
+			  <button class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono Danse Musique</button>
+			  <button class="tablinks" onclick="openCity(event,'sports')" id="openSports">Cercle des Sports</button>
 			</div>
 
 			<?php $name='Bar Polytech'; ?>
