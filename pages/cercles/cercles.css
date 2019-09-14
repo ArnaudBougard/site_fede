@@ -12,3 +12,19 @@
 	padding-left:4vw;
 	padding-right:4vw;
 }
+
+/*--------------------*/
+/* BAR */
+/*--------------------*/
+
+.img_bar1{
+	float: left;
+	width: 17.6%;
+	margin-right: 0.5vw;
+	height: auto;
+}
+
+.img_bar2{
+	width: 100%;
+	padding-bottom: 1vw;
+}

@@ -10,6 +10,7 @@ session_start();
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="cercles.css" rel="stylesheet">
 	</head>
 
 	<body class="bg1">

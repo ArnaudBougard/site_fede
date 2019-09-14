@@ -5,21 +5,16 @@
 
 		?>
 
-		<div class=" col-md-9" >
+		<div class=" col-md-12" >
 
 			<p>
 				<?php echo $cercle['description_cercle']; ?> <br>
-				<br> 
-
-				<div align="center">
-					<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-				</div>
-
+				<br/> 
 			</p>
 
 		</div>
 
-		<div class = "col-md-3" >
+		<div>
 
 			<ul >	Comité actuel
 
