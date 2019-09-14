@@ -41,20 +41,20 @@
 					</ul>
 				</li>
 				<li class="dropdown" href="#">
-					<a <?php if($page == "cercles/indexcercles.php" or $page == "cercles/bar.php" or $page == "cercles/cap.php" or $page == "cercles/cpv.php" or $page == "cercles/culture.php" or $page == "cercles/magellan.php" or $page == "cercles/mm.php" or $page == "cercles/mutu.php" or $page == "cercles/peyresq.php" or $page == "cercles/radio.php" or $page == "cercles/scientifique.php" or $page == "cercles/sdm.php" or $page == "cercles/sports.php" ){echo 'class="active"';} ?> href="../cercles/indexcercles.php">Cercles</a>
+					<a <?php if($page == "cercles/indexcercles.php" or $page == "cercles/cercles.php?id=openBar" or $page == "cercles/cercles.php?id=openCap" or $page == "cercles/cercles.php?id=openCpv" or $page == "cercles/cercles.php?id=openCulture" or $page == "cercles/cercles.php?id=openMagellan" or $page == "cercles/cercles.php?id=openMm" or $page == "cercles/cercles.php?id=openMutu" or $page == "cercles/cercles.php?id=openPeyresq" or $page == "cercles/cercles.php?id=openRadio" or $page == "cercles/cercles.php?id=openScientifique" or $page == "cercles/cercles.php?id=openSdm" or $page == "cercles/cercles.php?id=openSports" ){echo 'class="active"';} ?> href="../cercles/indexcercles.php">Cercles</a>
 					<ul class="dropdown-content">
-						<li><a href="../cercles/bar.php">Le Bar Polytech</a></li>
-						<li><a href="../cercles/cap.php">La C.A.P.</a></li>
-						<li><a href="../cercles/cpv.php">Le C.P.V.</a></li>
-						<li><a href="../cercles/culture.php">Le Cercle Culturel</a></li>
-						<li><a href="../cercles/magellan.php">Le Magellan</a></li>
-						<li><a href="../cercles/mm.php">Le Mons-Mines</a></li>
-						<li><a href="../cercles/mutu.php">La Mutu</a></li>
-						<li><a href="../cercles/peyresq.php">Peyresq</a></li>
-						<li><a href="../cercles/radio.php">Radio Extra</a></li>
-						<li><a href="../cercles/scientifique.php">Le Scientifique</a></li>
-						<li><a href="../cercles/sdm.php">Sono-Danse-Musique</a></li>
-						<li><a href="../cercles/sports.php">Les Sports</a></li>
+						<li><a href="../cercles/cercles.php?id=openBar">Le Bar Polytech</a></li>
+						<li><a href="../cercles/cercles.php?id=openCap">La C.A.P.</a></li>
+						<li><a href="../cercles/cercles.php?id=openCpv">Le C.P.V.</a></li>
+						<li><a href="../cercles/cercles.php?id=openCulture">Le Cercle Culturel</a></li>
+						<li><a href="../cercles/cercles.php?id=openMagellan">Le Magellan</a></li>
+						<li><a href="../cercles/cercles.php?id=openMm">Le Mons-Mines</a></li>
+						<li><a href="../cercles/cercles.php?id=openMutu">La Mutu</a></li>
+						<li><a href="../cercles/cercles.php?id=openPeyresq">Peyresq</a></li>
+						<li><a href="../cercles/cercles.php?id=openRadio">Radio Extra</a></li>
+						<li><a href="../cercles/cercles.php?id=openScientifique">Le Scientifique</a></li>
+						<li><a href="../cercles/cercles.php?id=openSdm">Sono-Danse-Musique</a></li>
+						<li><a href="../cercles/cercles.php?id=openSports">Les Sports</a></li>
 					</ul>
 				</li>
 				<!--<li class="dropdown" href="#">
