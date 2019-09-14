@@ -1,5 +1,4 @@
-<div class="title-div">
-  <h2>Événements passés</h2></div>
+
 <div class="tiles-grid">
    
   
@@ -9,7 +8,7 @@
     
     if(!empty($FutureEvents)) {
       
-        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
             ?> 
 
               <div data-role="tile" data-size="large"  data-effect="hover-slide-up" >
@@ -33,6 +32,7 @@
                       } ?>
                   
                     <p class="tile-text"><?php echo$description; ?></p>
+                    <p class="tile-text">Publié le: <?php echo $dateCreation; ?></p>
                     <p class="tile-text">
                       <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
                     </p>

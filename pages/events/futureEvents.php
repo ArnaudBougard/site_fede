@@ -1,20 +1,16 @@
-<div class="title-div">
-  <h2>Événements à venir</h2></div>
-<div class="tiles-grid">
-   
-  
+
   <?php 
 
     $FutureEvents=selectFutureEvents($bdd);
     
     if(!empty($FutureEvents)) {
       
-        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
             ?> 
 
-              <div data-role="tile" data-size="large"  data-effect="hover-slide-up" >
+              <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
                
-                 <div class="title-div"><h2 class="Tileh2"> <?php echo $nom; ?></h2></div>
+                <div class="title-div"><h2 class="Tileh2"> <?php echo $nom; ?></h2></div>
                 <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
 
                 </div>
@@ -33,6 +29,7 @@
                       } ?>
                   
                     <p class="tile-text"><?php echo$description; ?></p>
+                    <p class="tile-text">Publié le: <?php echo $dateCreation; ?></p>
                     <p class="tile-text">
                       <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
                     </p>
@@ -49,5 +46,3 @@
     else{echo "pas d'events à afficher";}
 
   ?>
-
-</div>
