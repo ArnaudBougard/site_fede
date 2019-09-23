@@ -57,7 +57,7 @@
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
   ->setUsername('commission.web.polytechmons@gmail.com')
-  ->setPassword('Magellanthenavigateur')
+  ->setPassword('pass')
 ;
 
 // Create the Mailer using your created Transport
