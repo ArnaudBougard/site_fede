@@ -1,3 +1,7 @@
+<?php include("../../model/connexionDAO")?>
+<?php include("../../model/userDAO")?>
+
+
 <?php
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
@@ -11,12 +15,49 @@
 	$contact = strip_tags(htmlspecialchars($_POST['contact']));
 	$message = strip_tags(htmlspecialchars($_POST['message']));
 
-require_once '../../../vendor/autoload.php';
+
+
+	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+
+
+
+	
+
+	//$req=$bdd->prepare('SELECT * FROM `historique` ') //on selectionne le cercle pour last promo search secrétaire
+	//$req1=$bdd->query('SELECT tmp_email FROM `historique` ORDER BY `tmp_annee` DESC WHERE tmp_cercle=$contact AND tmp_poste='Président' LIMIT 1');
+	$req_destination=$bdd->query('SELECT tmp_email FROM `historique` ORDER BY `tmp_annee` DESC WHERE tmp_cercle=$contact LIMIT 1');
+	$destinataires= array($req_destination);
+	echo ($req_destination);
+	$destinataires_lenth= count($destinataires);
+	
+
+	$transport=(new Swift_Mailer('server.smtp.com',25)) //test 465
+		->setUsername('postmaster')
+		->setPassword('passAdéterminer')
+	;
+
+	for ($i=0; $i <$destinataires_lenth ; $i++)
+	 { 
+		$destinataire=$destinataire[i];
+		$mailer= new Swift_Mailer($transport);
+		$message_swift=(new Swift_Message)
+			->setFrom(['postmaster@fede.fpms.ac.be'=>'PostMaster: Fédération des étudiants polytech Mons'])
+			->setTo($destinataire)
+			->setBody($message)
+			->addPart('Email envoyé par: ',$email)
+		;
+		$result=$mailer->send($message_swift);
+
+	};
+
+
+
+/*
 
 // Create the Transport
-$transport = (new Swift_SmtpTransport('in-v3.mailjet.com', 25))
-  ->setUsername('13f037cdb8146b88ab8c8e84673bef65')
-  ->setPassword('69f8900c115413b465058b1db2a6b3aa')
+$transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
+  ->setUsername('commission.web.polytechmons@gmail.com')
+  ->setPassword('Magellanthenavigateur')
 ;
 
 // Create the Mailer using your created Transport
@@ -25,7 +66,7 @@ $mailer = new Swift_Mailer($transport);
 // Create a message
 $message = (new Swift_Message('Demande'))
   ->setFrom(['161841@student.umons.ac.be' =>'postmaster'])
-  ->setTo(['simon.nicolas.laurent@live.be' => 'A name'])
+  ->setTo()
   ->setBody($message)
   ->addPart('Email envoyé par: ',$email )
   ;
@@ -33,9 +74,7 @@ $message = (new Swift_Message('Demande'))
 // Send the message
 $result = $mailer->send($message);
 
-
+*/
 
 
 ?>
-
-
