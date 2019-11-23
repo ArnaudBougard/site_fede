@@ -398,7 +398,6 @@ nav a.active{
   float: left;
   padding-top: 1vw;
   border-left: none;
-  padding-bottom: 2vw;
 }
 
 .tablinks{
@@ -620,7 +619,6 @@ nav a.active{
 	color: #f8f5ef;
 	box-shadow: 0vw 0vw 1vw 0vw black;
 	font-family: Calibri;
-	margin-top: 2rem;
 }
 
 .footerli {
