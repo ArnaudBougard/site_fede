@@ -13,7 +13,7 @@ session_start();
 		<link href="cercles.css" rel="stylesheet">
 	</head>
 
-	<body class="bg1">
+	<body class="bg1" style="width: 100%;">
 		
 		<?php include("../network.php"); ?>
 

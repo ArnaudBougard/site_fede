@@ -29,7 +29,7 @@
         <?php 
 
 
-         if(isset($_SESSION['id_utilisateur'])){ // On ferme l'accolade à la fin du code
+         if(isset($_SESSION['id_utilisateur'])){
 
              echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
           
