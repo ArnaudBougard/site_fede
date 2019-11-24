@@ -9,7 +9,7 @@ session_start();
 <html lang="fr">
 	<head>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -21,6 +21,7 @@ session_start();
 
 	<body id="body">
 		<?php include("../../model/eventDAO.php"); ?>
+		<?php include("../../model/newsDAO.php"); ?>
 		
 		<?php include("../network.php"); ?>
 
@@ -36,22 +37,85 @@ session_start();
 
 		<div class="row indexContent">
 			<div class="row indexRow">
-				<div class="col-sm-9 tileRow"> 
-					<div class="title-div">
+				<div class="title-div">
 					  <h2 class="h2index">Bientôt dans vos librairies</h2>
 					</div>
+				<div class="col-sm-9 tileRow"> 
+					
 					<?php include("../events/futureEvents.php"); ?>
+					<?php include("../news/recentNews.php"); ?>
+
+					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+		               
+		                <div class="title-div"><h2 class="Tileh2"> Plus d'événements!</h2></div>
+		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
+
+		                </div>
+
+		                <div class="slide-back" style="background-color: #f8f5ef;">  
+		                <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
+		                  <div style="padding-top: 140px">
+		                    
+		                    <p class="tile-text">
+		                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl"> Plus d'événements!</a> </btn>
+		                    </p>
+		                  </div>
+
+		                </div>
+		              
+		            </div>  
+
 				</div>
 			
 				<div class="col-sm-3"> 
-					<div class="title-div">
-					  <h2 class="h2index">Action de la semaine</h2>
-					</div>
-					<?php include("../events/futureEvents.php"); ?> 
+					
+					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+		               
+		                
+		                <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif" >
+
+		                </div>
+
+		                <div class="slide-back" style="background-color: #f8f5ef;">  
+		                <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
+		                  <div style="padding-top: 40px">
+		                    
+		                    <p class="tile-text">
+		                      Viens déguster cette magnifique bière au bar !
+		                    </p>
+		                  </div>
+
+		                </div>
+		              
+		            </div>  
+
+		            <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+		               
+		                <div class="title-div"><h2 class="Tileh2"> Plus d'événements!</h2></div>
+		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
+
+		                </div>
+
+		                <div class="slide-back" style="background-color: #f8f5ef;">  
+		                <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
+		                  <div style="padding-top: 140px">
+		                    
+		                    <p class="tile-text">
+		                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl"> Plus d'événements!</a> </btn>
+		                    </p>
+		                  </div>
+
+		                </div>
+		              
+		            </div>  
+
 				</div>
 			</div>
 
 			<div class="row indexRow">
+				<div class="title-div">
+					  <h2 class="h2index">En rupture de stock</h2>
+					</div>
 				<div class="col-sm-9">
 					<?php include("../events/futureEvents.php"); ?>  
 				</div>

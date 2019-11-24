@@ -31,39 +31,77 @@
 
          if(isset($_SESSION['id_utilisateur'])){
 
-             echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
+              echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="../users/deconnexion.php"> <span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
           
-             ?><li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> "> <span class="glyphicon glyphicon-user" ></span>  <?php echo $_SESSION["pseudo_utilisateur"]; ?></a></li>
-            <?php 
-
-            $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
-
-            if($comitard!= NULL){ // On ferme l'accolade à la fin du code
-
               ?>
-              <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../events/eventManager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes événements</a></li>
 
-              <li class="networkBarElement rightElement" ><a class="networkBarAnchor" href= "../news/newsmanager.php"> <span class="glyphicon glyphicon-bookmark" ></span> Mes News</a></li>
+              <li class="networkBarElement rightElement " >
+                <div class="dropdown show ">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user" ></span> <?php echo $_SESSION["pseudo_utilisateur"]; ?>
+                  </a>
+
+                  <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink" >
+                    <ul class="list-unstyled">
+                      <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> " >Mon Profil</a></li>
+
+                      <?php
+                        $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
+
+                        if($comitard!= NULL){ // On ferme l'accolade à la fin du code
+
+                          ?>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php"> Mes événements</a></li>
+
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsmanager.php">Mes News</a></li>
+
+                          
+                          <?php
+                          }
+                        
+                    
+                      ?>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </li>
 
               <?php
-              $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
-              if($admin!= NULL){
-                ?>
-                <li class="networkBarElement  rightElement" ><a class="networkBarAnchor" href= "../events/eventValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> Events Validation</a></li>
 
-                <li class="networkBarElement  rightElement" ><a class="networkBarAnchor" href= "../news/newsValidation.php"> <span class="glyphicon glyphicon-bookmark" ></span> News Validation</a></li>
-            
-              <?php
-              }
+                $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
+                if($admin!= NULL){
+                  ?>
+
+
+
+                  <li class="networkBarElement rightElement " >
+                    <div class="dropdown show">
+
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-bookmark" ></span> Modération
+                      </a>
+
+                      <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink">
+                        <ul class="list-unstyled">
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php"> Events Validation</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">  News Validation</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </li>
+                  <?php 
+                }
             }
-        }
-                                 
-        else{
+                                             
+            else{
 
-            echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
+              echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
 
-            echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
-          }
+              echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
+            }
 
         ?>
 

@@ -63,6 +63,24 @@
 	text-decoration: none;
 }
 
+
+.networkDropdown {
+	padding: 0.8vw;
+	width: 10vw;
+}
+
+.networkDropdown li {
+	border-bottom:1px solid silver ;
+	padding-bottom: 0.3vw;
+	margin-bottom: 0.3vw;
+}
+
+
+.networkDropdown a{
+	color: black;
+	
+	font-size: 1vw;
+}
 /*--------------------*/
 /* POPUP */
 /*--------------------*/

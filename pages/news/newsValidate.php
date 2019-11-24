@@ -2,7 +2,7 @@
 include("../../model/connexionDAO.php"); 
 
 echo $_GET['id'];
-$req = $bdd -> prepare("UPDATE news set statut_news=? where id_news=? ");
+$req = $bdd -> prepare("UPDATE news set statut=? where id=? ");
 $req->execute(array(1,$_GET['id']));
 
 if($req){$msg="News validée";}

@@ -56,19 +56,20 @@
                     $uploadThisFile = false;
                 }
                 
-                if(file_exists("../../assets/img/news/".$_FILES["files"]["name"][$key]))
-                {
-                    array_push($errors, "File name already exists! Name:- ". $file_name);
-                    $uploadThisFile = false;
-                }
+                // Plus necessaire vu qu'on change le nom du fichier => pas besoin de checker
+                // if(file_exists("../../assets/img/news/".$_FILES["files"]["name"][$key]))
+                // {
+                //     array_push($errors, "File name already exists! Name:- ". $file_name);
+                //     $uploadThisFile = false;
+                // }
         
                 if($uploadThisFile){
                     $filename=basename($file_name,$ext);
-                    $newFileName=$filename.$ext;                
+                    $newFileName=round(microtime(true)).".".$ext;                
                     move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/news/".$newFileName);
                     $img="../../assets/img/news/".$newFileName;
 
-                    $req = $bdd -> prepare("INSERT INTO news(nom_news,article_news, auteur, img_news) VALUES(?,?,?,?)");
+                    $req = $bdd -> prepare("INSERT INTO news(nom,article, auteur, img) VALUES(?,?,?,?)");
                     $req->execute(array($nom,$article,$auteur,$img));
 
                     $req->closeCursor(); // Termine le traitement de la requête

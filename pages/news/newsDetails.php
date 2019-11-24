@@ -22,12 +22,11 @@ session_start();
 		<?php include("../navbar.php"); ?>
 
 		<?php 
-			$eventData=selectEventById($bdd,$_GET['id']);	
+			$NewsArray=selectEventById($bdd,$_GET['id']);	
 			
-			if(!empty($eventData)) 
+			if(!empty($NewsArray)) 
 			{
-	        	foreach ($eventData as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) 
-	        	{
+	        	foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)) {
   					
 		?>
 		<div class="container">	
@@ -54,15 +53,6 @@ session_start();
 	                        Date : <?php echo $date; ?>
 	                        <br /> <br />
 	                        Lieu : <?php echo $lieu; ?>
-	                        <br /> <br />
-	                        <?php 
-	                        	if(!empty($link)){
-	                        		?>
-			                        <a href="<?php echo $link; ?>" > Event Facebook </a>
-			                        <br /> <br />
-			                        <?php
-			                    } ?>
-	                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 	                        <br /> <br />
 							</p>
 						</div>

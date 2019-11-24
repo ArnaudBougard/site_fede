@@ -40,7 +40,7 @@ session_start();
       <h2>Evénements à venir</h2>
       <?php 
 
-        $FutureEvents=selectAllEvents($bdd);
+        $FutureEvents=selectFutureEvents($bdd);
         
         if(!empty($FutureEvents)) {
           

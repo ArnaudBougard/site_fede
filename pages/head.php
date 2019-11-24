@@ -3,7 +3,7 @@
 <title>Site Fédé</title>
 
  <!--ICONE FAV, A AJOUTER-->
-<link rel="icon" type="image/png" href="../../assets/img/favicon/logofede.PNG"  />
+<link rel="icon" type="image/png" href="../../assets/img/favicon/logoFede.PNG"  />
 
 <!-- Styles packages -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

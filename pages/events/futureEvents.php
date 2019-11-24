@@ -1,11 +1,11 @@
 
   <?php 
 
-    $FutureEvents=selectFutureEvents($bdd);
+    $FutureEvents=selectSomeFutureEvents($bdd);
     
     if(!empty($FutureEvents)) {
       
-        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
+        foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)) {
             ?> 
 
               <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
@@ -18,6 +18,7 @@
                 <div class="slide-back" style="background-color: #f8f5ef;">  
                 <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
                   <div >
+                    <p class="tile-text"><?php echo $nom; ?></p>
                     <p class="tile-text"><?php echo $date; ?></p>
                     <p class="tile-text"><?php echo $lieu; ?></p>
                     <?php 

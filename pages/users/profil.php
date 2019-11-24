@@ -49,10 +49,10 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
                 <div class='col-md-5 inscription' style="float:left;">
                             
-                    <h2>Profil de <?php echo $userinfo['prenom_utilisateur']?></h2> <br /> <br />
+                    <h2>Profil de: <?php echo $userinfo['pseudo_utilisateur']?></h2> <br /> <br />
                     <p>
-                        Pseudo : <?php echo $userinfo['pseudo_utilisateur']; ?>
-                        <br /> <br />
+                        <!-- Pseudo : <?php echo $userinfo['pseudo_utilisateur']; ?>
+                        <br /> <br /> -->
                         Prénom : <?php echo $userinfo['prenom_utilisateur']; ?>
                         <br /> <br />
                         Nom : <?php echo $userinfo['nom_utilisateur']; ?>

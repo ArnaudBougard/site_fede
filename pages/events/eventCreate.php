@@ -70,15 +70,17 @@
                     $uploadThisFile = false;
                 }
                 
-                if(file_exists("../../assets/img/events/".$_FILES["files"]["name"][$key]))
-                {
-                    array_push($errors, "File name already exists! Name:- ". $file_name);
-                    $uploadThisFile = false;
-                }
+                // Plus nécessaire vu qu'onc hange les noms des fichiers.
+                // if(file_exists("../../assets/img/events/".$_FILES["files"]["name"][$key]))
+                // {
+                //     array_push($errors, "File name already exists! Name:- ". $file_name);
+                //     $uploadThisFile = false;
+                // }
         
                 if($uploadThisFile){
                     $filename=basename($file_name,$ext);
-                    $newFileName=$filename.$ext;                
+                    $newFileName=round(microtime(true)).$ext;      
+
                     move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/events/".$newFileName);
                     $img="../../assets/img/events/".$newFileName;
 
