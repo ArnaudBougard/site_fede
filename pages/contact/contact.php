@@ -43,25 +43,25 @@ session_start();
                 <label>Qui souhaitez-vous contacter?</label>
                 <div class="form-group">
                   <select class="form-control" id="contact" name="contact">
-                    <option>Commission Web (Admins du site fédé)</option>
-                    <option>Fédérale</option>
-                    <option>Cercle des Fêtes</option>
-                    <option>Bar</option>
-                    <option>CAP</option>
-                    <option>Cercle Culturel</option>
-                    <option>Magellan</option>
-                    <option>Mutuelle d'édition</option>
-                    <option>Mons-Mines</option>
-                    <option>Peyresq</option>
-                    <option>CPV</option>
-                    <option>Radio Extra</option>
-                    <option>Scientifique</option>
-                    <option>Cercle Sono Danse Musique</option>
-                    <option>Cercle des Sports</option>
-                    <option>Carolo</option>
-                    <option>Frontalière</option>
-                    <option>Centrale</option>
-                    <option>Boraine</option>
+                    <option>Commission Web</option>
+                    <option>Fédérale</option> <!-- ok -->
+                    <option>Cercle des Fêtes</option><!-- ok -->
+                    <option>Bar</option><!-- ok -->
+                    <option>CAP</option><!-- ok -->
+                    <option>Cercle Culturel</option><!-- ok -->
+                    <option>Magellan</option><!-- ok -->
+                    <option>Mutuelle d'édition</option><!-- ok -->
+                    <option>Mons-Mines</option><!-- ok -->
+                    <option>Peyresq</option><!-- ok -->
+                    <option>CPV</option><!-- ok -->
+                    <option>Radio Extra</option><!-- ok -->
+                    <option>Scientifique</option><!-- ok -->
+                    <option>Cercle Sono Danse Musique</option><!-- ok -->
+                    <option>Cercle des Sports</option><!-- ok -->
+                    <option>Carolo</option><!-- ok -->
+                    <option>Frontalière</option><!-- ok -->
+                    <option>Centrale</option><!-- ok -->
+                    <option>Boraine</option><!-- ok -->
                   </select>
                 </div>
                 <p class="help-block text-danger"></p>
