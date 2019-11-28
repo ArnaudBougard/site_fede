@@ -6,6 +6,7 @@
 	// Check for empty fields
 	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['email']) || empty($_POST['message'])) {
 	  http_response_code(500);
+	  echo "ben faut remplir les champs fieuh!";
 	  exit();
 	}
 	$name = strip_tags(htmlspecialchars($_POST['name']));
@@ -21,7 +22,7 @@
 	$message = strip_tags(htmlspecialchars($_POST['message']));
 
 
-
+	echo " nom envoyeur ".$name."  <br> "."  expediteur".$email."  <br>  "."destinataires".$contact."  <br>  "."message: ".$message. "<br>";
 	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 
 	$transport=(new Swift_Mailer('localhost',25)) //test 465
@@ -40,20 +41,18 @@
 			->setFrom(['postmaster@fede.fpms.ac.be'=>'PostMaster: Fédération des étudiants polytech Mons'])
 			->setTo($mail)
 			->setBody($message)
-			->addPart('Email envoyé par: ',$email)
-			->addPart('Ce mail est envoyé à tous les membres du comité actuel')
+		// 	->addPart('Email envoyé par: ',$email)
+			
 		;
 		$result=$mailer->send($message_swift);
-		echo "mail envoyé à ".$mail;
+		echo "mail envoyé à ".$mail. "<br>";
 	}
 	
 
-	for ($i=0; $i < $destinataires.len() ; $i++)
-	 { 
-		$destinataire=$destinataire[i];
 		
-
-	}
+		
+		// redirect("../index/index.php");
+	
 
 
 
