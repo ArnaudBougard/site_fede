@@ -9,18 +9,20 @@
 	  echo "ben faut remplir les champs fieuh!";
 	  exit();
 	}
-	$name = strip_tags(htmlspecialchars($_POST['name']));
-	
-	$email = strip_tags(htmlspecialchars($_POST['email']));
+	//$name = strip_tags(htmlspecialchars($_POST['name']));
+	$name = filter_var($name,FILTER_SANITIZE_EMAIL);
+	//$email = strip_tags(htmlspecialchars($_POST['email']));
+	$email = filter_var($email,FILTER_SANITIZE_EMAIL);
 	if($_POST['contact']=="Commission Web") {
 		$contact="Web";
 	}
 	else {
-		$contact = strip_tags(htmlspecialchars($_POST['contact']));
+		$contact = $_POST['contact'];
 	}
+	$contact = filter_var($contact,FILTER_SANITIZE_EMAIL);
 	
-	$message = strip_tags(htmlspecialchars($_POST['message']));
-
+	//$message = strip_tags(htmlspecialchars($_POST['message']));
+	$message = filter_var($message,FILTER_SANITIZE_EMAIL);
 
 	echo " nom envoyeur ".$name."  <br> "."  expediteur".$email."  <br>  "."destinataires".$contact."  <br>  "."message: ".$message. "<br>";
 	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
