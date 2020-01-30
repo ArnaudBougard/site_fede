@@ -3,7 +3,7 @@
 
 
 <?php
-	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+	// require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if( empty($_POST['contact']) || empty($_POST['message'])) {
@@ -28,22 +28,23 @@
 	//$message = strip_tags(htmlspecialchars($_POST['message']));
 	$message = filter_var($_POST['message'],FILTER_SANITIZE_EMAIL);
 
-	echo " nom envoyeur ".$name."  <br> "."  expediteur".$email."  <br>  "."destinataires".$contact."  <br>  "."message: ".$message. "<br>";
+	echo " nom expediteur ".$pseudo."  <br> "."  email expediteur".$email."  <br>  "."cercle contacté: ".$contact."  <br>  "."message: ".$message. "<br>";
 	
 
-	$transport=(new Swift_SmtpTransport('localhost',25)) //test 465
-		->setUsername('postmaster') // a modifier manuellement
-		->setPassword('passAdéterminer')  // a modifier manuellement
-	;
+	// $transport=(new Swift_SmtpTransport('localhost',25)) //test 465
+	// 	->setUsername('postmaster') // a modifier manuellement
+	// 	->setPassword('passAdéterminer')  // a modifier manuellement
+	// ;
 
 	$promo=lastPromo($bdd);
 	echo $promo;
 	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);
-	$mailsDeTous=[];
-	foreach ($destinataires as list($mail)){
-		array_push($mailsDeTous, $destinataires);
-	}
+	// $mailsDeTous=array();
+	// foreach ($destinataires as list($mail)){
+	// 	array_push($mailsDeTous, $mail);
+	// }
+	// $mailsDeTous=array($mailsDeTous);
 
 	$mailer= new Swift_Mailer($transport);
 		$message_swift=(new Swift_Message('Test formulaire contact'))
@@ -53,41 +54,19 @@
 			->setBody($message)
 		// 	->addPart('Email envoyé par: ',$email)
 		;
-		$result=$mailer->send($message_swift);
-		echo "mail envoyé à "; 
-		print_r($mailsDeTous);
-	
 
-		
-		
+		foreach ($destinataires as list($mail)){
+		 	echo "mail envoyé à ". $mail; 
+	 		$message_swift->addTo($mail);
+		}
+
+
+		$result=$mailer->send($message_swift);
+
+	
 		// redirect("../index/index.php");
 	
 
-
-
-/*
-
-// Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
-  ->setUsername('commission.web.polytechmons@gmail.com')
-  ->setPassword('pass')
-;
-
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
-
-// Create a message
-$message = (new Swift_Message('Demande'))
-  ->setFrom(['161841@student.umons.ac.be' =>'postmaster'])
-  ->setTo()
-  ->setBody($message)
-  ->addPart('Email envoyé par: ',$email )
-  ;
-
-// Send the message
-$result = $mailer->send($message);
-
-*/
 
 }
 ?>
