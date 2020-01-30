@@ -87,26 +87,7 @@ session_start();
               
               </div>
             </div>           
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>E-mail</label>
-
-                <?php
-                if(isset($_SESSION['id_utilisateur']))
-                  {?>
-                  <input class="form-control" id="email" name="email" type="email" placeholder="" <?php echo 'value="'.$_SESSION['email_utilisateur'].'"';?> required="required" data-validation-required-message="Veuillez completer le champ.">
-                  <?php 
-                } 
-                else {
-                  ?> 
-                  <input class="form-control" id="email" name="email" type="email" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
-                   <?php
-                } ?>
-
-                
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
+            
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>

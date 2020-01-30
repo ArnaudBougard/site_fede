@@ -3,10 +3,10 @@
 
 
 <?php
-	 require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
-	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['email']) || empty($_POST['message'])) {
+	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['message'])) {
 	  http_response_code(500);
 	  echo "ben faut remplir les champs fieuh!";
 	  exit();
@@ -14,7 +14,7 @@
 	//$name = strip_tags(htmlspecialchars($_POST['name']));
 	$name = filter_var($_POST['name'],FILTER_SANITIZE_EMAIL);
 	//$email = strip_tags(htmlspecialchars($_POST['email']));
-	$email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
+	$email = filter_var($_SESSION['email_utilisateur'],FILTER_SANITIZE_EMAIL);
 	if($_POST['contact']=="Commission Web") {
 		$contact="Web";
 	}
@@ -38,21 +38,21 @@
 	echo $promo;
 	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);
-
+	$mailsDeTous='';
 	foreach ($destinataires as list($mail)){
 
-		echo $mail."<br>";
-		$mailer= new Swift_Mailer($transport);
-		$message_swift=(new Swift_Message)
-			->setFrom(['postmaster@fede.fpms.ac.be'=>'PostMaster: Fédération des étudiants polytech Mons'])
-			->setTo($mail)
+	}
+	$mailer= new Swift_Mailer($transport);
+		$message_swift=(new Swift_Message('Test formulaire contact'))
+			->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
+			// ->setTo($mailsDeTous)
+			->setTo(['basilburleon@hotmail.com','simon.nicolas.laurent@live.be','simon.nicolas.laurent@hotmail.be'])
 			->setBody($message)
 		// 	->addPart('Email envoyé par: ',$email)
 			
 		;
 		$result=$mailer->send($message_swift);
-		echo "mail envoyé à ".$mail. "<br>";
-	}
+		echo "mail envoyé à ".$mailsDeTous. "<br>";
 	
 
 		
