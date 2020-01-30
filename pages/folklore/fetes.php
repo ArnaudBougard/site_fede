@@ -25,24 +25,56 @@ session_start();
 		   		<?php
 
 		   		include ("../../model/cercleDAO.php");
-		   		$cercle=selectByName($bdd,'Fédérale');
+		   		$cercle=selectByName($bdd,'Cercle des Fêtes');
 
 				?>
 
-				<div class="margintop marginbottom" >
+				<div class="row">
+				
+				<div class="container">
+					<div class=" col-md-12" >
 
-							
+						<p>
+							<?php echo $cercle['description_cercle']; ?> <br>
+							<br/> 
+						</p>
 
-					<p>
-			   			<?php echo $cercle['description_cercle']; ?> <br>
-			   			<br> 
+					</div>
+				</div>
+				</div>
 
-			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-			   		</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-2">
+						<img src="<?php echo $cercle['logo_cercle']; ?> ">
 
-			  		</p>
+					</div>
 
+					<div class="col-md-1"></div>
+					<div class="col-md-3">
+						<div class="container">
+
+							<ul >	
+
+							<?php
+
+								$annee= 181;
+
+								$comitardsArray=selectLastComite($bdd,'Cercle des Fêtes',$annee);
+								foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+
+									?> 
+									<li >
+										
+										<?php echo " $nom_poste: $firstname $lastname";?>
+										
+									</li>
+
+									<?php
+
+								} ?>
+					    	</ul>
+						</div>	
+					</div>
 				</div>
 
 				

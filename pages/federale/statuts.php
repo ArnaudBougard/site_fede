@@ -94,7 +94,7 @@ session_start();
 					<?php 
 						$conn = mysqli_connect("localhost","root","","bdd_site_fede");
 						
-						$query = "SELECT * FROM statuts ORDER BY `statuts_name` DESC ";
+						$query = "SELECT * FROM statuts ORDER BY `statuts_name` DESC LIMIT 50 OFFSET 1";
 						
 						$result = mysqli_query($conn, $query);
 						

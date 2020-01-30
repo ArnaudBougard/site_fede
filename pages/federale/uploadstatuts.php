@@ -44,7 +44,7 @@
             
             if($uploadThisFile){
                 $filename=basename($file_name,$ext);
-                $newFileName=$filename.$ext;                
+                $newFileName=$filename.".".$ext;                
                 move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/files/".$newFileName);
             
                 $query = "INSERT INTO statuts(statuts_path, statuts_name) VALUES('../../assets/files/','".$newFileName."')";
