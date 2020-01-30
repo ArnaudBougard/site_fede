@@ -51,21 +51,20 @@
 		$message_swift->setBody(
 		'<html>' .
 		' <body>' .
-		 $pseudo. "( ".$prenom." ".$nom." : ". $email. ') souhaite contacter: '.$contact. " ". "Voici son message: <br>". "<br>" .
-		$message.
+		 $pseudo. "( ".$prenom." ".$nom." : ". $email. ') souhaite contacter: '." ".$contact. " ". "Voici son message: <br>". "<br>" .
+		$_POST['message'].
 		'</body>' .
 		'</html>',
 		  'text/html' // Mark the content-type as HTML
 		);
 
 		foreach ($destinataires as list($mail)){
-		 	echo "mail envoyé à ". $mail; 
 	 		$message_swift->addTo($mail);
 		}
 
 
 		$result=$mailer->send($message_swift);
-
+		echo "Un mail a été envoyé aux responsables concernés.";
 	
 		// redirect("../index/index.php");
 	
