@@ -67,12 +67,65 @@ session_start();
                                       <br /> <br />
                                       <?php
                                   } ?>
-                              
+
+                                  <p class="tile-text">
+                                    <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                                  </p>
+                                              
                             </div>
 
+
+                          </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+              <?php  
+          }
+
+        }
+        else{echo "pas d'events à afficher";}
+
+      ?>
+    </div>
+    <div class="container-fluid">
+      
+      <h2>Evénements Passés</h2>
+
+    <?php
+    $FutureEvents=selectPastEvents($bdd);
+        
+        if(!empty($FutureEvents)) {
+          
+            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+                ?> 
+                    <div class="col-md-3 cms-boxes-outer">
+                      <div class="cms-boxes-items cms-features" style=" background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">0..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+                        <!-- <div class="boxes-align"> -->
+                          <div class="small-box" >
+
                             <div class="col-sm-12">
-                              <p><?php echo$description; ?></p>
+                              <h2 class="Tileh2"><?php echo$nom; ?></h2>
                             </div>
+
+                            <div class="col-sm-12" >
+
+                                <p><?php echo$date; ?></p>
+                                <p><?php echo$lieu; ?></p>
+                                <?php 
+                                    if(!empty($link)){
+                                      ?>
+                                      <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
+                                      <br /> <br />
+                                      <?php
+                                  } ?>
+
+                                  <p class="tile-text">
+                                    <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                                  </p>
+                                              
+                            </div>
+
 
                           </div>
                         <!-- </div> -->
