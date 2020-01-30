@@ -3,7 +3,7 @@
 
 
 <?php
-	// require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if( empty($_POST['contact']) || empty($_POST['message'])) {
@@ -31,10 +31,10 @@
 	echo " nom expediteur ".$pseudo."  <br> "."  email expediteur".$email."  <br>  "."cercle contacté: ".$contact."  <br>  "."message: ".$message. "<br>";
 	
 
-	// $transport=(new Swift_SmtpTransport('localhost',25)) //test 465
-	// 	->setUsername('postmaster') // a modifier manuellement
-	// 	->setPassword('passAdéterminer')  // a modifier manuellement
-	// ;
+	$transport=(new Swift_SmtpTransport('localhost',25)) //test 465
+		->setUsername('postmaster') // a modifier manuellement
+		->setPassword('passAdéterminer')  // a modifier manuellement
+	;
 
 	$promo=lastPromo($bdd);
 	echo $promo;
