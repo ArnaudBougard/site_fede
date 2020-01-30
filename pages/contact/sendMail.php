@@ -6,13 +6,15 @@
 	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
-	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['message'])) {
+	if( empty($_POST['contact']) || empty($_POST['message'])) {
 	  http_response_code(500);
 	  echo "ben faut remplir les champs fieuh!";
 	  exit();
 	}
 	//$name = strip_tags(htmlspecialchars($_POST['name']));
-	$name = filter_var($_POST['name'],FILTER_SANITIZE_EMAIL);
+	$pseudo = filter_var($_SESSION['pseudo_utilisateur'],FILTER_SANITIZE_EMAIL);
+	$nom = filter_var($_SESSION['nom_utilisateur'],FILTER_SANITIZE_EMAIL);
+	$prenom = filter_var($_SESSION['prenom_utilisateur'],FILTER_SANITIZE_EMAIL);
 	//$email = strip_tags(htmlspecialchars($_POST['email']));
 	$email = filter_var($_SESSION['email_utilisateur'],FILTER_SANITIZE_EMAIL);
 	if($_POST['contact']=="Commission Web") {
@@ -29,7 +31,7 @@
 	echo " nom envoyeur ".$name."  <br> "."  expediteur".$email."  <br>  "."destinataires".$contact."  <br>  "."message: ".$message. "<br>";
 	
 
-	$transport=(new Swift_Mailer('localhost',25)) //test 465
+	$transport=(new Swift_SmtpTransport('localhost',25)) //test 465
 		->setUsername('postmaster') // a modifier manuellement
 		->setPassword('passAdéterminer')  // a modifier manuellement
 	;
@@ -38,21 +40,22 @@
 	echo $promo;
 	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);
-	$mailsDeTous='';
+	$mailsDeTous=[];
 	foreach ($destinataires as list($mail)){
-
+		array_push($mailsDeTous, $destinataires);
 	}
+
 	$mailer= new Swift_Mailer($transport);
 		$message_swift=(new Swift_Message('Test formulaire contact'))
 			->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
 			// ->setTo($mailsDeTous)
-			->setTo(['basilburleon@hotmail.com','simon.nicolas.laurent@live.be','simon.nicolas.laurent@hotmail.be'])
+			->setTo($mailsDeTous)
 			->setBody($message)
 		// 	->addPart('Email envoyé par: ',$email)
-			
 		;
 		$result=$mailer->send($message_swift);
-		echo "mail envoyé à ".$mailsDeTous. "<br>";
+		echo "mail envoyé à "; 
+		print_r($mailsDeTous);
 	
 
 		

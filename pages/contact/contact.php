@@ -67,26 +67,7 @@ session_start();
                 <p class="help-block text-danger"></p>
               
               </div>
-            </div>   
-
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Nom</label>
-                <?php
-                if(isset($_SESSION['id_utilisateur']))
-                  {?>
-                  <input class="form-control "  id="name" name="name" type="text" placeholder="" <?php echo 'value="'.$_SESSION['prenom_utilisateur'].$_SESSION['nom_utilisateur'].'"';?> required="required" data-validation-required-message="Veuillez completer le champ.">
-                  <?php 
-                } 
-                else {
-                  ?> 
-                   <input class="form-control "  id="name" name="name" type="text" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ.">
-                   <?php
-                } ?>
-                <p class="help-block text-danger"></p>
-              
-              </div>
-            </div>           
+            </div>             
             
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
