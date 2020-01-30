@@ -1,8 +1,9 @@
 <?php include("../../model/connexionDAO.php")?>
+<?php include("../../model/contactDAO.php")?>
 
 
 <?php
-	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+	 require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['email']) || empty($_POST['message'])) {
@@ -33,7 +34,9 @@
 		->setPassword('passAdéterminer')  // a modifier manuellement
 	;
 
-	$destinataires= get_Contacts($bdd,$contact);
+	$promo=lastPromo($bdd);
+	echo $promo;
+	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);
 
 	foreach ($destinataires as list($mail)){

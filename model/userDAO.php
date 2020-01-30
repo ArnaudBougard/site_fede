@@ -77,26 +77,4 @@ function is_FEDE($bdd,$mail_user) {
 }
 
 
-
-function get_Contacts($bdd,$contact) {
-  ////////////////////////////////////////////////stock data into array
-  // run query
-  $req = $bdd->prepare('SELECT tmp_mail FROM `historique` WHERE tmp_cercle=? and tmp_annee="181" and tmp_poste!="Thème"');
-  $req->execute(array($contact));
-  $array = array();
-
-      // look through query
-      while($row = $req->fetch()){
-
-        // add each row returned into an array
-        $array[] = $row;
-       
-
-      }
-      return $array;
-
-  $query->closeCursor(); // Termine le traitement de la requête
-}
-
-
 ?>

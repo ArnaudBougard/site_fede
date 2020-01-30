@@ -53,7 +53,7 @@
                           ?>
                           <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php"> Mes événements</a></li>
 
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsmanager.php">Mes News</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsManager.php">Mes News</a></li>
 
                           
                           <?php
