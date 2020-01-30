@@ -28,16 +28,12 @@
 	//$message = strip_tags(htmlspecialchars($_POST['message']));
 	$message = filter_var($_POST['message'],FILTER_SANITIZE_EMAIL);
 
-	echo " nom expediteur ".$pseudo."  <br> "."  email expediteur".$email."  <br>  "."cercle contacté: ".$contact."  <br>  "."message: ".$message. "<br>";
-	
-
 	$transport=(new Swift_SmtpTransport('localhost',25)) //test 465
 		->setUsername('postmaster') // a modifier manuellement
 		->setPassword('passAdéterminer')  // a modifier manuellement
 	;
 
 	$promo=lastPromo($bdd);
-	echo $promo;
 	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);
 	// $mailsDeTous=array();
@@ -49,11 +45,18 @@
 	$mailer= new Swift_Mailer($transport);
 		$message_swift=(new Swift_Message('Test formulaire contact'))
 			->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
-			// ->setTo($mailsDeTous)
-			->setTo($mailsDeTous)
-			->setBody($message)
-		// 	->addPart('Email envoyé par: ',$email)
+			// ->setTo($mail)
 		;
+
+		$message_swift->setBody(
+		'<html>' .
+		' <body>' .
+		 $pseudo. "( ".$prenom." ".$nom." : ". $email. ') souhaite contacter: '.$contact. " ". "Voici son message: <br>". "<br>" .
+		$message.
+		'</body>' .
+		'</html>',
+		  'text/html' // Mark the content-type as HTML
+		);
 
 		foreach ($destinataires as list($mail)){
 		 	echo "mail envoyé à ". $mail; 
