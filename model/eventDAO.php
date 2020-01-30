@@ -98,7 +98,7 @@ function selectSomePastEvents($bdd) {
 	////////////////////////////////////////////////stock data into array
 			// run query
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 5");
+			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 3");
 	        $req->execute(array());
 
 			// set array

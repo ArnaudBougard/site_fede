@@ -24,6 +24,7 @@
                 $file_tmp=$_FILES["files"]["tmp_name"][$key];
                 
                 $ext=pathinfo($file_name,PATHINFO_EXTENSION);
+
                 $fileinfo = @getimagesize("../../assets/img/events/".$_FILES["files"]["name"][$key]);
                 $width = $fileinfo[0];
                 $height = $fileinfo[1];
@@ -31,6 +32,10 @@
                 $nom = htmlspecialchars($_POST['nom']);
                 $article = htmlspecialchars($_POST['article']); 
                 $auteur = $_SESSION['pseudo_utilisateur'];
+
+
+
+
 
                 if(empty($_POST['nom']) )
                 {
@@ -64,17 +69,17 @@
                 // }
         
                 if($uploadThisFile){
-                    $filename=basename($file_name,$ext);
-                    $newFileName=round(microtime(true)).".".$ext;                
+                    $newFileName=round(microtime(true)).".".$ext;   
+
                     move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/news/".$newFileName);
                     $img="../../assets/img/news/".$newFileName;
 
-                    $req = $bdd -> prepare("INSERT INTO news(nom,article, auteur, img) VALUES(?,?,?,?)");
+                    $req = $bdd -> prepare("INSERT INTO news(nom, article, auteur, img) VALUES(?,?,?,?)");
                     $req->execute(array($nom,$article,$auteur,$img));
 
                     $req->closeCursor(); // Termine le traitement de la requête
 
-                    // redirect("./newsManager.php");
+                    redirect("./newsManager.php");
                     
                 }
             }
@@ -92,54 +97,10 @@
             }
 
         }
+         else{
 
-        else{
-            foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name)
-            {
-                $uploadThisFile = true;
-                
-                $nom = htmlspecialchars($_POST['nom']);
-                $article = htmlspecialchars($_POST['article']); 
-                $auteur = $_SESSION['pseudo_utilisateur'];
-
-                if(empty($_POST['nom']) )
-                {
-                    array_push($errors, "Champ vide. Titre:- ".$file_name);
-                    $uploadThisFile = false;
-                }
-
-                if(empty($_POST['article']) )
-                {
-                    array_push($errors, "Champ vide. Article:- ".$file_name);
-                    $uploadThisFile = false;
-                }
-
-                if($uploadThisFile){
-                   
-
-                    $req = $bdd -> prepare("INSERT INTO news(nom_news,article_news, auteur) VALUES(?,?,?)");
-                    $req->execute(array($nom,$article,$auteur));
-
-                    $req->closeCursor(); // Termine le traitement de la requête
-
-                    // redirect("./newsManager.php");
-                    
-                }
-            }
-            
-            $count = count($errors);
-            
-            if($count != 0){
-                foreach($errors as $error){
-                    echo "<script type='text/javascript'>alert('$error');</script>";
-                }
-            }  
-
-            else {
-                echo "<h1 style='text-align:center;'> upload réussi</h1>";
-            }
-
-        }  
+             echo "<script type='text/javascript'>alert('Veuillez sélectionner un fichier!');</script>";
+        }
     }
 
 

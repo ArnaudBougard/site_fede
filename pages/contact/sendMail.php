@@ -2,6 +2,7 @@
 
 
 <?php
+	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if(empty($_POST['name']) || empty($_POST['contact']) || empty($_POST['email']) || empty($_POST['message'])) {
@@ -25,7 +26,7 @@
 	$message = filter_var($_POST['message'],FILTER_SANITIZE_EMAIL);
 
 	echo " nom envoyeur ".$name."  <br> "."  expediteur".$email."  <br>  "."destinataires".$contact."  <br>  "."message: ".$message. "<br>";
-	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
+	
 
 	$transport=(new Swift_Mailer('localhost',25)) //test 465
 		->setUsername('postmaster') // a modifier manuellement

@@ -13,9 +13,9 @@
         $minwidth=300;
         $minheight = 200;
 
-        if($_FILES['files']['tmp_name'][0]!='') // s'il y a pas d'erreur à l'upload: 
+        if($_FILES['files']['tmp_name'][0]!='') // s'il y a bien un fichier
         {
-            
+ 
             foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name)
             {
                 $uploadThisFile = true;
@@ -30,20 +30,14 @@
                 $height = $fileinfo[1];
 
                 $nom = htmlspecialchars($_POST['nom']);
-                $lieu = htmlspecialchars($_POST['lieu']);
-                $linkFB = htmlspecialchars($_POST['link']);
-                $date =htmlspecialchars($_POST['date']);
                 $description = htmlspecialchars($_POST['description']); 
-                $ouverture =$_POST['ouverture'];
-                $organisateur = $_SESSION['pseudo_utilisateur'];
+                $prix = htmlspecialchars($_POST['prix']); 
+                $quantite = htmlspecialchars($_POST['quantite']); 
+                $date = htmlspecialchars($_POST['date']); 
 
-                // if ($ouverture==1){}else{$ouverture=0;}
 
-                /*if(!empty($nom) AND !empty($date) AND !empty($organisateur) )
-                {
-                    array_push($errors, "Champ vide. Name:- ".$file_name);
-                    $uploadThisFile = false;
-                }*/
+
+
 
                 if(empty($_POST['nom']) )
                 {
@@ -69,26 +63,25 @@
                     $uploadThisFile = false;
                 }
                 
-                // Plus nécessaire vu qu'onc hange les noms des fichiers.
-                // if(file_exists("../../assets/img/events/".$_FILES["files"]["name"][$key]))
+                // Plus necessaire vu qu'on change le nom du fichier => pas besoin de checker
+                // if(file_exists("../../assets/img/news/".$_FILES["files"]["name"][$key]))
                 // {
                 //     array_push($errors, "File name already exists! Name:- ". $file_name);
                 //     $uploadThisFile = false;
                 // }
         
                 if($uploadThisFile){
-                    // $filename=basename($file_name,$ext);
-                    $newFileName=round(microtime(true)).".".$ext;      
+                    $newFileName=round(microtime(true)).".".$ext;   
 
-                    move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/events/".$newFileName);
-                    $img="../../assets/img/events/".$newFileName;
+                    move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/actions/".$newFileName);
+                    $img="../../assets/img/actions/".$newFileName;
 
-                    $req = $bdd -> prepare("INSERT INTO evenement(img_evenement, nom_evenement, description_evenement, date_evenement, ouverture_evenement,organisateur,lieu_evenement,link_evenement) VALUES(?,?,?,?,?,?,?,?)");
-                    $req->execute(array($img,$nom,$description,$date,$ouverture,$organisateur,$lieu,$linkFB));
+                    $req = $bdd -> prepare("INSERT INTO action(nom, prix, quantite, date_action, img, description) VALUES(?,?,?,?,?,?)");
+                    $req->execute(array($nom,$prix,$quantite,$date,$img,$description));
 
                     $req->closeCursor(); // Termine le traitement de la requête
 
-                    redirect("./eventManager.php");
+                    // redirect("./actionManager.php");
                     
                 }
             }
@@ -110,7 +103,6 @@
 
              echo "<script type='text/javascript'>alert('Veuillez sélectionner un fichier!');</script>";
         }
-    
     }
 
 

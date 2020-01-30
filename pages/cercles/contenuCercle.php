@@ -17,11 +17,16 @@
 	</div>
 
 		<div class="row">
-			<div class="col-md-7"></div>
-			<div class="col-md-5">
+			<div class="col-md-3 col-md-offset-2">
+				<img src="<?php echo $cercle['logo_cercle']; ?> ">
+
+			</div>
+
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
 				<div class="container">
 
-					<ul >	Comité actuel
+					<ul >	
 
 					<?php
 

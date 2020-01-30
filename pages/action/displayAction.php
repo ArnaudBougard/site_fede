@@ -1,9 +1,9 @@
 <?php 
 
-  $pastEvents=selectSomePastEvents($bdd);
-  if(!empty($pastEvents)) {
+  $lastAction=selectLastAction($bdd);
+  if(!empty($lastAction)) {
     
-      foreach ($pastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
+      foreach ($lastAction as list($id,$nom,$prix,$quantite,$date,$img,$description)) {
           ?> 
 
             <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile">
@@ -11,7 +11,7 @@
               
               <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
                  <div class="tileTitle">
-                  <h2 style="text-align: center; font-size: 3.4vh;"> <?php echo $nom; ?><h2>
+                  <h2 style="text-align: center; font-size: 3.4vh;"> Action de la semaine<h2>
                 </div>
               </div>
 
@@ -19,20 +19,13 @@
                 <div class="slide-back" data-cover="<?php echo "'".$img."'" ?>">  
                 <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
                   <div class="tileContent">
-                    <p class="tile-text"><?php echo $date; ?></p>
-                    <p class="tile-text"><?php echo $lieu; ?></p>
-                    <?php 
-                        if(!empty($link)){
-                          ?>
-                          <p class="tile-text"><a href="<?php echo $link; ?>" > Event Facebook </a></p>
-                          <br /> <br />
-                          <?php
-                      } ?>
-                  
-                    <p class="tile-text"><?php echo$description; ?></p>
-                    <p class="tile-text">Publié le: <?php echo $dateCreation; ?></p>
+                  	<p class="tile-text"><?php echo $nom; ?></p>
+                  	<p class="tile-text">Prix: <?php echo $prix; ?> €</p>
+                  	<p class="tile-text">Pour <?php echo $quantite; ?> cl</p>
+                    <p class="tile-text">A partir du <?php echo $date; ?></p>
+                    
                     <p class="tile-text">
-                      <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
+                      <btn class="btn-form2"> <a href="../action/actionDetails.php?id= <?php echo $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
                     </p>
                   </div>
 
@@ -50,14 +43,14 @@
         
       <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
         <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'event<h2>
+          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'action<h2>
         </div>
         
       </div>
 
       <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
         <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'events à venir <h2>
+          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'action<h2>
         </div>
         
       </div>

@@ -51,6 +51,19 @@ function is_MDC($bdd,$mail_user) {
   $query->closeCursor(); // Termine le traitement de la requête
 }
 
+function is_barman($bdd,$mail_user) {
+
+  ////////////////////////////////////////////////stock data into array
+  // run query
+  $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=? and tmp_cercle='Bar polytech'");
+  $query->execute(array($mail_user));
+  $exist = $query->rowCount();
+  
+  return $exist;
+
+  $query->closeCursor(); // Termine le traitement de la requête
+}
+
 function is_FEDE($bdd,$mail_user) {
   ////////////////////////////////////////////////stock data into array
   // run query

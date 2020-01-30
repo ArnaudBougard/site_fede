@@ -85,8 +85,9 @@
 
                       <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink">
                         <ul class="list-unstyled">
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php"> Events Validation</a></li>
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">  News Validation</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php"> Events</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">  News</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">  Actions</a></li>
                         </ul>
                       </div>
 
@@ -94,6 +95,25 @@
                   </li>
                   <?php 
                 }
+
+                $barman=is_barman($bdd,$_SESSION['email_utilisateur']);
+                if($barman!= NULL){
+                  ?>
+
+
+
+                  <li class="networkBarElement rightElement " >
+                    <div class="">
+
+                      <a class="" href="../action/actionManager.php">
+                        <span class="glyphicon glyphicon-bookmark" ></span> Action de la semaine
+                      </a>
+                    </div>
+                  </li>
+                  <?php 
+                }
+
+
             }
                                              
             else{

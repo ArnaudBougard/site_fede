@@ -1,7 +1,7 @@
 
   <?php 
 
-    $NewsArray=selectLastNews($bdd);
+    $NewsArray=selectSomeNews($bdd);
     
     if(!empty($NewsArray)) {
       
