@@ -158,7 +158,7 @@ session_start();
 
 														if($pass){
 															echo "la requête ";
-															//include("mailSender.php");
+															include("mailSender.php");
 
 															//redirect("./mailConfirm.php");
 														}
