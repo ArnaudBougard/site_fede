@@ -4,7 +4,7 @@ session_start();
 
 <?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
-<?php include("../../model/eventDAO.php"); ?>
+<?php include("../../model/newsDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,11 +22,12 @@ session_start();
 		<?php include("../navbar.php"); ?>
 
 		<?php 
-			$NewsArray=selectEventById($bdd,$_GET['id']);	
+			$newsData=selectNewsById($bdd,$_GET['id']);	
 			
-			if(!empty($NewsArray)) 
+			if(!empty($newsData)) 
 			{
-	        	foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)) {
+	        	foreach ($newsData as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)) 
+	        	{
   					
 		?>
 		<div class="container">	
@@ -41,19 +42,20 @@ session_start();
 					
 					<div class="container" style="margin-bottom: 5rem;"> 
 
-						<div class="col-sm-8" >
+						<div class="col-sm-4" >
 							 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
     					</div>
-    					<div class="col-sm-4" >
-							<p>
-	                        Nom de l'événement : <?php echo $nom; ?>
+    					<div class="col-sm-8" >
+							<p style="white-space: pre-line">
+								<?php echo $article; ?>
 	                        <br /> <br />
-	                        Description : <?php echo $description; ?>
+
+							</p>
+	                        
+	                        Publié par <?php echo $auteur; ?> le <?php echo $dateCreation; ?>
 	                        <br /> <br />
-	                        Date : <?php echo $date; ?>
-	                        <br /> <br />
-	                        Lieu : <?php echo $lieu; ?>
-	                        <br /> <br />
+	                        
+	                        
 							</p>
 						</div>
 

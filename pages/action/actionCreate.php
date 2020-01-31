@@ -76,8 +76,8 @@
                     move_uploaded_file($_FILES["files"]["tmp_name"][$key],"../../assets/img/actions/".$newFileName);
                     $img="../../assets/img/actions/".$newFileName;
 
-                    $req = $bdd -> prepare("INSERT INTO action(nom, prix, quantite, date_action, img, description) VALUES(?,?,?,?,?,?)");
-                    $req->execute(array($nom,$prix,$quantite,$date,$img,$description));
+                    $req = $bdd -> prepare("INSERT INTO action(nom, prix, quantite, date_action, img, description, statut) VALUES(?,?,?,?,?,?,?)");
+                    $req->execute(array($nom,$prix,$quantite,$date,$img,$description,1));
 
                     $req->closeCursor(); // Termine le traitement de la requête
 

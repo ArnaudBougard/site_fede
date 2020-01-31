@@ -24,18 +24,25 @@
 }
 
 .vertical {
-writing-mode: vertical-rl;
-text-orientation: upright;
-font-size: 3vh;
+transform: rotate(-90deg);
+white-space: nowrap;
+
+font-size: 6vh;
 font-weight: bold;
 padding: 0px;
 margin: 0px;
-padding-top: 2vh;
+padding-left: 8vh;
+
 
 }
 
 li {
   font-size: 3vh;
+  margin-bottom: 0.8vh;
+}
+
+ul{
+list-style: none;
 }
 
 
@@ -51,6 +58,8 @@ li {
 
 .tileRow{
   padding:0vw;
+  display: flex;
+  align-items: flex-end;
 }
 .tile{
  padding:0vw;

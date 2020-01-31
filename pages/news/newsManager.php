@@ -33,10 +33,14 @@ session_start();
 								<input class='champ' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
 							</p>
 
-							<p> 
+							<!-- <p> 
 								<label>Article * </label><br>
 								<input class='champ' type='text' id='article' name='article' placeholder='Si nécessaire' maxlength='500' size='100' required />
+							</p> -->
+							<p>
+								<textarea rows="10" cols="100" id='article' name='article' placeholder='Tapez ici votre article'></textarea>
 							</p>
+							
 
                         	<span>* obligatoire </span>
                         	</p>

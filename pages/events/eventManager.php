@@ -33,9 +33,8 @@ session_start();
 								<input class='champ' type='text' id='nom' name='nom' placeholder='Soirée Mousse' maxlength='25' size='30'  required />
 							</p>
 
-							<p> 
-								<label>Description </label><br>
-								<input class='champ' type='text' id='description' name='description' placeholder='Si nécessaire' maxlength='80' size='82'  />
+							<p>
+								<textarea rows="10" cols="100" id='description' name='description' placeholder='Tapez ici votre description'></textarea>
 							</p>
 
 							<p>

@@ -41,15 +41,19 @@ session_start();
 					
 					<div class="container" style="margin-bottom: 5rem;"> 
 
-						<div class="col-sm-8" >
+						<div class="col-sm-5" >
 							 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
     					</div>
-    					<div class="col-sm-4" >
+    					<div class="col-sm-7" >
 							<p class="tile-text"><?php echo $nom; ?></p>
 		                  	<p class="tile-text">Prix: <?php echo $prix; ?> €</p>
 		                  	<p class="tile-text">Pour <?php echo $quantite; ?> cl</p>
 		                    <p class="tile-text">A partir du <?php echo $date; ?></p>
-		                    <p class="tile-text"><?php echo $description; ?></p>
+		                    <p style="white-space: pre-line">
+								<?php echo $description; ?>
+	                        <br /> <br />
+
+							</p>
 						</div>
 
 					</div>

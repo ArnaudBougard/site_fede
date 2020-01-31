@@ -42,15 +42,13 @@ session_start();
 					
 					<div class="container" style="margin-bottom: 5rem;"> 
 
-						<div class="col-sm-8" >
+						<div class="col-sm-4" >
 							 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
     					</div>
-    					<div class="col-sm-4" >
-							<p>
-	                        Nom de l'événement : <?php echo $nom; ?>
-	                        <br /> <br />
-	                        Description : <?php echo $description; ?>
-	                        <br /> <br />
+    					<div class="col-sm-8" >
+							
+	                       
+
 	                        Date : <?php echo $date; ?>
 	                        <br /> <br />
 	                        Lieu : <?php echo $lieu; ?>
@@ -64,6 +62,10 @@ session_start();
 			                    } ?>
 	                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 	                        <br /> <br />
+							 <p style="white-space: pre-line">
+								<?php echo $description; ?>
+	                        <br /> <br />
+
 							</p>
 						</div>
 

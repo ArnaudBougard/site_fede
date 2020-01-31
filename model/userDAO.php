@@ -38,6 +38,19 @@ function is_admin($bdd,$mail_user) {
   $query->closeCursor(); // Termine le traitement de la requête
 }
 
+function is_mutu($bdd,$mail_user) {
+
+  ////////////////////////////////////////////////stock data into array
+  // run query
+  $query = $bdd->prepare("SELECT * FROM historique where tmp_mail=? and tmp_cercle='Mutuelle d'édition");
+  $query->execute(array($mail_user));
+  $exist = $query->rowCount();
+  
+  return $exist;
+
+  $query->closeCursor(); // Termine le traitement de la requête
+}
+
 function is_MDC($bdd,$mail_user) {
 
   ////////////////////////////////////////////////stock data into array

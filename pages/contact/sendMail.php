@@ -28,10 +28,7 @@
 	//$message = strip_tags(htmlspecialchars($_POST['message']));
 	$message = filter_var($_POST['message'],FILTER_SANITIZE_EMAIL);
 
-	$transport=(new Swift_SmtpTransport('localhost',25)) //test 465
-		->setUsername('postmaster') // a modifier manuellement
-		->setPassword('passAdéterminer')  // a modifier manuellement
-	;
+	include("../../controller/mailinit.php");
 
 	$promo=lastPromo($bdd);
 	$destinataires= get_Contacts($bdd,$contact,$promo);
@@ -43,7 +40,7 @@
 	// $mailsDeTous=array($mailsDeTous);
 
 	$mailer= new Swift_Mailer($transport);
-		$message_swift=(new Swift_Message('Test formulaire contact'))
+		$message_swift=(new Swift_Message('Site Fédé: un utilisateur vous contacte'))
 			->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
 			// ->setTo($mail)
 		;

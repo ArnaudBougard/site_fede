@@ -43,7 +43,7 @@ session_start();
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
 				<div class="col-sm-9 tileRow"> 
-					<div class="col-sm-1 vertical "> Events</div>
+					<div class="col-sm-1 vertical "> Evénements</div>
 					<div class="col-sm-11 tileRow">
 						<?php include("../events/futureEvents.php"); ?> 
 						<!-- affiche 3 future events les plus proches dans le temps -->
@@ -78,38 +78,9 @@ session_start();
 				</div>
 			
 				<div class="col-sm-3"> 
-					
-		            <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
-		               
-		                <div class="slide-front" data-cover="../../assets/img/print." >
-		                	<div class="tileTitle">
-					           <h2 style="text-align: center; font-size: 3.4vh;"> Horaire Mutu <h2>
-					        </div>
-		                </div>
-
-		                <div class="slide-back" data-cover="../../assets/img/print.png"  style="background-color: #f8f5ef;">  
-		                	<div class="tileContent">
-			                  <div style="padding-top: 9vh">
-			                    
-			                   <ul>
-				                   	<li> Lundi: 13h à 16h</li>
-				                   	<li> Mardi: 13h à 16h</li>
-				                   	<li> Mercredi: 13h à 16h</li>
-				                   	<li> Jeudi: 13h à 16h</li>
-				                   	<li> Vendredi: 13h à 16h</li>
-				                   	<span style="font-size: 2vh;"> * Sous réserve de modification </span>
-
-			                   </ul>
-			                  </div>
-			                  
-			                </div>
-		                </div>
-		              
-		            </div>  
-
-		            
-
+		            <?php include("../mutu/displayHoraire.php"); ?>
 				</div>
+
 			</div>
 
 			<div class="row indexRow">

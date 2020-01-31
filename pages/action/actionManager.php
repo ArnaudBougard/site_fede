@@ -53,9 +53,8 @@ session_start();
 	                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
                         	</p>
 
-							<p> 
-								<label>Description </label><br>
-								<input class='champ' type='text' id='description' name='description' placeholder='Si nécessaire' maxlength='500' size='100'  />
+							<p>
+								<textarea rows="10" cols="100" id='description' name='description' placeholder='Petite description des familles'></textarea>
 							</p>
 
                         	<span>* obligatoire </span>
@@ -120,7 +119,7 @@ session_start();
 							else
 							{
 						?>
-							<p>Vous n'avez aucune action en attente de validation</p>
+							<p>Vous n'avez aucune action en attente de validation, la validation est automatique peceka on vous fait confiance ouesh.</p>
 						<?php
 							}
 

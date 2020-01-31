@@ -87,7 +87,7 @@
                         <ul class="list-unstyled">
                           <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php"> Events</a></li>
                           <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">  News</a></li>
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">  Actions</a></li>
+                          <!-- <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">  Actions</a></li> -->
                         </ul>
                       </div>
 
@@ -97,16 +97,28 @@
                 }
 
                 $barman=is_barman($bdd,$_SESSION['email_utilisateur']);
-                if($barman!= NULL){
+                if($barman!= NULL || $admin!= NULL){
                   ?>
-
-
 
                   <li class="networkBarElement rightElement " >
                     <div class="">
 
                       <a class="" href="../action/actionManager.php">
                         <span class="glyphicon glyphicon-bookmark" ></span> Action de la semaine
+                      </a>
+                    </div>
+                  </li>
+                  <?php 
+                }
+
+                $mutu=is_mutu($bdd,$_SESSION['email_utilisateur']);
+                if($mutu!= NULL){
+                  ?>
+                  <li class="networkBarElement rightElement " >
+                    <div class="">
+
+                      <a class="" href="../mutu/horaireManager.php">
+                        <span class="glyphicon glyphicon-bookmark" ></span> Horaire Mutu
                       </a>
                     </div>
                   </li>

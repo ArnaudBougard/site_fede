@@ -151,9 +151,9 @@ session_start();
 													{	
 														//Pour rentrer les données dans la BDD 
 
-														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur) VALUES(?,?,?)');
+														$req = $bdd -> prepare('INSERT INTO utilisateur(email_utilisateur, pseudo_utilisateur, password_utilisateur, statut_utilisateur) VALUES(?,?,?,?)');
 														
-														$pass=$req->execute(array($mail,$pseudo,$mdp));
+														$pass=$req->execute(array($mail,$pseudo,$mdp,0));
 														$req->closeCursor(); // Termine le traitement de la requête
 
 														if($pass){
