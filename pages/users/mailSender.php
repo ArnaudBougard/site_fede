@@ -18,7 +18,7 @@ require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 
 include("../../controller/mailinit.php");
 
-
+	echo "Vous etes ici";
 $mailer= new Swift_Mailer($transport);
 	$message_swift=(new Swift_Message('Inscription Site Fédé'))
 		->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
@@ -44,48 +44,4 @@ $mailer= new Swift_Mailer($transport);
 
 
 }
-?>
-
-
-
-
-
-
-
-
-// multiple recipients
-$to  = $mail; // ajouter une virgule  .','
-
-// subject
-$subject = 'Inscription Site fédé: validez votre adresse email';
-
-// message
-$message = '
-<html>
-<head>
-  <title>Inscription Site fédé: validation</title>
-</head>
-<body>
-  <p>Cliquez le lien suivant pour valider votre inscription au site fédé:  http://yoursite.com/4-confirm.php?id='.$id.'</p>
-</body>
-</html>
-';
-
-echo $message;
-
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// Additional headers
-//$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Site Fédé <noreply@sitefede.com>' . "\r\n";
-//$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-//$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
-
-// Mail it
-mail($to, $subject, $message, $headers);
-
-$req->closeCursor();
-
 ?>
