@@ -157,7 +157,7 @@ session_start();
 														$req->closeCursor(); // Termine le traitement de la requête
 
 														if($pass){
-															echo "la requête a échoué, contactez votre administrateur";
+															echo "la requête ";
 															//include("mailSender.php");
 
 															//redirect("./mailConfirm.php");

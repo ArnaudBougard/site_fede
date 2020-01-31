@@ -1,16 +1,13 @@
 
 <?php
 
-$id= $bdd -> query('SELECT max(id_utilisateur) from utilisateur ');
 
-// $req = $bdd -> prepare('SELECT max(id_utilisateur),email_utilisateur,password_utilisateur from utilisateur');
-// $req->execute(array());
+$req = $bdd -> prepare('SELECT max(id_utilisateur) from utilisateur');
+$req->execute(array());
 
-// $userinfo = $req ->fetch();                                     
-//On enregistre les variables de session
-	// $id = $userinfo['max(id_utilisateur)'];
-	// $h = $userinfo['password_utilisateur'];
-	// $mail = $userinfo['email_utilisateur'];
+$userinfo = $req ->fetch();     
+$id = $userinfo['max(id_utilisateur)'];
+	
 
 
 echo "Vous etes ici";
