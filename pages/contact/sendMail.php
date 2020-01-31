@@ -3,7 +3,6 @@
 
 
 <?php
-	require_once '../../../vendor/autoload.php'; //Input packet for swift_mailer
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if( empty($_POST['contact']) || empty($_POST['message'])) {
