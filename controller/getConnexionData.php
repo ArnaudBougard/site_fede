@@ -36,6 +36,7 @@ if(isset($_POST['formco'])){
                 //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
             }
             else{
+                $erreur = "<p class='erreur'>Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )</p>";
                 $message = "Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }

@@ -29,7 +29,7 @@ function sendMail($bdd, $transport,$mail, $pseudo)
 	 	$message_swift->addTo($mail);
 		
 		$result=$mailer->send($message_swift);
-		echo "Veuillez confirmer votre inscription en validant votre adresse mail. Vérifiez vos spams!";
+		echo "Veuillez confirmer votre inscription en validant votre adresse mail. Vérifiez vos spams et marquez le mail comme n'étant pas du spam svp!";
 
 }
 ?>
