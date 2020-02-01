@@ -2,11 +2,8 @@
 <?php
 
 
-$req = $bdd -> prepare('SELECT max(id_utilisateur) as id from utilisateur');
-$req->execute(array());
-
-$userinfo = $req ->fetch();     
-$id = $userinfo['id'];
+    
+$id = lastID($bdd);
 	
 echo $id. "waaaaaaaaaaaaaaaaaw";
 

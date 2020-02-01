@@ -11,6 +11,18 @@ function lastPromo($bdd)
 
 }
 
+function lastID($bdd)
+{ 
+  $query = $bdd->query("SELECT max(id_utilisateur) as id FROM utilisateur ");
+ 
+  $resultat = $query->fetch();
+ 
+  $lastID=$resultat['id'];
+  return $lastID;
+  $query->closeCursor(); // Termine le traitement de la requête}
+
+}
+
 function is_comitard($bdd,$mail_user) {
 
   ////////////////////////////////////////////////stock data into array
