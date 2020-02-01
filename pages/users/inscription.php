@@ -160,7 +160,7 @@ session_start();
 														$req->closeCursor(); // Termine le traitement de la requête
 
 														if($pass){
-															echo "la requête ";
+															// echo "la requête ";
 															sendMail($bdd,$transport,$mail,$pseudo);
 
 															//redirect("./mailConfirm.php");

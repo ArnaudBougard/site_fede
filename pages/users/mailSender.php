@@ -4,12 +4,12 @@ function sendMail($bdd, $transport,$mail, $pseudo)
 { 
   $id = lastID($bdd);
 	
-	echo $id. "waaaaaaaaaaaaaaaaaw";
+	// echo $id. "waaaaaaaaaaaaaaaaaw";
 
 
 
 
-	echo "Vous etes ici";
+	// echo "Vous etes ici";
 
 	$mailer= new Swift_Mailer($transport);
 		$message_swift=(new Swift_Message('Inscription Site Fédé'))
@@ -29,7 +29,7 @@ function sendMail($bdd, $transport,$mail, $pseudo)
 	 	$message_swift->addTo($mail);
 		
 		$result=$mailer->send($message_swift);
-		echo "Veuillez confirmer votre inscription en validant votre adress mail.";
+		echo "Veuillez confirmer votre inscription en validant votre adresse mail. Vérifiez vos spams!";
 
 }
 ?>
