@@ -2,7 +2,7 @@
 <?php
 
 
-    
+    echo "waaaaaaaaaaaaaaaaaw";
 $id = lastID($bdd);
 	
 echo $id. "waaaaaaaaaaaaaaaaaw";
