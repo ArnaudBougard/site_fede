@@ -2,7 +2,7 @@
 if(isset($_POST['formco'])){
     $pseudoco = htmlspecialchars($_POST['pseudoco']);
     $passco = sha1($_POST['passco']);
-
+    $erreur=0;
     if(!empty($pseudoco) AND !empty($passco)){
 
         $requser = $bdd -> prepare('SELECT * FROM utilisateur WHERE pseudo_utilisateur = ? AND password_utilisateur = ?');
@@ -36,21 +36,21 @@ if(isset($_POST['formco'])){
                 //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
             }
             else{
-                $erreur = "<p class='erreur'>Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )</p>";
+                $erreur=1;
                 $message = "Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
-                echo "<script type='text/javascript'>alert('$message');</script>";
+                
             }
         }
         else
         {
-            $erreur = '<p class="erreur">Identifiant ou mot de passe incorrect!</p>';
+            $erreur=1;
             $message = "Identifiant ou mot de passe incorrect!";
-            echo "<script type='text/javascript'>alert('$message');</script>";
         }
     }
     else 
-    {
-        $erreur = '<p class="erreur">Tous les champs doivent être remplis !</p>';
+    {   
+        $erreur=1;
+        $message = '<p class="erreur">Tous les champs doivent être remplis !</p>';
     }
 
 }

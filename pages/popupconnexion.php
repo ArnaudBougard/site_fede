@@ -28,8 +28,9 @@
 
             if(isset($erreur))
             {   
-                ?> <p> <?php echo $erreur;?></p>
-                <?php
+                echo $erreur;
+                echo $message;
+                echo "<script type='text/javascript'>alert('$message');</script>";
             }
             else{
 
