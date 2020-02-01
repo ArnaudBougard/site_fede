@@ -16,7 +16,22 @@
           <li> Vendredi: ". $json[8]. " à ".$json[9]."</li>
           <span style='font-size: 2vh;''> * Sous réserve de modification </span>
 
-       </ul>"
+
+       </ul>";
+        if(isset($_SESSION['id_utilisateur'])){
+          if($mutu!= NULL){
+            ?>
+              
+              <button class="btn"> 
+                <a class="" href="../mutu/horaireManager.php">
+                  <span class="glyphicon glyphicon-bookmark" ></span> Horaire Mutu
+                </a>
+              </button>
+               
+              
+            <?php 
+          } 
+        }
 
        ?>
       </div>

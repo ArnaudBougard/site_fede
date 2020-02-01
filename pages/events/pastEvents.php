@@ -1,9 +1,11 @@
 <?php 
 
   $pastEvents=selectSomePastEvents($bdd);
+  $n=0;
   if(!empty($pastEvents)) {
     
       foreach ($pastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
+        $n=$n + 1;
           ?> 
 
             <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile">
@@ -44,26 +46,25 @@
     }
 
   }
- else{
-    ?>
-    <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+ for ($x = 0; $x < 3-$n; $x++) {
+      ?>
+      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
         
-      <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'event<h2>
+        <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;">Seems like there's nothing up!<h2>
+          </div>
+          
         </div>
-        
-      </div>
 
-      <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'events à venir <h2>
+        <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;"> BOUH! <h2>
+          </div>
+          
         </div>
-        
-      </div>
     
-    </div>  
-
-  <?php  
-  }
+      </div>  
+      <?php 
+    }
 ?>

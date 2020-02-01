@@ -1,11 +1,12 @@
 <?php 
 
   $FutureEvents=selectSomeFutureEvents($bdd);
+  $n=0;
   if(!empty($FutureEvents)) {
-    
       foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)) {
+        $n=$n + 1;
           ?> 
-
+            
             <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
              
               
@@ -42,27 +43,51 @@
         <?php  
     }
 
-  }
-  else{
-    ?>
-    <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
-        
-      <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'event à venir<h2>
-        </div>
-        
-      </div>
-
-      <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'events à venir <h2>
-        </div>
-        
-      </div>
     
-    </div>  
+    for ($x = 0; $x < 3-$n; $x++) {
+      ?>
+      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+        
+        <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;">Seems like there's nothing up!<h2>
+          </div>
+          
+        </div>
+
+        <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;"> BOUH! <h2>
+          </div>
+          
+        </div>
+    
+      </div>  
+      <?php 
+    }
+
+  }
+
+  // else{
+  //   ?>
+  <!--  <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+        
+  //     <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
+  //       <div class="tileTitle">
+  //         <h2 style="text-align: center; font-size: 3.4vh;">Seems like there's nothing up!<h2>
+  //       </div>
+        
+  //     </div>
+
+  //     <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
+  //       <div class="tileTitle">
+  //         <h2 style="text-align: center; font-size: 3.4vh;"> BOUH! <h2>
+  //       </div>
+        
+  //     </div>
+    
+  //   </div>   -->
 
   <?php  
-  }
+  // }
 ?>

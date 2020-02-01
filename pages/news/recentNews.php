@@ -2,10 +2,11 @@
   <?php 
 
     $NewsArray=selectLastNews($bdd);
-    
+    $n=0;
     if(!empty($NewsArray)) {
       
         foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)) {
+          $n=$n +1;
             ?> 
 
               <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
@@ -37,27 +38,26 @@
 
     }
  
-    else{
+    for ($x = 0; $x < 3-$n; $x++) {
       ?>
       <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
-          
+        
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
-          <div style="background-color: rgba(0, 0, 0, 0.8); width:100%; padding-top: 1vh; padding-bottom: 1vh;">
-            <h2 style="text-align: center; font-size: 3.4vh;"> Pas de news<h2>
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;">Seems like there's nothing up!<h2>
           </div>
           
         </div>
 
         <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
-          <div style="background-color: rgba(0, 0, 0, 0.8); width:100%; padding-top: 1vh; padding-bottom: 1vh;">
-            <h2 style="text-align: center; font-size: 3.4vh;"> Pas de news<h2>
+          <div class="tileTitle">
+            <h2 style="text-align: center; font-size: 3.4vh;"> BOUH! <h2>
           </div>
           
         </div>
-      
+    
       </div>  
-
-    <?php  
+      <?php 
     }
 
   ?>
