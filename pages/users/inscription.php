@@ -6,6 +6,9 @@ session_start();
 
 <?php include("../../model/connexionDAO.php"); ?>
 <?php include("../../controller/getConnexionData.php"); ?>
+<?php include("../../controller/mailinit.php"); ?>
+<?php include("mailSender.php"); ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -158,7 +161,7 @@ session_start();
 
 														if($pass){
 															echo "la requête ";
-															include("mailSender.php");
+															sendMail($bdd,$transport,$mail,$pseudo);
 
 															//redirect("./mailConfirm.php");
 														}
