@@ -10,10 +10,10 @@ if(isset($_POST['formco'])){
         $userexist = $requser->rowCount();
 
         if($userexist==1){
-
+            $userinfo = $requser ->fetch();
             if($userinfo['statut_utilisateur']==1){
                                   
-                $userinfo = $requser ->fetch();                                     
+                                                     
                 //On enregistre les variables de session
                 $_SESSION['id_utilisateur'] = $userinfo['id_utilisateur'];
                 $_SESSION['pseudo_utilisateur'] = $userinfo['pseudo_utilisateur'];
