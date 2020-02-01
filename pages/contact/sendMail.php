@@ -29,7 +29,6 @@
 
 	include("../../controller/mailinit.php");
 
-// waw
 	$promo=lastPromo($bdd);
 	$destinataires= get_Contacts($bdd,$contact,$promo);
 	$count= count($destinataires);

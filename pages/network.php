@@ -97,7 +97,7 @@
                 }
 
                 $barman=is_barman($bdd,$_SESSION['email_utilisateur']);
-                if($barman!= NULL || $admin!= NULL){
+                if($barman!= NULL){
                   ?>
 
                   <li class="networkBarElement rightElement " >
