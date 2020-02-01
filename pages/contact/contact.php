@@ -74,12 +74,16 @@ session_start();
               ?> 
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                   <input class='champ' type='mail' id='mail'  name='mail' maxlength='50' size='55' placeholder="votre adresse mail" required/>
+                <label>Adresse mail</label>
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                     <input class='champ' type='mail' id='mail'  name='mail' maxlength='50' size='55' placeholder="votre adresse mail" required/>
+                  </div>
                 </div>
               </div>
               <br>
 
               <div class="control-group">
+                <label>Qui êtes-vous?</label>
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                    <input class='champ' type='text' id='pseudo'  name='pseudo' placeholder='Votre nom et prénom' maxlength='50' size='55'  required/>
                 </div>
