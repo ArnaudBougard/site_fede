@@ -8,7 +8,7 @@
         <h2 class="popupconnexionh2">Connexion</h2>
         <br />
 
-        <form class='popupconnexionformulaire' method='post' action=''>    
+        <form class='popupconnexionformulaire' method='post' >    
 
             <p>
                  <input class='popupconnexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='PSEUDO' maxlength='25' size='45' required />
