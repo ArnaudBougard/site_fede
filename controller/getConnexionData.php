@@ -28,16 +28,16 @@ if(isset($_POST['formco'])){
                 $_SESSION['photo_utilisateur'] = $userinfo['photo_utilisateur'];
                 $_SESSION['statut_utilisateur'] = $userinfo['statut_utilisateur'];
                 //On redirige l'utilisateur soit sur son profil, soit sur l'accueil
-                $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
-                include("../../model/redirect.php");
-                redirect($location);
+                // $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
+                // include("../../model/redirect.php");
+                // redirect($location);
                 // Sur son profil, on transite par l'id : 
 
                 //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
             }
             else{
                 $erreur=1;
-                $message = "Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
+                $message = " Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
                 
             }
         }
