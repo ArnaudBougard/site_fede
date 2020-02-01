@@ -19,9 +19,10 @@ session_start();
 
     <?php
         $id=$_GET['id'];
-        $req = $bdd -> prepare('UPDATE utilisateur(statut_utilisateur) where id_utilisateur=? VALUES(?)');
+        echo $id;
+        $req = $bdd -> prepare('UPDATE utilisateur SET statut_utilisateur = ? WHERE id_utilisateur = ?' );
                                                         
-        $pass=$req->execute(array($id,1));
+        $pass=$req->execute(array(1,$id));
         $req->closeCursor(); // Termine le traitement de la requête
 
         if($pass){
