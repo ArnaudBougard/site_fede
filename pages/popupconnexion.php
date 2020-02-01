@@ -26,16 +26,17 @@
 
             <?php
 
-            if(isset($erreur))
+            if($erreur==0)
             {   
-                echo $erreur;
-                echo $message;
-                echo "<script type='text/javascript'>alert('$message');</script>";
+                include("../../model/redirect.php"); 
+                //redirect(en absolu car le popup est sur des types de pages differents);
+                echo " connexion gg";
             }
             else{
 
-                include("../../model/redirect.php"); 
-                //redirect(en absolu car le popup est sur des types de pages differents);
+               
+                echo "<p>".$message."</p>";
+                echo "<script type='text/javascript'>alert('$message');</script>";
             }
             ?>
             
