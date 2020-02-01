@@ -67,8 +67,28 @@ session_start();
                 <p class="help-block text-danger"></p>
               
               </div>
-            </div>             
-            
+            </div> 
+
+            <?php
+            if(!isset($_SESSION['id_utilisateur'])){
+              ?> 
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                   <input class='champ' type='mail' id='mail'  name='mail' maxlength='50' size='55' placeholder="votre adresse mail" required/>
+                </div>
+              </div>
+              <br>
+
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                   <input class='champ' type='text' id='pseudo'  name='pseudo' placeholder='Votre nom et prénom' maxlength='50' size='55'  required/>
+                </div>
+              </div>
+              <br>
+              <?php 
+            }
+            ?>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>
@@ -77,6 +97,8 @@ session_start();
               </div>
             </div>
             <br>
+
+            
             <div id="success"></div>
             <div class="form-group">
               <input type="submit" class="btn-contact" id="sendMessageButton" name="sendmail" value="Envoyer"></input>

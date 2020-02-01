@@ -20,7 +20,7 @@ function sendMail($bdd, $transport,$mail, $pseudo)
 		$message_swift->setBody(
 		'<html>' .
 		' <body>' .
-		'Bonjour, '. ' '. $pseudo. ' <br> <br>'. 'cliquez <a href="http://atlantoge.be/site_fede/pages/users/mailValidation.php?id='.$id.'">ici </a> pour confirmer votre inscription au site de la fédération des étudiants de la faculté polytechnique de Mons.
+		'Bonjour '. ' '. $pseudo. ', <br> <br>'. 'Cliquez <a href="http://atlantoge.be/site_fede/pages/users/mailValidation.php?id='.$id.'">ici </a> pour confirmer votre inscription au site de la fédération des étudiants de la faculté polytechnique de Mons.
 		</body>' .
 		'</html>',
 		  'text/html' // Mark the content-type as HTML
