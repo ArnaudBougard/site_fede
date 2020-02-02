@@ -73,25 +73,25 @@ session_start();
 									<input class='champ' type='date' id='date_naissance_utilisateur' name='date_naissance_utilisateur' maxlength='25' size='45' required />
 								</p> -->
 								<div class="input-group">
-									<input class='champ' type='text' id='pseudo_utilisateur' name='pseudo_utilisateur' autofocus placeholder='PSEUDO' maxlength='25' size='50'  required />
+									<input class='champ' type='text' id='pseudo_utilisateur' name='pseudo_utilisateur' autofocus placeholder='PSEUDO' maxlength='25' size='40'  required />
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='50' size='50' required />
+									<input class='champ' type='email' id='email_utilisateur' name='email_utilisateur' placeholder='E-MAIL' maxlength='40' size='40' required />
 								</div>
 
 								<div class="input-group">
-									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='50' size='50' required />
+									<input class='champ' type='email' id='email' name='email' placeholder="CONFIRMATION E-MAIL" maxlength='40' size='40' required />
 								</div>
 
 								<!--<input class='champ' id='promotion_utilisateur' type='number' name='promotion_utilisateur' placeholder='Ex : 176' maxlength='25' size='45' />-->
 
 								<div class="input-group">
-									<input class='champ' type='password' id='password_utilisateur' name='password_utilisateur' placeholder='MOT DE PASSE' minlength="6" maxlength='25' size='50' required />
+									<input class='champ' type='password' id='password_utilisateur' name='password_utilisateur' placeholder='MOT DE PASSE' minlength="6" maxlength='25' size='40' required />
 								</div>
 								
 								<div class="input-group">
-									<input class='champ' type='password' id='password' name='password' placeholder='CONFIRMATION MOT DE PASSE' minlength='6' maxlength='25' size='50' required />
+									<input class='champ' type='password' id='password' name='password' placeholder='CONFIRMATION MOT DE PASSE' minlength='6' maxlength='25' size='40' required />
 								</div>
 								<!--
 								<p>
