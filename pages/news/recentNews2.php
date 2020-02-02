@@ -1,7 +1,7 @@
 
   <?php 
 
-    $NewsArray=selectLastNews3($bdd);
+    $NewsArray=selectLastNews2($bdd);
     $n=0;
     if(!empty($NewsArray)) {
       
@@ -9,11 +9,11 @@
           $n=$n +1;
             ?> 
 
-              <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+              <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile" >
                
                 <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
                   <div class="tileTitle">
-                    <h2> <?php echo $nom; ?><h2>
+                    <h2 > <?php echo $nom; ?><h2>
                   </div>
                 </div>
 
@@ -38,13 +38,13 @@
 
     }
  
-    for ($x = 0; $x < 3-$n; $x++) {
+    for ($x = 0; $x < 2-$n; $x++) {
       ?>
-      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile" >
         
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
           <div class="tileTitle">
-            <h2 >Seems like there's nothing up!<h2>
+            <h2>Seems like there's nothing up!<h2>
           </div>
           
         </div>

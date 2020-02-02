@@ -1,7 +1,7 @@
 
   <?php 
 
-    $NewsArray=selectSomeNews($bdd);
+    $NewsArray=selectSomeNews3($bdd);
     $n=0;
     if(!empty($NewsArray)) {
       
@@ -13,7 +13,7 @@
                
                 <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
                   <div class="tileTitle">
-                    <h2 style="text-align: center; font-size: 3.4vh;"> <?php echo $nom; ?><h2>
+                    <h2 > <?php echo $nom; ?><h2>
                   </div>
                 </div>
 
@@ -44,14 +44,14 @@
         
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
           <div class="tileTitle">
-            <h2 style="text-align: center; font-size: 3.4vh;">Seems like there's nothing up!<h2>
+            <h2 >Seems like there's nothing up!<h2>
           </div>
           
         </div>
 
         <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
           <div class="tileTitle">
-            <h2 style="text-align: center; font-size: 3.4vh;"> BOUH! <h2>
+            <h2 > BOUH! <h2>
           </div>
           
         </div>

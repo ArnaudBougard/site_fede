@@ -14,38 +14,42 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 
 		<?php 
 
-		$statut=is_FEDE($bdd,$_SESSION['email_utilisateur']);
-        if($statut!= NULL){
+         
+        if(isset($_SESSION['id_utilisateur'])){
+			$statut=is_FEDE($bdd,$_SESSION['email_utilisateur']);
+	        if($statut!= NULL){
 
-	        ?>
-			<div class="container"> <!-- upload files -->
-				<div class="container">			
-					<div class="page-header">
-						<h3>Upload Statuts</h3>
-						<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
-						<p>RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>! </p>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadstatuts.php">
-								<div class="form-group">
-									<label for="exampleInputFile">Select file to upload:</label>
-									<input type="file" id="exampleInputFile" name="files[]" >
-									<p class="help-block"><span class="label label-info">Note:</span> Please, select a pdf file</p>
-								</div>			
-								<button type="submit" class="btn-form2" name="btnSubmit" >Upload</button>
-							</form>
-							<br/>
-							
+		        ?>
+				<div class="container"> <!-- upload files -->
+					<div class="container">			
+						<div class="page-header">
+							<h3>Upload Statuts</h3>
+							<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
+							<p>RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>! </p>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadstatuts.php">
+									<div class="form-group">
+										<label for="exampleInputFile">Select file to upload:</label>
+										<input type="file" id="exampleInputFile" name="files[]" >
+										<p class="help-block"><span class="label label-info">Note:</span> Please, select a pdf file</p>
+									</div>			
+									<button type="submit" class="btn-form2" name="btnSubmit" >Upload</button>
+								</form>
+								<br/>
+								
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<?php 
+				<?php 
+			}
 		}
 		?>
 
@@ -122,6 +126,7 @@ session_start();
 	
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

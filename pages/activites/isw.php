@@ -20,7 +20,8 @@ session_start();
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 
 		<div class="bg1">
 			<div class="container" id="content"> 
@@ -95,6 +96,7 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

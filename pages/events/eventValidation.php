@@ -19,7 +19,8 @@ session_start();
 
 		<!-- HEADER -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php");
+		include("../sideBar.php"); ?>
 
 
 
@@ -173,6 +174,7 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 
 	</body>

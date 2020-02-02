@@ -11,7 +11,7 @@
               
               <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
                  <div class="tileTitle">
-                  <h2 style="text-align: center; font-size: 3.4vh;"> Action de la semaine<h2>
+                  <h2 > Action de la semaine<h2>
                 </div>
               </div>
 
@@ -43,14 +43,14 @@
         
       <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
         <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'action<h2>
+          <h2 > Pas d'action<h2>
         </div>
         
       </div>
 
       <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
         <div class="tileTitle">
-          <h2 style="text-align: center; font-size: 3.4vh;"> Pas d'action<h2>
+          <h2 > Pas d'action<h2>
         </div>
         
       </div>

@@ -30,7 +30,8 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+        include("../sideBar.php");?>
 
 		<?php include ("../../controller/warningPopup.php");?>
 
@@ -87,10 +88,9 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
         </div>
 
             
-            <script src="js/jquery-1.11.3.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
 
         		<?php include("../footer.php"); ?>
+                <?php include("../../controller/toggle.php"); ?>
                 
         </div>    
 	</body>

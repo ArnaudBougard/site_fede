@@ -14,7 +14,8 @@ session_start();
 <body>
 
     <?php include("../network.php"); ?>
-    <?php include("../navbar.php"); ?>
+    <?php include("../navbar.php"); 
+    include("../sideBar.php");?>
 
     <div class = container style="padding-top: 3rem">
         <div class = row>
@@ -38,12 +39,12 @@ session_start();
 
             <p>
                 <label>Pseudo : </label><br>
-                <input class='connexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='Pseudo' maxlength='25' size='45' required />
+                <input class='connexionchamp' type='text' id='pseudoco'  name='pseudoco' placeholder='Pseudo' maxlength='25' size='30' required />
             </p>
 
             <p>
                 <label>Mot de passe : </label><br>
-                <input class='connexionchamp' type='password' id='passco' name='passco' placeholder='Mot de passe' maxlength='25' size='45' required/>
+                <input class='connexionchamp' type='password' id='passco' name='passco' placeholder='Mot de passe' maxlength='25' size='30' required/>
             </p>
 
             <p>
@@ -55,9 +56,9 @@ session_start();
 
             <?php
 
-            if(isset($erreur))
+            if(isset($erreur2))
             {
-                echo $erreur;
+                echo $erreur2;
             }
             else{
 
@@ -76,6 +77,7 @@ session_start();
     </div>
 
     <?php include("../footer.php"); ?>
+    <?php include("../../controller/toggle.php"); ?>
 
     
     <script src="js/jquery-1.11.3.min.js"></script>

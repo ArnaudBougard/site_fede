@@ -15,7 +15,8 @@ session_start();
 	<body id="body">
 		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 
 		<div class="container" style="margin-top: 3vw;">
 
@@ -166,6 +167,7 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 
 	</body>

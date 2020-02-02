@@ -17,7 +17,8 @@ session_start();
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 
 
 		<div class="container"> 
@@ -41,6 +42,10 @@ session_start();
 		   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
 		   		</div>
 
+		   		<div class="center ">
+					<img class=" imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
+				</div>
+
 		  		</p>
 
 			</div>
@@ -50,6 +55,7 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

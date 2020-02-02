@@ -1,6 +1,6 @@
 <?php 
 
-  $pastEvents=selectSomePastEvents3($bdd);
+  $pastEvents=selectSomePastEvents2($bdd);
   $n=0;
   if(!empty($pastEvents)) {
     
@@ -8,7 +8,7 @@
         $n=$n + 1;
           ?> 
 
-            <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile">
+            <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile">
              
               
               <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
@@ -46,9 +46,9 @@
     }
 
   }
- for ($x = 0; $x < 3-$n; $x++) {
+ for ($x = 0; $x < 2-$n; $x++) {
       ?>
-      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+      <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile" >
         
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
           <div class="tileTitle">

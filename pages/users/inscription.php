@@ -25,7 +25,8 @@ session_start();
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php");
+		include("../sideBar.php"); ?>
 
 		<div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">
 			<div class = "row" >
@@ -206,6 +207,7 @@ session_start();
 	</div>
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

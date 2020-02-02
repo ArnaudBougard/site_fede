@@ -1,5 +1,8 @@
 <!-- javascript pour le bouton connexion, faire apparaitre et disparaitre le div-->
-<?php include ("../../controller/connexionPopup.php");?>
+<?php include ("../../controller/connexionPopup.php");
+
+$error=0;
+?>
 
 <div class="backgroundOverlay" style="display: none;" id="backgroundOverlay">
 
@@ -26,11 +29,10 @@
 
             <?php
 
-            if($erreur==0)
+            if($error==0)
             {   
                 include("../../model/redirect.php"); 
                 //redirect(en absolu car le popup est sur des types de pages differents);
-                echo " connexion gg";
             }
             else{
 

@@ -2,7 +2,7 @@
 if(isset($_POST['formco'])){
     $pseudoco = htmlspecialchars($_POST['pseudoco']);
     $passco = sha1($_POST['passco']);
-    $erreur=0;
+    $error=0;
     if(!empty($pseudoco) AND !empty($passco)){
 
         $requser = $bdd -> prepare('SELECT * FROM utilisateur WHERE pseudo_utilisateur = ? AND password_utilisateur = ?');
@@ -28,28 +28,28 @@ if(isset($_POST['formco'])){
                 $_SESSION['photo_utilisateur'] = $userinfo['photo_utilisateur'];
                 $_SESSION['statut_utilisateur'] = $userinfo['statut_utilisateur'];
                 //On redirige l'utilisateur soit sur son profil, soit sur l'accueil
-                // $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
-                // include("../../model/redirect.php");
-                // redirect($location);
+                $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
+                include("../../model/redirect.php");
+                redirect($location);
                 // Sur son profil, on transite par l'id : 
 
                 //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
             }
             else{
-                $erreur=1;
+                $error=1;
                 $message = " Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
                 
             }
         }
         else
         {
-            $erreur=1;
+            $error=1;
             $message = "Identifiant ou mot de passe incorrect!";
         }
     }
     else 
     {   
-        $erreur=1;
+        $error=1;
         $message = '<p class="erreur">Tous les champs doivent être remplis !</p>';
     }
 

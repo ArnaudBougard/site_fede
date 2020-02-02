@@ -15,27 +15,39 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
+		<?php include("../navbar.php");
+		include("../sideBar.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<div class="row" >
 
-		<div class="row">
-			<div class="tab">
-			  <button class="tablinks" onclick="openCity(event, 'Web')" id="defaultOpen">Web</button>
-			  <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button>
-			  <button class="tablinks" onclick="openCity(event, 'PMD')">PMD</button>
-			  <button class="tablinks" onclick="openCity(event, 'PIMs')">PIM's</button>
-			  <button class="tablinks" onclick="openCity(event, 'FPMath')">FPMath</button>
-			  <button class="tablinks" onclick="openCity(event, 'Bal')">Bal des Mines</button>
+			<div class="tab col-sm-2 hidden-xs hidden-sm">
+				<ul class="unstyled">
+					<li><button class="tablinks" onclick="openCity(event, 'Web')" id="defaultOpen">Web</button></li>
+					<li> <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button></li>
+					<li><button class="tablinks" onclick="openCity(event, 'PMD')">PMD</button></li>
+					<!-- <li><button class="tablinks" onclick="openCity(event, 'PIMs')">PIM's</button></li> -->
+					<li><button class="tablinks" onclick="openCity(event, 'FPMath')">FPMath's</button></li>
+					<!-- <li><button class="tablinks" onclick="openCity(event, 'Bal')">Bal des Mines</button></li> -->
+				</ul>
 			</div>
 
-			<div id="Web" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">La commission WEB</h3> 
-				  		<span class="title-line2"></span> 
-					</div>
+			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
+				<ul class="unstyled horizontal">
+					<li class="tablinks " onclick="openCity(event, 'Web')" id="defaultOpen">Web</li>
+					<li class="tablinks " onclick="openCity(event, 'Historique')">Historique</li>
+					<li class="tablinks " onclick="openCity(event, 'PMD')">PMD</li>
+					<li class="tablinks " onclick="openCity(event, 'FPMath')">FPMath</li>
+				</ul>
+			</div>
+			
 
+			<div id="Web" class="col-xs-12 col-md-9 tabcontent">
+
+				<div class="title-area">
+					<h3 class="title2">La commission WEB</h3> 
+				</div>
+
+				<div class="">
 					<img class="img3" src="../../assets/img/logoComWeb.PNG" alt="bleusaille">
 
 					<p class="text">
@@ -56,24 +68,19 @@ session_start();
 						<br>
 							Durant l'été 2019, une importante refonte graphique à été effectuée afin de rendre le site plus harmonieu vis-à-vis des couleurs de la faculté ainsi que de la fédérale. De plus, l'aspect général à été modernisé à l'aide des dernières mises à jour du framework Bootstrap.
 						</br>
-
-					</p>
-
-					<p class="text">
+						<br>
 						La commision web est composée d'au minimum deux personnes qui sont chargées par la fédérale du maintient et du dévellopement du site sur lequel vous vous trouvez actuellement.
 					</p>
-
-					
 				</div>
 			</div>
-		
 
-			<div id="Historique" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">La commission historique</h3> 
-					</div>
 
+			<div id="Historique" class="col-xs-12 col-md-9 tabcontent">
+				
+				<div class="title-area">
+					<h3 class="title2">La commission historique</h3> 
+				</div>
+				<div>
 					<img class="img3" src="../../assets/img/logoComHisto.png" alt="Commission Historique">
 						
 
@@ -86,18 +93,16 @@ session_start();
 					<p class="text">
 						<a href="https://historiquefpms.wordpress.com/">Le site de la commission historique</a>
 					</p>	
-
-
 				</div>
 			</div>
 
-			<div id="PMD" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">La commission PMD</h3> 
-				  		<span class="title-line2">Polytech Mons Day</span> 
-					</div>
+			<div id="PMD" class="col-xs-12 col-md-9  tabcontent">
+				<div class="title-area">
+					<h3 class="title2">La commission PMD</h3> 
+			  		<span class="subtitle">Polytech Mons Day</span> 
+				</div>
 
+				<div class="">
 					<p class="text">
 						La Faculté Polytechnique de Mons, la Fédération des Etudiants et l’Association des Ingénieurs de Mons, souhaitant organiser un événement annuel marquant et prestigieux permettant de rassembler l’ensemble de la communauté Polytech Mons, ont créé en 2007 le « Polytech Mons Day ». Cet événement permet de fêter la nouvelle promotion, fraîchement diplômée. En effet, le Polytech Mons Day est né, avant tout, de la volonté de la F.P.Ms de s’impliquer davantage dans la symbolique de la remise de diplômes à ses nouveaux promus.
 
@@ -120,95 +125,53 @@ session_start();
 					<p class="text">
 						Le dernier PMD s'est déroulé en 2018 et est remplacé dès 2019 par le Bal des Mines.
 					</p>	
-
 				</div>
 			</div>
 
-			<div id="FPMath" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">La Carolo</h3> 
-				  		<span class="title-line2"></span> 
-					</div>
-
-					<img class="img3" src="../../assets/img/charleroi-blason.gif" alt="bleusaille">
-
-					<p class="text">
-						Si tu habites Charleroi ou ses environs (de Lobbes à Namur, en passant par Chimay ou Arlon...), alors ces quelques lignes te concernent !
-					</p>
-
-					<p class="text">
-						Un comité composé de 5 personnes motivées ainsi que de tous les gais lurons du pays noir sont là pour te faire vivre une tonne d'expériences uniques, le tout dans une ambiance folklorique, joyeuse et conviviale.
-					</p>
-
-					<p class="text">
-						En voici un bref aperçu :
-						<ul class="list">
-							<li>Un souper destiné à accueillir les nouveaux baptisés Carolos, dont nous l'espérons, tu feras bientôt partie</li>
-							<li>Un petit déjeuner suivi d'une dégustation où tu pourras goûter les spécialités de notre belle région</li>
-							<li>Une excursion afin de supporter nos valeureux Zèbres ou nos brillants Spirous</li>
-							<li>Un voyage d’une journée au Pays Noir afin de découvrir son folklore unique avec notamment l’illustre distillerie de Biercée ou les ruines de l’Abbaye D’Aulne</li>
-							<li>Une soirée regroupant tous les étudiants Carolos des différentes Universités telles Mons, Namur, Louvain,…</li>
-						</ul>
-					</p>	
-
-					<p class="text">
-						Si ces quelques lignes te mettent l'eau à la bouche, si tu es prêt à perpétuer avec nous le folklore du pays de Charleroi, alors n'hésite plus et viens rejoindre cette grande famille que sera toujours la Carolo lors des activités de début d’année.
-					</p>
-
-					<h4 class="subtitle">Armoiries de Charleroi</h4>
-					<p class="text">
-						Le coq, emblème de la partie francophone belge et de la France. Sa dextre est posée en chef, en signe d'allégeance.
-					</p>	
-
-					<p class="text">
-						Sur le blason (en partant du haut):
-						<ul class="list">
-							<li>La fleur de lys rappelle le développement donné par la France à la forteresse initiale</li>
-							<li>Les 15 carrés représentent les 15 anciennes communes (Charleroi, Couillet, Dampremy, Gilly, Gosselies, Goutroux, Jumet, Lodelinsart, Marchienne, Marcinelle, Monceau/s/Sambre, Montignies/s/Sambre, Mont/s/Marchienne, Ransart, Roux), qui fusionnées forment l'actuelle ville de Charleroi</li>
-							<li>Les 12 étoiles qui symbolisent le drapeau des Communes d'Europe</li>
-							<li>(Au centre des étoiles) La forteresse de Vauban, berceau de la ville.</li>
-						</ul>
-					</p>		
+			<div id="FPMath" class="col-xs-12 col-md-9 tabcontent">
+				
+				<div class="title-area">
+					<h3 class="title2">FPMath's</h3> 
+			  		<span class="title-line2"></span> 
 				</div>
+
+				<div>
+					
+				</div>	
 			</div>
 
-			<div id="PIMs" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">La Boraine</h3> 
-				  		<span class="title-line2"></span> 
-					</div>
+			<div id="PIMs" class="col-xs-12 col-md-9 tabcontent">
+				
+				<div class="title-area">
+					<h3 class="title2">La Boraine</h3> 
+			  		<span class="title-line2"></span> 
+				</div>
 
+				<div>
 					<p class="text">
 						Sorry, pas de folklore à la Boraine
-					</p>	
-
+					</p>
 				</div>
-			</div>
-			<div id="Bal" class="tabcontent">
-				<div class="container">
-					<div class="title-area">
-						<h3 class="title2">Le Bal des Mines</h3> 
-				  		<span class="title-line2"></span> 
-					</div>
 
+			</div>
+
+			<div id="Bal" class="col-xs-12 col-md-9 tabcontent">
+				<div class="title-area">
+					<h3 class="title2">Le Bal des Mines</h3> 
+			  		<span class="title-line2"></span> 
+				</div>
+
+				<div>
 					<img class="img3" src="../../assets/img/logoBalDesMines.PNG" alt="bleusaille">
 
 					<p class="text">
-						
-						<br>
-							LA dernière organisation historique du Bal des Mines remonte à 2007.  Il rennait aujourd'hui de ses cendres					
-						</br>
-
-						
-					
+							La dernière organisation historique du Bal des Mines remonte à 2007.  Il rennait aujourd'hui de ses cendres.
+					</p>
 				</div>
 			</div>
 
 		</div>
-		</div>
-		
+
 
 		<script>
 		function openCity(evt, cityName) {
@@ -230,7 +193,8 @@ session_start();
 		</script>
 
 
-				<?php include("../footer.php"); ?>
+		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

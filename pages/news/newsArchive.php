@@ -24,7 +24,8 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php");
+    include("../sideBar.php"); ?>
 
 		<?php //include("./caroussel.php"); ?>
 
@@ -83,6 +84,7 @@ session_start();
 </div>
 
 		<?php include("../footer.php"); ?>
+    <?php include("../../controller/toggle.php"); ?>
 	</body>
 
 

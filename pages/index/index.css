@@ -11,7 +11,16 @@
   padding-top: 1vh; 
   padding-bottom: 1vh;
   color: white;
+  text-align: center;
 
+}
+.tileTitle h2 {
+  font-size: 2vw;
+}
+
+.nopadding{
+  padding:none !important;
+  margin: none !important;
 }
 
 .tileContent {
@@ -27,22 +36,33 @@
 transform: rotate(-90deg);
 white-space: nowrap;
 
-font-size: 6vh;
+font-size: 3vw;
 font-weight: bold;
 padding: 0px;
 margin: 0px;
-padding-left: 8vh;
+padding-left: 4vw;
 
 
 }
 
-li {
-  font-size: 2.4vh;
-  margin-bottom: 0.8vh;
+.mutuli {
+  font-size: 1vw;
+  margin-bottom: 0.4vw;
 }
 
-ul{
+.mutuspan { 
+  font-size: 0.8vw;
+  }
+
+.mutuul{
 list-style: none;
+padding-left: 0px;
+text-align: center;
+}
+
+.mutuh2{
+font-size: 2vw;
+text-align: center;
 }
 
 
@@ -80,7 +100,7 @@ list-style: none;
 .tile-text{
 text-align: center;
 font-family: Calibri;
-font-size: 30px;
+font-size: 3.5vh;
 }
 
 .tile{
@@ -131,6 +151,43 @@ font-size: 30px;
   height: 305px;*/
   width: 20vw;
   height: 20vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .tile-large {
+  /*  width: 305px;
+    height: 305px;*/
+    width: 30vw;
+    height: 30vw;
+  }
+  .mutuli {
+  font-size: 2vw;
+  margin-bottom: 0.4vw;
+  }
+  .mutuspan { font-size: 1.5vw;
+  }
+  .mutuh2{
+  font-size: 2vw;
+  margin: 0px;
+  margin-bottom: : 2vw;
+  }
+
+
+  .Tileh2 {
+    font-size: 1vw !important;
+  }
+  .vertical {
+    font-size: 5vw; 
+    margin-left: 3vw;
+  }
+
+  .tileTitle {
+  font-size: 4vw;
+  text-align: center;
+  }
+  .tileTitle h2 {
+  font-size: 4vw;
+  }
 }
 .tile-app {
   width: 44px;

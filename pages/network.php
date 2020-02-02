@@ -6,7 +6,7 @@
 
 <?php include("../../model/userDAO.php"); ?>
 
-<div  class="networkBar hidden-xs" >
+<div  class="networkBar hidden-md hidden-sm hidden-xs" >
   
     <ul class="networkul">
       
@@ -14,10 +14,10 @@
 
         <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="http://www.the-games.be/"> The-Games</a></li>
+        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href=" https://the-games.magellan.fpms.ac.be/"> The-Games</a></li>
 
         <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://historiquefpms.wordpress.com"> Commission Historique</a></li>
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="http://jde.fede-fpms.be/"> JDE</a></li>
+        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://jde.polytech-mons-alumni.be/"> JDE</a></li>
 
         <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://magellan.fpms.ac.be/"> Magellan</a></li>
 
@@ -44,6 +44,7 @@
                   <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink" >
                     <ul class="list-unstyled">
                       <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> " >Mon Profil</a></li>
+
 
                       <?php
                         $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
@@ -133,6 +134,8 @@
               echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
 
               echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
+
+              
             }
 
         ?>

@@ -14,39 +14,41 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php");
+		include("../sideBar.php"); ?>
 		
 		<?php 
-
+		if(isset($_SESSION['id_utilisateur'])){
 		$statut=is_FEDE($bdd,$_SESSION['email_utilisateur']);
-        if($statut!= NULL){
+	        if($statut!= NULL){
 
-	        ?>
-			<div class="container"> <!-- upload files -->
-				<div class="container">			
-					<div class="page-header">
-						<h3>Upload PV de réunion </h3>
-						<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
-						<p> Attention: RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>! </p>
-						<p >tu peux en upload plusieurs à la fois </p>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadpv.php">
-								<div class="form-group">
-									<label for="exampleInputFile">Select files to upload:</label>
-									<input type="file" id="exampleInputFile" name="files[]" multiple="multiple">
-									<p class="help-block"><span class="label label-info">Note:</span> Please, select pdf files</p>
-								</div>			
-								<button type="submit" class="btn-form2" name="btnSubmit" >Upload</button>
-							</form>
-							
+		        ?>
+				<div class="container"> <!-- upload files -->
+					<div class="container">			
+						<div class="page-header">
+							<h3>Upload PV de réunion </h3>
+							<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
+							<p> Attention: RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>! </p>
+							<p >tu peux en upload plusieurs à la fois </p>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadpv.php">
+									<div class="form-group">
+										<label for="exampleInputFile">Select files to upload:</label>
+										<input type="file" id="exampleInputFile" name="files[]" multiple="multiple">
+										<p class="help-block"><span class="label label-info">Note:</span> Please, select pdf files</p>
+									</div>			
+									<button type="submit" class="btn-form2" name="btnSubmit" >Upload</button>
+								</form>
+								
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<?php
+				<?php
 			}
+		}
 			?>
 
 
@@ -88,6 +90,7 @@ session_start();
 		
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
 </html>

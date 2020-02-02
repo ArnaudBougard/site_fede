@@ -17,7 +17,8 @@ session_start();
 		
 		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php");
+		include("../sideBar.php"); ?>
 
 		<?php include("../../model/chantDAO.php"); ?>
 
@@ -157,6 +158,7 @@ session_start();
 			}
 		</script>
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 	</body>
 </html>
 

@@ -2,11 +2,11 @@
 <div class="footer" style="margin:0;width: 100%;margin-top: 2vh;">
   <div class="row">
 
-    <div class="col-sm-4 col-xs-12">
-      <img src='../../assets/img/logoFede2.png' style="width:50%;display: block; margin: 0 auto; margin-top: 3.5rem;" alt='Logo du site !'/>
+    <div class="col-sm-4 col-xs-12 hidden-xs ">
+      <img src='../../assets/img/logoFede2.png' style="width:250px;display: block; margin: 0 auto; margin-top: 3.5rem;" alt='Logo du site !'/>
     </div>
 
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-12 hidden-xs">
       <div class="links-foot">
         <ul>
           <li style="list-style-type: none;"><a class="link-foot" href="../federale/apropos.php">À propos de nous</a></li>
@@ -30,3 +30,5 @@
   </div>
 
 </div>
+
+

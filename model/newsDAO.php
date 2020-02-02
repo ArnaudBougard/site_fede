@@ -22,12 +22,35 @@ function selectMyNews($bdd,$auteur) {
 				$req->closeCursor(); // Termine le traitement de la requête
 	}
 
-	function selectLastNews($bdd) {
+	function selectLastNews3($bdd) {
 
 	////////////////////////////////////////////////stock data into array
 			// run query
 
 			$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 3");
+	        $req->execute(array());
+
+			// set array
+			$array = array();
+
+			// look through query
+			while($row = $req->fetch()){
+
+			  // add each row returned into an array
+			  $array[] = $row;
+			 
+
+			}
+			return $array;
+			$req->closeCursor(); // Termine le traitement de la requête
+}
+
+function selectLastNews2($bdd) {
+
+	////////////////////////////////////////////////stock data into array
+			// run query
+
+			$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 2");
 	        $req->execute(array());
 
 			// set array
@@ -68,10 +91,31 @@ function selectMyPendingNews($bdd,$auteur) {
 	}
 
 
-function selectSomeNews($bdd) {
+function selectSomeNews3($bdd) {
 
 
-	$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 4 OFFSET 3");
+	$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 3 OFFSET 3");
+    $req->execute(array());
+
+	// set array
+	$array = array();
+
+	// look through query
+	while($row = $req->fetch()){
+
+	  // add each row returned into an array
+	  $array[] = $row;
+	 
+
+	}
+	return $array;
+	$req->closeCursor(); // Termine le traitement de la requête
+}
+
+function selectSomeNews2($bdd) {
+
+
+	$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 2 OFFSET 2");
     $req->execute(array());
 
 	// set array

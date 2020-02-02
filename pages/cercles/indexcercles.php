@@ -16,7 +16,8 @@ session_start();
 
 		<!-- SCROLL TOP BUTTON ? (Rex) -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 		<div class="cardContainer" >
 			<div class="row cardRow">
 				<div class="col-md-3">
@@ -93,5 +94,6 @@ session_start();
 		</div>
 
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 	</body>

@@ -19,7 +19,8 @@ session_start();
 
 		<!-- HEADER -->
 
-		<?php include("../navbar.php"); ?>
+		<?php include("../navbar.php"); 
+		include("../sideBar.php");?>
 
 		<?php 
 			$eventData=selectEventById($bdd,$_GET['id']);	
@@ -86,6 +87,7 @@ session_start();
 		</div>
 	
 		<?php include("../footer.php"); ?>
+		<?php include("../../controller/toggle.php"); ?>
 
 
 	</body>

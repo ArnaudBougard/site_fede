@@ -1,4 +1,4 @@
-<div class="header-container">
+<div class="header-container hidden-md hidden-sm hidden-xs">
 	<img src="../../assets/img/houdain.jpg" alt="img">
 	
 	

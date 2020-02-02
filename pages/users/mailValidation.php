@@ -14,7 +14,8 @@ session_start();
 <body>
 
     <?php include("../network.php"); ?>
-    <?php include("../navbar.php"); ?>
+    <?php include("../navbar.php");
+    include("../sideBar.php"); ?>
 
 
     <?php
@@ -27,8 +28,6 @@ session_start();
 
         if($pass){
             echo "GG, vous êtes inscrit!";
-            sleep(3);
-            redirect("../index/index.php");
         }
 
    
@@ -37,8 +36,6 @@ session_start();
 
     <?php include("../footer.php"); ?>
 
-    
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <?php include("../../controller/toggle.php"); ?>
 </body>
 </html>
