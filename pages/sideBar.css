@@ -4,11 +4,12 @@
 ----------------------------------------------------- */
 .smnetwork{
     
-    height:auto; 
+    height:40px; 
     padding: 0px;
     background-color:#f8f5ef;
     font-family: Calibri;
     border-bottom: solid grey 1px;
+    margin-bottom: 10px;
 }
 
 .smtoggle{
