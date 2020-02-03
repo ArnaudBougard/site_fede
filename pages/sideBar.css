@@ -5,7 +5,7 @@
 .smnetwork{
     
     height:auto; 
-    padding: 0.5vh;
+    padding: 0px;
     background-color:#f8f5ef;
     font-family: Calibri;
     border-bottom: solid grey 1px;
@@ -13,6 +13,7 @@
 
 .smtoggle{
     width: 100%;
+    padding:0.5vh;
     text-align: center;
 }
 #sidebar {
