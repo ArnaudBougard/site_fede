@@ -44,7 +44,7 @@
         
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
           <div class="tileTitle">
-            <h2 >Seems like there's nothing up!<h2>
+            <h2 >Y s'passe jamais rien ici<h2>
           </div>
           
         </div>
