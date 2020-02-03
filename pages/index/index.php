@@ -87,7 +87,7 @@ session_start();
 
 
 
-			<div class="row indexRow hidden-xs">
+			<div class="row indexRow hidden-xs ">
 				<div class="title-div">
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
@@ -105,7 +105,8 @@ session_start();
 				</div>
 
 			</div>
-			<div class="row indexRow hidden-sm hidden-md hidden-xl hidden-xl">
+
+			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">
 				<div class="title-div">
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
@@ -119,7 +120,7 @@ session_start();
 					
 				</div>
 			
-				<div class="col-xs-4 nopadding"> 
+				<div class="col-xs-4 nopadding "> 
 		            <?php include("../mutu/displayHoraire.php"); ?>
 				</div>
 

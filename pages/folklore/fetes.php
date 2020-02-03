@@ -20,7 +20,7 @@ session_start();
 		<?php include("../navbar.php");
 		include("../sideBar.php"); ?>
 
-
+		
 		<div class="container"> 
 
 		   		<?php
