@@ -3,7 +3,7 @@
         <div  class="smnetwork">
           <button type="button" id="sidebarCollapse" class="btn smtoggle" >
               <span class="glyphicon glyphicon-list"></span>
-              <span>Menu</span>
+              <span></span>
           </button> 
          </div>
         
