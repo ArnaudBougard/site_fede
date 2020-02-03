@@ -20,7 +20,7 @@ session_start();
 		<?php include("../navbar.php");
 		include("../sideBar.php"); ?>
 
-		
+		<div>
 		<div class="container"> 
 
 		   		<?php
@@ -32,54 +32,61 @@ session_start();
 
 				<div class="row">
 				
-				<div class="container">
-					<div class=" col-md-12" >
+					
+						<div class=" col-xs-12" >
 
-						<p>
-							<?php echo $cercle['description_cercle']; ?> <br>
-							<br/> 
-						</p>
+							<p>
+								<?php echo $cercle['description_cercle']; ?> 
+								<b><a href="../../assets/files/charte2019.pdf" download>
 
-					</div>
+							  		Charte de baptême de l'UMons 2019
+
+								</a></b>
+								<br>
+								<br/> 
+							</p>
+
+
+						</div>
+					
+
 				</div>
-				</div>
 
-				<div class="row">
-					<div class="col-md-3 col-md-offset-2">
+				<div class="row ">
+					<div class="col col-sm-3 col-sm-offset-2 center" style="padding-bottom: 20px;">
 						<img src="<?php echo $cercle['logo_cercle']; ?> ">
 
 					</div>
 
-					<div class="col-md-1"></div>
-					<div class="col-md-3">
-						<div class="container">
+					<div class="col col-sm-3 col-sm-offset-1 center" >
+						<ul class="horizontal">	
 
-							<ul >	
+						<?php
 
-							<?php
+							$annee= lastPromo($bdd);
 
-								$annee= 181;
+							$comitardsArray=selectLastComite($bdd,'Cercle des Fêtes',$annee);
+							foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
 
-								$comitardsArray=selectLastComite($bdd,'Cercle des Fêtes',$annee);
-								foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+								?> 
+								<li >
+									
+									<?php echo " $nom_poste: $firstname $lastname";?>
+									<br>
+									
+								</li>
 
-									?> 
-									<li >
-										
-										<?php echo " $nom_poste: $firstname $lastname";?>
-										
-									</li>
+								<?php
 
-									<?php
-
-								} ?>
-					    	</ul>
-						</div>	
+							} ?>
+				    	</ul>
+						
 					</div>
 				</div>
 
 				
-		    </div>
+		</div>
+		</div>
 
 
 		<?php include("../footer.php"); ?>

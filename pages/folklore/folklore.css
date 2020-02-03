@@ -55,7 +55,8 @@
 }
 
 #search{
-	width: 25%;
+	width: 300px;
+	max-width: 70%;
 	padding: 0.7rem;
 	margin: 1.76rem;
 	margin-bottom: 4rem;

@@ -20,8 +20,8 @@
 		$email = filter_var($_SESSION['email_utilisateur'],FILTER_SANITIZE_EMAIL);
 	}
 	else{
-		$email = filter_var($_POST['mail'],FILTER_SANITIZE_EMAIL);
-		$pseudo = filter_var($_POST['pseudo'],FILTER_SANITIZE_EMAIL);
+		//$email = filter_var($_POST['mail'],FILTER_SANITIZE_EMAIL);
+		//$pseudo = filter_var($_POST['pseudo'],FILTER_SANITIZE_EMAIL);
 	}
 	if($_POST['contact']=="Commission Web") {
 		$contact="Web";

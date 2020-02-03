@@ -5,7 +5,7 @@
 
 		?>
 		<div class="container">
-			<div class=" col-md-12" >
+			<div class=" col-xs-12" >
 
 				<p>
 					<?php echo $cercle['description_cercle']; ?> <br>
@@ -17,35 +17,33 @@
 	</div>
 
 		<div class="row">
-			<div class="col-md-3 col-md-offset-2">
+			<div class="col-xs-12 col-sm-6 center">
 				<img src="<?php echo $cercle['logo_cercle']; ?> ">
 
 			</div>
 
-			<div class="col-md-1"></div>
-			<div class="col-md-3">
-				<div class="container">
+			<div class="col-xs-12 col-md-6" >
 
-					<ul >	
+				<ul class="unstyled center" >	
 
-					<?php
+				<?php
 
-						$annee= 181;
+					$annee= lastPromo($bdd);
 
-						$comitardsArray=selectLastComite($bdd,$name,$annee);
-						foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+					$comitardsArray=selectLastComite($bdd,$name,$annee);
+					foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
 
-							?> 
-							<li >
-								
-								<?php echo " $nom_poste: $firstname $lastname";?>
-								
-							</li>
+						?> 
+						<li >
+							
+							<?php echo " $nom_poste: $firstname $lastname";?>
+							
+						</li>
 
-							<?php
+						<?php
 
-						} ?>
-			    	</ul>
-				</div>	
+					} ?>
+		    	</ul>
+					
 			</div>
 		</div>

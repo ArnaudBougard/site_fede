@@ -73,23 +73,10 @@ session_start();
             <?php
             if(!isset($_SESSION['id_utilisateur'])){
               ?> 
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Adresse mail</label>
-                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                     <input class='form-control' type='mail' id='mail'  name='mail' maxlength='50' size='55' placeholder="votre adresse mail" required/>
-                  </div>
-                </div>
+             <div class="container">
+                <div class="row"> Veuillez vous connecter afin de pouvoir contacter un cercle!</div>
+                <div class="row"></div>
               </div>
-              <br>
-
-              <div class="control-group">
-                <label>Qui êtes-vous?</label>
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                   <input class='form-control' type='text' id='pseudo'  name='pseudo' placeholder='Votre nom et prénom' maxlength='50' size='55'  required/>
-                </div>
-              </div>
-              <br>
               <?php 
             }
             ?>

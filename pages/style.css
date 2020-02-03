@@ -1,4 +1,4 @@
-#body{
+body{
 	font-family: Calibri;
 	margin: 0 auto;
 	background-color: #f8f5ef;
@@ -500,7 +500,7 @@
 
 .list{
 	list-style-type: circle;
-	font-size: 1.3vw;
+	font-size: 14px;
 	text-align: justify;
 	margin-bottom: 1.1vw;
 }
@@ -751,6 +751,13 @@ text-align: center;}
 	.tab li.active {
 	  background-color: #F0EDE7;
 	}
+
+	.title {
+	
+	font-size: 25px;
+	font-weight: bold;
+	
+}
 }
 
 
