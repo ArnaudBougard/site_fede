@@ -1,7 +1,7 @@
     <div class="hidden-xl hidden-lg ">
 
         <div  class="smnetwork">
-          <button type="button" id="sidebarCollapse" class="btn smtoggle" style="margin-left: 20px;">
+          <button type="button" id="sidebarCollapse" class="btn smtoggle" >
               <span class="glyphicon glyphicon-list"></span>
               <span>Menu</span>
           </button> 
