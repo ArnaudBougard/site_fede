@@ -41,7 +41,7 @@ session_start();
 						</ul>
 					</p>
 				</div>
-				<div class="center col-xs-12 col-sm-4"><img class="" src="../../assets/img/reduc.png"> </div>
+				<div class="center col-xs-12 col-sm-4"><img class="" src="../../assets/img/reduc.PNG"> </div>
 
 			</div>
 			
@@ -56,9 +56,9 @@ session_start();
 					<li>Réduction aux soirées de la fédération</li>
 				</ul>
 			</p>
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc1.png"></div>
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc2.png"></div>
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc3.png"></div>
+			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc1.PNG"></div>
+			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc2.PNG"></div>
+			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc3.PNG"></div>
 
 			<h2>Trop bien ! Combien ça coute ? </h2>
 

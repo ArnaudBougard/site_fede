@@ -48,7 +48,7 @@ session_start();
 				</div>
 
 				<div class="">
-					<img class="img3" src="../../assets/img/logoComWeb.PNG" >
+					<img class="img3" src="../../assets/img/logoComWeb.png" >
 
 					<p class="text">
 						
