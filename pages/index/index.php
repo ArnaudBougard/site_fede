@@ -216,7 +216,7 @@ session_start();
 					
 					<div class="col-xs-1 vertical "> Old News</div>
 					<div class="col-xs-11 tileRow hidden-xs">
-						<?php include("../news/pastNews.php"); ?>  
+						<?php include("../news/pastnews.php"); ?>  
 					<!-- affiche 4 dernieres news suivantes-->
 					</div>
 					
@@ -256,7 +256,7 @@ session_start();
 					<div class="col-xs-1 vertical "> Old News</div>
 					
 					<div class="col-xs-11 tileRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../news/pastNews2.php"); ?>  
+						<?php include("../news/pastnews2.php"); ?>  
 						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 
