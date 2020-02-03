@@ -211,7 +211,7 @@ session_start();
 
 
 
-			<div class="row indexRow hidden-xs " style="background-color: gold;">	
+			<div class="row indexRow hidden-xs ">	
 				<div class="col-xs-9 tileRow"> 
 					
 					<div class="col-xs-1 vertical "> Old News</div>
