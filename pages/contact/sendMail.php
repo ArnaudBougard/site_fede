@@ -71,10 +71,13 @@ if(isset($_SESSION['id_utilisateur'])){
 	
 
 	}
+	else{
+		echo "Veuillez vous connecter.";
+	}
 }
 
 else 
 {
-	echo "Veuillez vous connecter.";
+
 }
 ?>
