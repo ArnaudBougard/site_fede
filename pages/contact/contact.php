@@ -24,7 +24,19 @@ session_start();
 
 <section class="center-block mb-0 bg-fourth" id="contact">
     <div class="container" style="margin-top: 2vw; margin-bottom: 4vw;">   
+
       <div class="row">
+
+        <?php
+            if(!isset($_SESSION['id_utilisateur'])){
+              ?> 
+             <div class="container">
+                <div class="row"> <h3>Veuillez vous connecter afin de pouvoir contacter un cercle!</h3></div>
+                <div class="row"></div>
+              </div>
+              <?php 
+            }
+            ?>
         <div class=col-lg-5>
           <img src="../../assets/img/contact.png" alt="contact" style="width: 55%; margin-top: 5vw;">
         </div>
@@ -70,16 +82,7 @@ session_start();
               </div>
             </div> 
 
-            <?php
-            if(!isset($_SESSION['id_utilisateur'])){
-              ?> 
-             <div class="container">
-                <div class="row"> Veuillez vous connecter afin de pouvoir contacter un cercle!</div>
-                <div class="row"></div>
-              </div>
-              <?php 
-            }
-            ?>
+            
 
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
