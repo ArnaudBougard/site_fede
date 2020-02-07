@@ -4,9 +4,11 @@
 
 <?php
 
-if(isset($_SESSION['id_utilisateur'])){
+
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
+
+	if(isset($_SESSION['id_utilisateur'])){
 	if( empty($_POST['contact']) || empty($_POST['message'])) {
 	  http_response_code(500);
 	  echo "ben faut remplir les champs fieuh!";
@@ -71,13 +73,10 @@ if(isset($_SESSION['id_utilisateur'])){
 	
 
 	}
-	else{
+	
+}
+
+else{
 		echo "Veuillez vous connecter.";
 	}
-}
-
-else 
-{
-
-}
 ?>
