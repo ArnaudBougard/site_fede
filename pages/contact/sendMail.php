@@ -49,7 +49,7 @@
 
 	//////////////////////////////////////////////////////////// ENREGISTREMENT MAIL DANS LA DB /////////////////////////////////////////////////////////////////
 
-	$req = $bdd -> prepare("INSERT INTO mail(expéditeur, message, destinataire) VALUES(?,?,?)");
+	$req = $bdd -> prepare("INSERT INTO mails(expediteur, message, destinataire) VALUES(?,?,?)"); 
     $req->execute(array($email, $_POST['message'], $contact));
 
     $req->closeCursor(); // Termine le traitement de la requête
