@@ -89,7 +89,7 @@
 
 
 		$result=$mailer->send($message_swift);
-		echo ' <div class="row"> <h3>Un mail a été envoyé aux responsables concernés.</h3></div>';
+		echo ' <div class="container"><div class="row"> <h3>Un mail a été envoyé aux responsables concernés.</h3></div> </div>';
 	
 		// redirect("../index/index.php");
 	
