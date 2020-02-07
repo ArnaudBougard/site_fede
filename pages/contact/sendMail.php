@@ -3,6 +3,8 @@
 
 
 <?php
+
+if(isset($_SESSION['id_utilisateur'])){
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
 	if( empty($_POST['contact']) || empty($_POST['message'])) {
@@ -11,18 +13,14 @@
 	  exit();
 	}
 
-	if(isset($_SESSION['id_utilisateur'])){
-		//$name = strip_tags(htmlspecialchars($_POST['name']));
-		$pseudo = filter_var($_SESSION['pseudo_utilisateur'],FILTER_SANITIZE_EMAIL);
-		$nom = filter_var($_SESSION['nom_utilisateur'],FILTER_SANITIZE_EMAIL);
-		$prenom = filter_var($_SESSION['prenom_utilisateur'],FILTER_SANITIZE_EMAIL);
-		//$email = strip_tags(htmlspecialchars($_POST['email']));
-		$email = filter_var($_SESSION['email_utilisateur'],FILTER_SANITIZE_EMAIL);
-	}
-	else{
-		//$email = filter_var($_POST['mail'],FILTER_SANITIZE_EMAIL);
-		//$pseudo = filter_var($_POST['pseudo'],FILTER_SANITIZE_EMAIL);
-	}
+	
+	//$name = strip_tags(htmlspecialchars($_POST['name']));
+	$pseudo = filter_var($_SESSION['pseudo_utilisateur'],FILTER_SANITIZE_EMAIL);
+	$nom = filter_var($_SESSION['nom_utilisateur'],FILTER_SANITIZE_EMAIL);
+	$prenom = filter_var($_SESSION['prenom_utilisateur'],FILTER_SANITIZE_EMAIL);
+	//$email = strip_tags(htmlspecialchars($_POST['email']));
+	$email = filter_var($_SESSION['email_utilisateur'],FILTER_SANITIZE_EMAIL);
+	
 	if($_POST['contact']=="Commission Web") {
 		$contact="Web";
 	}
@@ -72,6 +70,11 @@
 		// redirect("../index/index.php");
 	
 
+	}
+}
 
+else 
+{
+	echo "Veuillez vous connecter.";
 }
 ?>
