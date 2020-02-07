@@ -34,6 +34,7 @@
 	//$message = strip_tags(htmlspecialchars($_POST['message']));
 	$message = filter_var($_POST['message'],FILTER_SANITIZE_EMAIL);
 
+	//////////////////////////////////////////////////////////// CONNEXION SERVEUR SMTP /////////////////////////////////////////////////////////////////////////
 	include("../../controller/mailinit.php");
 
 	$promo=lastPromo($bdd);
@@ -45,6 +46,27 @@
 	// }
 	// $mailsDeTous=array($mailsDeTous);
 
+
+	//////////////////////////////////////////////////////////// ENREGISTREMENT MAIL DANS LA DB /////////////////////////////////////////////////////////////////
+
+	$req = $bdd -> prepare("INSERT INTO mail(expéditeur, message, destinataire) VALUES(?,?,?)");
+    $req->execute(array($email, $_POST['message'], $contact));
+
+    $req->closeCursor(); // Termine le traitement de la requête
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//////////////////////////////////////////////////////////// ENVOI DU MAIL /////////////////////////////////////////////////////////////////////////
 	$mailer= new Swift_Mailer($transport);
 		$message_swift=(new Swift_Message('Site Fédé: un utilisateur vous contacte'))
 			->setFrom(['commission.web@magellan.fpms.ac.be'=>'PostMaster: Fédé Polytech Mons'])
@@ -67,7 +89,7 @@
 
 
 		$result=$mailer->send($message_swift);
-		echo "Un mail a été envoyé aux responsables concernés.";
+		echo " <div class="row"> <h3>Un mail a été envoyé aux responsables concernés.</h3></div>";
 	
 		// redirect("../index/index.php");
 	
@@ -77,6 +99,6 @@
 }
 
 else{
-		echo "Veuillez vous connecter.";
+		echo "Veuillez vous connecter!!";
 	}
 ?>
