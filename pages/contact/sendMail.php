@@ -95,10 +95,12 @@
 	
 
 	}
+
+	else{
+		echo "Veuillez vous connecter!!";
+	}
 	
 }
 
-else{
-		echo "Veuillez vous connecter!!";
-	}
+
 ?>
