@@ -8,7 +8,8 @@ body{
   --bluecolor: #2671C1;
   --whitecolor: #f8f5ef;
   --bluehovercolor: #004795;
-  --footercolor: #003772;
+  --footercolor: #083043;
+  --tealhovercolor: #1BB4B4;
   --fullwidth: 100%;
 }
 
@@ -109,10 +110,10 @@ body{
 
 .popup{
     padding: 3rem;
-	border: solid 0.05rem var(--bluecolor);
+	border: solid 0.05rem black;
 	height: 35rem;
 	width: 70rem;
-    background-color: black;
+    background-color: var(--footercolor);
  	margin: 0 auto;
  	margin-top: 10rem;
     z-index: 6 ;
@@ -131,19 +132,19 @@ body{
 }
 
 .popupconnexionchamp{
-    padding-left:10px;
-    background-color: black;
+    padding: 10px;
+    background-color: var(--footercolor);
     color: black;
     border: none;
 	font-weight: bold;
 	font-family: Calibri;
-	border-bottom: 2px solid var(--bluecolor);
+	border-bottom: 2px solid var(--tealhovercolor);
 	color: var(--whitecolor);
 }
 
 .popupconnexionchamp:focus{
 	text-decoration: none;
-	border: 2px solid var(--bluecolor);
+	border: 2px solid var(--tealhovercolor);
 	color: var(--whitecolor);
 }
 
@@ -154,7 +155,7 @@ body{
 }
 
 .btn-form2{
-	background-color: var(--bluecolor);
+	background-color: var(--tealhovercolor);
 	font-family: Calibri;
 	padding: 1rem 2rem;
 	border-radius: 20px;
@@ -247,9 +248,9 @@ body{
 
 .header-btn:hover,
 .header-btn:focus{
-	background-color: var(--bluecolor);
-	border-color: var(--bluecolor);
-	color: var(--whitecolor);
+	background-color: var(--footercolor);
+	border-color: var(--footercolor);
+	color: var(--tealhovercolor);
 	text-decoration: none;
 	outline: none;
 }
@@ -261,6 +262,7 @@ body{
 /*--------------------*/
 
 #nav{
+	background-color: var(--footercolor);
 	position: sticky;
 	z-index: 4;
 	width: 100%;
@@ -287,7 +289,7 @@ body{
 .navbar a{
 	display: block;
 	text-decoration: none;
-	color: black;
+	color: var(--whitecolor);
 	font-size: 100%;
 	text-transform: uppercase;
 	font-family: Calibri;
@@ -297,9 +299,9 @@ body{
 }
 
 .navbar a:hover{
-	color: var(--bluecolor);
+	color: var(--tealhovercolor);
 	text-decoration: none;
-	border-bottom: 0.2em solid var(--bluecolor);
+	border-bottom: 0.2em solid var(--tealhovercolor);
 }
 
 .menuul {
@@ -315,7 +317,7 @@ body{
 	margin: 0 ;
 	display: none;
 	box-shadow: 0px 1px 2px #CCC;
-	background-color: #F8F8F8;
+	background-color: var(--footercolor);
 	position: absolute;
 	width: 100%;
 	z-index: 10;
@@ -334,7 +336,7 @@ body{
 }
 
 .dropdown-content a{
-	padding: 0.5vw;
+	padding: 1em;
 	border-bottom: none;
 	text-transform: none;
 }
@@ -346,14 +348,14 @@ body{
 
 .dropdown > a::after{
 	content:" ▼";
-	font-size: 0.76vw;
+	font-size: 0.76em;
 }
 
 .mystyle {
   width: 100%;
   padding: 25px;
   background-color: coral;
-  color: var(--whitecolor);
+  color: var(--tealhovercolor);
   font-size: 25px;
   box-sizing: border-box;
 }
@@ -631,8 +633,6 @@ body{
 
 .footerli {
 	text-align: center;
-
-
 }
 
 .footera,
@@ -651,10 +651,10 @@ body{
 }
 
 .gmap_canvas{
-	overflow:hidden;
-	background:none!important;
-	height:25rem;
-	width:20rem;
+	overflow: hidden;
+	background: none!important;
+	height: 25rem;
+	width: 20rem;
 }
 
 .link-foot{
@@ -664,7 +664,7 @@ body{
 
 .link-foot:hover{
 	font-size: 2.5rem;
-	color: var(--bluecolor);
+	color: var(--tealhovercolor);
 }
 
 .links-foot{

@@ -1,4 +1,5 @@
 <?php 
+
 if(isset($_POST['formco'])){
     $pseudoco = htmlspecialchars($_POST['pseudoco']);
     $passco = sha1($_POST['passco']);
@@ -12,8 +13,7 @@ if(isset($_POST['formco'])){
         if($userexist==1){
             $userinfo = $requser ->fetch();
             if($userinfo['statut_utilisateur']==1){
-                                  
-                                                     
+                                
                 //On enregistre les variables de session
                 $_SESSION['id_utilisateur'] = $userinfo['id_utilisateur'];
                 $_SESSION['pseudo_utilisateur'] = $userinfo['pseudo_utilisateur'];
@@ -37,7 +37,7 @@ if(isset($_POST['formco'])){
             }
             else{
                 $error=1;
-                $message = " Vous n'avez pas validé votre adresse mail, vérifiez vos mails ( et vos spams )";
+                $message = "Vous n'avez pas validé votre adresse mail, vérifiez vos mails (ainsi que vos spams)";
                 
             }
         }
@@ -54,7 +54,5 @@ if(isset($_POST['formco'])){
     }
 
 }
-
-
 
 ?>

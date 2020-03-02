@@ -1,7 +1,6 @@
 .indexContent{
   margin-right: 2vw;
   /*margin-left: 2vw;*/
-
 }
 
 .tileTitle {background-color: rgba(0, 0, 0, 0.5); 
@@ -33,26 +32,11 @@
 }
 
 .vertical {
-transform: rotate(-90deg);
-white-space: nowrap;
-
-font-size: 3vw;
-font-weight: bold;
-padding: 0px;
-margin: 0px;
-padding-left: 4vw;
-
-<<<<<<< HEAD
   transform: rotate(-90deg);
   white-space: nowrap;
   font-size: 3em;
   font-weight: bold;
-  padding: 0px;
-  margin: 0px;
-  padding-left: 4vw;
-=======
->>>>>>> parent of 9947e6d... Résolution du problème d'affichage des événements
-
+  margin-bottom: 5%;
 }
 
 .mutuli {
@@ -62,7 +46,7 @@ padding-left: 4vw;
 
 .mutuspan { 
   font-size: 0.8vw;
-  }
+}
 
 .mutuul{
 list-style: none;
@@ -74,7 +58,6 @@ text-align: center;
 font-size: 2vw;
 text-align: center;
 }
-
 
 .title-div{
   margin-top: 1.76vw;
@@ -91,6 +74,7 @@ text-align: center;
   display: flex;
   align-items: flex-end;
 }
+
 .tile{
  padding:0vw;
   margin:0.5vw ;
@@ -118,11 +102,10 @@ font-size: 3.5vh;
 }
 
 
+
 /*--------------------*/
 /* Metro4: On a pris juste le code css concernant les tiles;  */ 
 /*--------------------*/
-
-
 
 .tile-small,
 .tile-medium,
@@ -135,15 +118,16 @@ font-size: 3.5vh;
   width: 150px;
   height: 150px;
   -webkit-box-shadow: inset 0 0 1px #FFFFCC;
-          box-shadow: inset 0 0 1px #FFFFCC;
+  box-shadow: inset 0 0 1px #FFFFCC;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 .tile-small {
   width: 70px;
   height: 70px;
@@ -164,6 +148,7 @@ font-size: 3.5vh;
 }
 
 @media only screen and (max-width: 768px) {
+
   .tile-large {
   /*  width: 305px;
     height: 305px;*/
@@ -181,7 +166,6 @@ font-size: 3.5vh;
   margin: 0px;
   margin-bottom: : 2vw;
   }
-
 
   .Tileh2 {
     font-size: 1vw !important;
@@ -214,7 +198,7 @@ font-size: 3.5vh;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   font-size: 50px;
   line-height: 50px;
   z-index: 2;
@@ -386,7 +370,7 @@ font-size: 3.5vh;
 .tile-large.transform-top.tile-wide,
 .tile-app.transform-top.tile-wide {
   -webkit-transform: perspective(500px) rotateX(0.069186rad) !important;
-          transform: perspective(500px) rotateX(0.069186rad) !important;
+  transform: perspective(500px) rotateX(0.069186rad) !important;
 }
 .tile-small.transform-top.tile-large,
 .tile-medium.transform-top.tile-large,
@@ -394,7 +378,7 @@ font-size: 3.5vh;
 .tile-large.transform-top.tile-large,
 .tile-app.transform-top.tile-large {
   -webkit-transform: perspective(500px) rotateX(0.046124rad) !important;
-          transform: perspective(500px) rotateX(0.046124rad) !important;
+  transform: perspective(500px) rotateX(0.046124rad) !important;
 }
 .tile-small.transform-bottom,
 .tile-medium.transform-bottom,
@@ -402,9 +386,9 @@ font-size: 3.5vh;
 .tile-large.transform-bottom,
 .tile-app.transform-bottom {
   -webkit-transform-origin: 50% top;
-          transform-origin: 50% top;
+  transform-origin: 50% top;
   -webkit-transform: perspective(500px) rotateX(-0.138372rad) !important;
-          transform: perspective(500px) rotateX(-0.138372rad) !important;
+  transform: perspective(500px) rotateX(-0.138372rad) !important;
 }
 .tile-small.transform-bottom.tile-small,
 .tile-medium.transform-bottom.tile-small,
@@ -412,7 +396,7 @@ font-size: 3.5vh;
 .tile-large.transform-bottom.tile-small,
 .tile-app.transform-bottom.tile-small {
   -webkit-transform: perspective(500px) rotateX(-0.276744rad) !important;
-          transform: perspective(500px) rotateX(-0.276744rad) !important;
+  transform: perspective(500px) rotateX(-0.276744rad) !important;
 }
 .tile-small.transform-bottom.tile-wide,
 .tile-medium.transform-bottom.tile-wide,
@@ -420,7 +404,7 @@ font-size: 3.5vh;
 .tile-large.transform-bottom.tile-wide,
 .tile-app.transform-bottom.tile-wide {
   -webkit-transform: perspective(500px) rotateX(-0.069186rad) !important;
-          transform: perspective(500px) rotateX(-0.069186rad) !important;
+  transform: perspective(500px) rotateX(-0.069186rad) !important;
 }
 .tile-small.transform-bottom.tile-large,
 .tile-medium.transform-bottom.tile-large,
@@ -428,7 +412,7 @@ font-size: 3.5vh;
 .tile-large.transform-bottom.tile-large,
 .tile-app.transform-bottom.tile-large {
   -webkit-transform: perspective(500px) rotateX(-0.046124rad) !important;
-          transform: perspective(500px) rotateX(-0.046124rad) !important;
+  transform: perspective(500px) rotateX(-0.046124rad) !important;
 }
 .tiles-grid {
   position: relative;
@@ -1633,7 +1617,7 @@ font-size: 3.5vh;
 [class*=tile-].effect-hover-slide-up:hover .slide-front,
 [class*=tile-].effect-hover-zoom-up:hover .slide-front {
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 [class*=tile-].effect-hover-slide-up:hover .slide-back,
 [class*=tile-].effect-hover-zoom-up:hover .slide-back {
@@ -1644,7 +1628,7 @@ font-size: 3.5vh;
   top: 0;
   left: 0;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 [class*=tile-].effect-hover-slide-down:hover .slide-front,
 [class*=tile-].effect-hover-zoom-down:hover .slide-front {
@@ -1653,7 +1637,7 @@ font-size: 3.5vh;
 [class*=tile-].effect-hover-slide-down:hover .slide-back,
 [class*=tile-].effect-hover-zoom-down:hover .slide-back {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 [class*=tile-].effect-hover-slide-left .slide-back,
 [class*=tile-].effect-hover-zoom-left .slide-back {
@@ -1663,7 +1647,7 @@ font-size: 3.5vh;
 [class*=tile-].effect-hover-slide-left:hover .slide-front,
 [class*=tile-].effect-hover-zoom-left:hover .slide-front {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 [class*=tile-].effect-hover-slide-left:hover .slide-back,
 [class*=tile-].effect-hover-zoom-left:hover .slide-back {
@@ -1674,7 +1658,7 @@ font-size: 3.5vh;
   top: 0;
   left: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 [class*=tile-].effect-hover-slide-right:hover .slide-front,
 [class*=tile-].effect-hover-zoom-right:hover .slide-front {
@@ -1683,7 +1667,7 @@ font-size: 3.5vh;
 [class*=tile-].effect-hover-slide-right:hover .slide-back,
 [class*=tile-].effect-hover-zoom-right:hover .slide-back {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 [class*=tile-].effect-hover-zoom-up:hover .slide-front,
 [class*=tile-].effect-hover-zoom-down:hover .slide-front,
@@ -1692,5 +1676,5 @@ font-size: 3.5vh;
   left: 0;
   top: 0;
   -webkit-transform: scale(2);
-          transform: scale(2);
+  transform: scale(2);
 }
