@@ -34,7 +34,7 @@
 
 .vertical {
 
-  transform: rotate(-99deg);
+  transform: rotate(-90deg);
   white-space: nowrap;
   font-size: 3em;
   font-weight: bold;
