@@ -1,260 +1,156 @@
 <?php
-
 function selectMyEvents($bdd,$organisateur) {
 
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? and statut_evenement='1' ORDER BY `id_evenement` DESC");
-		        $req->execute(array($organisateur));
+	$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? and statut_evenement='1' ORDER BY `id_evenement` DESC");
+    $req->execute(array($organisateur));
+	$array = array();
 
-				// set array
-				$array = array();
-
-				// look through query
-				while($row = $req->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
-				$req->closeCursor(); // Termine le traitement de la requête
+	while($row = $req->fetch()){
+	  $array[] = $row;
 	}
+
+	return $array;
+	$req->closeCursor();
+}
 
 function selectMyPendingEvents($bdd,$organisateur) {
 
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? and statut_evenement='0' ORDER BY `id_evenement` DESC");
-		        $req->execute(array($organisateur));
+	$req = $bdd -> prepare("SELECT * FROM evenement where organisateur=? and statut_evenement='0' ORDER BY `id_evenement` DESC");
+	$req->execute(array($organisateur));
+	$array = array();
 
-				// set array
-				$array = array();
-
-				// look through query
-				while($row = $req->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
-				$req->closeCursor(); // Termine le traitement de la requête
+	while($row = $req->fetch()){
+	  $array[] = $row;
 	}
 
-
+	return $array;
+	$req->closeCursor();
+}
 
 function selectFutureEvents($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 
 function selectPastEvents($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC");
-	        $req->execute(array());
-
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
+	
+	return $array;
+	$req->closeCursor();
 }
 
 function selectSomePastEvents3($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 3");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 3");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 function selectSomePastEvents2($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 2");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement <= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` DESC LIMIT 2");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 function selectSomeFutureEvents3($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC LIMIT 3");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC LIMIT 3");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 function selectSomeFutureEvents2($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC LIMIT 2");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where date_evenement >= CURDATE() and statut_evenement='1' ORDER BY `date_evenement` ASC LIMIT 2");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 function selectAllValidatedEvents($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where statut_evenement='1' ORDER BY `date_evenement` DESC");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where statut_evenement='1' ORDER BY `date_evenement` DESC");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 
 function selectAllPendingEvents($bdd) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where statut_evenement='0' ORDER BY `date_evenement` DESC");
+    $req->execute(array());
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where statut_evenement='0' ORDER BY `date_evenement` DESC");
-	        $req->execute(array());
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
 
 function selectEventById($bdd,$id) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM evenement where id_evenement=?");
+    $req->execute(array($id));
+	$array = array();
 
-			$req = $bdd -> prepare("SELECT * FROM evenement where id_evenement=?");
-	        $req->execute(array($id));
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
-
-
-
-?>

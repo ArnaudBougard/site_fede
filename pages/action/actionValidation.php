@@ -8,22 +8,18 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body id="body">
-		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<!-- HEADER -->
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
-
-
-
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 
 		<div class="container">			
 			
@@ -141,14 +137,10 @@ session_start();
 			</div>
 		</div>
 
-
 		<?php include("../footer.php"); ?>
 		<?php include("../../controller/toggle.php"); ?>
 
-	</body>
-
-
-	
+	</body>	
 
 </html>
 

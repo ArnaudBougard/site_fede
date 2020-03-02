@@ -8,6 +8,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
@@ -117,11 +118,10 @@ session_start();
 
 								}
 							}
-							else
-							{
-						?>
+							else{
+							?>
 							<p>Vous n'avez aucune action en attente de validation, la validation est automatique peceka on vous fait confiance ouesh.</p>
-						<?php
+							<?php
 							}
 
 					?>					
@@ -130,14 +130,10 @@ session_start();
 		
 		</div>
 
-
 		<?php include("../footer.php"); ?>
 		<?php include("../../controller/toggle.php"); ?>
 
 	</body>
-
-
-	
 
 </html>
 

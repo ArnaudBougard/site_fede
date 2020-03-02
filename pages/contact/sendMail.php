@@ -1,9 +1,7 @@
 <?php include("../../model/connexionDAO.php")?>
 <?php include("../../model/contactDAO.php")?>
 
-
 <?php
-
 
 	if(isset($_POST["sendmail"])){
 	// Check for empty fields
@@ -53,16 +51,6 @@
     $req->execute(array($email, $_POST['message'], $contact));
 
     $req->closeCursor(); // Termine le traitement de la requête
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,123 +1,71 @@
 <?php
+function selectLastAction($bdd){
 
+	$req = $bdd -> prepare("SELECT * FROM action where statut='1' ORDER BY `id` DESC LIMIT 1");
+    $req->execute(array());
 
-function selectLastAction($bdd) {
+	// set array
+	$array = array();
 
-	////////////////////////////////////////////////stock data into array
-			// run query
-
-			$req = $bdd -> prepare("SELECT * FROM action where statut='1' ORDER BY `id` DESC LIMIT 1");
-	        $req->execute(array());
-
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
-}
-
-function selectMyPendingactions($bdd,$auteur) {
-
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$req = $bdd -> prepare("SELECT * FROM action where statut='0' ORDER BY `id` DESC");
-		        $req->execute(array($auteur));
-
-				// set array
-				$array = array();
-
-				// look through query
-				while($row = $req->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
-				$req->closeCursor(); // Termine le traitement de la requête
+	// look through query
+	while($row = $req->fetch()){
+		
+	  // add each row returned into an array
+	  $array[] = $row;
 	}
 
-
-
-function selectAllActions($bdd) {
-
-	////////////////////////////////////////////////stock data into array
-			// run query
-
-			$req = $bdd -> prepare("SELECT * FROM action where statut='1' ORDER BY `date_action` DESC");
-	        $req->execute(array());
-
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor(); // Termine le traitement de la requête
 }
 
+function selectMyPendingactions($bdd,$auteur){
 
-function selectAllPendingActions($bdd) {
+	$req = $bdd -> prepare("SELECT * FROM action where statut='0' ORDER BY `id` DESC");
+    $req->execute(array($auteur));
+	$array = array();
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	return $array;
+	$req->closeCursor();
+}
 
-			$req = $bdd -> prepare("SELECT * FROM action where statut='0' ORDER BY `date_action` DESC");
-	        $req->execute(array());
+function selectAllActions($bdd){
 
-			// set array
-			$array = array();
+	$req = $bdd -> prepare("SELECT * FROM action where statut='1' ORDER BY `date_action` DESC");
+    $req->execute(array());
+	$array = array();
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			// look through query
-			while($row = $req->fetch()){
+	return $array;
+	$req->closeCursor();
+}
 
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
+function selectAllPendingActions($bdd){
 
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	$req = $bdd -> prepare("SELECT * FROM action where statut='0' ORDER BY `date_action` DESC");
+    $req->execute(array());
+	$array = array();
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
+
+	return $array;
+	$req->closeCursor();
 }
 
 function selectActionById($bdd,$id) {
 
-	////////////////////////////////////////////////stock data into array
-			// run query
+	$req = $bdd -> prepare("SELECT * FROM action where id=?");
+    $req->execute(array($id));
+	$array = array();
+	while($row = $req->fetch()){
+	  $array[] = $row;
+	}
 
-			$req = $bdd -> prepare("SELECT * FROM action where id=?");
-	        $req->execute(array($id));
-
-			// set array
-			$array = array();
-
-			// look through query
-			while($row = $req->fetch()){
-
-			  // add each row returned into an array
-			  $array[] = $row;
-			 
-
-			}
-			return $array;
-			$req->closeCursor(); // Termine le traitement de la requête
+	return $array;
+	$req->closeCursor();
 }
-
-
-
-?>

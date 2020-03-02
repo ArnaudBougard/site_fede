@@ -1,9 +1,10 @@
 <?php 
-
 if(isset($_POST['formco'])){
+
     $pseudoco = htmlspecialchars($_POST['pseudoco']);
     $passco = sha1($_POST['passco']);
     $error=0;
+
     if(!empty($pseudoco) AND !empty($passco)){
 
         $requser = $bdd -> prepare('SELECT * FROM utilisateur WHERE pseudo_utilisateur = ? AND password_utilisateur = ?');
@@ -41,18 +42,14 @@ if(isset($_POST['formco'])){
                 
             }
         }
-        else
-        {
+        else{
             $error=1;
             $message = "Identifiant ou mot de passe incorrect!";
         }
     }
-    else 
-    {   
+    else{   
         $error=1;
         $message = '<p class="erreur">Tous les champs doivent être remplis !</p>';
     }
 
 }
-
-?>

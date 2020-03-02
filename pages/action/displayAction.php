@@ -1,6 +1,7 @@
 <?php 
 
   $lastAction=selectLastAction($bdd);
+
   if(!empty($lastAction)) {
     
       foreach ($lastAction as list($id,$nom,$prix,$quantite,$date,$img,$description)) {
@@ -37,7 +38,7 @@
     }
 
   }
- else{
+  else{
     ?>
     <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
         

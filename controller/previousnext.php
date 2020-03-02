@@ -1,5 +1,4 @@
 <?php
-
 function previousId($minid) {
 
 	$id_actuel=$_GET['id'];
@@ -21,5 +20,3 @@ function nextId($maxid){
 
 	return $id_next;
 }
-
-?>

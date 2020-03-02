@@ -14,4 +14,3 @@ $req->closeCursor(); // Termine le traitement de la requête
 
 include("../../model/redirect.php"); 
 redirect("./actionValidation.php");
-?>

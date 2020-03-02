@@ -1,80 +1,57 @@
 <?php
+function selectByName($bdd,$name) {
 
-	function selectByName($bdd,$name) {
+	// On récupère tout le contenu de la table chant
+	$reponse= $bdd->prepare('SELECT * from cercle where nom_cercle=?');
+	$reponse->execute(array($name));
 
-		// On récupère tout le contenu de la table chant
-		$reponse= $bdd->prepare('SELECT * from cercle where nom_cercle=?');
-		$reponse->execute(array($name));
+	// On recupere la ligne
+	return $reponse->fetch();
+	$reponse->closeCursor(); // Termine le traitement de la requête
+}
 
-		// On recupere la ligne
-		return $reponse->fetch();
+function selectFirstId($bdd){
 
-		$reponse->closeCursor(); // Termine le traitement de la requête
-
-	}
-
-	function selectFirstId($bdd){
-
-		$reponse = $bdd->prepare('SELECT MIN(id_cercle) AS id_min FROM cercle');
-		$reponse->execute();
-		
-		return $reponse->fetch();
-
-		$reponse->closeCursor(); // Termine le traitement de la requête
-
-	}
-
-	function selectLastId($bdd){
-
-		$reponse = $bdd->prepare('SELECT MAX(id_cercle) AS id_max FROM cercle');
-		$reponse->execute();
-		
-		return $reponse->fetch();
-
-		$reponse->closeCursor(); // Termine le traitement de la requête
-	}
-
+	$reponse = $bdd->prepare('SELECT MIN(id_cercle) AS id_min FROM cercle');
+	$reponse->execute();
 	
-	function selectPromo($bdd) {
+	return $reponse->fetch();
+	$reponse->closeCursor();
+}
 
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$query = $bdd->prepare("SELECT max(tmp_annee) from historique");
-				$query->execute(array());
-				
-				// set array
-				$array = array();
+function selectLastId($bdd){
 
-				// look through query
-				while($row = $query->fetch()){
+	$reponse = $bdd->prepare('SELECT MAX(id_cercle) AS id_max FROM cercle');
+	$reponse->execute();
+	
+	return $reponse->fetch();
+	$reponse->closeCursor();
+}
 
-				  // add each row returned into an array
-				  $array[] = $row;
+function selectPromo($bdd){
 
-				}
-				return $array;
+	$query = $bdd->prepare("SELECT max(tmp_annee) from historique");
+	$query->execute(array());
+	$array = array();
 
-				$query->closeCursor(); // Termine le traitement de la requête
+	while($row = $query->fetch()){
+	  $array[] = $row;
 	}
 
-	function selectLastComite($bdd,$nom_cercle,$annee) {
+	return $array;
+	$query->closeCursor();
+}
 
-		////////////////////////////////////////////////stock data into array
-				// run query
-				$query = $bdd->prepare("SELECT tmp_poste, tmp_firstname, tmp_lastname FROM historique where tmp_cercle=? AND tmp_annee=?");
-				$query->execute(array($nom_cercle, $annee));
+function selectLastComite($bdd,$nom_cercle,$annee){
 
-				// set array
-				$array = array();
+	$query = $bdd->prepare("SELECT tmp_poste, tmp_firstname, tmp_lastname FROM historique where tmp_cercle=? AND tmp_annee=?");
+	$query->execute(array($nom_cercle, $annee));
+	$array = array();
 
-				// look through query
-				while($row = $query->fetch()){
-
-				  // add each row returned into an array
-				  $array[] = $row;
-				 
-
-				}
-				return $array;
+	while($row = $query->fetch()){
+	  $array[] = $row;
 	}
-?>
+
+	return $array;
+	$query->closeCursor();
+}
