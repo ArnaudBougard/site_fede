@@ -1,21 +1,20 @@
 body{
+
 	font-family: Calibri;
 	margin: 0 auto;
 	background-color: #f8f5ef;
+
 }
 
 /*--------------------*/
 /* NETWORK */
 /*--------------------*/
 
-
-
 .networkBar{
 	
-	height:2.5vw; 
-	padding-top: 0.5vw;
 	background-color: black;
 	font-family: Calibri;
+
 }
 
 .networkul {
@@ -23,6 +22,7 @@ body{
 	margin: 0 ;
 	list-style-type: none; 
 	padding-left: 3vw;
+	
 }
 
 

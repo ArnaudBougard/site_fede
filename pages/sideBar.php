@@ -30,7 +30,7 @@
                     if($comitard!= NULL){ // On ferme l'accolade à la fin du code
 
                         ?>
-                        <li class="" ><a class="" href= "../events/eventManager.php"> Mes événements</a></li>
+                        <li class="" ><a class="" href= "../events/eventManager.php">Mes événements</a></li>
 
                         <li class="" ><a class="" href= "../news/newsManager.php">Mes news</a></li>
 
@@ -41,8 +41,8 @@
                     $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
                     if($admin!= NULL){
                       ?>
-                        <li class="" ><a class=" " href= "../events/eventValidation.php"> Events Validation</a></li>
-                        <li class="" ><a class=" " href= "../news/newsValidation.php">  News Validation</a></li>
+                        <li class="" ><a class=" " href= "../events/eventValidation.php">Events Validation</a></li>
+                        <li class="" ><a class=" " href= "../news/newsValidation.php">News Validation</a></li>
                               
                       <?php 
                     }
@@ -57,7 +57,7 @@
                     $mutu=is_mutu($bdd,$_SESSION['email_utilisateur']);
                     if($mutu!= NULL){
                       ?>
-                      <li class="" > <a class="" href="../mutu/horaireManager.php"> Horaire Mutu</a> </li>
+                      <li class="" > <a class="" href="../mutu/horaireManager.php">Horaire Mutu</a> </li>
                       <?php 
                     }
 
@@ -81,7 +81,6 @@
                 <li class="active"><a <?php if($page == "index/index.php" or $page == "index/"){echo 'class="active"';} ?> href="../index/index.php">Accueil</a></li>
                 
                 <li>
-
                     <a 
                     <?php 
                     if($page == "federale/apropos.php" or $page == "federale/adhesion.php" or $page == "federale/statuts.php" 
@@ -147,25 +146,24 @@
             </ul>
 
 
-
             <ul class="list-unstyled components">
                 
                 <li>
                     <a href="#lienSubmenu" data-toggle="collapse" aria-expanded="false">Polytech Network</a>
                         <ul class="collapse list-unstyled" id="lienSubmenu">
       
-                            <li class="" > <a class=""  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
+                            <li class="" > <a class=""  target="_blank" href="https://cerclephotovideofpms.wordpress.com/">CPV</a></li>
 
-                            <li class="" > <a class="" target="_blank" href=" https://the-games.magellan.fpms.ac.be/"> The-Games</a></li>
+                            <li class="" > <a class="" target="_blank" href=" https://the-games.magellan.fpms.ac.be/">The-Games</a></li>
 
-                            <li class="" > <a class="" target="_blank" href="https://historiquefpms.wordpress.com"> Commission Historique</a></li>
-                            <li class="" > <a class="" target="_blank" href="https://jde.polytech-mons-alumni.be/"> JDE</a></li>
+                            <li class="" > <a class="" target="_blank" href="https://historiquefpms.wordpress.com">Commission Historique</a></li>
+                            <li class="" > <a class="" target="_blank" href="https://jde.polytech-mons-alumni.be/">JDE</a></li>
 
-                            <li class="" > <a class="" target="_blank" href="https://magellan.fpms.ac.be/"> Magellan</a></li>
+                            <li class="" > <a class="" target="_blank" href="https://magellan.fpms.ac.be/">Magellan</a></li>
 
-                            <li class="" > <a class="" target="_blank" href="https://polytech-mons-alumni.be/accueil/"> AIMs</a></li>
+                            <li class="" > <a class="" target="_blank" href="https://polytech-mons-alumni.be/accueil/">AIMs</a></li>
 
-                            <li class="" > <a class="" target="_blank" href="https://www.facebook.com/groups/12209585370/"> Facebook</a></li>
+                            <li class="" > <a class="" target="_blank" href="https://www.facebook.com/groups/12209585370/">Facebook</a></li>
                         </ul>
                       </div>
 

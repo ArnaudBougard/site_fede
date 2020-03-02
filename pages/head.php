@@ -1,9 +1,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Site Fédé</title>
 
  <!--ICONE FAV, A AJOUTER-->
-<link rel="icon" type="image/png" href="../../assets/img/favicon/logoFede.png"  />
+<link rel="icon" type="image/png" href="../../assets/img/favicon/logoFede.png">
 
 <!-- Styles packages -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
