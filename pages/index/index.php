@@ -30,60 +30,53 @@ session_start();
 
 		include("../navbar.php"); 
 
-		include("../sideBar.php");
-
+		include("../sideBar.php"); 
 		?>
-
 		<!--
 		<div class="col-sm-4">
 	        <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
 	    </div>
 		-->
 
-		<div class="row indexContent">
+		<div class="row indexContent ">
 
 			<div class="row indexRow hidden-xs">
-
 				<div class="title-div">
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
-
-				<div class="col-xs-9 tileRow">
-
-					<div class="col-xs-1 vertical">Evènements</div>
-
-					<div class="col-xs-11 tileRow">
-
-						<?php include("../events/futureEvents.php"); ?>
+				<div class="col-xs-9 tileRow"> 
+					<div class="col-xs-1 vertical "> Evénements</div>
+					<div class="col-xs-11 tileRow ">
+						<?php include("../events/futureEvents.php"); ?> 
 						<!-- affiche 3 future events les plus proches dans le temps -->
-
 					</div>
 					
+
+					
+
 				</div>
 			
-				<div class="col-xs-3 nopadding">
-
-					<?php include("../action/displayAction.php"); ?>
-
+				<div class="col-xs-3 nopadding"> 
+					<?php include("../action/displayAction.php"); ?> 
 				</div>
 
 			</div>
 
 			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">
-				
 				<div class="title-div">
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
-
 				<div class="col-xs-8 tileRow"> 
-
-					<div class="col-xs-1 vertical">Evènements</div>
+					<div class="col-xs-1 vertical "> Evénements</div>
 					
 					<div class="col-xs-11 tileRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../events/futureEvents2.php"); ?> 
 						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 					
+
+					
+
 				</div>
 			
 				<div class="col-xs-4 nopadding"> 
@@ -92,15 +85,14 @@ session_start();
 
 			</div>
 
+
+
 			<div class="row indexRow hidden-xs ">
-				
 				<div class="title-div">
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
-
 				<div class="col-xs-9 tileRow"> 
-
-					<div class="col-xs-1 vertical">Actualités</div>
+					<div class="col-xs-1 vertical "> Actualités</div>
 					<div class="col-xs-11 tileRow hidden-xs">
 						
 						<?php include("../news/recentNews.php"); ?>
@@ -119,7 +111,7 @@ session_start();
 					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
 				<div class="col-xs-8 tileRow"> 
-					<div class="col-xs-1 vertical ">Actualités</div>
+					<div class="col-xs-1 vertical "> Actualités</div>
 					
 					<div class="col-xs-11 tileRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../news/recentNews2.php"); ?>
@@ -134,6 +126,8 @@ session_start();
 
 			</div>
 
+
+
 			<div class="row indexRow">
 				<div class="title-div" style="padding:1vh;">
 					
@@ -143,7 +137,7 @@ session_start();
 			<div class="row indexRow hidden-xs">
 
 				<div class="col-xs-9 tileRow"> 
-					<div class="col-xs-1 vertical ">Old Events</div>
+					<div class="col-xs-1 vertical "> Old Events</div>
 					<div class="col-xs-11 tileRow hidden-xs">
 						<?php include("../events/pastEvents.php"); ?>  
 					<!-- affiche 4 derniers events passés-->
@@ -154,10 +148,10 @@ session_start();
 				<div class="col-xs-3 nopadding"> 
 					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
 		               
-		                <div class="title-div"><h2 class="Tileh2">Tous les événements</h2></div>
+		                <div class="title-div"><h2 class="Tileh2"> Tous les événements!</h2></div>
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
 		                	<div class="tileTitle">
-					           <h2>Voir tous les événements<h2>
+					           <h2> Voir tous les événements<h2>
 					        </div>
 		                </div>
 
@@ -166,7 +160,7 @@ session_start();
 			                  <div style="padding-top: 16vh">
 			                    
 			                    <p class="tile-text">
-			                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl">Tous les événements</a> </btn>
+			                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl">Tous les événements!</a> </btn>
 			                    </p>
 			                  </div>
 			                 
@@ -179,7 +173,7 @@ session_start();
 			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">
 
 				<div class="col-xs-8 tileRow"> 
-					<div class="col-xs-1 vertical ">Old Events</div>
+					<div class="col-xs-1 vertical "> Old Events</div>
 					
 					<div class="col-xs-11 tileRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../events/pastEvents2.php"); ?>  
@@ -191,10 +185,10 @@ session_start();
 				<div class="col-xs-4 nopadding"> 
 					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
 		               
-		                <div class="title-div"><h2 class="Tileh2">Tous les événements</h2></div>
+		                <div class="title-div"><h2 class="Tileh2"> Tous les événements!</h2></div>
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
 		                	<div class="tileTitle">
-					           <h2>Voir tous les événements<h2>
+					           <h2> Voir tous les événements<h2>
 					        </div>
 		                </div>
 
@@ -203,7 +197,7 @@ session_start();
 			                  <div style="padding-top: 16vh">
 			                    
 			                    <p class="tile-text">
-			                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl">Tous les événements</a> </btn>
+			                      <btn class="btn-form2"> <a href="../events/eventArchive.php " class="gras btn btn-xl">Tous les événements!</a> </btn>
 			                    </p>
 			                  </div>
 			                 
@@ -220,7 +214,7 @@ session_start();
 			<div class="row indexRow hidden-xs ">	
 				<div class="col-xs-9 tileRow"> 
 					
-					<div class="col-xs-1 vertical ">Old News</div>
+					<div class="col-xs-1 vertical "> Old News</div>
 					<div class="col-xs-11 tileRow hidden-xs">
 						<?php include("../news/pastnews.php"); ?>  
 					<!-- affiche 4 dernieres news suivantes-->
@@ -232,10 +226,10 @@ session_start();
 
 					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
 		               
-		                <div class="title-div"><h2 class="Tileh2">Toutes les news</h2></div>
+		                <div class="title-div"><h2 class="Tileh2"> Toutes les news!</h2></div>
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
 		                	<div class="tileTitle">
-					           <h2 style="text-align: center; font-size: 3.4vh;">Voir toutes les news<h2>
+					           <h2 style="text-align: center; font-size: 3.4vh;"> Voir toutes les news<h2>
 					        </div>
 		                </div>
 
@@ -245,7 +239,7 @@ session_start();
 			                  <div style="padding-top: 16vh">
 			                    
 			                    <p class="tile-text">
-			                      <btn class="btn-form2"><a href="../news/newsArchive.php" class="gras btn btn-xl">Toutes les news</a> </btn>
+			                      <btn class="btn-form2"> <a href="../news/newsArchive.php " class="gras btn btn-xl">Toutes les news!</a> </btn>
 			                    </p>
 			                  </div>
 			                </div>
@@ -256,11 +250,10 @@ session_start();
 				</div>
 			</div>
 
-			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">
-
+			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">	
 				<div class="col-xs-8 tileRow"> 
 					
-					<div class="col-xs-1 vertical">Old News</div>
+					<div class="col-xs-1 vertical "> Old News</div>
 					
 					<div class="col-xs-11 tileRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../news/pastnews2.php"); ?>  
@@ -274,10 +267,10 @@ session_start();
 
 					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
 		               
-		                <div class="title-div"><h2 class="Tileh2">Toutes les news</h2></div>
+		                <div class="title-div"><h2 class="Tileh2"> Toutes les news!</h2></div>
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
 		                	<div class="tileTitle">
-					           <h2 style="text-align: center; font-size: 3.4vh;">Voir toutes les news<h2>
+					           <h2 style="text-align: center; font-size: 3.4vh;"> Voir toutes les news<h2>
 					        </div>
 		                </div>
 
@@ -287,7 +280,7 @@ session_start();
 			                  <div style="padding-top: 16vh">
 			                    
 			                    <p class="tile-text">
-			                      <btn class="btn-form2"> <a href="../news/newsArchive.php " class="gras btn btn-xl">Toutes les news</a> </btn>
+			                      <btn class="btn-form2"> <a href="../news/newsArchive.php " class="gras btn btn-xl">Toutes les news!</a> </btn>
 			                    </p>
 			                  </div>
 			                </div>
@@ -298,16 +291,28 @@ session_start();
 				</div>
 			</div>
 
+
+
 		</div>
 
+	   
+
 		<?php include("../footer.php"); ?>
+
 
 		<!-- jQuery first, then Metro UI JS -->
 	    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	    <?php include("../../controller/toggle.php"); ?>
 	    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 
+	    
 	</body>
+
+
+
+
+
+	
 
 </html>
 

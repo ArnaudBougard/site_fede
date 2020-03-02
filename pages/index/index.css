@@ -33,7 +33,16 @@
 }
 
 .vertical {
+transform: rotate(-90deg);
+white-space: nowrap;
 
+font-size: 3vw;
+font-weight: bold;
+padding: 0px;
+margin: 0px;
+padding-left: 4vw;
+
+<<<<<<< HEAD
   transform: rotate(-90deg);
   white-space: nowrap;
   font-size: 3em;
@@ -41,6 +50,8 @@
   padding: 0px;
   margin: 0px;
   padding-left: 4vw;
+=======
+>>>>>>> parent of 9947e6d... Résolution du problème d'affichage des événements
 
 }
 
@@ -54,19 +65,18 @@
   }
 
 .mutuul{
-  list-style: none;
-  padding-left: 0px;
-  text-align: center;
+list-style: none;
+padding-left: 0px;
+text-align: center;
 }
 
 .mutuh2{
-  font-size: 2vw;
-  text-align: center;
+font-size: 2vw;
+text-align: center;
 }
 
 
 .title-div{
-  /*176 ! Bien ouéj Basil !*/
   margin-top: 1.76vw;
   margin-bottom: 1vw;
 }
@@ -77,11 +87,10 @@
 }
 
 .tileRow{
-  padding: 0;
+  padding:0vw;
   display: flex;
   align-items: flex-end;
 }
-
 .tile{
  padding:0vw;
   margin:0.5vw ;
