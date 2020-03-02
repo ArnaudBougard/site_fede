@@ -10,20 +10,35 @@
   
     <ul class="networkul">
       
-        <li style="font-weight: bold; float: left;padding-right: 1.5vw; color:#f8f5ef; font-size: 1.1vw" >Polytech NETWORK  </li>
+        <li class="networkTitle">Polytech NETWORK</li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/"> CPV</a>  </li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/">CPV</a>
+        </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href=" https://the-games.magellan.fpms.ac.be/"> The-Games</a></li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href=" https://the-games.magellan.fpms.ac.be/">The-Games</a>
+        </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://historiquefpms.wordpress.com"> Commission Historique</a></li>
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://jde.polytech-mons-alumni.be/"> JDE</a></li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href="https://historiquefpms.wordpress.com">Commission Historique</a>
+        </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://magellan.fpms.ac.be/"> Magellan</a></li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href="https://jde.polytech-mons-alumni.be/">JDE</a>
+        </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://polytech-mons-alumni.be/accueil/"> AIMs</a></li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href="https://magellan.fpms.ac.be/">Magellan</a>
+        </li>
 
-        <li class="networkBarElement" > <a class="networkBarAnchor" target="_blank" href="https://www.facebook.com/groups/12209585370/"> Facebook</a></li>
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href="https://polytech-mons-alumni.be/accueil/">AIMs</a>
+        </li>
+
+        <li class="networkBarElement">
+          <a class="networkBarAnchor" target="_blank" href="https://www.facebook.com/groups/12209585370/">Facebook</a>
+        </li>
 
        
         <?php 
@@ -43,7 +58,7 @@
 
                   <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink" >
                     <ul class="list-unstyled">
-                      <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> " >Mon Profil</a></li>
+                      <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> ">Mon Profil</a></li>
 
 
                       <?php
@@ -81,13 +96,13 @@
                     <div class="dropdown show">
 
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-bookmark" ></span> Modération
+                        <span class="glyphicon glyphicon-bookmark" ></span>Modération
                       </a>
 
                       <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink">
                         <ul class="list-unstyled">
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php"> Events</a></li>
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">  News</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php">Events</a></li>
+                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">News</a></li>
                           <!-- <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">  Actions</a></li> -->
                         </ul>
                       </div>
@@ -119,7 +134,7 @@
                     <div class="">
 
                       <a class="" href="../mutu/horaireManager.php">
-                        <span class="glyphicon glyphicon-bookmark" ></span> Horaire Mutu
+                        <span class="glyphicon glyphicon-bookmark" ></span>Horaire Mutu
                       </a>
                     </div>
                   </li>
