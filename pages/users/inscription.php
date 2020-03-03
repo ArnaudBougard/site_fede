@@ -1,22 +1,21 @@
-
 <!--Formulaire d'inscription-->
 <?php
 session_start();
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
-<?php include("../../controller/mailinit.php"); ?>
-<?php include("mailSender.php"); ?>
-
+<?php 
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php");
+include("../../controller/mailinit.php");
+include("mailSender.php"); 
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		
-	<?php include("../head.php"); ?>
-	<link href="./users.css" rel="stylesheet">
 
+	<head>
+		<?php include("../head.php"); ?>
+		<link href="./users.css" rel="stylesheet">
 	</head>
 
 	<body class="bg1">
@@ -206,8 +205,10 @@ session_start();
 		</div>
 	</div>
 
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../controller/toggle.php"); 
+		?>
 
 	</body>
 </html>

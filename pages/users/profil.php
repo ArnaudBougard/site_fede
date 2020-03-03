@@ -18,10 +18,10 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
         <link href="./users.css" rel="stylesheet">
-
 	</head>
 
 	<body class="bg1">

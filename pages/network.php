@@ -40,9 +40,7 @@
           <a class="networkBarAnchor" target="_blank" href="https://www.facebook.com/groups/12209585370/">Facebook</a>
         </li>
 
-       
         <?php 
-
 
          if(isset($_SESSION['id_utilisateur'])){
 
@@ -134,30 +132,25 @@
                     <div class="">
 
                       <a class="" href="../mutu/horaireManager.php">
-                        <span class="glyphicon glyphicon-bookmark" ></span>Horaire Mutu
+                        <span class="glyphicon glyphicon-bookmark"></span>Horaire Mutu
                       </a>
                     </div>
                   </li>
                   <?php 
                 }
 
-
-            }
-                                             
+            }                             
             else{
 
-              echo '<li class="networkBarElement rightElement" ><a class="networkBarAnchor" href="#"   id="openOverlay"> <span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
+              echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="#" id="openOverlay"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
 
-              echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil" ></span> Inscription</a></li>';
+              echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil"></span> Inscription</a></li>';
 
-              
             }
 
         ?>
 
     </ul>
-
-
 
 </div>
 
