@@ -2,8 +2,10 @@
 session_start();
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
+<?php 
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,9 +16,11 @@ session_start();
 
     <body>
 
-        <?php include("../network.php"); ?>
-        <?php include("../navbar.php"); 
-        include("../sideBar.php");?>
+        <?php 
+        include("../network.php");
+        include("../navbar.php"); 
+        include("../sideBar.php");
+        ?>
 
         <div class="container" style="padding-top: 3rem">
 

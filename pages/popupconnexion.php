@@ -1,6 +1,5 @@
-<!-- javascript pour le bouton connexion, faire apparaitre et disparaitre le div-->
-<?php 
-include ("../../controller/connexionPopup.php");
+<?php
+include ("../../scripts/connexionPopup.php");
 $error=0;
 ?>
 
@@ -23,7 +22,7 @@ $error=0;
 
             <p>
                 <br/>
-                <input type="submit" class="btn-form2" name="formco" value="SE CONNECTER"/>
+                <input type="submit" class="btn-form2" name="formco" id="formcobutton" value="SE CONNECTER"/>
                 <br/>
             </p>
 
@@ -33,13 +32,8 @@ $error=0;
                 include("../../model/redirect.php");
                 //redirect(en absolu car le popup est sur des types de pages differents);
             }
-            else{
+            elseif($error==1){
                 echo "<p>".$message."</p>";
-                echo "
-                <script type='text/javascript'>
-                document.getElementById('backgroundOverlay').style.display = 'block';
-                document.getElementById('popup').style.display = 'block';
-                </script>";
             }
             ?>
 

@@ -67,7 +67,6 @@ session_start();
 
 			<div class="row indexRow hidden-sm hidden-md hidden-lg hidden-xl">
 				<div class="title-div">
-					<!-- <h2 class="h2index">Bientôt dans vos librairies</h2> -->
 				</div>
 				<div class="col-xs-8 tileRow"> 
 					<div class="col-xs-1 vertical "> Evénements</div>

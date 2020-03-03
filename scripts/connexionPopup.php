@@ -7,7 +7,7 @@ window.onload = function(){
     var openButton = document.getElementById('openOverlay');
     
     document.onclick = function(e){
-        if(e.target.id == 'backgroundOverlay'){
+        if(e.target === overlay){
             popup.style.display = 'none';
             overlay.style.display = 'none';
         }

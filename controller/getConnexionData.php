@@ -12,7 +12,9 @@ if(isset($_POST['formco'])){
         $userexist = $requser->rowCount();
 
         if($userexist==1){
+
             $userinfo = $requser ->fetch();
+
             if($userinfo['statut_utilisateur']==1){
                                 
                 //On enregistre les variables de session
@@ -28,18 +30,18 @@ if(isset($_POST['formco'])){
                 $_SESSION['sexe_utilisateur'] = $userinfo['sexe_utilisateur'];
                 $_SESSION['photo_utilisateur'] = $userinfo['photo_utilisateur'];
                 $_SESSION['statut_utilisateur'] = $userinfo['statut_utilisateur'];
+
                 //On redirige l'utilisateur soit sur son profil, soit sur l'accueil
                 $location="../users/profil.php?id_utilisateur=".$_SESSION['id_utilisateur'];
                 include("../../model/redirect.php");
                 redirect($location);
                 // Sur son profil, on transite par l'id : 
-
                 //header("Location: profil.php?id_utilisateur=".$_SESSION['id_utilisateur']);
+
             }
             else{
                 $error=1;
                 $message = "Vous n'avez pas validé votre adresse mail, vérifiez vos mails (ainsi que vos spams)";
-                
             }
         }
         else{
@@ -47,9 +49,9 @@ if(isset($_POST['formco'])){
             $message = "Identifiant ou mot de passe incorrect!";
         }
     }
-    else{   
+    else{
         $error=1;
-        $message = '<p class="erreur">Tous les champs doivent être remplis !</p>';
+        $message = "<p>Tous les champs doivent être remplis!</p>";
     }
 
 }
