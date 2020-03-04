@@ -603,10 +603,10 @@ body{
 	box-shadow: 0vw 0vw 1vw 0vw black;
 	color: var(--whitecolor);
 	font-family: var(--sitefont); 
-	margin-top: 1em;
+	margin-top: 3em;
 }
 
-.row{	
+.footer .row{	
 	padding-bottom: 2em;
 }
 
