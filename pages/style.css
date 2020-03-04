@@ -1,18 +1,23 @@
-body{
-	font-family: Calibri;
-	margin: 0 auto;
-	background-color: #f8f5ef;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 :root {
   --bluecolor: #2671C1;
-  --whitecolor: #f8f5ef;
+  --whitecolor: #F5F5F5;
   --bluehovercolor: #004795;
   --footercolor: #083043;
   --tealhovercolor: #1BB4B4;
-  --fullwidth: 100%;
+  --sitefont: Calibri;
+
 }
 
+body{
+	font-family: var(--sitefont);
+	margin: 0 auto;
+	background-color: var(--whitecolor);
+}
 
 /*--------------------*/
 /* NETWORK */
@@ -30,7 +35,7 @@ body{
 	height: 2.5vw; 
 	padding-top: 0.5vw;
 	background-color: black;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 }
 
 .networkul {
@@ -137,7 +142,7 @@ body{
     color: black;
     border: none;
 	font-weight: bold;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	border-bottom: 2px solid var(--tealhovercolor);
 	color: var(--whitecolor);
 }
@@ -156,7 +161,7 @@ body{
 
 .btn-form2{
 	background-color: var(--tealhovercolor);
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	padding: 1rem 2rem;
 	border-radius: 20px;
 	border: none;
@@ -217,7 +222,7 @@ body{
 	color: var(--whitecolor);	
 	font-size: 1.3em;
 	font-weight: bold;
-	font-family: 'Calibri';
+	font-family: var(--sitefont);
 	text-transform: uppercase;
 	padding: 1.4em 1.4em;
 	-webkit-transition: all 0.5s;
@@ -272,7 +277,7 @@ body{
 	color: var(--whitecolor);
 	font-size: 100%;
 	text-transform: uppercase;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	font-weight: bold;
 	padding: 1vw 1vw;
 	border-bottom: 0.2em solid transparent;
@@ -438,13 +443,13 @@ body{
 .bg1{
 	background-color: var(--whitecolor);
 	width: 100%;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 }
 
 .bg2{
 	background-color: var(--whitecolor);
 	width: 100%;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 }
 
 #content{
@@ -533,7 +538,7 @@ body{
 	color: black;
 	border: none;
 	font-weight: bold;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	border-bottom: 2px solid var(--bluecolor);
 }
 
@@ -547,7 +552,7 @@ body{
 	color: black;
 	border: none;
 	font-weight: bold;
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	border-bottom: 2px solid var(--bluecolor);
 }
 
@@ -571,7 +576,7 @@ body{
 
 .btn-contact{
 	background-color: var(--bluecolor);
-	font-family: Calibri;
+	font-family: var(--sitefont);
 	padding: 1rem 2rem;
 	margin-top: 0.5rem;
 	border-radius: 20px;
@@ -597,14 +602,19 @@ body{
 	background-color: var(--footercolor);
 	box-shadow: 0vw 0vw 1vw 0vw black;
 	color: var(--whitecolor);
-	font-family: Calibri; 
-	margin-top: 3em;
+	font-family: var(--sitefont); 
+	margin-top: 1em;
+}
+
+.row{	
+	padding-bottom: 2em;
 }
 
 .footer-copyright{
-	padding: 1em 0 1em 0;
-	font-family: Calibri;
+	padding: 0.7em 0 0.7em 0;
+	font-family: var(--sitefont);
 	font-size: 1.1em;
+	background: #062433;
 }
 
 .footer-logo{

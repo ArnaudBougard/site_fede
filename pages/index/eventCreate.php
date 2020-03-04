@@ -1,4 +1,3 @@
-
 <?php
     if(isset($_POST["eventform"])){     
         $errors = array();
@@ -16,7 +15,7 @@
 
         if(isset($_FILES["files"])==false)
         {
-            echo "<b>Please, Select the files to upload!!!</b>";
+            echo "<b>Veuillez choisir les fichiers à uploader.</b>";
             return;
         }
         
@@ -106,7 +105,7 @@
         }  
 
         else {
-            echo "<h1 style='text-align:center;'> upload réussi</h1>";
+            echo "<h1 style='text-align:center;'>Upload effectué avec succès.</h1>";
         }
 
     

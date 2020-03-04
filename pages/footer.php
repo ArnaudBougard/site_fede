@@ -31,11 +31,9 @@
   	
   </div>
 
-  <!-- Copyright -->
   <div class="footer-copyright text-center">
     © 2020 Copyright : <a href="https://magellan.fpms.ac.be/">Commission Web F.P.Ms</a>
   </div>
-  <!-- Copyright -->
 
 </div>
 
