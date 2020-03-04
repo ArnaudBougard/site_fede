@@ -1,33 +1,41 @@
+<div class="footer text-center">
 
-<div class="footer" style="margin:0;width: 100%;margin-top: 2vh;">
   <div class="row">
 
-    <div class="col-sm-4 col-xs-12 hidden-xs ">
-      <img src='../../assets/img/logoFede2.png' style="width:250px;display: block; margin: 0 auto; margin-top: 3.5rem;" alt='Logo du site !'/>
+    <div class="col-sm-4 hidden-xs">
+
+      <img class="footer-logo" src="../../assets/img/logoFede2.png" alt='Logo du site'/>
+
     </div>
 
-    <div class="col-sm-4 col-xs-12 hidden-xs">
-      <div class="links-foot">
-        <ul>
-          <li style="list-style-type: none;"><a class="link-foot" href="../federale/apropos.php">À propos de nous</a></li>
-          <li style="list-style-type: none;"><a class="link-foot" href="../contact/contact.php">Contact</a></li>
+    <div class="col-sm-4 hidden-xs">
+
+      <div class="footer-links">
+
+        <ul class="list-unstyled">
+          <li><a href="../federale/about.php">À propos</a></li>
+          <li><a href="../contact/contact.php">Nous contacter</a></li>
         </ul>
+
       </div>
+
     </div>
 
   	<div class="col-sm-4 col-xs-12">
-      <center>
-      <h4 style="font-weight: bold;"> Où nous trouver? </h4>
-  		<div class="mapouter">
-        <div class="gmap_canvas">
-          <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=69%2Cboulevard%20Dolez&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-          <a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/"></a>
-        </div>
-      </div>
-    </center>
+
+      <h4 class="footer-maptitle">Où nous trouver?</h4>
+
+        <iframe class="footer-googlemap" id="gmap-canvas" src="https://maps.google.com/maps?q=69%2Cboulevard%20Dolez&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
   	</div>
   	
   </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center">
+    © 2020 Copyright : <a href="https://magellan.fpms.ac.be/">Commission Web F.P.Ms</a>
+  </div>
+  <!-- Copyright -->
 
 </div>
 

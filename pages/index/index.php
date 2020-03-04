@@ -11,13 +11,15 @@ include("../../controller/getConnexionData.php");
 <html lang="fr">
 
 	<head>
-		
+
+		<!-- jQuery first-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     	<?php include("../head.php"); ?>
-    	<link href="./index.css" rel="stylesheet">	
+    	<link href="./index.css" rel="stylesheet">
 
 	</head>
 
@@ -308,17 +310,18 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 		</div>
+	    
+	</body>
 
+	<footer class="page-footer">
 		<?php 
 		include("../footer.php");
 		include("../../controller/toggle.php");
 		?>
+	</footer>
 
-		<!-- jQuery first, then Metro UI JS -->
-	    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-	    
-	</body>
+	<!-- Metro UI JS at the end AND after JQuery -->
+	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 
 </html>
 

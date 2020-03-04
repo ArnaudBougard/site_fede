@@ -621,78 +621,61 @@ body{
 /*--------------------*/
 
 .footer{
-	background-color: var(--footercolor);
 	width: 100%;
-	padding: 1rem;
-	padding-bottom: 0.5rem;
-	padding-top: 1rem;
-	color: var(--whitecolor);
+	background-color: var(--footercolor);
 	box-shadow: 0vw 0vw 1vw 0vw black;
+	color: var(--whitecolor);
+	font-family: Calibri; 
+	margin-top: 3em;
+}
+
+.footer-copyright{
+	padding: 1em 0 1em 0;
 	font-family: Calibri;
+	font-size: 1.1em;
 }
 
-.footerli {
+.footer-logo{
+	width: 11em;
+	margin: 3em auto 0 auto;
+}
+
+.footer-maptitle{
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+.footer-googlemap{
+	width: 60%;
+	margin: auto;
+}
+
+.footer-links{
 	text-align: center;
+	font-size: 1.3em;
+	margin-top: 5em;
 }
 
-.footera,
-.footera:hover, 
-.footera:visited {
-	color:black;+
+.footer-links a:link, .footer-links a:visited{
+	color: var(--whitecolor);
 	text-decoration: none;
 }
 
-.mapouter{
-	position:relative;
-	text-align:right;
-	height:25rem;
-	width:20rem;
-	margin: 2rem;
-}
-
-.gmap_canvas{
-	overflow: hidden;
-	background: none!important;
-	height: 25rem;
-	width: 20rem;
-}
-
-.link-foot{
-	font-size: 2.5rem;
-	color: var(--whitecolor);
-}
-
-.link-foot:hover{
-	font-size: 2.5rem;
+.footer-copyright a:link, .footer-copyright a:visited{
 	color: var(--tealhovercolor);
+	text-decoration: none;
 }
 
-.links-foot{
-	margin-top: 13rem;
-	text-align: center;
+.footer-copyright a:hover{
+	color: var(--bluehovercolor);
+	text-decoration: none;
 }
 
-.imgArticle{
-	width: 80%;
+.footer-links a:hover{
+	color: var(--tealhovercolor);
+  	text-decoration: none;
 }
 
-.center{
-	text-align: center;
-}
-
-.subtitle{
-	font-size: 2vh;
-}
-
-.unstyled{
-	list-style: none;
-	padding-left: 0px;
-	margin-bottom: 0px;
-}
-
-.horizontal li {
-	display:inline;
-}
 
 @media only screen and (max-width: 992px) {
 
