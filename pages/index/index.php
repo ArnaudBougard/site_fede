@@ -12,12 +12,6 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 
-		<!-- jQuery first-->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     	<?php include("../head.php"); ?>
     	<link href="./index.css" rel="stylesheet">
 
@@ -90,7 +84,6 @@ include("../../controller/getConnexionData.php");
 					<div class="col-xs-11 tileSubRow hidden-xs">
 						
 						<?php include("../news/recentNews.php"); ?>
-						<!-- affiche 3 dernières news publiées -->
 
 					</div>
 
@@ -182,7 +175,6 @@ include("../../controller/getConnexionData.php");
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../events/pastEvents2.php"); ?>  
-						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 
 				</div>
@@ -222,11 +214,10 @@ include("../../controller/getConnexionData.php");
 
 				<div class="col-xs-9 tileRow"> 
 					
-					<div class="col-xs-1 vertical">Old News</div>
+					<div class="col-xs-1 vertical">Old News</div> 
 
 					<div class="col-xs-11 tileSubRow hidden-xs">
 						<?php include("../news/pastnews.php"); ?>  
-					<!-- affiche 4 dernieres news suivantes-->
 					</div>
 					
 				</div>
@@ -270,7 +261,6 @@ include("../../controller/getConnexionData.php");
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../news/pastnews2.php"); ?>  
-						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 
 				</div>

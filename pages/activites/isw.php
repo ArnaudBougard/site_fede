@@ -7,9 +7,10 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<?php include("../head.php"); ?>
 
+	<head>
+
+		<?php include("../head.php"); ?>
 		<link href="activites.css" rel="stylesheet">
 
 	</head>
