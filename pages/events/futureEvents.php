@@ -5,7 +5,7 @@
 
   if(!empty($FutureEvents)) {
 
-    foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)) {
+    foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
       $n=$n + 1;
         ?> 
           
