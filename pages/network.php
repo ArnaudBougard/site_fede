@@ -8,9 +8,9 @@
 
 <div  class="networkBar hidden-md hidden-sm hidden-xs" >
   
-    <ul class="networkul">
+    <ul class="network-list">
       
-        <li class="networkTitle">Polytech NETWORK</li>
+        <li class="network-title">Polytech NETWORK</li>
 
         <li class="networkBarElement">
           <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/">CPV</a>

@@ -23,27 +23,26 @@ body{
 /* NETWORK */
 /*--------------------*/
 
-.networkTitle{
-	font-weight: bold;
-	float: left;
-	padding-right: 1.5em;
-	color: var(--whitecolor);
-	font-size: 1.2em
-}
-
 .networkBar{
-	height: 2.5vw; 
-	padding-top: 0.5vw;
+	height: 24px;
 	background-color: black;
-	font-family: var(--sitefont);
+	font-family: arial;
+	color: var(--whitecolor);
 }
 
-.networkul {
+.network-list{
 	margin: 0;
-	list-style-type: none; 
-	padding-left: 3vw;
+	list-style-type: none;
+	padding-left: 50px;
 }
 
+.network-title{
+	font-weight: bold;
+	font-size: 14px;
+	float: left;
+	padding: 2px 15px 0 0;
+	text-align: left;
+}
 
 .networkBar a{	
 	color: var(--whitecolor);
@@ -56,46 +55,24 @@ body{
 
 .networkBarElement a:hover{	
 	text-decoration: none;
-	color: var(--bluecolor);
+	padding: 7px;
+	background: #202020;
 }
 
 .networkBarElement{
 	float: left;
-	display: block;
-	padding-left: 0.8vw;
-	padding-right: 0.8vw;
-	font-size: 1vw;
-	text-decoration: none;
+	padding: 3px 8px 0 8px;
+	font-size: 12px;
 }
 
 .rightElement{
-
-	float:right !important; 
-	padding-right: 1.5vw;
-	padding-left: 1.5vw;
+	float: right !important; 
+	padding: 3px 20px 0 10px;
 }
 
 .networkBarAnchor:hover{
-	color: var(--bluecolor);
 	text-decoration: none;
 }
-
-.networkDropdown {
-	padding: 0.8vw;
-	width: 10vw;
-}
-
-.networkDropdown li {
-	border-bottom:1px solid silver ;
-	padding-bottom: 0.3vw;
-	margin-bottom: 0.3vw;
-}
-
-.networkDropdown a{
-	color: black;
-	font-size: 1vw;
-}
-
 
 
 /*--------------------*/
@@ -600,7 +577,7 @@ body{
 .footer{
 	width: 100%;
 	background-color: var(--footercolor);
-	box-shadow: 0vw 0vw 1vw 0vw black;
+	box-shadow: 0 0 1em 0 black;
 	color: var(--whitecolor);
 	font-family: var(--sitefont); 
 	margin-top: 3em;
