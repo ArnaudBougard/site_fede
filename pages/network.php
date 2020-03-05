@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- javascript du popup + le popup -->
-<?php include("../popupconnexion.php"); ?>
-
-<?php include("../../model/userDAO.php"); ?>
+<?php 
+include("../popupconnexion.php");
+include("../../model/userDAO.php"); 
+?>
 
 <div  class="networkBar hidden-md hidden-sm hidden-xs" >
   
@@ -58,7 +59,6 @@
                     <ul class="list-unstyled">
                       <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> ">Mon Profil</a></li>
 
-
                       <?php
                         $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
 
@@ -72,7 +72,6 @@
                           
                           <?php
                           }
-                        
                     
                       ?>
 
@@ -88,8 +87,6 @@
                 if($admin!= NULL){
                   ?>
 
-
-
                   <li class="networkBarElement rightElement " >
                     <div class="dropdown show">
 
@@ -101,7 +98,7 @@
                         <ul class="list-unstyled">
                           <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php">Events</a></li>
                           <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">News</a></li>
-                          <!-- <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">  Actions</a></li> -->
+                          <!-- <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">Actions</a></li> -->
                         </ul>
                       </div>
 
