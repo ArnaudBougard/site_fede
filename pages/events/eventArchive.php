@@ -1,9 +1,8 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -143,12 +142,13 @@ session_start();
   </section>
 </div>
 
-		<?php include("../footer.php"); ?>
-    <?php include("../../controller/toggle.php"); ?>
+		<?php 
+    include("../footer.php");
+    include("../../scripts/toggle.php"); 
+    ?>
+
 	</body>
 
-
 	
-
 </html>
 

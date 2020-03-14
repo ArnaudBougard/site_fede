@@ -1,26 +1,24 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php");
+include("../../model/eventDAO.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
-<?php include("../../model/eventDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body id="body">
-		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<!-- HEADER -->
-
-		<?php include("../navbar.php"); 
-		include("../sideBar.php");?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php"); 
+		include("../sideBar.php");
+		?>
 
 		<?php 
 			$eventData=selectEventById($bdd,$_GET['id']);	
@@ -32,12 +30,16 @@ session_start();
   					
 		?>
 		<div class="container">	
+
 			<div class="page-header">
+
 				<div class="title-area">
-				<h3 class="title2"><?php echo $nom; ?></h3> 
-		  		<span class="title-line2"></span> 
+					<h3 class="title2"><?php echo $nom; ?></h3> 
+		  			<span class="title-line2"></span> 
+				</div>
+
 			</div>
-			</div>
+
 			<div class="panel panel-default">
 				<div class="panel-body">
 					
@@ -65,7 +67,8 @@ session_start();
 	                        <br /> <br />
 							 <p style="white-space: pre-line">
 								<?php echo $description; ?>
-	                        <br /> <br />
+	                        <br/>
+	                        <br/>
 
 							</p>
 						</div>
@@ -75,25 +78,23 @@ session_start();
 
 				}
 			}
-			else
-			{
-		?>
-			<p>Oups, cet article joue à cache-cache!</p>
-		<?php
-			}
-		?>					
-	</div>
-</div>
+				else
+					{
+				?>
+					<p>Oups, cet article joue à cache-cache!</p>
+				<?php
+					}
+				?>					
+				</div>
+			</div>
 		</div>
 	
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
-
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
-
-
-	
 
 </html>
 

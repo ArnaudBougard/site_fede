@@ -13,6 +13,9 @@
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+<!-- Metro UI JS at the end AND after JQuery -->
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+
 <script type="text/javascript">
     
     $(document).ready(function () {

@@ -162,7 +162,7 @@ include("../../controller/getConnexionData.php");
 	<footer class="page-footer">
 		<?php 
 		include("../footer.php");
-		include("../../controller/toggle.php");
+		include("../../scripts/toggle.php");
 		?>
 	</footer>
 

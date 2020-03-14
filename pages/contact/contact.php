@@ -119,7 +119,7 @@ session_start();
   <?php 
   include("./sendMail.php");
 	include("../footer.php");
-  include("../../controller/toggle.php");
+  include("../../scripts/toggle.php");
   ?>
 
 	</body>

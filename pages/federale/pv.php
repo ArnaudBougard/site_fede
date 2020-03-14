@@ -1,21 +1,23 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body>
 		
-		<?php include("../network.php"); ?>
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 		
 		<?php 
 		if(isset($_SESSION['id_utilisateur'])){
@@ -86,12 +88,13 @@ session_start();
 				</div>
 			</div>
 		</div>
-		
-		
 
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
+
 </html>
 

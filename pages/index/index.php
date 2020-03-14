@@ -306,12 +306,9 @@ include("../../controller/getConnexionData.php");
 	<footer class="page-footer">
 		<?php 
 		include("../footer.php");
-		include("../../controller/toggle.php");
+		include("../../scripts/toggle.php");
 		?>
 	</footer>
-
-	<!-- Metro UI JS at the end AND after JQuery -->
-	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 
 </html>
 

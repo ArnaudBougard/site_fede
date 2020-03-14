@@ -1,11 +1,12 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 		<link href="folklore.css" rel="stylesheet">
@@ -14,12 +15,11 @@ session_start();
 
 	<body class="bg1" id="body">
 		
-		<?php include("../network.php"); ?>
-
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<?php include("../navbar.php"); 
-		include("../sideBar.php");?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php"); 
+		include("../sideBar.php");
+		?>
 
 		<div class="row" >
 
@@ -31,10 +31,7 @@ session_start();
 					<li><button class="tablinks" onclick="openCity(event, 'Boraine')">Boraine</button></li>
 				</ul>
 			</div>
-
-			  
-			  
-			  
+ 
 			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
 				<ul class="unstyled horizontal">
 					<li class="tablinks " onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</li>
@@ -44,7 +41,6 @@ session_start();
 				</ul>
 			</div>
 			
-
 			<div id="Carolo" class="col-xs-12 col-md-9 tabcontent">
 
 				<div class="title-area">
@@ -125,7 +121,8 @@ session_start();
 				</p>
 			</div>
 
-			<div id="Centrale" class="col-xs-12 col-md-9  tabcontent">
+			<div id="Centrale" class="col-xs-12 col-md-9 tabcontent">
+
 				<div class="title-area">
 					<h3 class="title2">La Centrale</h3> 
 			  		<span class="title-line2"></span> 
@@ -161,25 +158,25 @@ session_start();
 
 					<p class="text">
 						Le cercle estudiantin de la F.P.Ms se compose de plusieurs cercles fédérés et de diverses régionales telles que la Carolo, la Frontalière, la Centrale et la Boraine. Chaque étudiant participant à la Bleusaille sera associé à l’une de ces régionales. Ainsi, si tu habites ou si tu es allé dans une école du Borinage, ou encore si tu te sens proche et fier de ce tte région, rejoins-nous ! Nous serons fiers de t’accueillir et de te faire découvrir le folklore borain où rassemblement, amusement et respect des traditions sont les maitres mots. Tu y apprendras en outre divers chants et évènements en l'honneur de cette belle ville qu'est la notre.
-						<br>
+						<br/>
 					</p>	
 					<p class="text">	
 						Photo Régionale Boraine
 						Dès le début de l’année, ton comité borain (composé de cinq personnes) te sera présenté, et tu auras également l’occasion de rencontrer d’anciens membres. Si tu t’en montre digne, ceux-ci seront fiers de t’accueillir et te guideront tout au long de ta bleusaille et de ta vie estudiantine. Chacun d’eux pourra t’apprendre, te conseiller, ainsi que t’aider tout au long de l’année dans les bons moments comme dans les mauvais. En effet, quelques conseils lors de l’approche des examens sont toujours bons à prendre. Et oui, nous sommes une vraie petite famille prête à s’agrandir si tu nous fais confiance.
-						<br>
+						<br/>
 					</p>	
 					<p class="text">	
 						Durant l’année, nous organisons plusieurs événements, tels qu’un souper et une dégustation où tu seras amené à découvrir les bières et autres spécialités de la région. Tu pourras également profiter des quelques réductions que nous offrons lors du Doudou !
-						<br>
+						<br/>
 					</p>	
 					<p class="text">	
 						Photo Régionale Boraine
 						Mis à part la découverte du folklore, le baptême t'offrira l'occasion de créer des liens avec de nombreuses personnes et celui-ci se révèlera pour toi riche en expériences. En effet, les liens que tu créeras lors de ta Bleusaille seront très forts et dureront encore bien des années après la vie facultaire ! La Bleusaille restera un souvenir imprimé dans ta mémoire que tu ne regretteras pas, et qui t’ouvrira les portes de nombreuses expériences.
-						<br>
+						<br/>
 					</p>	
 					<p class="text">	
 						Nous espérons qu’après ce petit aperçu, nous t’avons donné envie de venir nous rejoindre et de prendre une grande et belle décision pour ta vie d’étudiant. Les cartes sont désormais entre tes mains pour jongler entre étude mais aussi solidarité et amusement durant tes cinq années à la Faculté Polytechnique de Mons. Ne laisse pas passer cette chance à regarder les autres s’amuser pendant que tu glanderas sur Facebook et 9gag, on n’a qu’une seule vie universitaire !
-						<br>
+						<br/>
 					</p>	
 
 				</div>
@@ -189,28 +186,32 @@ session_start();
 		</div>
 
 		<script>
-		function openCity(evt, cityName) {
-		  var i, tabcontent, tablinks;
-		  tabcontent = document.getElementsByClassName("tabcontent");
-		  for (i = 0; i < tabcontent.length; i++) {
-		    tabcontent[i].style.display = "none";
-		  }
-		  tablinks = document.getElementsByClassName("tablinks");
-		  for (i = 0; i < tablinks.length; i++) {
-		    tablinks[i].className = tablinks[i].className.replace(" active", "");
-		  }
-		  document.getElementById(cityName).style.display = "block";
-		  evt.currentTarget.className += " active";
-		}
 
-		// Get the element with id="defaultOpen" and click on it
-		document.getElementById("defaultOpen").click();
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+			    tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+			    tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
+
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+
 		</script>
 
-
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
+
 </html>
 

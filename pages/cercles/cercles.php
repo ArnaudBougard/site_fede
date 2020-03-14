@@ -1,9 +1,8 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -62,7 +61,6 @@ session_start();
 			<?php $name='Bar'; ?>
 			<div id="bar" class="tabcontent col-xs-12 col-md-10"> <?php include ("./contenuCercle.php"); ?></div>
 
-
 			<?php $name='CAP'; ?>
 			<div id="cap" class="tabcontent col-xs-12 col-md-10 "><?php include ("./contenuCercle.php"); ?></div>
 
@@ -118,9 +116,11 @@ session_start();
 			document.getElementById("<?php echo $_GET['id'] ?>").click();
 		</script>
 
-
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
+
 </html>

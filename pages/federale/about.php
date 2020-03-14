@@ -1,11 +1,12 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 
@@ -32,30 +33,29 @@ session_start();
 
 			<div class="margintop marginbottom" >
 
-						
-
 				<p>
-		   			<?php echo $cercle['description_cercle']; ?> <br>
-		   			<br> 
+		   			<?php echo $cercle['description_cercle']; ?>
+		   			<br/>
+		   			<br/> 
 
-		   		<div align="center">
-		   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
-		   		</div>
+			   		<div align="center">
+			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
+			   		</div>
 
-		   		<div class="center ">
-					<img class=" imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
-				</div>
+			   		<div class="center ">
+						<img class=" imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
+					</div>
 
 		  		</p>
 
 			</div>
-
 			
 	    </div>
 
-
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
 </html>

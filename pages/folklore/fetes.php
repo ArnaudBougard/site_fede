@@ -1,11 +1,12 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php"); 
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 
@@ -13,26 +14,21 @@ session_start();
 
 	<body id="body">
 		
-		<?php include("../network.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
-
-		<div>
 		<div class="container"> 
 
 		   		<?php
-
 		   		include ("../../model/cercleDAO.php");
 		   		$cercle=selectByName($bdd,'Cercle des Fêtes');
-
 				?>
 
 				<div class="row">
 				
-					
 						<div class=" col-xs-12" >
 
 							<p>
@@ -46,10 +42,8 @@ session_start();
 								<br/> 
 							</p>
 
-
 						</div>
 					
-
 				</div>
 
 				<div class="row ">
@@ -86,11 +80,11 @@ session_start();
 
 				
 		</div>
-		</div>
 
-
-		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
 </html>
