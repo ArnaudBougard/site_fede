@@ -207,7 +207,7 @@ include("mailSender.php");
 
 		<?php 
 		include("../footer.php");
-		include("../../controller/toggle.php"); 
+		include("../../scripts/toggle.php"); 
 		?>
 
 	</body>

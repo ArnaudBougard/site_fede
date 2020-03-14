@@ -1,11 +1,7 @@
 <?php
 session_start();
-
-
-
 include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
-
 
 if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'accolade à la fin du code
     {
@@ -26,26 +22,26 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
 
 	<body class="bg1">
 		
-		<?php include("../network.php"); ?>
-
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<?php include("../navbar.php"); 
-        include("../sideBar.php");?>
-
-		<?php include ("../../controller/warningPopup.php");?>
-
-        <?php include ("./warningDeleteUser.php");?>
+		<?php 
+        include("../network.php");
+        include("../navbar.php"); 
+        include("../sideBar.php");
+        include ("../../controller/warningPopup.php");
+        include ("./warningDeleteUser.php");
+        ?>
         
-
         <div class="container" style="padding-top: 2rem; padding-bottom: 15rem;">
-            <div class = "row" >
+
+            <div class="row">
+
                 <div class="col-md-7">
+
                     <div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
 
                         <img class="logo" src='../../assets/img/logoFede.png' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
 
                     </div>
+
                 </div>
 
                 <div class='col-md-5 inscription' style="float:left;">
@@ -83,17 +79,22 @@ if(isset($_GET['id_utilisateur']) AND $_GET['id_utilisateur']>0) // On ferme l'a
                         
                     
                     </p>
+
                 </div>
+
             </div>
+
         </div>
 
-            
+    		<?php 
+            include("../footer.php");
+            include("../../scripts/toggle.php"); 
+            ?>
+                    
+        </div>
 
-        		<?php include("../footer.php"); ?>
-                <?php include("../../controller/toggle.php"); ?>
-                
-        </div>    
 	</body>
+
 </html>
 
 

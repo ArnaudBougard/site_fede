@@ -160,10 +160,12 @@ include("../../controller/getConnexionData.php");
 	</body>
 
 	<footer class="page-footer">
+
 		<?php 
 		include("../footer.php");
 		include("../../scripts/toggle.php");
 		?>
+		
 	</footer>
 
 </html>

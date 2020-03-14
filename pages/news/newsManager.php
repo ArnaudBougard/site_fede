@@ -167,7 +167,7 @@ session_start();
 
 
 		<?php include("../footer.php"); ?>
-		<?php include("../../controller/toggle.php"); ?>
+		<?php include("../../scripts/toggle.php"); ?>
 
 
 	</body>

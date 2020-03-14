@@ -81,7 +81,7 @@ include("../../controller/getConnexionData.php");
 
         <?php 
         include("../footer.php");
-        include("../../controller/toggle.php"); 
+        include("../../scripts/toggle.php"); 
         ?>
         
         <script src="js/jquery-1.11.3.min.js"></script>
