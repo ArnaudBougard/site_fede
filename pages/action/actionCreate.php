@@ -52,13 +52,6 @@ if(isset($_POST["eventform"])){
                 array_push($errors, "File size must be less than 10Mb. Name:- ".$file_name);
                 $uploadThisFile = false;
             }
-            
-            // Plus necessaire vu qu'on change le nom du fichier => pas besoin de checker
-            // if(file_exists("../../assets/img/news/".$_FILES["files"]["name"][$key]))
-            // {
-            //     array_push($errors, "File name already exists! Name:- ". $file_name);
-            //     $uploadThisFile = false;
-            // }
     
             if($uploadThisFile){
                 $newFileName=round(microtime(true)).".".$ext;   
@@ -94,6 +87,3 @@ if(isset($_POST["eventform"])){
          echo "<script type='text/javascript'>alert('Veuillez sélectionner un fichier!');</script>";
     }
 }
-
-
-?>

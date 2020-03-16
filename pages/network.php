@@ -7,14 +7,14 @@ include("../popupconnexion.php");
 include("../../model/userDAO.php"); 
 ?>
 
-<div  class="networkBar hidden-md hidden-sm hidden-xs" >
+<div class="networkBar hidden-md hidden-sm hidden-xs" >
   
     <ul class="network-list">
       
         <li class="network-title">Polytech NETWORK</li>
 
         <li class="networkBarElement">
-          <a class="networkBarAnchor"  target="_blank" href="https://cerclephotovideofpms.wordpress.com/">CPV</a>
+          <a class="networkBarAnchor" target="_blank" href="https://cerclephotovideofpms.wordpress.com/">CPV</a>
         </li>
 
         <li class="networkBarElement">
@@ -49,91 +49,116 @@ include("../../model/userDAO.php");
           
               ?>
 
-              <li class="networkBarElement rightElement " >
+              <li class="networkBarElement rightElement">
+
                 <div class="dropdown show ">
+
                   <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="glyphicon glyphicon-user" ></span> <?php echo $_SESSION["pseudo_utilisateur"]; ?>
                   </a>
 
-                  <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink" >
+                  <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink">
+
                     <ul class="list-unstyled">
-                      <li><a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> ">Mon Profil</a></li>
+
+                      <li>
+                        <a class="dropdown-item" href= "../users/profil.php?id_utilisateur= <?php echo $_SESSION["id_utilisateur"]; ?> ">Mon Profil</a>
+                      </li>
 
                       <?php
+
                         $comitard=is_comitard($bdd,$_SESSION['email_utilisateur']);
 
-                        if($comitard!= NULL){ // On ferme l'accolade à la fin du code
+                        if($comitard!= NULL){
 
                           ?>
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php"> Mes événements</a></li>
 
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsManager.php">Mes News</a></li>
+                          <li>
+                            <a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php"> Mes événements</a>
+                          </li>
 
-                          
+                          <li>
+                            <a class="networkBarAnchor dropdown-item" href= "../news/newsManager.php">Mes News</a>
+                          </li>
+
                           <?php
                           }
-                    
-                      ?>
+                          ?>
 
                     </ul>
+
                   </div>
 
                 </div>
+
               </li>
 
               <?php
 
                 $admin=is_admin($bdd,$_SESSION['email_utilisateur']);
-                if($admin!= NULL){
-                  ?>
 
-                  <li class="networkBarElement rightElement " >
+                if($admin!= NULL){
+                ?>
+
+                  <li class="networkBarElement rightElement">
+
                     <div class="dropdown show">
 
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-bookmark" ></span>Modération
+                        <span class="glyphicon glyphicon-bookmark"></span>Modération
                       </a>
 
                       <div class="dropdown-menu networkDropdown" aria-labelledby="dropdownMenuLink">
+
                         <ul class="list-unstyled">
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php">Events</a></li>
-                          <li class="" ><a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">News</a></li>
-                          <!-- <li class="" ><a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">Actions</a></li> -->
+
+                          <li>
+                            <a class="networkBarAnchor dropdown-item" href= "../events/eventValidation.php">Events</a>
+                          </li>
+
+                          <li>
+                            <a class="networkBarAnchor dropdown-item" href= "../news/newsValidation.php">News</a>
+                          </li>
+
+                          <!-- <li class="" >
+                            <a class="networkBarAnchor dropdown-item" href= "../action/actionValidation.php">Actions</a>
+                          </li> -->
+
                         </ul>
+
                       </div>
 
                     </div>
+
                   </li>
-                  <?php 
+
+                <?php 
                 }
 
                 $barman=is_barman($bdd,$_SESSION['email_utilisateur']);
                 if($barman!= NULL){
-                  ?>
+                ?>
 
-                  <li class="networkBarElement rightElement " >
-                    <div class="">
-
-                      <a class="" href="../action/actionManager.php">
-                        <span class="glyphicon glyphicon-bookmark" ></span> Action de la semaine
+                  <li class="networkBarElement rightElement">
+                      <a href="../action/actionManager.php">
+                        <span class="glyphicon glyphicon-bookmark"></span>Action de la semaine
                       </a>
-                    </div>
                   </li>
-                  <?php 
+
+                <?php 
                 }
 
                 $mutu=is_mutu($bdd,$_SESSION['email_utilisateur']);
                 if($mutu!= NULL){
-                  ?>
-                  <li class="networkBarElement rightElement " >
-                    <div class="">
+                ?>
 
-                      <a class="" href="../mutu/horaireManager.php">
+                  <li class="networkBarElement rightElement">
+                      <a href="../mutu/horaireManager.php">
                         <span class="glyphicon glyphicon-bookmark"></span>Horaire Mutu
                       </a>
-                    </div>
                   </li>
-                  <?php 
+
+                <?php 
                 }
 
             }                             

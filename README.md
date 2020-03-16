@@ -3,11 +3,11 @@
 /*-----------------------------------------*/
 
 Ce fichier constitue le point de départ et le centre névralgique de la documentation du projet de site fédé.
-Les technologies utilisées ici sont assez basique pour un site internet :
+Les technologies utilisées ici sont assez basiques pour un site internet :
 
 - Du PHP et une base de données MySql/MariaDB pour la partie back-end (nous utilisons donc tout naturellement Phpmyadmin pour le développement)
 
-- Un front-end en HTML5, CSS3 et Javascript utilisant les célèbres frameworks Bootstrap et Jquery ainsi que "Metro" pour certaines animations.
+- Un front-end en HTML5, CSS3 et Javascript utilisant les célèbres frameworks Bootstrap et Jquery ainsi que "MetroUI" pour l'animation des tuiles de la page d'accueil du site.
 
 L'architecture du projet est du style Model-View-Controler avec des scripts JS et un dossier "assets" comprenant tous les fichiers audio, image et texte du site. Les views se trouvent dans le dossier "pages".
 

@@ -20,8 +20,17 @@
 
 .smtoggle{
     text-align: center;
+    color: var(--whitecolor);
     background-color: var(--footercolor);
     width: 100%;
+}
+
+.smtoggle:hover{
+    color: var(--tealhovercolor);
+}
+
+.smtoggle:active{
+    color: var(--tealhovercolor);
 }
 
 #sidebar {
@@ -82,6 +91,11 @@
     padding-top: 8px;
     padding-bottom: 8px;
     background: var(--footercolor);
+}
+
+.navtag{
+    text-decoration: none; 
+    color: white;
 }
 
 .submenu{

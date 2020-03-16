@@ -1,26 +1,24 @@
 <?php
 session_start();
+include("../../model/connexionDAO.php");
+include("../../controller/getConnexionData.php");
+include("../../model/actionDAO.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
-<?php include("../../model/actionDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body id="body">
-		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<!-- HEADER -->
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 
 		<?php 
 			$actionArray=selectActionById($bdd,$_GET['id']);	
@@ -33,10 +31,14 @@ session_start();
 					<div class="container">
 
 						<div class="page-header">
+
 							<div class="title-area">
+
 								<h3 class="title2"><?php echo $nom; ?></h3> 
 						  		<span class="title-line2"></span> 
+
 							</div>
+
 						</div>
 
 						<div class="panel panel-default">
@@ -45,19 +47,16 @@ session_start();
 								
 								<div class="container" style="margin-bottom: 5rem;"> 
 
-									<div class="col-sm-5" >
+									<div class="col-sm-5">
 										 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
 			    					</div>
-			    					<div class="col-sm-7" >
+
+			    					<div class="col-sm-7">
 										<p class="tile-text"><?php echo $nom; ?></p>
 					                  	<p class="tile-text">Prix: <?php echo $prix; ?> €</p>
 					                  	<p class="tile-text">Pour <?php echo $quantite; ?> cl</p>
 					                    <p class="tile-text">A partir du <?php echo $date; ?></p>
-					                    <p style="white-space: pre-line">
-											<?php echo $description; ?>
-				                        <br /> <br />
-
-										</p>
+					                    <p style="white-space: pre-line"><?php echo $description; ?><br/><br/></p>
 									</div>
 
 								</div>
@@ -73,11 +72,15 @@ session_start();
 			}
 			?>					
 							</div>
+
 						</div>
+
 					</div>
 	
-		<?php include("../footer.php"); ?>
-		<?php include("../../scripts/toggle.php"); ?>
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
 
