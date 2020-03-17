@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -29,7 +28,7 @@ include("../../controller/getConnexionData.php");
 			  		<span class="title-line2"></span> 
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<p class="text">
 						Le Game est un évènement organisé par le cercle Magellan dont la première édition a eu lieu il y a un peu plus de 20 ans. C’est une LAN-Party, donc un rassemblement de joueurs de jeux vidéo pour se mesurer les uns contre les autres en solo ou en équipe dans une ambiance festive et conviviale, moyennant la modique somme d’environ 20€.
 					</p>
@@ -47,11 +46,11 @@ include("../../controller/getConnexionData.php");
 					</p>
 				</div>
 
-				<div class="col-md-5 gameDiv"> 
+				<div class="col-md-5 acti-div"> 
 					<img class="img2" src="../../assets/img/game2.jpg" alt="bleusaille">
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<img class="img2" src="../../assets/img/game3.jpg" alt="bleusaille">
 				</div>
 
@@ -61,11 +60,11 @@ include("../../controller/getConnexionData.php");
 					</p>
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<img class="img2" src="../../assets/img/game4.jpg" alt="bleusaille">
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<p class="text">En quelques mots, le Game c’est : de l’amusement assuré et des souvenirs inoubliables! Intéressé? Visite <a href="http://www.the-games.be" target="_blank">The-Games.be</a>
 					</p>
 				</div>

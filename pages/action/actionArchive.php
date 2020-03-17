@@ -10,7 +10,6 @@ include("../../controller/getConnexionData.php");
 	<head>
 
 		<?php include("../head.php"); ?>
-
 		<link href="./action.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -47,31 +46,32 @@ include("../../controller/getConnexionData.php");
                     ?> 
                         <div class="col-md-3 cms-boxes-outer">
 
-                          <div class="cms-boxes-items cms-features" style="background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
+                          <div class="cms-boxes-items cms-features" style="background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
 
-                              <div class="small-box" >
+                            <div class="small-box" >
 
-                                <div class="col-sm-12">
-                                  <h2 class="Tileh2"><?php echo$nom; ?></h2>
-                                </div>
-
-                                <div class="col-sm-12" >
-                                    <p><?php echo$date; ?></p>
-                                    <p><?php echo$lieu; ?></p>
-                                    <?php 
-                                        if(!empty($link)){
-                                          ?>
-                                          <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
-                                          <br /> <br />
-                                          <?php
-                                      } ?>
-                                </div>
-
-                                <div class="col-sm-12">
-                                  <p><?php echo$description; ?></p>
-                                </div>
-
+                              <div class="col-sm-12">
+                                <h2 class="Tileh2"><?= $nom; ?></h2>
                               </div>
+
+                              <div class="col-sm-12" >
+                                  <p><?= $date; ?></p>
+                                  <p><?= $lieu; ?></p>
+                                  <?php 
+                                      if(!empty($link)){
+                                        ?>
+                                        <p><a href="<?= $link; ?>">Event Facebook</a></p>
+                                        <br/>
+                                        <br/>
+                                        <?php
+                                    } ?>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <p><?= $description; ?></p>
+                              </div>
+
+                            </div>
 
                           </div>
 

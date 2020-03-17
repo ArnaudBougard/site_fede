@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -8,7 +7,6 @@ include("../../controller/getConnexionData.php");
 <html lang="fr">
 	<head>
 		<?php include("../head.php"); ?>
-
 		<link href="./index2.css" rel="stylesheet">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

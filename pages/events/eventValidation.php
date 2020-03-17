@@ -1,37 +1,34 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php");
+include("../../model/eventDAO.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
-<?php include("../../model/eventDAO.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body id="body">
-		<?php include("../network.php"); ?>
 
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<!-- HEADER -->
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
-
-
-
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 
 		<div class="container">			
 			
-			<div class="container">	
+			<div class="container">
+
 				<div class="page-header">
-					<h1>Événements en attente de validation ( ou pas ) </h1>
+					<h1>Événements en attente de validation (ou pas)</h1>
 				</div>
+
 				<div class="panel panel-default">
+
 					<div class="panel-body">
 						<br/>
 
@@ -44,42 +41,41 @@ session_start();
 		        					?> 
 		        					<div class="container" style="margin-bottom: 5rem;"> 
 
-		        						<div class="col-sm-4" >
-											 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
+		        						<div class="col-sm-4">
+											 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
 			        					</div>
-			        					<div class="col-sm-4" >
+
+			        					<div class="col-sm-4">
 			        						<p>
-					                        Organisateur : <?php echo $organisateur; ?>
-					                        <br /> <br />
+					                        Organisateur : <?= $organisateur; ?>
+					                        <br/><br/>
 											<p>
-					                        Nom de l'événement : <?php echo $nom; ?>
-					                        <br /> <br />
-					                        Description : <?php echo $description; ?>
-					                        <br /> <br />
-					                        Date : <?php echo $date; ?>
-					                        <br /> <br />
-					                        Lieu : <?php echo $lieu; ?>
-					                        <br /> <br />
+					                        Nom de l'événement : <?= $nom; ?>
+					                        <br/><br/>
+					                        Description : <?= $description; ?>
+					                        <br/><br/>
+					                        Date : <?= $date; ?>
+					                        <br/><br/>
+					                        Lieu : <?= $lieu; ?>
+					                        <br/><br/>
 					                        <?php 
 					                        	if(!empty($link)){
 					                        		?>
-							                        <a href="<?php echo $link; ?>" > Event Facebook </a>
-							                        <br /> <br />
+							                        <a href="<?= $link; ?>" > Event Facebook </a>
+							                        <br/><br/>
 							                        <?php
 							                    } ?>
 					                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
-					                        <br /> <br />
+					                        <br/> <br/>
 											</p>
 										</div>
 
-										
-
 										<div class="col-sm-4" >
 											<div class="row" style="margin-bottom: 5rem;margin-top: 2rem;">
-												<btn class="btn-form2" > <a href="./eventValidate.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Valider</a> </btn>
+												<btn class="btn-form2" > <a href="./eventValidate.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl"> Valider</a> </btn>
 											</div>
 											<div class="row">
-												<btn class="btn-form2" > <a href="./eventDeleteModeration.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
+												<btn class="btn-form2" > <a href="./eventDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
 											</div>
 											
 			        					</div>
@@ -96,14 +92,19 @@ session_start();
 							}	
 						?>					
 					</div>
+
 				</div>
+
 			</div>
 
-			<div class="container">	
+			<div class="container">
+
 				<div class="page-header">
 					<h1>Événements validés</h1>
 				</div>
+
 				<div class="panel panel-default">
+
 					<div class="panel-body">
 						<br/>
 
@@ -117,47 +118,45 @@ session_start();
 		        					?> 
 		        					<div class="container" style="margin-bottom: 5rem;"> 
 
-		        						<div class="col-sm-4" >
-											 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
+		        						<div class="col-sm-4">
+											 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
 			        					</div>
-			        					<div class="col-sm-4" >
+
+			        					<div class="col-sm-4">
 			        						<p>
-					                        Organisateur : <?php echo $organisateur; ?>
-					                        <br /> <br />
+					                        Organisateur : <?= $organisateur; ?>
+					                        <br/><br/>
 											<p>
-					                        Nom de l'événement : <?php echo $nom; ?>
-					                        <br /> <br />
-					                        Description : <?php echo $description; ?>
-					                        <br /> <br />
-					                        Date : <?php echo $date; ?>
-					                        <br /> <br />
-					                        Lieu : <?php echo $lieu; ?>
-					                        <br /> <br />
+					                        Nom de l'événement : <?= $nom; ?>
+					                        <br/><br/>
+					                        Description : <?= $description; ?>
+					                        <br/><br/>
+					                        Date : <?= $date; ?>
+					                        <br/><br/>
+					                        Lieu : <?= $lieu; ?>
+					                        <br/><br/>
 					                        <?php 
 					                        	if(!empty($link)){
 					                        		?>
-							                        <a href="<?php echo $link; ?>" > Event Facebook </a>
-							                        <br /> <br />
+							                        <a href="<?= $link; ?>">Event Facebook</a>
+							                        <br/> <br/>
 							                        <?php
 							                    } ?>
 					                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
-					                        <br /> <br />
+					                        <br/><br/>
 											</p>
 										</div>
 
-										
+										<div class="col-sm-4">
 
-										<div class="col-sm-4" >
-											<div class="row" style="margin-bottom: 5rem;margin-top: 2rem;">
-											</div>
 											<div class="row">
-												<btn class="btn-form2" > <a href="./eventDeleteModeration.php?id= <?php echo $id; ?>&path=<?php echo $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
+												<btn class="btn-form2"><a href="./eventDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a> </btn>
 											</div>
 											
 			        					</div>
+
 		        					</div>
 		        					<?php
-
 		        				}
 		        			}
 							else
@@ -168,19 +167,19 @@ session_start();
 							}
 						?>					
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
 
-
-		<?php include("../footer.php"); ?>
-		<?php include("../../scripts/toggle.php"); ?>
-
+		<?php 
+		include("../footer.php");
+		include("../../scripts/toggle.php"); 
+		?>
 
 	</body>
-
-
-	
 
 </html>
 

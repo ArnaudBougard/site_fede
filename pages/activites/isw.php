@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -30,7 +29,7 @@ include("../../controller/getConnexionData.php");
 			  		<span class="title-line2"></span> 
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<p class="text">
 						Depuis 55 ans déjà, la Fédération des Etudiants de la Faculté polytechnique de Mons organise sa traditionnelle International Student Week, souvent abrégée ISW. Celle-ci a lieu le plus souvent durant le mois de février ou de mars. 
 						<br/>
@@ -54,11 +53,11 @@ include("../../controller/getConnexionData.php");
 					</p>
 				</div>
 
-				<div class="col-md-5 gameDiv"> 
+				<div class="col-md-5 acti-div"> 
 					<img class="img2" src="../../assets/img/isw2.jpg" alt="bleusaille">
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<img class="img3" src="../../assets/img/isw3.jpg" alt="bleusaille">
 				</div>
 				<div class="row">
@@ -68,13 +67,13 @@ include("../../controller/getConnexionData.php");
 						</p>
 					</div>
 
-					<div class="col-md-7 gameDiv"> 
+					<div class="col-md-7 acti-div"> 
 						<img class="img4" src="../../assets/img/isw4.jpg" alt="bleusaille">
 					</div>
 
 				</div>
 				
-				<div class="col-md-7 gameDiv">
+				<div class="col-md-7 acti-div">
 
 					<p class="text">
 					Durant ces 7 jours, les folklores des différents pays se mêlent. En effet, chaque stranger apporte les attributs représentatifs de sa faculté. Pour certains ce sont des bagues, des couvre-chefs, pour d’autres des sabots et un costume à queue de pie. Après quelques verres, les couvre-chefs s’échangent et les sabots en bois changent de propriétaire. Les différents chants de chaque université sont également lancés de nombreuses fois. Il est toujours plus ou moins facile de suivre les chants en anglais mais l’affaire se corse quand ils sont en Hongrois ou en Norvégien. En une semaine, un mélange de culture invraisemblable a lieu, un mélange qui rend chaque ISW unique tant pour les strangers que pour les organisateurs ou les participants. 
@@ -82,11 +81,11 @@ include("../../controller/getConnexionData.php");
 
 				</div>
 				
-				<div class="col-md-5 gameDiv"> 
+				<div class="col-md-5 acti-div"> 
 					<img class="img7" src="../../assets/img/isw7.jpg" alt="bleusaille">
 				</div>
 
-				<div class="col-md-12 gameDiv"> 
+				<div class="col-md-12 acti-div"> 
 					<p class="text">
 						Le samedi, les strangers retournent chacun dans leur pays d’origine, fatigués certes, mais avec des souvenirs plein la tête. 
 					</p>

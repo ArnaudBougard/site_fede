@@ -108,6 +108,5 @@
             echo "<h1 style='text-align:center;'>Upload effectué avec succès.</h1>";
         }
 
-    
     }
 ?>

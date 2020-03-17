@@ -1,16 +1,14 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php");
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
-	<head>
-		<?php include("../head.php"); ?>
-	</head>
+  <head>
+  	<?php include("../head.php"); ?>
+  </head>
 
 	<body class="bg1">
 		
@@ -22,16 +20,20 @@ session_start();
 
     <section class="center-block mb-0 bg-fourth" id="contact">
 
-        <div class="container" style="margin-top: 2vw; margin-bottom: 4vw;">   
+        <div class="container" style="margin-top: 2em; margin-bottom: 4em;">   
 
           <div class="row">
 
             <?php
                 if(!isset($_SESSION['id_utilisateur'])){
                   ?> 
+
                  <div class="container">
-                    <div class="row"> <h3>Veuillez vous connecter afin de pouvoir contacter un cercle!</h3></div>
-                    <div class="row"></div>
+
+                    <div class="row">
+                      <h3>Vous devez vous connecter afin de pouvoir contacter un cercle.</h3>
+                    </div>
+
                   </div>
                   <?php 
                 }
@@ -58,7 +60,6 @@ session_start();
                     <div class="form-group">
 
                       <select class="form-control" id="contact" name="contact">
-
                         <option>Commission Web</option>
                         <option>Fédérale</option>
                         <option>Cercle des Fêtes</option>
@@ -78,12 +79,9 @@ session_start();
                         <option>Frontalière</option>
                         <option>Centrale</option>
                         <option>Boraine</option>
-
                       </select>
 
                     </div>
-
-                    <p class="help-block text-danger"></p>
 
                   </div>
 
@@ -92,10 +90,13 @@ session_start();
                 <div class="control-group">
 
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
+
                     <label>Message</label>
+
                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="" required="required" data-validation-required-message="Veuillez completer le champ."></textarea>
-                    <p class="help-block text-danger"></p>
+
                   </div>
+
                 </div>
 
                 <br/>
@@ -116,8 +117,8 @@ session_start();
         
     </section>
 
-  <?php 
-  include("./sendMail.php");
+  <?php
+  include("../../controller/sendMail.php");
 	include("../footer.php");
   include("../../scripts/toggle.php");
   ?>

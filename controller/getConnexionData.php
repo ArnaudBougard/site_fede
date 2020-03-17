@@ -1,4 +1,6 @@
 <?php 
+include ("../../model/connexionDAO.php");
+
 if(isset($_POST['formco'])){
 
     $pseudoco = htmlspecialchars($_POST['pseudoco']);
