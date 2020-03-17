@@ -13,8 +13,10 @@
       <div class="footer-links">
 
         <ul class="list-unstyled">
+
           <li><a href="../federale/about.php">À propos</a></li>
           <li><a href="../contact/contact.php">Nous contacter</a></li>
+          
         </ul>
 
       </div>

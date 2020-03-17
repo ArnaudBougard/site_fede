@@ -8,7 +8,7 @@
 session_start();
 include("connexionDAO.php");
 
-//Les deux lignes ci-dessous permettent d'éviter que l'emploie de la méthode Get ne mette en péril notre sécurité
+//Les deux lignes ci-dessous permettent d'éviter que l'emploi de la méthode Get ne mette en péril notre sécurité
 //En effet, Si un utilisateur déconnecté entrait à la fin du site: livreOrDeleteComment?id=(l'id qu'il désire supprimé')
 //Il était capable de le faire sans qu'il en soit l'auteur.
 //
@@ -36,8 +36,4 @@ if(isset($_SESSION['id_utilisateur']))
     }
 }
 
-
 header('Location:../../pages/livreOr.php');
-
-
-?>

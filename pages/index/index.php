@@ -261,7 +261,7 @@ include("../../controller/getConnexionData.php");
 			
 				<div class="col-xs-4 tileRow"> 
 
-					<div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
+					<div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile" >
 		               
 		                <div class="title-div">
 		                	<h2 class="Tileh2">Toutes les news</h2>

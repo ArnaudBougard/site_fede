@@ -25,5 +25,3 @@ header('Location:../../pages/LivreOrCommentaire.php?idCom='.$_GET['idAnecd']);
 //$req = $bdd->prepare('INSERT INTO `anecdote` (`id_anecdote`, `texte_anecdote`, `date_publication`, `id_utilisateur`) VALUES (NULL,"yolo3000//", \'2017-12-22\', \'1\'); ');
 
 //$req->execute(array($_POST['pseudo'], $_POST['message']));
-
-?>

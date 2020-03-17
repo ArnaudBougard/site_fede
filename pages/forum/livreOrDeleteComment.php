@@ -5,6 +5,7 @@
  * Date: 27/12/17
  * Time: 16:55
  */
+
 session_start();
 include("connexionDAO.php");
 
@@ -32,8 +33,4 @@ if(isset($_SESSION['id_utilisateur']))
     }
 }
 
-
 header('Location:../../pages/livreOr.php');
-
-
-?>

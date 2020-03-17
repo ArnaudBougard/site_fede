@@ -1,31 +1,35 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php"); 
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 	</head>
 
 	<body id="body">
-		<?php include("../network.php"); ?>
 
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php"); 
+		?>
 
 		<div class="container" style="margin-top: 3vw;">
 
 			<div class="panel panel-default">
+
 				<div class="panel-body">
+
 					<div class="col-sm-4">
+
 						<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
+
 							<div class="form-group">
 
-								
 								<p> 
 									<label>Lundi </label>
 									<input type="time" id="ld" name="ld"  > 
@@ -63,33 +67,28 @@ session_start();
 							</div>	
 
 						</form>
+
 						<br/>
 						
-					</div>	
+					</div>
+
 					<div class="col-sm-8">
-
 						<?php include("displayHoraire.php"); ?>
-
 					</div>
 
 				</div>
+
 			</div>
 			
 			<?php include("horaireUpdate.php"); ?>
 		
 		</div>
 
-
 		<?php 
 		include("../footer.php");
 		include("../../scripts/toggle.php"); 
 		?>
 
-
 	</body>
 
-
-	
-
 </html>
-
