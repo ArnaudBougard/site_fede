@@ -1,49 +1,47 @@
 
-	<div class="row">
-		<?php
-		$cercle=selectByName($bdd,$name);
+<div class="row">
 
-		?>
-		<div class="container">
-			<div class=" col-xs-12" >
+	<div class="container">
 
-				<p>
-					<?php echo $cercle['description_cercle']; ?> <br>
-					<br/> 
-				</p>
+		<div class="col-xs-12">
 
-			</div>
+			<p>
+				<?= $cercle['description_cercle']; ?>
+				<br/>
+				<br/>
+			</p>
+
 		</div>
+
 	</div>
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-6 center">
-			<img src="<?php echo $cercle['logo_cercle']; ?> ">
+</div>
 
-		</div>
+<div class="row">
 
-		<div class="col-xs-12 col-md-6" >
+	<div class="col-xs-12 col-sm-6 center">
 
-			<ul class="unstyled center" >	
+		<img src="<?= $cercle['logo_cercle']; ?>">
+
+	</div>
+
+	<div class="col-xs-12 col-md-6">
+
+		<ul class="unstyled center">	
 
 			<?php
+			foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+			?> 
+				<li>
+					<?= "$nom_poste: $firstname $lastname"; ?>
+				</li>
 
-				$annee= lastPromo($bdd);
+			<?php
+			} 
+			?>
 
-				$comitardsArray=selectLastComite($bdd,$name,$annee);
-				foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
-
-					?> 
-					<li >
-						
-						<?php echo " $nom_poste: $firstname $lastname";?>
-						
-					</li>
-
-					<?php
-
-				} ?>
-	    	</ul>
-				
-		</div>
+    	</ul>
+			
 	</div>
+
+</div>

@@ -42,7 +42,8 @@ include("../../controller/getConnexionData.php");
             
             if(!empty($FutureEvents)) {
               
-                foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
+                foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
+                  
                     ?> 
                         <div class="col-md-3 cms-boxes-outer">
 
@@ -81,7 +82,7 @@ include("../../controller/getConnexionData.php");
             }
             else{echo "pas d'events à afficher";}
 
-          ?>
+            ?>
 
         </div>
 

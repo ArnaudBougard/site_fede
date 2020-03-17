@@ -12,6 +12,10 @@
 	padding-right:4em;
 }
 
+.unstyled{
+	list-style-type: none;
+}
+
 /*--------------------*/
 /* BAR */
 /*--------------------*/
