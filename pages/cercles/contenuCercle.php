@@ -1,4 +1,3 @@
-
 <div class="row">
 
 	<div class="container">
@@ -35,7 +34,6 @@
 				<li>
 					<?= "$nom_poste: $firstname $lastname"; ?>
 				</li>
-
 			<?php
 			} 
 			?>

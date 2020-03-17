@@ -12,7 +12,7 @@ include("../../controller/getConnexionData.php");
 		<link href="cercles.css" rel="stylesheet">
 	</head>
 
-	<body class="bg1" style="width: 100%;">
+	<body class="bg1 full-width">
 		
 		<?php 
 		include("../network.php");
@@ -35,7 +35,7 @@ include("../../controller/getConnexionData.php");
 					<li><button class="tablinks" onclick="openCity(event,'sports')" id="openSports">Cercle des Sports</button></li>
 					<li><button class="tablinks" onclick="openCity(event,'radio')" id="openRadio">Radio Extra</button></li>
 					<li><button class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">Cercle Scientifique</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono Danse Musique</button></li>
+					<li><button class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono-Danse-Musique</button></li>
 					<li><button class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">Peyresq</button></li>
 				</ul>
 
@@ -54,7 +54,7 @@ include("../../controller/getConnexionData.php");
 					<li class="tablinks" onclick="openCity(event,'sports')" id="openSports">Cercle des Sports</li>
 					<li class="tablinks" onclick="openCity(event,'radio')" id="openRadio">Radio Extra</li>
 					<li class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">Cercle Scientifique</li>
-					<li class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono Danse Musique</li>
+					<li class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono-Danse-Musique</li>
 					<li class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">Peyresq</li>
 				</ul>
 
