@@ -62,7 +62,7 @@ include("../../model/actionDAO.php");
 
 									<div class="col-sm-4">
 
-										<div class="row" style="margin-bottom: 2rem;margin-top: 2rem;">
+										<div class="row" style="margin-bottom: 2rem; margin-top: 2rem;">
 												<btn class="btn-form2"><a href="./actionValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
 										</div>
 
@@ -113,10 +113,10 @@ include("../../model/actionDAO.php");
 	        					?> 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
-	        						<div class="col-sm-4" >
+	        						<div class="col-sm-4">
 										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
 									</div>
-									<div class="col-sm-4" >
+									<div class="col-sm-4">
 										<p>
 					                    Nom de l'action : <?= $nom; ?>
 					                    <br/><br/>
@@ -131,7 +131,7 @@ include("../../model/actionDAO.php");
 
 										<div class="row" style="margin-bottom: 2rem;margin-top: 2rem;">
 
-											<btn class="btn-form2" ><a href="./actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+											<btn class="btn-form2"><a href="./actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 
 										</div>
 
@@ -146,7 +146,7 @@ include("../../model/actionDAO.php");
 						else
 						{
 					?>
-						<p>Il n'y a aucune action déjà validé</p>
+						<p>Il n'y a aucune action déjà validée</p>
 					<?php
 						}
 					?>
@@ -159,10 +159,7 @@ include("../../model/actionDAO.php");
 
 		</div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>	
 

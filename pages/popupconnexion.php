@@ -13,7 +13,7 @@ $error=0;
         <form class="popupconnexionformulaire" method="post">
 
             <p>
-                 <input class="popupconnexionchamp" type="text" id="pseudoco" name="pseudoco" placeholder="IDENTIFIANT" maxlength="25" size="45" required/>
+                <input class="popupconnexionchamp" type="text" id="pseudoco" name="pseudoco" placeholder="IDENTIFIANT" maxlength="25" size="45" required/>
             </p>
 
             <p>

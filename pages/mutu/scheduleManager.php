@@ -32,36 +32,36 @@ include("../../controller/getConnexionData.php");
 
 								<p> 
 									<label>Lundi </label>
-									<input type="time" id="ld" name="ld"  > 
-									<input type="time" id="lf" name="lf"  >
+									<input type="time" id="ld" name="ld"> 
+									<input type="time" id="lf" name="lf">
 								</p>
 
 								<p> 
 									<label>Mardi</label>
-									<input type="time" id="mad" name="mad"  > 
-									<input type="time" id="maf" name="maf"  >
+									<input type="time" id="mad" name="mad"> 
+									<input type="time" id="maf" name="maf">
 								</p>
 
 								<p> 
 									<label>Mercredi</label>
-									<input type="time" id="med" name="med"  > 
-									<input type="time" id="mef" name="mef"  >
+									<input type="time" id="med" name="med"> 
+									<input type="time" id="mef" name="mef">
 								</p>
 
 								<p> 
 									<label>Jeudi</label>
-									<input type="time" id="jd" name="jd"  > 
-									<input type="time" id="jf" name="jf"  >
+									<input type="time" id="jd" name="jd"> 
+									<input type="time" id="jf" name="jf">
 								</p>
 
 								<p> 
 									<label>Vendredi</label>
-									<input type="time" id="vd" name="vd"  > 
-									<input type="time" id="vf" name="vf"  >
+									<input type="time" id="vd" name="vd"> 
+									<input type="time" id="vf" name="vf">
 								</p>
 								
 								<p>
-									<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Update l'horaire" />
+									<input style="margin-left: 0;" type='submit' class='btn-form2' name='eventform' value="Update l'horaire" />
 								</p>
 
 							</div>	
@@ -73,20 +73,19 @@ include("../../controller/getConnexionData.php");
 					</div>
 
 					<div class="col-sm-8">
-						<?php include("displayHoraire.php"); ?>
+						<?php include("displaySchedule.php"); ?>
 					</div>
 
 				</div>
 
 			</div>
 			
-			<?php include("horaireUpdate.php"); ?>
+			<?php include("updateSchedule.php"); ?>
 		
 		</div>
 
 		<?php 
 		include("../footer.php");
-		include("../../scripts/toggle.php"); 
 		?>
 
 	</body>

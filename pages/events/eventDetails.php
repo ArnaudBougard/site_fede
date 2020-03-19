@@ -1,4 +1,4 @@
-<?php
+h<?php
 session_start();
 include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
@@ -23,78 +23,84 @@ include("../../model/eventDAO.php");
 		<?php 
 			$eventData=selectEventById($bdd,$_GET['id']);	
 			
-			if(!empty($eventData)) 
-			{
-	        	foreach ($eventData as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) 
-	        	{
-  					
-		?>
-		<div class="container">	
+			if(!empty($eventData)){
 
-			<div class="page-header">
+	        	foreach ($eventData as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){	
+				?>
 
-				<div class="title-area">
-					<h3 class="title2"><?php echo $nom; ?></h3> 
-		  			<span class="title-line2"></span> 
-				</div>
+					<div class="container">	
 
-			</div>
+						<div class="page-header">
 
-			<div class="panel panel-default">
-				<div class="panel-body">
-					
-					<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="title-area">
+								<h3 class="title2"><?= $nom; ?></h3> 
+					  			<span class="title-line2"></span> 
+							</div>
 
-						<div class="col-sm-4" >
-							 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
-    					</div>
-    					<div class="col-sm-8" >
-							
-	                       
+						</div>
 
-	                        Date : <?php echo $date; ?>
-	                        <br /> <br />
-	                        Lieu : <?php echo $lieu; ?>
-	                        <br /> <br />
-	                        <?php 
-	                        	if(!empty($link)){
-	                        		?>
-			                        <a href="<?php echo $link; ?>" > Event Facebook </a>
-			                        <br /> <br />
-			                        <?php
-			                    } ?>
-	                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
-	                        <br /> <br />
-							 <p style="white-space: pre-line">
-								<?php echo $description; ?>
-	                        <br/>
-	                        <br/>
+						<div class="panel panel-default">
 
-							</p>
+							<div class="panel-body">
+								
+								<div class="container" style="margin-bottom: 5rem;"> 
+
+									<div class="col-sm-4">
+										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+			    					</div>
+
+			    					<div class="col-sm-8">
+
+				                        Date : <?= $date; ?>
+				                        <br/>
+				                        <br/>
+				                        Lieu : <?= $lieu; ?>
+				                        <br/>
+				                        <br/>
+
+				                        <?php 
+			                        	if(!empty($link)){
+			                        		?>
+					                        <a href="<?= $link; ?>">Event Facebook</a>
+					                        <br/>
+					                        <br/>
+					                        <?php
+					                    } 
+					                    ?>
+
+				                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
+
+				                        <br/>
+				                        <br/>
+										<p style="white-space: pre-line">
+											<?= $description; ?>
+										</p>
+				                        <br/>
+				                        <br/>
+
+									</div>
+
+								</div>
+
+							</div>
+
 						</div>
 
 					</div>
+
 					<?php
 
 				}
 			}
-				else
-					{
-				?>
-					<p>Oups, cet article joue à cache-cache!</p>
-				<?php
-					}
-				?>					
-				</div>
-			</div>
-		</div>
+			else{
+			?>
+				<p>Oups, cet article joue à cache-cache!</p>
+			<?php
+			}
+			?>					
 	
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 
 </html>
-

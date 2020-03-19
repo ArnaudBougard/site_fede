@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST["eventform"])){
 
     $errors = array();
@@ -18,7 +19,7 @@ if(isset($_POST["eventform"])){
     if($_POST["jf"]==""){$jf="";} else{$jf = $_POST["jf"];}
     if($_POST["vd"]==""){$vd="Fermé";} else{$vd = $_POST["vd"];}
     if($_POST["vf"]==""){$vf="";} else{ $vf = $_POST["vf"];}
-    
+
     $myArr = array($ld,$lf,$mad ,$maf ,$med,$mef, $jd ,$jf ,$vd,$vf);
     $myJSON = json_encode($myArr, JSON_UNESCAPED_UNICODE);
 

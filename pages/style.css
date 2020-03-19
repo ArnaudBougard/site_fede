@@ -329,7 +329,7 @@ body{
 
 
 /*--------------------*/
-/*       CONTENT      */
+/*      CONTENT       */
 /*--------------------*/
 
 .tab {
@@ -666,7 +666,6 @@ body{
 
 	.tabcontent{
 		padding: 25px;
-
 	}
 
 	p {
@@ -677,7 +676,6 @@ body{
 	  background-color: var(--whitecolor);
 	}
 
-	/* Create an active/current "tab button" class */
 	.tab li.active {
 	  background-color: var(--whitecolor);
 	}

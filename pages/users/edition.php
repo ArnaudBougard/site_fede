@@ -1,8 +1,6 @@
 <?php
 session_start();
 //session_start() est obligatoire sur les pages si on veut récupérer les variables de session enregistrées. 
-
-
 include("../../model/connexionDAO.php"); 
 include("../../controller/getConnexionData.php"); 
 
@@ -241,9 +239,7 @@ include("../../controller/getConnexionData.php");
     </div>
 
     <?php include ("../footer.php") ?>
-    
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

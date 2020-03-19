@@ -26,22 +26,22 @@
   margin-bottom: 5%;
 }
 
-.mutuli{
+.mutu-li{
   font-size: 1.3em;
   margin-bottom: 0.5em;
 }
 
-.mutuspan{ 
+.mutu-span{ 
   font-size: 1em;
 }
 
-.mutuul{
+.mutu-ul{
   list-style: none;
   padding: 0;
   text-align: center;
 }
 
-.mutuh2{
+.mutu-h2{
   font-size: 2em;
   text-align: center;
 }
@@ -51,7 +51,7 @@
   margin-bottom: 1em;
 }
 
-.h2index{
+.index-h2{
   text-align: center;
   font-size: 2em;
 }
@@ -68,20 +68,20 @@
 }
 
 .tile{
-  padding:0vw;
-  margin:0.5vw;
+  padding: 0;
+  margin: 0.5em;
 }
 
-.Tileh2{
+.tile-h2{
   text-align: center;
 }
 
-.indexRow{
+.index-row{
   margin: 0 1em 0 2em;
 }
 
 .tile-text{
-text-align: center;
-font-family: Calibri;
-font-size: 3em;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 3em;
 }

@@ -1,4 +1,3 @@
-
 <?php
 function sendMail($bdd, $transport,$mail, $pseudo)
 { 

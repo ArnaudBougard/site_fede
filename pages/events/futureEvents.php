@@ -1,76 +1,79 @@
 <?php 
+$FutureEvents=selectSomeFutureEvents3($bdd);
+$n=0;
 
-  $FutureEvents=selectSomeFutureEvents3($bdd);
-  $n=0;
+if(!empty($FutureEvents)){
 
-  if(!empty($FutureEvents)) {
+  foreach($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
+    $n=$n + 1;
+    ?>
+  
+    <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
+     
+      <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
+        <div class="tile-title">
+          <h2><?= $nom; ?><h2>
+        </div>
+      </div>
 
-    foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
-      $n=$n + 1;
-        ?> 
+      <div class="slide-back" data-cover="<?= "'".$img."'" ?>">
+
+        <div class="tile-content">
+
+          <p class="tile-text"><?= $date; ?></p>
+          <p class="tile-text"><?= $lieu; ?></p>
+
+          <?php 
+          if(!empty($link)){
+          ?>
+            <p class="tile-text"><a href="<?= $link; ?>">Event Facebook</a></p>
+            <br/>
+            <br/>
+          <?php
+          } 
+          ?>
           
-          <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
-           
-            
-            <div class="slide-front" data-cover="<?= "'".$img."'" ?>" >
-               <div class="tileTitle">
-                <h2 > <?= $nom; ?><h2>
-              </div>
-            </div>
+          <p class="tile-text"><?=$description; ?></p>
+          <p class="tile-text">Publié le: <?= $dateCreation; ?></p>
+          <p class="tile-text"><btn class="btn-form2"><a href="../events/eventDetails.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn></p>
 
-            <div class="slide-back" data-cover="<?= "'".$img."'" ?>">  
-            <!-- <div class="slide-back" style="background-color: #1BB4B4;">   -->
-              <div class="tileContent">
-                <p class="tile-text"><?= $date; ?></p>
-                <p class="tile-text"><?= $lieu; ?></p>
-                <?php 
-                    if(!empty($link)){
-                      ?>
-                      <p class="tile-text"><a href="<?= $link; ?>" > Event Facebook </a></p>
-                      <br /> <br />
-                      <?php
-                  } ?>
-              
-                <p class="tile-text"><?=$description; ?></p>
-                <p class="tile-text">Publié le: <?= $dateCreation; ?></p>
-                <p class="tile-text">
-                  <btn class="btn-form2"> <a href="../events/eventDetails.php?id= <?= $id; ?> " class="gras btn btn-xl"> Plus d'info</a> </btn>
-                </p>
-              </div>
+        </div>
 
-            </div>
-          
-          </div>  
-                    
-      <?php
-
-    }
+      </div>
+    
+    </div>  
+                  
+    <?php
 
   }
 
+}
+
+for ($x = 0; $x < 3-$n; $x++){
+  ?>
+
+  <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
     
-  for ($x = 0; $x < 3-$n; $x++) {
-    ?>
-    <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-4 tile" >
-      
-      <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2 >Seems like there's nothing up!<h2>
-        </div>
-        
+    <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
+
+      <div class="tile-title">
+        <h2 >Seems like there's nothing up!<h2>
       </div>
 
-      <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
-        <div class="tileTitle">
-          <h2> BOUH! <h2>
-        </div>
-        
-      </div>
-  
     </div>
 
-    <?php 
+    <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
 
-  }
+      <div class="tile-title">
+        <h2>BOUH!<h2>
+      </div>
+
+    </div>
+
+  </div>
+
+  <?php 
+
+}
 
 ?>

@@ -1,9 +1,5 @@
 <?php
-session_start();
-?>
-
-<?php 
-include("../../model/connexionDAO.php");
+session_start(); 
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -66,7 +62,6 @@ include("../../controller/getConnexionData.php");
                         if(isset($erreur2)){
                             echo $erreur2;
                         }
-                        else{}
                         
                         ?>
 
@@ -76,16 +71,12 @@ include("../../controller/getConnexionData.php");
                     </form>
 
                 </div>
+
             </div>
+
         </div>
 
-        <?php 
-        include("../footer.php");
-        include("../../scripts/toggle.php"); 
-        ?>
-        
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <?php include("../footer.php"); ?>
 
     </body>
 
