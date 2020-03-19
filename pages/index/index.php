@@ -9,6 +9,7 @@ include("../../controller/getConnexionData.php");
 	<head>
     	<?php include("../head.php"); ?>
     	<link href="./index.css" rel="stylesheet">
+    	<link href="./metro4.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -23,13 +24,7 @@ include("../../controller/getConnexionData.php");
 		include("../sideBar.php");
 		?>
 
-		<!--
-		<div class="col-sm-4">
-	        <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-	    </div>
-		-->
-
-		<div class="row indexContent">
+		<div class="row index-content">
 
 			<div class="row indexRow hidden-xs">
 
@@ -39,7 +34,6 @@ include("../../controller/getConnexionData.php");
 
 					<div class="col-xs-11 tileSubRow">
 						<?php include("../events/futureEvents.php"); ?> 
-						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 					
 				</div>
@@ -58,7 +52,6 @@ include("../../controller/getConnexionData.php");
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../events/futureEvents2.php"); ?> 
-						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 	
 				</div>
@@ -97,7 +90,6 @@ include("../../controller/getConnexionData.php");
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
 						<?php include("../news/recentNews2.php"); ?>
-						<!-- affiche 3 future events les plus proches dans le temps -->
 					</div>
 					
 				</div>
@@ -122,7 +114,6 @@ include("../../controller/getConnexionData.php");
 
 					<div class="col-xs-11 tileSubRow hidden-xs">
 						<?php include("../events/pastEvents.php"); ?>  
-					<!-- affiche 4 derniers events passés-->
 					</div>
 
 				</div>
@@ -135,17 +126,15 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
 
-		                	<div class="tileTitle">
-
+		                	<div class="tile-title">
 					           <h2>Voir tous les évènements<h2>
-
 					        </div>
 
 		                </div>
 
 		                <div class="slide-back" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileContent">
+		                	<div class="tile-content">
 			                    
 			                    <p class="tile-text">
 			                      <button class="btn-form2"><a href="../events/eventArchive.php" class="gras btn btn-xl">Tous les événements</a></button>
@@ -180,7 +169,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileTitle">
+		                	<div class="tile-title">
 					           <h2>Voir tous les événements<h2>
 					        </div>
 
@@ -188,7 +177,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-back" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileContent">
+		                	<div class="tile-content">
 		                  		
 			                    <p class="tile-text">
 			                      <button class="btn-form2"><a href="../events/eventArchive.php" class="gras btn btn-xl">Tous les événements</a></button>
@@ -224,7 +213,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileTitle">
+		                	<div class="tile-title">
 					           <h2>Voir toutes les news<h2>
 					        </div>
 
@@ -232,7 +221,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-back" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileContent">
+		                	<div class="tile-content">
 
 			                    <p class="tile-text">
 			                      <button class="btn-form2"><a href="../news/newsArchive.php" class="gras btn btn-xl">Toutes les news</a></button>
@@ -269,7 +258,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-front" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileTitle">
+		                	<div class="tile-title">
 					           <h2>Voir toutes les news<h2>
 					        </div>
 
@@ -277,7 +266,7 @@ include("../../controller/getConnexionData.php");
 
 		                <div class="slide-back" data-cover="../../assets/img/news.jfif">
 
-		                	<div class="tileContent">
+		                	<div class="tile-content">
 			                    
 			                    <p class="tile-text">
 			                      <button class="btn-form2"><a href="../news/newsArchive.php" class="gras btn btn-xl">Toutes les news</a></button>
@@ -298,12 +287,7 @@ include("../../controller/getConnexionData.php");
 	</body>
 
 	<footer class="page-footer">
-
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php");
-		?>
-		
+		<?php include("../footer.php"); ?>
 	</footer>
 
 </html>

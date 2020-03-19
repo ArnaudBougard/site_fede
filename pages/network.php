@@ -1,4 +1,4 @@
-<!-- Add icon library -->
+ <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- javascript du popup + le popup -->
@@ -7,7 +7,7 @@ include("../popupconnexion.php");
 include("../../model/userDAO.php"); 
 ?>
 
-<div class="networkBar hidden-md hidden-sm hidden-xs" >
+<div class="networkBar hidden-md hidden-sm hidden-xs">
   
     <ul class="network-list">
       
@@ -41,7 +41,7 @@ include("../../model/userDAO.php");
           <a class="networkBarAnchor" target="_blank" href="https://www.facebook.com/groups/12209585370/">Facebook</a>
         </li>
 
-        <?php 
+        <?php
 
          if(isset($_SESSION['id_utilisateur'])){
 
@@ -74,7 +74,7 @@ include("../../model/userDAO.php");
                           ?>
 
                           <li>
-                            <a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php"> Mes événements</a>
+                            <a class="networkBarAnchor dropdown-item" href= "../events/eventManager.php">Mes événements</a>
                           </li>
 
                           <li>

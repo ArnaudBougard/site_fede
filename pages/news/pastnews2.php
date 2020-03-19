@@ -12,7 +12,7 @@
               <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile" >
                
                 <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>" >
-                  <div class="tileTitle">
+                  <div class="tile-title">
                     <h2 > <?php echo $nom; ?><h2>
                   </div>
                 </div>
@@ -43,14 +43,14 @@
       <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile" >
         
         <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
-          <div class="tileTitle">
+          <div class="tile-title">
             <h2 >Seems like there's nothing up!<h2>
           </div>
           
         </div>
 
         <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
-          <div class="tileTitle">
+          <div class="tile-title">
             <h2> BOUH! <h2>
           </div>
           

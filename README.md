@@ -1,6 +1,4 @@
-/*-----------------------------------------*/
-/* README Général pour le site fédé F.P.Ms */ 			LAST EDIT : 14 Mars 2020 à 18h08
-/*-----------------------------------------*/
+# README Général pour le site fédé F.P.Ms
 
 Ce fichier constitue le point de départ et le centre névralgique de la documentation du projet de site fédé.
 Les technologies utilisées ici sont assez basiques pour un site internet :
@@ -11,10 +9,7 @@ Les technologies utilisées ici sont assez basiques pour un site internet :
 
 L'architecture du projet est du style Model-View-Controler avec des scripts JS et un dossier "assets" comprenant tous les fichiers audio, image et texte du site. Les views se trouvent dans le dossier "pages".
 
-
-/*--------------------*/
-/* MAJ de la liste des comitards */
-/*--------------------*/
+## MAJ de la liste des comitards
 
 on utilise la table historique dans la bdd.
 elle est générée en important le fichier historique.csv dans le dossier assets/files/
@@ -24,6 +19,10 @@ Export au format csv ( ATTENTION, save with encoding utf-8 sinon l'import dans l
 On a notre fichier => import dans phpMyAdmin, attention, cocher "la 1ere ligne sont les noms des colonnes"
 Si succès : supprimer la table historique et renommer la nouvelle table importée en 'historique' ( via operations dans phpmyadmin)
 
-
 Le système est clairement améliorable, faites vous plaiz
 
+## Intégration iframe Google Calendar :
+
+<div class="col-sm-4">
+    <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+</div>

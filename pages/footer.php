@@ -37,4 +37,6 @@
     © 2020 Copyright : <a href="https://magellan.fpms.ac.be/">Commission Web F.P.Ms</a>
   </div>
 
+  <?php include("../../scripts/toggle.php"); ?>
+
 </div>
