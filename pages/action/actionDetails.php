@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
 include("../../model/actionDAO.php"); 
 ?>
@@ -60,8 +59,14 @@ include("../../model/actionDAO.php");
 								</div>
 
 							</div>
-							<?php
 
+						</div>
+
+					</div>
+
+				</div>
+
+			<?php
 			}
 
 		}
@@ -70,19 +75,10 @@ include("../../model/actionDAO.php");
 			<p>Oups, cet article joue à cache-cache!</p>
 		<?php
 		}
-		?>					
-						</div>
-
-					</div>
-
-				</div>
-	
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
 		?>
+
+		<?php include("../footer.php"); ?>
 
 	</body>
 
 </html>
-

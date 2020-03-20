@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
 include("../../model/actionDAO.php"); 
 ?>
@@ -39,11 +38,11 @@ include("../../model/actionDAO.php");
 
 							<p> 
 								<label>Titre de l'action *</label><br> 
-								<input class='champ' type='text' id='nom' name='nom' placeholder='Lindemans pomme' maxlength='25' size='30'  required />
+								<input class='champ' type='text' id='nom' name='nom' placeholder='Lindemans pomme' maxlength='25' size='30' required />
 							</p>
 
 							<p> 
-								<label>Quantité * </label> <span>en Cl</span><br>
+								<label>Quantité *</label><span>en Cl</span><br>
 								<input class='champ' list="quantites" type='number' id='quantite' name='quantite' maxlength='10' size='10' required />
 								<datalist id="quantites">
 								  <option value="25"> 
@@ -58,7 +57,7 @@ include("../../model/actionDAO.php");
 							</p>
 
 							<p>
-	                            <label>Date de lancement de l'action*</label> <br>
+	                            <label>Date de lancement de l'action *</label> <br>
 	                            <input class='champ' type='date' id='date' name='date' maxlength='25' size='45' required />
                         	</p>
 
@@ -66,7 +65,7 @@ include("../../model/actionDAO.php");
 								<textarea rows="10" cols="100" id='description' name='description' placeholder='Petite description des familles'></textarea>
 							</p>
 
-                        	<span>* obligatoire </span>
+                        	<span>* obligatoire</span>
 
                         	<br/>
 
@@ -95,59 +94,55 @@ include("../../model/actionDAO.php");
 					</div>
 
 					<?php 
+					$actionArray=selectMyPendingActions($bdd,$_SESSION['pseudo_utilisateur']);
+					
+					if(!empty($actionArray)){
 
-						$actionArray=selectMyPendingActions($bdd,$_SESSION['pseudo_utilisateur']);
+						foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+						?>
 
-						
-						if(!empty($actionArray)) {
-								foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)) {
+							<div class="container" style="margin-bottom: 5rem;"> 
 
-									?> 
-									<div class="container" style="margin-bottom: 5rem;"> 
+								<div class="col-sm-4">
+									 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
+								</div>
 
-										<div class="col-sm-4" >
-											 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
-										</div>
+								<div class="col-sm-4">
+									<p>
+				                    Nom de l'action : <?php echo $nom; ?>
+				                    <br/><br/>
+				                    Description : <?php echo $description; ?>
+				                    <br/><br/>
+				                    Valable à partir du <?php echo $date; ?>
+				                    <br/><br/>
+									</p>
+								</div>
 
-										<div class="col-sm-4" >
-											<p>
-						                    Nom de l'action : <?php echo $nom; ?>
-						                    <br/><br/>
-						                    Description : <?php echo $description; ?>
-						                    <br/><br/>
-						                    Valable à partir du <?php echo $date; ?>
-						                    <br/><br/>
-											</p>
-										</div>
+								<div class="col-sm-4" >
 
-										<div class="col-sm-4" >
+									<btn class="btn-form2"> <a href="./actionDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+								</div>
+							</div>
 
-											<btn class="btn-form2"> <a href="./actionDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
-										</div>
-									</div>
-									<?php
-
-								}
-							}
-							else{
-							?>
-							<p>Vous n'avez aucune action en attente de validation, la validation est automatique peceka on vous fait confiance ouesh.</p>
 							<?php
-							}
 
-					?>					
+						}
+					}
+					else{
+					?>
+					<p>Vous n'avez aucune action en attente de validation, la validation est automatique peceka on vous fait confiance ouesh.</p>
+					<?php
+					}
+					?>
+
 				</div>
 
 			</div>
 		
 		</div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 
 </html>
-

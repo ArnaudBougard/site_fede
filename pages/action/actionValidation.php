@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
 include("../../model/actionDAO.php"); 
 ?>
@@ -35,19 +34,19 @@ include("../../model/actionDAO.php");
 
 						<?php 
 
-							$actionArray=selectAllPendingActions($bdd);
+						$actionArray=selectAllPendingActions($bdd);
 
-							if(!empty($actionArray)) {
-	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)) {
+						if(!empty($actionArray)){
 
+	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
 	        					?> 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
-	        						<div class="col-sm-4" >
+	        						<div class="col-sm-4">
 										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
 									</div>
 
-									<div class="col-sm-4" >
+									<div class="col-sm-4">
 										<p>
 					                    Nom de l'action : <?= $nom; ?>
 					                    <br/><br/>
@@ -57,8 +56,6 @@ include("../../model/actionDAO.php");
 					                    <br/><br/>
 										</p>
 									</div>
-
-									
 
 									<div class="col-sm-4">
 
@@ -74,15 +71,15 @@ include("../../model/actionDAO.php");
 
 	        					</div>
 
-	        					<?php
+        					<?php
 
 	        				}
 	        			}
 						else
 						{
-					?>
+						?>
 						<p>Vous n'avez aucune action en attente de validation</p>
-					<?php
+						<?php
 						}
 						?>
 
@@ -105,17 +102,19 @@ include("../../model/actionDAO.php");
 
 						<?php 
 
-							$actionArray=selectAllActions($bdd);
+						$actionArray=selectAllActions($bdd);
 
-							if(!empty($actionArray)) {
-	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)) {
+						if(!empty($actionArray)){
 
-	        					?> 
+	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+	        				?>
+
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
 	        						<div class="col-sm-4">
 										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
 									</div>
+
 									<div class="col-sm-4">
 										<p>
 					                    Nom de l'action : <?= $nom; ?>
@@ -139,17 +138,16 @@ include("../../model/actionDAO.php");
 
 	        					</div>
 
-	        					<?php
+        					<?php
 
 	        				}
 	        			}
-						else
-						{
-					?>
+						else{
+						?>
 						<p>Il n'y a aucune action déjà validée</p>
-					<?php
+						<?php
 						}
-					?>
+						?>
 
 					</div>
 
@@ -164,4 +162,3 @@ include("../../model/actionDAO.php");
 	</body>	
 
 </html>
-

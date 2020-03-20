@@ -57,7 +57,7 @@ function selectAllPendingActions($bdd){
 	$req->closeCursor();
 }
 
-function selectActionById($bdd,$id) {
+function selectActionById($bdd,$id){
 
 	$req = $bdd -> prepare("SELECT * FROM action where id=?");
     $req->execute(array($id));
