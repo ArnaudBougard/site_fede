@@ -61,12 +61,8 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 
 </html>
-

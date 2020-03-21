@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -9,29 +8,19 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
-
 	</head>
 
 	<body>
 		
-		<?php include("../network.php"); ?>
-
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<?php include("../navbar.php"); 
-		include("../sideBar.php");?>
-
+		<?php 
+		include("../network.php");
+		include("../navbar.php"); 
+		include("../sideBar.php");
+		?>
 
 		<div class="container"> 
 
-	   		<?php
-
-	   		include ("../../model/cercleDAO.php");
-	   		$cercle=selectByName($bdd,'Fédérale');
-
-			?>
-
-			<div class="margintop marginbottom" >
+			<div class="margintop marginbottom">
 
 				<p>
 		   			<?php echo $cercle['description_cercle']; ?>
@@ -39,7 +28,7 @@ include("../../controller/getConnexionData.php");
 		   			<br/> 
 
 			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?> ">
+			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?>">
 			   		</div>
 
 			   		<div class="center ">
@@ -52,11 +41,8 @@ include("../../controller/getConnexionData.php");
 			
 	    </div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
-</html>
 
+</html>

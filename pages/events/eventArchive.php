@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+    <link href="events.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -27,14 +28,14 @@ include("../../controller/getConnexionData.php");
           <h2>Evénements à venir</h2>
           
           <?php 
-          if(!empty($FutureEvents)){
+          if(!empty($futureEvents)){
             
-            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
+            foreach($futureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
             ?>
 
               <div class="col-md-3 cms-boxes-outer">
 
-                <div class="cms-boxes-items cms-features" style=" background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
+                <div class="cms-boxes-items cms-features event-image" style="background-image: url(<?= "'".$img."'" ?>);">
 
                   <div class="small-box">
 
@@ -83,13 +84,14 @@ include("../../controller/getConnexionData.php");
           <h2>Evénements Passés</h2>
 
           <?php     
-          if(!empty($PastEvents)){
+          if(!empty($pastEvents)){
             
-            foreach ($PastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
-            ?> 
+            foreach($pastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
+            ?>
+            
               <div class="col-md-3 cms-boxes-outer">
 
-                <div class="cms-boxes-items cms-features" style=" background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%;">
+                <div class="cms-boxes-items cms-features event-image" style="background-image: url(<?= "'".$img."'" ?>);">
 
                   <div class="small-box">
 

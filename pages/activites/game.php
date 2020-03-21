@@ -33,14 +33,14 @@ include("../../controller/getConnexionData.php");
 						Le Game est un évènement organisé par le cercle Magellan dont la première édition a eu lieu il y a un peu plus de 20 ans. C’est une LAN-Party, donc un rassemblement de joueurs de jeux vidéo pour se mesurer les uns contre les autres en solo ou en équipe dans une ambiance festive et conviviale, moyennant la modique somme d’environ 20€.
 					</p>
 					
-					<img class="img1 " src="../../assets/img/game1.jpg" alt="bleusaille">
+					<img class="img1" src="../../assets/img/game1.jpg" alt="bleusaille">
 				</div>
 
-				<div class="col-md-7 "> 
+				<div class="col-md-7">
 					<p class="text">
 						Cet évènement se tient généralement en fin février et début mars, pendant un week-end (vendredi fin d’après-midi au dimanche fin de matinée), il est mis en place par une équipe d’environ 40 etudiants. Ces personnes constituent ainsi le staff durant ce week-end festif.
 					</p> 
-
+					
 					<p class="text">
 						Le Game peut rassembler jusqu’à 200 joueurs et plus de 500 visiteurs (hors staff) dans le Stiévenart pour jouer à des jeux tels que LoL, Trackmania, HearthStone, CS:GO, Trackmania, … Les meilleurs joueurs de chaque tournoi sont récompensés de leur participation et de leurs compétences, réflexes ou … chance avec des lots et cashprize. 
 					</p>
@@ -73,12 +73,8 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 	
 </html>
-

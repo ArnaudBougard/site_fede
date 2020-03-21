@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
 ?>
 
@@ -25,18 +24,18 @@ include("../../controller/getConnexionData.php");
 			<div class="tab col-sm-2 hidden-xs hidden-sm">
 
 				<ul class="unstyled">
-					<li><button class="tablinks" onclick="openCity(event,'bar')" id="openBar">Bar Polytech</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'cap')" id="openCap">C.A.P</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'cpv')" id="openCpv">C.P.V</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'culture')" id="openCulture">Cercle Culturel</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'magellan')" id="openMagellan">Magellan</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'mutu')" id="openMutu">Mutuelle d'édition</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'mm')" id="openMm">Mons-Mines</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'sports')" id="openSports">Cercle des Sports</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'radio')" id="openRadio">Radio Extra</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">Cercle Scientifique</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono-Danse-Musique</button></li>
-					<li><button class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">Peyresq</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'bar')" id="openBar">Bar Polytech</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'cap')" id="openCap">C.A.P</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'cpv')" id="openCpv">Cercle Photo-Vidéo</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'culture')" id="openCulture">Cercle Culturel</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'magellan')" id="openMagellan">Cercle Magellan</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'mm')" id="openMm">Mons-Mines</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'mutu')" id="openMutu">Mutuelle d'édition</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'radio')" id="openRadio">Radio Extra</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'sports')" id="openSports">Cercle des Sports</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'scientifique')" id="openScientifique">Cercle Scientifique</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'sdm')" id="openSdm">Cercle Sono-Danse-Musique</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'peyresq')" id="openPeyresq">Cercle Peyresq</button></li>
 				</ul>
 
 			</div>
@@ -44,18 +43,18 @@ include("../../controller/getConnexionData.php");
 			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
 
 				<ul class="unstyled horizontal">
-					<li class="tablinks" onclick="openCity(event,'bar')" id="openBar">Bar Polytech</li>
-					<li class="tablinks" onclick="openCity(event,'cap')" id="openCap">C.A.P</li>
-					<li class="tablinks" onclick="openCity(event,'cpv')" id="openCpv">C.P.V</li>
-					<li class="tablinks" onclick="openCity(event,'culture')" id="openCulture">Cercle Culturel</li>
-					<li class="tablinks" onclick="openCity(event,'magellan')" id="openMagellan">Magellan</li>
-					<li class="tablinks" onclick="openCity(event,'mutu')" id="openMutu">Mons-Mines</li>
-					<li class="tablinks" onclick="openCity(event,'mm')" id="openMm">Mutuelle d'édition</li>
-					<li class="tablinks" onclick="openCity(event,'sports')" id="openSports">Cercle des Sports</li>
-					<li class="tablinks" onclick="openCity(event,'radio')" id="openRadio">Radio Extra</li>
-					<li class="tablinks" onclick="openCity(event,'scientifique')" id="openScientifique">Cercle Scientifique</li>
-					<li class="tablinks" onclick="openCity(event,'sdm')" id="openSdm">Sono-Danse-Musique</li>
-					<li class="tablinks" onclick="openCity(event,'peyresq')" id="openPeyresq">Peyresq</li>
+					<li class="tablinks" onclick="openCercle(event,'bar')" id="openBar">Bar Polytech</li>
+					<li class="tablinks" onclick="openCercle(event,'cap')" id="openCap">C.A.P</li>
+					<li class="tablinks" onclick="openCercle(event,'cpv')" id="openCpv">C.P.V</li>
+					<li class="tablinks" onclick="openCercle(event,'culture')" id="openCulture">Cercle Culturel</li>
+					<li class="tablinks" onclick="openCercle(event,'magellan')" id="openMagellan">Magellan</li>
+					<li class="tablinks" onclick="openCercle(event,'mm')" id="openMm">Mons-Mines</li>
+					<li class="tablinks" onclick="openCercle(event,'mutu')" id="openMutu">Mutuelle d'édition</li>
+					<li class="tablinks" onclick="openCercle(event,'radio')" id="openRadio">Radio Extra</li>
+					<li class="tablinks" onclick="openCercle(event,'sports')" id="openSports">Sports</li>
+					<li class="tablinks" onclick="openCercle(event,'scientifique')" id="openScientifique">Scientifique</li>
+					<li class="tablinks" onclick="openCercle(event,'sdm')" id="openSdm">Sono-Danse-Musique</li>
+					<li class="tablinks" onclick="openCercle(event,'peyresq')" id="openPeyresq">Peyresq</li>
 				</ul>
 
 			</div>
@@ -64,7 +63,7 @@ include("../../controller/getConnexionData.php");
 			<div id="bar" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
 
 			<?php $name='CAP'; ?>
-			<div id="cap" class="tabcontent col-xs-12 col-md-10 "><?php include("../../controller/cercleController.php"); ?></div>
+			<div id="cap" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
 
 			<?php $name='CPV'; ?>
 			<div id="cpv" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
@@ -81,11 +80,11 @@ include("../../controller/getConnexionData.php");
 			<?php $name="mutuelle d'édition"; ?>
 			<div id="mutu" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
 
-			<?php $name='cercle des sports'; ?>
-			<div id="sports" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
-
 			<?php $name='Radio Extra'; ?>
 			<div id="radio" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
+
+			<?php $name='cercle des sports'; ?>
+			<div id="sports" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
 
 			<?php $name='Scientifique'; ?>
 			<div id="scientifique" class="tabcontent col-xs-12 col-md-10"><?php include("../../controller/cercleController.php"); ?></div>
@@ -99,9 +98,8 @@ include("../../controller/getConnexionData.php");
 		</div>
 
 		<?php 
+		include("../../scripts/openCercle.php");
 		include("../footer.php");
-		include("../../scripts/openCity.php");
-		include("../../scripts/toggle.php"); 
 		?>
 
 	</body>

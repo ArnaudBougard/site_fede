@@ -1,5 +1,5 @@
 <?php 
 include_once ("../../model/eventDAO.php");
-$FutureEvents=selectFutureEvents($bdd);
-$PastEvents=selectPastEvents($bdd);
+$futureEvents=selectFutureEvents($bdd);
+$pastEvents=selectPastEvents($bdd);
 include ("../../pages/events/eventArchive.php");

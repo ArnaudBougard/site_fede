@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -25,19 +24,19 @@ include("../../controller/getConnexionData.php");
 
 			<div class="tab col-sm-2 hidden-xs hidden-sm">
 				<ul class="unstyled">
-					<li><button class="tablinks" onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</button></li>
-					<li><button class="tablinks" onclick="openCity(event, 'Frontalière')">Frontalière</button></li>
-					<li><button class="tablinks" onclick="openCity(event, 'Centrale')">Centrale</button></li>
-					<li><button class="tablinks" onclick="openCity(event, 'Boraine')">Boraine</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'Carolo')" id="defaultOpen">Carolo</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'Frontalière')">Frontalière</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'Centrale')">Centrale</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'Boraine')">Boraine</button></li>
 				</ul>
 			</div>
  
 			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
 				<ul class="unstyled horizontal">
-					<li class="tablinks " onclick="openCity(event, 'Carolo')" id="defaultOpen">Carolo</li>
-					<li class="tablinks " onclick="openCity(event, 'Frontalière')">Frontalière</li>
-					<li class="tablinks " onclick="openCity(event, 'Centrale')">Centrale</li>
-					<li class="tablinks " onclick="openCity(event, 'Boraine')">Boraine</li>
+					<li class="tablinks " onclick="openCercle(event,'Carolo')" id="defaultOpen">Carolo</li>
+					<li class="tablinks " onclick="openCercle(event,'Frontalière')">Frontalière</li>
+					<li class="tablinks " onclick="openCercle(event,'Centrale')">Centrale</li>
+					<li class="tablinks " onclick="openCercle(event,'Boraine')">Boraine</li>
 				</ul>
 			</div>
 			
@@ -185,33 +184,11 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
-		<script>
-
-			function openCity(evt, cityName) {
-			  var i, tabcontent, tablinks;
-			  tabcontent = document.getElementsByClassName("tabcontent");
-			  for (i = 0; i < tabcontent.length; i++) {
-			    tabcontent[i].style.display = "none";
-			  }
-			  tablinks = document.getElementsByClassName("tablinks");
-			  for (i = 0; i < tablinks.length; i++) {
-			    tablinks[i].className = tablinks[i].className.replace(" active", "");
-			  }
-			  document.getElementById(cityName).style.display = "block";
-			  evt.currentTarget.className += " active";
-			}
-
-			// Get the element with id="defaultOpen" and click on it
-			document.getElementById("defaultOpen").click();
-
-		</script>
-
 		<?php 
+		include("../../scripts/openCercle.php");
 		include("../footer.php");
-		include("../../scripts/toggle.php"); 
 		?>
 
 	</body>
 
 </html>
-

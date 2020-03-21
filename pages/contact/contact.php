@@ -65,16 +65,16 @@ include("../../controller/getConnexionData.php");
                         <option>Cercle des Fêtes</option>
                         <option>Bar</option>
                         <option>CAP</option>
+                        <option>CPV</option>
                         <option>Cercle Culturel</option>
                         <option>Magellan</option>
-                        <option>Mutuelle d'édition</option>
                         <option>Mons-Mines</option>
-                        <option>Peyresq</option>
-                        <option>CPV</option>
+                        <option>Mutuelle d'édition</option>
                         <option>Radio Extra</option>
-                        <option>Scientifique</option>
-                        <option>Cercle Sono Danse Musique</option>
                         <option>Cercle des Sports</option>
+                        <option>Scientifique</option>
+                        <option>Cercle Sono-Danse-Musique</option>
+                        <option>Peyresq</option>
                         <option>Carolo</option>
                         <option>Frontalière</option>
                         <option>Centrale</option>
@@ -120,10 +120,8 @@ include("../../controller/getConnexionData.php");
   <?php
   include("../../controller/sendMail.php");
 	include("../footer.php");
-  include("../../scripts/toggle.php");
   ?>
 
 	</body>
 
 </html>
-

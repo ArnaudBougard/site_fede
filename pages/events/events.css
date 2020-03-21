@@ -2,3 +2,8 @@
   margin: 3em;
   cursor: pointer;
 }
+
+.event-image{
+	background-position: center top;
+	background-size: 100%;
+}

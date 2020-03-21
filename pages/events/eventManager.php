@@ -1,8 +1,6 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
-include("../../model/eventDAO.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +77,7 @@ include("../../model/eventDAO.php");
                         	<br/>
 
 							<p>
-								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Créer un événement" />
+								<input style="margin-left: 0rem;" type="submit" class="btn-form2" name="eventform" value="Créer un événement" />
 							</p>
 
 						</div>	
@@ -92,7 +90,7 @@ include("../../model/eventDAO.php");
 
 			</div>
 			
-			<?php include("eventCreate.php"); ?>
+			<?php include("../../controller/events/eventCreate.php"); ?>
 		
 			<div class="panel panel-default">
 
@@ -104,12 +102,10 @@ include("../../model/eventDAO.php");
 
 					<?php 
 
-						$eventsArray=selectMyPendingEvents($bdd,$_SESSION['pseudo_utilisateur']);
+						if(!empty($pendingEventsArray)){
 
-						if(!empty($eventsArray)){
-
-	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
-	        					?> 
+	        				foreach ($pendingEventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
+        					?> 
 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
@@ -135,11 +131,11 @@ include("../../model/eventDAO.php");
 
 					                        <?php 
 				                        	if(!empty($link)){
-				                        		?>
+			                        		?>
 						                        <a href="<?= $link; ?>">Event Facebook</a>
 						                        <br/>
 						                        <br/>
-						                        <?php
+					                        <?php
 						                    } 
 						                    ?>
 
@@ -155,7 +151,7 @@ include("../../model/eventDAO.php");
 									</div>
 
 									<div class="col-sm-4">
-										<btn class="btn-form2"><a href="./EventDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+										<btn class="btn-form2"><a href="../../controller/events/eventDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 		        					</div>
 
 	        					</div>
@@ -185,12 +181,10 @@ include("../../model/eventDAO.php");
 
 					<?php 
 
-						$eventsArray=selectMyEvents($bdd,$_SESSION['pseudo_utilisateur']);
-
 						if(!empty($eventsArray)){
 
 	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
-	        					?>
+        					?>
 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
@@ -217,7 +211,7 @@ include("../../model/eventDAO.php");
 					                        <?php 
 				                        	if(!empty($link)){
 				                        		?>
-						                        <a href="<?= $link; ?>" > Event Facebook </a>
+						                        <a href="<?= $link; ?>">Event Facebook</a>
 						                        <br/> <br/>
 						                        <?php
 						                    }
@@ -235,7 +229,7 @@ include("../../model/eventDAO.php");
 									</div>
 
 									<div class="col-sm-4">
-										<btn class="btn-form2"><a href="./eventDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+										<btn class="btn-form2"><a href="../../controller/events/eventDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 		        					</div>
 
 	        					</div>

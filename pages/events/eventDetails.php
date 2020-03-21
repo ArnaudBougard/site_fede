@@ -56,11 +56,11 @@ include("../../controller/getConnexionData.php");
 
 			                        <?php 
 		                        	if(!empty($link)){
-		                        		?>
+	                        		?>
 				                        <a href="<?= $link; ?>">Event Facebook</a>
 				                        <br/>
 				                        <br/>
-				                        <?php
+		                        	<?php
 				                    } 
 				                    ?>
 

@@ -1,7 +1,7 @@
 <?php 
-if(!empty($FutureEvents)){
+if(!empty($futureEvents)){
 
-  foreach($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
+  foreach($futureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
     $n=$n + 1;
     ?> 
         
@@ -34,7 +34,7 @@ if(!empty($FutureEvents)){
         
           <p class="tile-text"><?=$description; ?></p>
           <p class="tile-text">Publié le: <?= $dateCreation; ?></p>
-          <p class="tile-text"><btn class="btn-form2"><a href="../events/eventDetails.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn></p>
+          <p class="tile-text"><btn class="btn-form2"><a href="../../controller/events/eventDetailsController.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn></p>
 
         </div>
 
@@ -42,14 +42,14 @@ if(!empty($FutureEvents)){
     
     </div>  
         
-    <?php  
+  <?php  
   }
 
 }
  
-for ($x = 0; $x < 2-$n; $x++){
-  ?>
-  <div data-role="tile" data-size="large"  data-effect="hover-slide-up" class="col-sm-6 tile">
+for($x = 0; $x < 2-$n; $x++){
+?>
+  <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-6 tile">
     
     <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
       <div class="tile-title">
@@ -67,7 +67,6 @@ for ($x = 0; $x < 2-$n; $x++){
 
   </div>
 
-  <?php 
+<?php 
 }
-
 ?>

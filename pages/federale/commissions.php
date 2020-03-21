@@ -1,11 +1,11 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php"); 
 ?>
 
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 		<link href="../folklore/folklore.css" rel="stylesheet">
@@ -13,33 +13,33 @@ session_start();
 
 	<body class="bg1">
 		
-		<?php include("../network.php"); ?>
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php");
+		?>
 
 		<div class="row" >
 
 			<div class="tab col-sm-2 hidden-xs hidden-sm">
 				<ul class="unstyled">
-					<li><button class="tablinks" onclick="openCity(event, 'Web')" id="defaultOpen">Web</button></li>
-					<li> <button class="tablinks" onclick="openCity(event, 'Historique')">Historique</button></li>
-					<li><button class="tablinks" onclick="openCity(event, 'PMD')">PMD</button></li>
-					<!-- <li><button class="tablinks" onclick="openCity(event, 'PIMs')">PIM's</button></li> -->
-					<li><button class="tablinks" onclick="openCity(event, 'FPMath')">FPMath's</button></li>
-					<!-- <li><button class="tablinks" onclick="openCity(event, 'Bal')">Bal des Mines</button></li> -->
+					<li><button class="tablinks" onclick="openCercle(event, 'Web')" id="defaultOpen">Web</button></li>
+					<li> <button class="tablinks" onclick="openCercle(event, 'Historique')">Historique</button></li>
+					<li><button class="tablinks" onclick="openCercle(event, 'PMD')">PMD</button></li>
+					<!-- <li><button class="tablinks" onclick="openCercle(event, 'PIMs')">PIM's</button></li> -->
+					<li><button class="tablinks" onclick="openCercle(event, 'FPMath')">FPMath's</button></li>
+					<!-- <li><button class="tablinks" onclick="openCercle(event, 'Bal')">Bal des Mines</button></li> -->
 				</ul>
 			</div>
 
 			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
 				<ul class="unstyled horizontal">
-					<li class="tablinks " onclick="openCity(event, 'Web')" id="defaultOpen">Web</li>
-					<li class="tablinks " onclick="openCity(event, 'Historique')">Historique</li>
-					<li class="tablinks " onclick="openCity(event, 'PMD')">PMD</li>
-					<li class="tablinks " onclick="openCity(event, 'FPMath')">FPMath</li>
+					<li class="tablinks " onclick="openCercle(event, 'Web')" id="defaultOpen">Web</li>
+					<li class="tablinks " onclick="openCercle(event, 'Historique')">Historique</li>
+					<li class="tablinks " onclick="openCercle(event, 'PMD')">PMD</li>
+					<li class="tablinks " onclick="openCercle(event, 'FPMath')">FPMath</li>
 				</ul>
 			</div>
-			
 
 			<div id="Web" class="col-xs-12 col-md-9 tabcontent">
 
@@ -109,17 +109,14 @@ session_start();
 
 					<p class="text">
 						La Faculté Polytechnique de Mons, la Fédération des Etudiants et l’Association des Ingénieurs de Mons, souhaitant organiser un événement annuel marquant et prestigieux permettant de rassembler l’ensemble de la communauté Polytech Mons, ont créé en 2007 le « Polytech Mons Day ». Cet événement permet de fêter la nouvelle promotion, fraîchement diplômée. En effet, le Polytech Mons Day est né, avant tout, de la volonté de la F.P.Ms de s’impliquer davantage dans la symbolique de la remise de diplômes à ses nouveaux promus.
-
 					</p>
 
 					<p class="text">
 						En fusionnant trois évènements clés, à savoir la remise des diplômes de la Faculté, le défunt Bal des Mines de la Fédération des Etudiants et la Cérémonie du Commencement de l’A.I.Ms, le Polytech Mons Day entend créer, et renforcer, les rencontres, les liens et les échanges au sein même de la communauté, toutes générations, orientations et situations professionnelles confondues. Dès lors, même si cette organisation a pour but premier de mettre à l’honneur les nouveaux diplômés, il est évident que tous les étudiants de la Faculté y sont conviés.
-
 					</p>
 
 					<p class="text">
 						Après une première édition au Château de Seneffe, c’est le Château de Beloeil qui accueille depuis 2008 cette prestigieuse réception rassemblant près de 500 invités. En 2012, le Polytech Mons Day aura lieu le Samedi 8 septembre 2012. Nous fêterons la 169e promotion d'Ingénieurs Civils issus de notre honorable institution ! Tous les renseignements utiles seront donnés dès la rentrée et seront disponibles sur le site http://pmd.fede.fpms.ac.be.
-
 					</p>	
 
 					<p class="text">
@@ -131,6 +128,7 @@ session_start();
 					</p>
 
 				</div>
+
 			</div>
 
 			<div id="FPMath" class="col-xs-12 col-md-9 tabcontent">
@@ -170,7 +168,7 @@ session_start();
 					<img class="img3" src="../../assets/img/logoBalDesMines.PNG" alt="bleusaille">
 
 					<p class="text">
-						La dernière organisation historique du Bal des Mines remonte à 2007.  Il rennait aujourd'hui de ses cendres.
+						La dernière organisation historique du Bal des Mines remonte à 2007. Il renaît aujourd'hui de ses cendres.
 					</p>
 
 				</div>
@@ -179,31 +177,11 @@ session_start();
 
 		</div>
 
-		<script>
-			function openCity(evt, cityName) {
-			  var i, tabcontent, tablinks;
-			  tabcontent = document.getElementsByClassName("tabcontent");
-			  for (i = 0; i < tabcontent.length; i++) {
-			    tabcontent[i].style.display = "none";
-			  }
-			  tablinks = document.getElementsByClassName("tablinks");
-			  for (i = 0; i < tablinks.length; i++) {
-			    tablinks[i].className = tablinks[i].className.replace(" active", "");
-			  }
-			  document.getElementById(cityName).style.display = "block";
-			  evt.currentTarget.className += " active";
-			}
-
-			// Get the element with id="defaultOpen" and click on it
-			document.getElementById("defaultOpen").click();
-		</script>
-
 		<?php 
+		include("../../scripts/openCercle.php");
 		include("../footer.php");
-		include("../../scripts/toggle.php"); 
 		?>
 
 	</body>
 
 </html>
-

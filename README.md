@@ -28,11 +28,11 @@ Le système est clairement améliorable, faites vous plaiz
 </div>
 
 ## Dossiers VIEW à nettoyer :
-- action
-- activities
-- cercles
-- contact
-- events
+- action -- OK
+- activities -- OK (tout est statique)
+- cercles -- OK (tout est statique)
+- contact -- OK (tout est statique)
+- events -- OK
 - federale
 - folklore
 - forum

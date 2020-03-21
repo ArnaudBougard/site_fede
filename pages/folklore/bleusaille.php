@@ -1,27 +1,23 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php");
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
-		
 		<link href="folklore.css" rel="stylesheet">
-
 	</head>
 
 	<body id="body">
 		
-		<?php include("../network.php"); ?>
-
-		<!-- SCROLL TOP BUTTON ? (Rex) -->
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php");
+		?>
 
 		<div class="bg1">
 			<div class="container" id="content"> 
@@ -108,11 +104,8 @@ session_start();
 			</div>
 		</div>
 
-
-
 		<?php include("../footer.php"); ?>
-		<?php include("../../scripts/toggle.php"); ?>
 
 	</body>
+	
 </html>
-

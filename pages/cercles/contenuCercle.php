@@ -29,7 +29,7 @@
 		<ul class="unstyled center">	
 
 			<?php
-			foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)) {
+			foreach($comitardsArray as list($nom_poste,$firstname,$lastname)){
 			?> 
 				<li>
 					<?= "$nom_poste: $firstname $lastname"; ?>

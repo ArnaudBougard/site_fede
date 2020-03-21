@@ -1,6 +1,6 @@
-<script>
+<script type='text/javascript'>
 
-	function openCity(evt, cercle){
+	function openCercle(event, cercle){
 
   		var i, tabcontent, tablinks;
   		
@@ -17,10 +17,10 @@
 		}
 
 		document.getElementById(cercle).style.display = "block";
-		evt.currentTarget.className += "active";
+		event.currentTarget.className += "active";
 	}
 
 	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("<?php echo $_GET['id'] ?>").click();
+	document.getElementById("<?= $_GET['id'] ?>").click();
 
 </script>

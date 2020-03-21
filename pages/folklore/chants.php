@@ -1,27 +1,23 @@
 <?php
 session_start();
+include("../../controller/getConnexionData.php");
 ?>
-
-<?php include("../../model/connexionDAO.php"); ?>
-<?php include("../../controller/getConnexionData.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
 		<?php include("../head.php"); ?>
 		<link href="folklore.css" rel="stylesheet">
-
 	</head>
 
 	<body id="body">
 		
-		<?php include("../network.php"); ?>
-
-		<?php include("../navbar.php");
-		include("../sideBar.php"); ?>
-
-		<?php include("../../model/chantDAO.php"); ?>
-
+		<?php 
+		include("../network.php");
+		include("../navbar.php");
+		include("../sideBar.php");
+		include("../../model/chantDAO.php"); ?>
 
 		<?php 
 		if(isset($_SESSION['id_utilisateur'])){
@@ -159,12 +155,8 @@ session_start();
 			}
 		</script>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 	
 </html>
-

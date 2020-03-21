@@ -1,6 +1,5 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php"); 
 ?>
 
@@ -23,7 +22,7 @@ include("../../controller/getConnexionData.php");
 
 			<div class="row">
 				<div class="title-area col-xs-12">
-					<h3 class="title2">La carte fédé ? Qu’est-ce que c’est ? </h3> 
+					<h3 class="title2">La carte fédé, qu’est-ce que c’est ?</h3> 
 			  		<h3>Elle représente l’adhésion à la Fédération des Etudians de la FPMs en tant que membre.</h3> 
 				</div>
 			</div>
@@ -44,11 +43,11 @@ include("../../controller/getConnexionData.php");
 
 				</div>
 
-				<div class="center col-xs-12 col-sm-4"><img class="" src="../../assets/img/reduc.PNG"> </div>
+				<div class="center col-xs-12 col-sm-4"><img src="../../assets/img/reduc.PNG"></div>
 
 			</div>
 
-			<h2>Avantages : </h2>
+			<h2>Avantages :</h2>
 			
 			<p class="text">
 				<ul class="list">
@@ -71,15 +70,10 @@ include("../../controller/getConnexionData.php");
 
 			</p>
 
-				
 	    </div>
 
-		<?php 
-		include("../footer.php");
-		include("../../scripts/toggle.php"); 
-		?>
+		<?php include("../footer.php"); ?>
 
 	</body>
 
 </html>
-
