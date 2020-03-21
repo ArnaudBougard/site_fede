@@ -65,7 +65,7 @@ if(isset($_POST["eventform"])){
             }
         }  
         else {
-            echo "<h1 style='text-align:center;'> upload réussi</h1>";
+            echo "<h1 style='text-align:center;'>Upload réussi</h1>";
         }
 
     }

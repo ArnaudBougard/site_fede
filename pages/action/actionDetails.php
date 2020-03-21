@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("../../controller/getConnexionData.php");
-include("../../model/actionDAO.php"); 
+include("../../controller/getConnexionData.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +19,6 @@ include("../../model/actionDAO.php");
 		?>
 
 		<?php 
-		$actionArray=selectActionById($bdd,$_GET['id']);	
-		
 		if(!empty($actionArray)){
 
         	foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){

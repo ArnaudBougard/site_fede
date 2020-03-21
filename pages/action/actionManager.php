@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("../../controller/getConnexionData.php");
-include("../../model/actionDAO.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@ include("../../model/actionDAO.php");
 							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
 
 							<p class="help-block">
-								<span class="label label-info">Note:</span> Please, select png jpg or jpeg files
+								<span class="label label-info">Note:</span>Please select png, jpg or jpeg file(s).
 							</p>
 
 							<p> 
@@ -83,19 +82,17 @@ include("../../model/actionDAO.php");
 
 			</div>
 			
-			<?php include("actionCreate.php"); ?>
+			<?php include("../../controller/action/actionCreate.php"); ?>
 		
 			<div class="panel panel-default">
 
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw;margin-bottom: 1.76vw;">En attente de validation</h4>
+						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;">En attente de validation</h4>
 					</div>
 
 					<?php 
-					$actionArray=selectMyPendingActions($bdd,$_SESSION['pseudo_utilisateur']);
-					
 					if(!empty($actionArray)){
 
 						foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
@@ -118,14 +115,13 @@ include("../../model/actionDAO.php");
 									</p>
 								</div>
 
-								<div class="col-sm-4" >
-
-									<btn class="btn-form2"> <a href="./actionDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+								<div class="col-sm-4">
+									<btn class="btn-form2"><a href="../../controller/action/actionDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 								</div>
+
 							</div>
 
-							<?php
-
+						<?php
 						}
 					}
 					else{

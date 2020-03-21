@@ -1,8 +1,5 @@
 <?php 
-
-$pastEvents=selectSomePastEvents2($bdd);
-$n=0;
-if(!empty($pastEvents)) {
+if(!empty($pastEvents)){
   
     foreach ($pastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)) {
       $n=$n + 1;

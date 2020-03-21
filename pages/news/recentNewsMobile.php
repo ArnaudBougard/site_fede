@@ -1,8 +1,4 @@
 <?php 
-
-  $NewsArray=selectLastNews2($bdd);
-  $n=0;
-
   if(!empty($NewsArray)){
     
     foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){

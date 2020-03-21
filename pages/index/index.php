@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../../controller/getConnexionData.php"); 
+include("../../controller/getConnexionData.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +15,6 @@ include("../../controller/getConnexionData.php");
 	<body id="body">
 
 		<?php 
-		include("../../model/eventDAO.php");
-		include("../../model/newsDAO.php");
-		include("../../model/actionDAO.php");
 		include("../network.php");
 		include("./header.php");
 		include("../navbar.php"); 
@@ -29,14 +26,17 @@ include("../../controller/getConnexionData.php");
 			<div class="row index-row hidden-xs">
 
 				<div class="col-xs-9 tileRow">
+
 					<div class="col-xs-1 vertical">Evènements</div>
+
 					<div class="col-xs-11 tileSubRow">
-						<?php include("../events/futureEvents.php"); ?> 
+						<?php include("../../controller/events/futureEventsController.php"); ?> 
 					</div>
+
 				</div>
 			
 				<div class="col-xs-3 tileRow"> 
-					<?php include("../action/displayAction.php"); ?> 
+					<?php include("../../controller/action/displayActionController.php"); ?> 
 				</div>
 
 			</div>
@@ -46,12 +46,12 @@ include("../../controller/getConnexionData.php");
 				<div class="col-xs-8 tileRow">
 					<div class="col-xs-1 vertical">Evènements</div>
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../events/futureEvents2.php"); ?> 
+						<?php include("../../controller/events/futureEventsMobileController.php"); ?> 
 					</div>
 				</div>
 			
 				<div class="col-xs-4 tileRow"> 
-					<?php include("../action/displayAction.php"); ?> 
+					<?php include("../../controller/action/displayActionController.php"); ?> 
 				</div>
 
 			</div>
@@ -61,7 +61,7 @@ include("../../controller/getConnexionData.php");
 				<div class="col-xs-9 tileRow">
 					<div class="col-xs-1 vertical">Actualités</div>
 					<div class="col-xs-11 tileSubRow hidden-xs">
-						<?php include("../news/recentNews.php"); ?>
+						<?php include("../../controller/news/recentNewsController.php"); ?>
 					</div>
 				</div>
 			
@@ -76,7 +76,7 @@ include("../../controller/getConnexionData.php");
 				<div class="col-xs-8 tileRow"> 
 					<div class="col-xs-1 vertical">Actualités</div>
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../news/recentNews2.php"); ?>
+						<?php include("../news/recentNewsMobile.php"); ?>
 					</div>
 				</div>
 			
@@ -91,7 +91,7 @@ include("../../controller/getConnexionData.php");
 				<div class="col-xs-9 tileRow">
 					<div class="col-xs-1 vertical">Old Events</div>
 					<div class="col-xs-11 tileSubRow hidden-xs">
-						<?php include("../events/pastEvents.php"); ?>  
+						<?php include("../../controller/events/pastEventsController.php"); ?>  
 					</div>
 				</div>
 			
@@ -103,7 +103,7 @@ include("../../controller/getConnexionData.php");
 		                	<h2 class="tile-h2">Tous les évènements</h2>
 		                </div>
 
-		                <div class="slide-front" data-cover="../../assets/img/news.jfif" >
+		                <div class="slide-front" data-cover="../../assets/img/news.jfif">
 		                	<div class="tile-title">
 					           <h2>Voir tous les évènements<h2>
 					        </div>
@@ -113,7 +113,7 @@ include("../../controller/getConnexionData.php");
 
 		                	<div class="tile-content">
 			                    <p class="tile-text">
-			                      <button class="btn-form2"><a href="../events/eventArchive.php" class="gras btn btn-xl">Tous les événements</a></button>
+			                      <button class="btn-form2"><a href="../../controller/events/eventArchiveController.php" class="gras btn btn-xl">Tous les événements</a></button>
 			                    </p>
 			                </div>
 			              
@@ -132,7 +132,7 @@ include("../../controller/getConnexionData.php");
 					<div class="col-xs-1 vertical">Old Events</div>
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../events/pastEvents2.php"); ?>  
+						<?php include("../../controller/events/pastEventsMobileController.php"); ?>  
 					</div>
 
 				</div>
@@ -157,7 +157,7 @@ include("../../controller/getConnexionData.php");
 
 		                	<div class="tile-content">
 			                    <p class="tile-text">
-			                      <button class="btn-form2"><a href="../events/eventArchive.php" class="gras btn btn-xl">Tous les événements</a></button>
+			                      <button class="btn-form2"><a href="../../controller/events/eventArchiveController.php" class="gras btn btn-xl">Tous les événements</a></button>
 			                    </p>
 			                </div>
 			              
@@ -173,12 +173,10 @@ include("../../controller/getConnexionData.php");
 
 				<div class="col-xs-9 tileRow">
 
-					<div class="col-xs-1 vertical">
-						Old News
-					</div>
+					<div class="col-xs-1 vertical">Old News</div>
 
 					<div class="col-xs-11 tileSubRow hidden-xs">
-						<?php include("../news/pastnews.php"); ?>  
+						<?php include("../../controller/news/pastNewsController.php"); ?>  
 					</div>
 
 				</div>
@@ -201,7 +199,7 @@ include("../../controller/getConnexionData.php");
 
 		                	<div class="tile-content">
 			                    <p class="tile-text">
-			                      <button class="btn-form2"><a href="../news/newsArchive.php" class="gras btn btn-xl">Toutes les news</a></button>
+			                      <button class="btn-form2"><a href="../../controller/news/newsArchiveController.php" class="gras btn btn-xl">Toutes les news</a></button>
 			                    </p>
 			                </div>
 
@@ -220,7 +218,7 @@ include("../../controller/getConnexionData.php");
 					<div class="col-xs-1 vertical">Old News</div>
 					
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../news/pastnews2.php"); ?>  
+						<?php include("../../controller/news/pastNewsMobileController.php"); ?>  
 					</div>
 
 				</div>
@@ -246,7 +244,7 @@ include("../../controller/getConnexionData.php");
 		                	<div class="tile-content">
 			                    
 			                    <p class="tile-text">
-			                      <button class="btn-form2"><a href="../news/newsArchive.php" class="gras btn btn-xl">Toutes les news</a></button>
+			                      <button class="btn-form2"><a href="../../controller/news/newsArchiveController.php" class="gras btn btn-xl">Toutes les news</a></button>
 			                    </p>
 
 			                </div>

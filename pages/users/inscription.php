@@ -1,7 +1,6 @@
 <!--Formulaire d'inscription-->
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
 include("../../controller/mailinit.php");
 include("mailSender.php"); 

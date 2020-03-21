@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
-include("../../controller/getConnexionData.php"); 
+include("../../controller/getConnexionData.php");
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,6 @@ include("../../controller/getConnexionData.php");
 	<body id="body">
 
 		<?php 
-    include("../../model/newsDAO.php");
     include("../network.php");
     include("../navbar.php");
     include("../sideBar.php"); 
@@ -27,10 +25,8 @@ include("../../controller/getConnexionData.php");
         <div class="container-fluid">
 
           <h2>Evénements à venir</h2>
-          <?php 
 
-          $NewsArray=selectAllnews($bdd);
-          
+          <?php 
           if(!empty($NewsArray)){
             
             foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
@@ -41,7 +37,7 @@ include("../../controller/getConnexionData.php");
                 <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
 
                   <div class="tile-title">
-                    <h2 style="text-align: center; font-size: 3.4vh;"> <?= $nom; ?><h2>
+                    <h2 style="text-align: center; font-size: 3.4vh;"><?= $nom; ?><h2>
                   </div>
 
                 </div>
@@ -64,7 +60,6 @@ include("../../controller/getConnexionData.php");
 
           }
           else{echo "Pas de news à afficher";}
-
         ?>
 
         </div>

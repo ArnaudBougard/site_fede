@@ -1,8 +1,6 @@
-h<?php
+<?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
-include("../../model/eventDAO.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -20,65 +18,61 @@ include("../../model/eventDAO.php");
 		include("../sideBar.php");
 		?>
 
-		<?php 
-			$eventData=selectEventById($bdd,$_GET['id']);	
-			
-			if(!empty($eventData)){
+		<?php 	
+		if(!empty($eventData)){
 
-	        	foreach ($eventData as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){	
-				?>
+        	foreach ($eventData as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){	
+			?>
 
-					<div class="container">	
+				<div class="container">	
 
-						<div class="page-header">
+					<div class="page-header">
 
-							<div class="title-area">
-								<h3 class="title2"><?= $nom; ?></h3> 
-					  			<span class="title-line2"></span> 
-							</div>
-
+						<div class="title-area">
+							<h3 class="title2"><?= $nom; ?></h3> 
+				  			<span class="title-line2"></span> 
 						</div>
 
-						<div class="panel panel-default">
+					</div>
 
-							<div class="panel-body">
-								
-								<div class="container" style="margin-bottom: 5rem;"> 
+					<div class="panel panel-default">
 
-									<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
-			    					</div>
+						<div class="panel-body">
+							
+							<div class="container" style="margin-bottom: 5rem;"> 
 
-			    					<div class="col-sm-8">
+								<div class="col-sm-4">
+									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+		    					</div>
 
-				                        Date : <?= $date; ?>
+		    					<div class="col-sm-8">
+
+			                        Date : <?= $date; ?>
+			                        <br/>
+			                        <br/>
+			                        Lieu : <?= $lieu; ?>
+			                        <br/>
+			                        <br/>
+
+			                        <?php 
+		                        	if(!empty($link)){
+		                        		?>
+				                        <a href="<?= $link; ?>">Event Facebook</a>
 				                        <br/>
 				                        <br/>
-				                        Lieu : <?= $lieu; ?>
-				                        <br/>
-				                        <br/>
+				                        <?php
+				                    } 
+				                    ?>
 
-				                        <?php 
-			                        	if(!empty($link)){
-			                        		?>
-					                        <a href="<?= $link; ?>">Event Facebook</a>
-					                        <br/>
-					                        <br/>
-					                        <?php
-					                    } 
-					                    ?>
+			                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
 
-				                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
-
-				                        <br/>
-				                        <br/>
-										<p style="white-space: pre-line">
-											<?= $description; ?>
-										</p>
-				                        <br/>
-				                        <br/>
-
-									</div>
+			                        <br/>
+			                        <br/>
+									<p style="white-space: pre-line">
+										<?= $description; ?>
+									</p>
+			                        <br/>
+			                        <br/>
 
 								</div>
 
@@ -88,16 +82,18 @@ include("../../model/eventDAO.php");
 
 					</div>
 
-					<?php
+				</div>
 
-				}
-			}
-			else{
-			?>
-				<p>Oups, cet article joue à cache-cache!</p>
 			<?php
 			}
-			?>					
+
+		}
+		else{
+		?>
+			<p>Oups, cet article joue à cache-cache!</p>
+		<?php
+		}
+		?>					
 	
 		<?php include("../footer.php"); ?>
 

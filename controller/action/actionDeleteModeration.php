@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 include("../../model/connexionDAO.php"); 
 $req = $bdd -> prepare('DELETE FROM action WHERE id = :id ');
 $req -> execute(array('id' => $_GET['id']));

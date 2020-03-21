@@ -1,7 +1,4 @@
 <?php 
-
-$lastAction=selectLastAction($bdd);
-
 if(!empty($lastAction)){
   
   foreach ($lastAction as list($id,$nom,$prix,$quantite,$date,$img,$description)){
@@ -12,7 +9,7 @@ if(!empty($lastAction)){
           <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
 
             <div class="tile-title">
-              <h2 >Action de la semaine<h2>
+              <h2>Action de la semaine<h2>
             </div>
 
           </div>
@@ -24,7 +21,7 @@ if(!empty($lastAction)){
             	<p class="tile-text">Prix: <?= $prix; ?> €</p>
             	<p class="tile-text">Pour <?= $quantite; ?> cl</p>
               <p class="tile-text">A partir du <?= $date; ?></p>
-              <p class="tile-text"><btn class="btn-form2"><a href="../action/actionDetails.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn></p>
+              <p class="tile-text"><btn class="btn-form2"><a href="../../controller/action/actionDetailsController.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn></p>
             </div>
 
           </div>
@@ -51,7 +48,7 @@ else{
     <div class="slide-back" data-cover="../../assets/img/paixdieu.jfif">
 
       <div class="tile-title">
-        <h2>Pas d'action<h2>d
+        <h2>Pas d'action bis<h2>
       </div>
       
     </div>

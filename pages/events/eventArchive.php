@@ -13,7 +13,6 @@ include("../../controller/getConnexionData.php");
 	<body id="body">
 
 		<?php 
-    include("../../model/eventDAO.php");
     include("../network.php");
     include("../navbar.php");
     include("../sideBar.php"); 
@@ -26,116 +25,111 @@ include("../../controller/getConnexionData.php");
         <div class="container-fluid">
 
           <h2>Evénements à venir</h2>
+          
           <?php 
-
-            $FutureEvents=selectFutureEvents($bdd);
+          if(!empty($FutureEvents)){
             
-            if(!empty($FutureEvents)){
-              
-                foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
-                ?> 
-                        <div class="col-md-3 cms-boxes-outer">
+            foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
+            ?>
 
-                          <div class="cms-boxes-items cms-features" style=" background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
+              <div class="col-md-3 cms-boxes-outer">
 
-                              <div class="small-box">
+                <div class="cms-boxes-items cms-features" style=" background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
 
-                                <div class="col-sm-12">
-                                  <h2 class="Tileh2"><?php echo$nom; ?></h2>
-                                </div>
+                  <div class="small-box">
 
-                                <div class="col-sm-12">
+                    <div class="col-sm-12">
+                      <h2 class="Tileh2"><?=$nom; ?></h2>
+                    </div>
 
-                                    <p><?php echo $date; ?></p>
-                                    <p><?php echo $lieu; ?></p>
+                    <div class="col-sm-12">
 
-                                    <?php 
-                                    if(!empty($link)){
-                                    ?>
-                                      <p><a href="<?php echo $link; ?>">Event Facebook</a></p>
-                                      <br/>
-                                      <br/>
-                                    <?php
-                                    } 
-                                    ?>
+                        <p><?= $date; ?></p>
+                        <p><?= $lieu; ?></p>
 
-                                    <p class="tile-text">
-                                      <btn class="btn-form2"><a href="../events/eventDetails.php?id= <?php echo $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn>
-                                    </p>
-                                                  
-                                </div>
+                        <?php 
+                        if(!empty($link)){
+                        ?>
+                          <p><a href="<?= $link; ?>">Event Facebook</a></p>
+                          <br/>
+                          <br/>
+                        <?php
+                        } 
+                        ?>
 
+                        <p class="tile-text">
+                          <btn class="btn-form2"><a href="../../controller/events/eventDetailsController.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn>
+                        </p>
+                                      
+                    </div>
 
-                              </div>
+                  </div>
 
-                          </div>
+                </div>
 
-                        </div>
-                  <?php  
-              }
+              </div>
 
+            <?php  
             }
-            else{echo "pas d'events à afficher";}
 
+          }
+          else{echo "pas d'events à afficher";}
           ?>
+
         </div>
 
         <div class="container-fluid">
           
           <h2>Evénements Passés</h2>
 
-          <?php
-          $FutureEvents=selectPastEvents($bdd);
-              
-            if(!empty($FutureEvents)){
-              
-                foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
-                    ?> 
-                        <div class="col-md-3 cms-boxes-outer">
+          <?php     
+          if(!empty($PastEvents)){
+            
+            foreach ($PastEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
+            ?> 
+              <div class="col-md-3 cms-boxes-outer">
 
-                          <div class="cms-boxes-items cms-features" style=" background-image: url(<?php echo "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">.......
+                <div class="cms-boxes-items cms-features" style=" background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%;">
 
-                              <div class="small-box">
+                  <div class="small-box">
 
-                                <div class="col-sm-12">
-                                  <h2 class="Tileh2"><?php echo$nom; ?></h2>
-                                </div>
+                    <div class="col-sm-12">
+                      <h2 class="Tileh2"><?=$nom; ?></h2>
+                    </div>
 
-                                <div class="col-sm-12">
+                    <div class="col-sm-12">
 
-                                    <p><?php echo $date; ?></p>
-                                    <p><?php echo $lieu; ?></p>
+                        <p><?= $date; ?></p>
+                        <p><?= $lieu; ?></p>
 
-                                    <?php 
-                                    if(!empty($link)){
-                                    ?>
-                                      <p><a href="<?php echo $link; ?>" > Event Facebook </a></p>
-                                      <br/>
-                                      <br/>
-                                    <?php
-                                    } 
-                                    ?>
+                        <?php 
+                        if(!empty($link)){
+                        ?>
+                          <p><a href="<?= $link; ?>">Event Facebook</a></p>
+                          <br/>
+                          <br/>
+                        <?php
+                        } 
+                        ?>
 
-                                    <p class="tile-text">
-                                      <btn class="btn-form2"><a href="../events/eventDetails.php?id= <?php echo $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn>
-                                    </p>
-                                                  
-                                </div>
+                        <p class="tile-text">
+                          <btn class="btn-form2"><a href="../../controller/events/eventDetailsController.php?id= <?= $id; ?>" class="gras btn btn-xl">Plus d'info</a></btn>
+                        </p>
+                                      
+                    </div>
 
+                  </div>
 
-                              </div>
+                </div>
 
-                          </div>
+              </div>
 
-                        </div>
-
-                  <?php  
-              }
-
+              <?php  
             }
-              else{echo "pas d'events à afficher";}
 
-            ?>
+          }
+          else{echo "pas d'events à afficher";}
+          ?>
 
         </div>
 

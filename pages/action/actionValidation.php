@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("../../controller/getConnexionData.php");
-include("../../model/actionDAO.php"); 
+include("../../controller/getConnexionData.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +32,10 @@ include("../../model/actionDAO.php");
 						<br/>
 
 						<?php 
+						if(!empty($pendingActionArray)){
 
-						$actionArray=selectAllPendingActions($bdd);
-
-						if(!empty($actionArray)){
-
-	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
-	        					?> 
+	        				foreach ($pendingActionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+	        				?> 
 	        					<div class="container" style="margin-bottom: 5rem;"> 
 
 	        						<div class="col-sm-4">
@@ -60,11 +56,11 @@ include("../../model/actionDAO.php");
 									<div class="col-sm-4">
 
 										<div class="row" style="margin-bottom: 2rem; margin-top: 2rem;">
-												<btn class="btn-form2"><a href="./actionValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
+												<btn class="btn-form2"><a href="../../controller/action/actionValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
 										</div>
 
 										<div class="row">
-											<btn class="btn-form2"><a href="./actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+											<btn class="btn-form2"><a href="../../controller/action/actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 										</div>
 
 		        					</div>
@@ -75,8 +71,7 @@ include("../../model/actionDAO.php");
 
 	        				}
 	        			}
-						else
-						{
+						else{
 						?>
 						<p>Vous n'avez aucune action en attente de validation</p>
 						<?php
@@ -98,12 +93,10 @@ include("../../model/actionDAO.php");
 				<div class="panel panel-default">
 
 					<div class="panel-body">
+
 						<br/>
-
+						
 						<?php 
-
-						$actionArray=selectAllActions($bdd);
-
 						if(!empty($actionArray)){
 
 	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
@@ -130,7 +123,7 @@ include("../../model/actionDAO.php");
 
 										<div class="row" style="margin-bottom: 2rem;margin-top: 2rem;">
 
-											<btn class="btn-form2"><a href="./actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+											<btn class="btn-form2"><a href="../../controller/action/actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 
 										</div>
 

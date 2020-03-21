@@ -1,13 +1,9 @@
 <?php 
-  
-$FutureEvents=selectSomeFutureEvents2($bdd);
-$n=0;
+if(!empty($FutureEvents)){
 
-if(!empty($FutureEvents)) {
-
-  foreach ($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)) {
+  foreach($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
     $n=$n + 1;
-      ?> 
+    ?> 
         
     <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-6 tile">
       

@@ -1,7 +1,4 @@
 <?php 
-$FutureEvents=selectSomeFutureEvents3($bdd);
-$n=0;
-
 if(!empty($FutureEvents)){
 
   foreach($FutureEvents as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$statut,$dateCreation)){
@@ -11,9 +8,11 @@ if(!empty($FutureEvents)){
     <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
      
       <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
+
         <div class="tile-title">
           <h2><?= $nom; ?><h2>
         </div>
+        
       </div>
 
       <div class="slide-back" data-cover="<?= "'".$img."'" ?>">
@@ -50,14 +49,14 @@ if(!empty($FutureEvents)){
 }
 
 for ($x = 0; $x < 3-$n; $x++){
-  ?>
+?>
 
   <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
     
     <div class="slide-front" data-cover="../../assets/img/paixdieu.jfif">
 
       <div class="tile-title">
-        <h2 >Seems like there's nothing up!<h2>
+        <h2>Seems like there's nothing up!<h2>
       </div>
 
     </div>
