@@ -1,5 +1,5 @@
 <?php 
 include_once ("../../model/newsDAO.php");
-$NewsArray=selectSomeNews2($bdd);
+$NewsArray=selectSomeNews3($bdd);
 $n=0;
-include ("../../pages/news/pastNews.php");
+include ("../../pages/news/pastNews.php"); 

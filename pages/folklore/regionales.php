@@ -8,8 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
-		<link href="folklore.css" rel="stylesheet">
-
+		<link href="./folklore.css" rel="stylesheet">
 	</head>
 
 	<body class="bg1" id="body">
@@ -95,9 +94,6 @@ include("../../controller/getConnexionData.php");
 					<h3 class="title2">La Frontalière</h3> 
 			  		<span class="title-line2"></span> 
 				</div>
-
-				<!--<img class="img3" src="../../assets/img/Fronta.png" alt="bleusaille">
-					TROUVER AUTRE IMAGE, CELLE-LA EST DEGUEU-->
 
 				<p class="text">
 					Bonjour à toi ex-rhétoricienne et ex-rhétoricien !

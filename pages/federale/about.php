@@ -23,16 +23,16 @@ include("../../controller/getConnexionData.php");
 			<div class="margintop marginbottom">
 
 				<p>
-		   			<?php echo $cercle['description_cercle']; ?>
+		   			<?= $cercle['description_cercle']; ?>
 		   			<br/>
 		   			<br/> 
 
 			   		<div align="center">
-			   			<img class= "center" src="<?php echo $cercle['logo_cercle'] ?>">
+			   			<img class= "center" src="<?= $cercle['logo_cercle'] ?>">
 			   		</div>
 
 			   		<div class="center ">
-						<img class=" imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
+						<img class="imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
 					</div>
 
 		  		</p>

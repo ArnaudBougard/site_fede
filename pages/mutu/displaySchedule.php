@@ -5,7 +5,6 @@
     <h2 class="mutu-h2"><span class="glyphicon glyphicon-print"></span>Horaire Mutu</h2> 
 
     <?php 
-
     $str = file_get_contents('../mutu/schedule.json');
     $json = json_decode($str, true);
 
@@ -23,7 +22,7 @@
         ?>
           
         <button class="btn"> 
-          <a href="../mutu/scheduleManager.php"><span class="glyphicon glyphicon-bookmark"></span>Horaire Mutu</a>
+          <a href="../../pages/mutu/scheduleManager.php"><span class="glyphicon glyphicon-bookmark"></span>Horaire Mutu</a>
         </button>
 
       <?php 

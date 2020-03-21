@@ -79,48 +79,45 @@ include("../../model/newsDAO.php");
 					</div>
 
 					<?php 
+					if(!empty($pendingEventsArray)){
 
-						$eventsArray=selectMyPendingNews($bdd,$_SESSION['pseudo_utilisateur']);
-						
-						if(!empty($eventsArray)){
+						foreach ($pendingEventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
+							?>
 
-							foreach ($eventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
-								?>
+							<div class="container" style="margin-bottom: 5rem;"> 
 
-								<div class="container" style="margin-bottom: 5rem;"> 
+								<div class="col-sm-4">
+									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+								</div>
 
-									<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
-									</div>
+								<div class="col-sm-4">
 
-									<div class="col-sm-4">
-
-										<p>
-					                    Nom de l'événement : <?= $nom; ?>
-					                    <br/><br/>
-					                    Description : <?= $article; ?>
-					                    <br/><br/>
-					                    Publié le: <?= $dateCreation; ?>
-					                    <br/><br/>
-										</p>
-
-									</div>
-
-									<div class="col-sm-4">
-										<btn class="btn-form2"><a href="./newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl">Supprimer</a></btn>
-									</div>
+									<p>
+				                    Nom de l'événement : <?= $nom; ?>
+				                    <br/><br/>
+				                    Description : <?= $article; ?>
+				                    <br/><br/>
+				                    Publié le: <?= $dateCreation; ?>
+				                    <br/><br/>
+									</p>
 
 								</div>
 
-								<?php
+								<div class="col-sm-4">
+									<btn class="btn-form2"><a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl">Supprimer</a></btn>
+								</div>
 
-							}
-						}
-						else{
-						?>
-							<p>Vous n'avez aucune news en attente de validation</p>
+							</div>
+
 						<?php
 						}
+
+					}
+					else{
+					?>
+						<p>Vous n'avez aucune news en attente de validation</p>
+					<?php
+					}
 					?>
 
 				</div>
@@ -132,52 +129,49 @@ include("../../model/newsDAO.php");
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;" >News publiées</h4>
+						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;">News publiées</h4>
 					</div>
 
 					<?php 
+					if(!empty($eventsArray)){
 
-						$eventsArray=selectMyNews($bdd,$_SESSION['pseudo_utilisateur']);
-						
-						if(!empty($eventsArray)){
+						foreach($eventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
+						?>
 
-							foreach ($eventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
-								?>
+							<div class="container" style="margin-bottom: 5rem;"> 
 
-								<div class="container" style="margin-bottom: 5rem;"> 
+								<div class="col-sm-4">
+									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+								</div>
 
-									<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
-									</div>
+								<div class="col-sm-4">
 
-									<div class="col-sm-4">
-
-										<p>
-					                    Nom de l'événement : <?= $nom; ?>
-					                    <br/><br/>
-					                    Description : <?= $article; ?>
-					                    <br/><br/>
-					                    Publié le: <?= $dateCreation; ?>
-					                    <br/><br/>
-										</p>
-
-									</div>
-
-									<div class="col-sm-4">
-										<btn class="btn-form2"> <a href="./newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
-									</div>
+									<p>
+				                    Nom de l'événement : <?= $nom; ?>
+				                    <br/><br/>
+				                    Description : <?= $article; ?>
+				                    <br/><br/>
+				                    Publié le: <?= $dateCreation; ?>
+				                    <br/><br/>
+									</p>
 
 								</div>
 
-								<?php
+								<div class="col-sm-4">
+									<btn class="btn-form2"> <a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
+								</div>
 
-							}
-						}
-						else{
-						?>
-							<p>Vous n'avez aucune news en attente de validation</p>
+							</div>
+
 						<?php
 						}
+
+					}
+					else{
+					?>
+						<p>Vous n'avez aucune news en attente de validation</p>
+					<?php
+					}
 					?>
 
 				</div>

@@ -19,26 +19,31 @@ include("../../controller/getConnexionData.php");
 		include("../sideBar.php");
 		?>
 
-		<div class="row" >
+		<div class="row">
 
 			<div class="tab col-sm-2 hidden-xs hidden-sm">
+
 				<ul class="unstyled">
-					<li><button class="tablinks" onclick="openCercle(event, 'Web')" id="defaultOpen">Web</button></li>
-					<li> <button class="tablinks" onclick="openCercle(event, 'Historique')">Historique</button></li>
-					<li><button class="tablinks" onclick="openCercle(event, 'PMD')">PMD</button></li>
-					<!-- <li><button class="tablinks" onclick="openCercle(event, 'PIMs')">PIM's</button></li> -->
-					<li><button class="tablinks" onclick="openCercle(event, 'FPMath')">FPMath's</button></li>
-					<!-- <li><button class="tablinks" onclick="openCercle(event, 'Bal')">Bal des Mines</button></li> -->
+					<li><button class="tablinks" onclick="openCercle(event,'Web')" id="defaultOpen">Web</button></li>
+					<li> <button class="tablinks" onclick="openCercle(event,'Historique')">Historique</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'PMD')">PMD</button></li>
+					<!-- <li><button class="tablinks" onclick="openCercle(event,'PIMs')">PIM's</button></li> -->
+					<li><button class="tablinks" onclick="openCercle(event,'FPMath')">FPMath's</button></li>
+					<li><button class="tablinks" onclick="openCercle(event,'Bal')">Bal des Mines</button></li>
 				</ul>
+
 			</div>
 
 			<div class="tab col-xs-12 hidden-md hidden-lg hidden-xl">
+
 				<ul class="unstyled horizontal">
-					<li class="tablinks " onclick="openCercle(event, 'Web')" id="defaultOpen">Web</li>
-					<li class="tablinks " onclick="openCercle(event, 'Historique')">Historique</li>
-					<li class="tablinks " onclick="openCercle(event, 'PMD')">PMD</li>
-					<li class="tablinks " onclick="openCercle(event, 'FPMath')">FPMath</li>
+					<li class="tablinks" onclick="openCercle(event,'Web')" id="defaultOpen">Web</li>
+					<li class="tablinks" onclick="openCercle(event,'Historique')">Historique</li>
+					<li class="tablinks" onclick="openCercle(event,'PMD')">PMD</li>
+					<li class="tablinks" onclick="openCercle(event,'FPMath')">FPMath's</li>
+					<li class="tablinks" onclick="openCercle(event,'Bal')">Bal des Mines</li>
 				</ul>
+
 			</div>
 
 			<div id="Web" class="col-xs-12 col-md-9 tabcontent">
@@ -47,9 +52,9 @@ include("../../controller/getConnexionData.php");
 					<h3 class="title2">La commission WEB</h3> 
 				</div>
 
-				<div class="">
+				<div>
 
-					<img class="img3" src="../../assets/img/logoComWeb.png" >
+					<img class="img3" src="../../assets/img/logoComWeb.png">
 
 					<p class="text">
 						En mai 2003, la Fédération des Etudiants a décidé de se doter d'un site internet aux objectifs multiples mais visant essentiellement à faire la promotion de ses cercles et de leurs activités. Au fur et à mesure du temps, les besoins du site ont été de plus en plus nombreux. Un exemple fut la gestion avancée des utilisateurs et des groupes d'utilisateurs.
@@ -102,7 +107,7 @@ include("../../controller/getConnexionData.php");
 
 				<div class="title-area">
 					<h3 class="title2">La commission PMD</h3> 
-			  		<span class="subtitle">Polytech Mons Day</span> 
+			  		<span class="subtitle">Polytech Mons Day</span>
 				</div>
 
 				<div>
@@ -138,9 +143,6 @@ include("../../controller/getConnexionData.php");
 			  		<span class="title-line2"></span> 
 				</div>
 
-				<div>
-					
-				</div>	
 			</div>
 
 			<div id="PIMs" class="col-xs-12 col-md-9 tabcontent">
@@ -159,6 +161,7 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 			<div id="Bal" class="col-xs-12 col-md-9 tabcontent">
+
 				<div class="title-area">
 					<h3 class="title2">Le Bal des Mines</h3> 
 			  		<span class="title-line2"></span> 

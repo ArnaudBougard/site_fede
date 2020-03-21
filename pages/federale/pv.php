@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./federale.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -31,12 +32,10 @@ include("../../controller/getConnexionData.php");
 					<div class="container">
 
 						<div class="page-header">
-
 							<h3>Upload PV de réunion</h3>
 							<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
-							<p> Attention: RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>! </p>
-							<p >tu peux en upload plusieurs à la fois</p>
-
+							<p> Attention: RESPECTE LE FORMAT (S'il te plaît) : <strong class="text-reduction">AA_MM_JJ.pdf</strong> pour le nom du fichier, exemple <strong class="text-reduction">19_02_21.pdf</strong> afin d'éviter les <strong class="text-reduction">DOUBLONS</strong> et qu'ils soient dans <strong class="text-reduction">l'ORDRE</strong>!</p>
+							<p>tu peux en upload plusieurs à la fois</p>
 						</div>
 
 						<div class="panel panel-default">
@@ -47,9 +46,9 @@ include("../../controller/getConnexionData.php");
 
 									<div class="form-group">
 
-										<label for="exampleInputFile">Select files to upload:</label>
+										<label for="exampleInputFile">Select files to upload :</label>
 										<input type="file" id="exampleInputFile" name="files[]" multiple="multiple">
-										<p class="help-block"><span class="label label-info">Note:</span> Please, select pdf files</p>
+										<p class="help-block"><span class="label label-info">Note :</span> Please, select pdf files</p>
 
 									</div>
 
@@ -67,14 +66,14 @@ include("../../controller/getConnexionData.php");
 
 			<?php
 			}
+
 		}
 		?>
-
 
 		<div class="container">	
 
 			<div class="page-header">
-				<h1>Procès verbaux </h1>
+				<h1>Procès verbaux</h1>
 			</div>
 
 			<div class="panel panel-default">
@@ -84,18 +83,15 @@ include("../../controller/getConnexionData.php");
 					<br/>
 
 					<?php 
-					$conn = mysqli_connect("localhost","root","","bdd_site_fede");
-					$query = "SELECT * FROM pv ORDER BY `pv_name` DESC";
-					$result = mysqli_query($conn, $query);
-					
-					if(mysqli_num_rows($result) > 0){
+					if(mysqli_num_rows($result)>0){
 
 						while($row = mysqli_fetch_assoc($result)){
 
 							$url = $row["pv_path"]."/".$row["pv_name"];
 							?>
-							<li> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $row["pv_name"]  ?> </a> </li>
-							<?php
+							<li><a href="<?= $url; ?>" target="_blank"><?= $row["pv_name"] ?></a></li>
+
+						<?php 
 						}
 
 					}

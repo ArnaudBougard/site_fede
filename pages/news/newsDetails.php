@@ -1,8 +1,6 @@
 <?php
 session_start();
-include("../../model/connexionDAO.php");
 include("../../controller/getConnexionData.php");
-include("../../model/newsDAO.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -20,11 +18,9 @@ include("../../model/newsDAO.php");
 		?>
 
 		<?php 
-		$newsData=selectNewsById($bdd,$_GET['id']);	
-		
 		if(!empty($newsData)){
 
-        	foreach ($newsData as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){	
+        	foreach($newsData as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){	
 			?>
 
 				<div class="container">

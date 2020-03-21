@@ -55,7 +55,6 @@ function selectMyPendingNews($bdd,$auteur){
 	$req->closeCursor();
 }
 
-
 function selectSomeNews3($bdd){
 
 	$req = $bdd -> prepare("SELECT * FROM news where statut='1' ORDER BY `date_creation` DESC LIMIT 3 OFFSET 3");
@@ -98,7 +97,6 @@ function selectAllNews($bdd) {
 	return $array;
 	$req->closeCursor();
 }
-
 
 function selectAllPendingNews($bdd) {
 

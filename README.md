@@ -33,11 +33,11 @@ Le système est clairement améliorable, faites vous plaiz
 - cercles -- OK (tout est statique)
 - contact -- OK (tout est statique)
 - events -- OK
-- federale
-- folklore
-- forum
-- index
-- mutu
-- news
-- users
-- le reste
+- federale -- OK
+- folklore -- OK
+- forum -- OK (ce sont tous des controllers, il n'y a aucune view mais je ne sais pas quoi en faire, ça marche p-ê même pas.)
+- index -- OK
+- mutu -- OK
+- news -- OK
+- users -- C'est le bordel ici dedans
+- le reste -- à faire

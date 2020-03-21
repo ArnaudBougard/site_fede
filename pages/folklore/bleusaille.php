@@ -8,7 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
-		<link href="folklore.css" rel="stylesheet">
+		<link href="./folklore.css" rel="stylesheet">
 	</head>
 
 	<body id="body">

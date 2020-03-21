@@ -66,7 +66,7 @@ include("../../controller/getConnexionData.php");
 				</div>
 			
 				<div class="col-xs-3 tileRow"> 
-		            <?php include("../mutu/displaySchedule.php"); ?>
+		            <?php include("../../controller/mutu/displayScheduleController.php"); ?>
 				</div>
 
 			</div>
@@ -76,12 +76,12 @@ include("../../controller/getConnexionData.php");
 				<div class="col-xs-8 tileRow"> 
 					<div class="col-xs-1 vertical">Actualités</div>
 					<div class="col-xs-11 tileSubRow hidden-sm hidden-md hidden-lg hidden-xl">
-						<?php include("../news/recentNewsMobile.php"); ?>
+						<?php include("../../controller/news/recentNewsMobileController.php"); ?>
 					</div>
 				</div>
 			
 				<div class="col-xs-4 tileRow">
-		            <?php include("../mutu/displaySchedule.php"); ?>
+		            <?php include("../../controller/mutu/displayScheduleController.php"); ?>
 				</div>
 
 			</div>

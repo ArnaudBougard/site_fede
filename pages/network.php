@@ -169,10 +169,8 @@ include("../../model/userDAO.php");
               echo '<li class="networkBarElement rightElement"><a class="networkBarAnchor" href="../users/inscription.php"><span class="glyphicon glyphicon-pencil"></span> Inscription</a></li>';
 
             }
-
         ?>
 
     </ul>
 
 </div>
-

@@ -73,14 +73,14 @@ include("../../controller/getConnexionData.php");
 					</div>
 
 					<div class="col-sm-8">
-						<?php include("displaySchedule.php"); ?>
+						<?php include("../../controller/mutu/displayScheduleController.php"); ?>
 					</div>
 
 				</div>
 
 			</div>
 			
-			<?php include("updateSchedule.php"); ?>
+			<?php include("../../controller/mutu/updateSchedule.php"); ?>
 		
 		</div>
 

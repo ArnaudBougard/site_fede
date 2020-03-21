@@ -29,7 +29,7 @@ include("../../controller/getConnexionData.php");
           <?php 
           if(!empty($NewsArray)){
             
-            foreach ($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
+            foreach($NewsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
             ?> 
 
               <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">

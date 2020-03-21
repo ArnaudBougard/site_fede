@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./federale.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -34,7 +35,7 @@ include("../../controller/getConnexionData.php");
 
 							<h3>Upload Statuts</h3>
 							<p>Seuls le comité fédé et la commission web voient l'outil d'upload</p>
-							<p>RESPECTE LE FORMAT (S'il te plaît) : <strong style="color:red;font-style: bold;">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong style="color:red;font-style: bold;">19_02_21.pdf</strong> afin d'éviter les <strong style="color:red;font-style: bold;">DOUBLONS</strong> et qu'ils soient dans <strong style="color:red;font-style: bold;">l'ORDRE</strong>!</p>
+							<p>RESPECTE LE FORMAT (S'il te plaît) : <strong class="text-reduction">AA_MM_JJ.pdf</strong> pour le nom du fichier , exemple <strong class="text-reduction">19_02_21.pdf</strong> afin d'éviter les <strong class="text-reduction">DOUBLONS</strong> et qu'ils soient dans <strong class="text-reduction">l'ORDRE</strong>!</p>
 
 						</div>
 
@@ -45,9 +46,9 @@ include("../../controller/getConnexionData.php");
 								<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm" action="uploadstatuts.php">
 
 									<div class="form-group">
-										<label for="exampleInputFile">Select file to upload:</label>
+										<label for="exampleInputFile">Select file to upload :</label>
 										<input type="file" id="exampleInputFile" name="files[]" >
-										<p class="help-block"><span class="label label-info">Note:</span> Please, select a pdf file</p>
+										<p class="help-block"><span class="label label-info">Note :</span> Please, select a pdf file</p>
 									</div>
 
 									<button type="submit" class="btn-form2" name="btnSubmit">Upload</button>
@@ -72,7 +73,7 @@ include("../../controller/getConnexionData.php");
 		<div class="container">	
 
 			<div class="page-header">
-				<h1>Statuts de la fédérale </h1>
+				<h1>Statuts de la fédérale</h1>
 			</div>
 
 			<div class="panel panel-default">
@@ -82,18 +83,14 @@ include("../../controller/getConnexionData.php");
 					<br/>
 
 					<?php 
-					$conn = mysqli_connect("localhost","root","","bdd_site_fede");
-					$query = "SELECT * FROM statuts ORDER BY `statuts_name` DESC LIMIT 1";
-					$result = mysqli_query($conn, $query);
-					
 					if(mysqli_num_rows($result)>0){
 
 						while($row = mysqli_fetch_assoc($result)){
 
 							$url = $row["statuts_path"]."/".$row["statuts_name"];
-					?>
-							<li> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $row["statuts_name"]  ?> </a> </li>
-					<?php
+							?>
+							<li><a href="<?= $url; ?>" target="_blank"><?= $row["statuts_name"] ?></a></li>
+						<?php
 						}
 
 					}
@@ -123,18 +120,14 @@ include("../../controller/getConnexionData.php");
 					<br/>
 
 					<?php 
-					$conn = mysqli_connect("localhost","root","","bdd_site_fede");
-					$query = "SELECT * FROM statuts ORDER BY `statuts_name` DESC LIMIT 50 OFFSET 1";
-					$result = mysqli_query($conn, $query);
-					
-					if(mysqli_num_rows($result)>0){
+					if(mysqli_num_rows($result2)>0){
 
-						while($row = mysqli_fetch_assoc($result)){
+						while($row = mysqli_fetch_assoc($result2)){
 
 							$url = $row["statuts_path"]."/".$row["statuts_name"];
-					?>
-							<li> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $row["statuts_name"]  ?> </a> </li>
-					<?php
+							?>
+							<li><a href="<?= $url; ?>" target="_blank"><?= $row["statuts_name"] ?></a></li>
+						<?php
 						}
 
 					}

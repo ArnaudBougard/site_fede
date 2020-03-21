@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./federale.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -57,17 +58,16 @@ include("../../controller/getConnexionData.php");
 				</ul>
 			</p>
 
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc1.png"></div>
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc2.png"></div>
-			<div class="center"><img class="" style="max-width: 90vw" src="../../assets/img/reduc3.png"></div>
+			<div class="center adhesion-image"><img src="../../assets/img/reduc1.png"></div>
+			<div class="center adhesion-image"><img src="../../assets/img/reduc2.png"></div>
+			<div class="center adhesion-image"><img src="../../assets/img/reduc3.png"></div>
 
-			<h2>Trop bien ! Combien ça coute ? </h2>
+			<h2>Trop bien ! Combien ça coute ?</h2>
 
-			<h2 style="text-align: center;">10€ pour jusqu’à <span style="font-weight: bold; color: red;">30€ de réductions <span></h2>
+			<h2 class="text-center">10€ pour jusqu’à <span class="text-reduction">30€ de réductions.<span></h2>
 
 			<p class="text">
 				En vente à la Mutuelle d’édition FPMs ou auprès d’un membre de la Fédérale!
-
 			</p>
 
 	    </div>
