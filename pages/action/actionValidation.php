@@ -36,10 +36,10 @@ include("../../controller/getConnexionData.php");
 
 	        				foreach ($pendingActionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
 	        				?> 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container action-details-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="action-image" src=<?= "'".$img."'" ?>> 
 									</div>
 
 									<div class="col-sm-4">
@@ -55,8 +55,8 @@ include("../../controller/getConnexionData.php");
 
 									<div class="col-sm-4">
 
-										<div class="row" style="margin-bottom: 2rem; margin-top: 2rem;">
-												<btn class="btn-form2"><a href="../../controller/action/actionValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
+										<div class="row">
+											<btn class="btn-form2"><a href="../../controller/action/actionValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
 										</div>
 
 										<div class="row">
@@ -99,13 +99,13 @@ include("../../controller/getConnexionData.php");
 						<?php 
 						if(!empty($actionArray)){
 
-	        				foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+	        				foreach($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
 	        				?>
 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container action-details-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="action-image" src=<?= "'".$img."'" ?>> 
 									</div>
 
 									<div class="col-sm-4">
@@ -121,10 +121,8 @@ include("../../controller/getConnexionData.php");
 
 									<div class="col-sm-4">
 
-										<div class="row" style="margin-bottom: 2rem;margin-top: 2rem;">
-
+										<div class="row" class="button-row">
 											<btn class="btn-form2"><a href="../../controller/action/actionDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
-
 										</div>
 
 		        					</div>

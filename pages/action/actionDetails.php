@@ -21,9 +21,9 @@ include("../../controller/getConnexionData.php");
 		<?php 
 		if(!empty($actionArray)){
 
-        	foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
-					
-				?>
+        	foreach($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+			?>
+
 				<div class="container">
 
 					<div class="page-header">
@@ -41,7 +41,7 @@ include("../../controller/getConnexionData.php");
 
 						<div class="panel-body">
 							
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container action-details-container"> 
 
 								<div class="col-sm-5">
 									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
@@ -52,7 +52,7 @@ include("../../controller/getConnexionData.php");
 				                  	<p class="tile-text">Prix: <?= $prix; ?> €</p>
 				                  	<p class="tile-text">Pour <?= $quantite; ?> cl</p>
 				                    <p class="tile-text">À partir du <?= $date; ?></p>
-				                    <p style="white-space: pre-line"><?= $description; ?><br/><br/></p>
+				                    <p class="action-description"><?= $description; ?><br/><br/></p>
 								</div>
 
 							</div>

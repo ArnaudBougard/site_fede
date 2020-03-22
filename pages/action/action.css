@@ -1,0 +1,34 @@
+.action-image{
+	background-position: center top; 
+	background-size: 100%;
+}
+
+.action-details-container{
+	margin-bottom: 5rem;
+}
+
+.action-description{
+	white-space: pre-line;
+}
+
+.action-manager-container{
+	margin-top: 3em;
+}
+
+.action-submit{
+	margin-left: 0;
+}
+
+.validation-row{
+	margin-left: 4em;
+	margin-bottom: 2em;
+}
+
+.action-image{
+	width: 80%;
+}
+
+.button-row{
+	margin-bottom: 2rem; 
+	margin-top: 2rem;
+}

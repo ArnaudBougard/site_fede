@@ -13,8 +13,8 @@
 .tile-content{
   background-color: rgba(0, 0, 0, 0.7); 
   height: 100%;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: white;
 }
 

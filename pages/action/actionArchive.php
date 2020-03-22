@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+    <link href="./action.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -34,12 +35,12 @@ include("../../controller/getConnexionData.php");
 
               <div class="col-md-3 cms-boxes-outer">
 
-                <div class="cms-boxes-items cms-features" style="background-image: url(<?= "'".$img."'" ?>); background-position: center top; background-size: 100% 100%; ">
+                <div class="cms-boxes-items cms-features action-image" style="background-image: url(<?= "'".$img."'" ?>);">
 
                   <div class="small-box">
 
                     <div class="col-sm-12">
-                      <h2 class="Tileh2"><?= $nom; ?></h2>
+                      <h2 class="tile-h2"><?= $nom; ?></h2>
                     </div>
 
                     <div class="col-sm-12">

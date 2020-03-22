@@ -15,10 +15,10 @@ include("../../controller/getConnexionData.php");
 		<?php 
 		include("../network.php");
 		include("../navbar.php");
-		include("../sideBar.php"); 
+		include("../sideBar.php");
 		?>
 
-		<div class="container" style="margin-top: 3vw;">
+		<div class="container action-manager-container">
 
 			<div class="panel panel-default">
 
@@ -32,10 +32,10 @@ include("../../controller/getConnexionData.php");
 							<input type="file" id="exampleInputFile" name="files[]" accept="image/*">
 
 							<p class="help-block">
-								<span class="label label-info">Note:</span>Please select png, jpg or jpeg file(s).
+								<span class="label label-info">Note :</span> Please select png, jpg or jpeg file(s).
 							</p>
 
-							<p> 
+							<p>
 								<label>Titre de l'action *</label><br> 
 								<input class='champ' type='text' id='nom' name='nom' placeholder='Lindemans pomme' maxlength='25' size='30' required />
 							</p>
@@ -69,7 +69,7 @@ include("../../controller/getConnexionData.php");
                         	<br/>
 
 							<p>
-								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Créer action de la semaine" />
+								<input type='submit' class='btn-form2 action-submit' name='eventform' value="Créer action de la semaine" />
 							</p>
 
 						</div>	
@@ -83,40 +83,40 @@ include("../../controller/getConnexionData.php");
 			</div>
 			
 			<?php include("../../controller/action/actionCreate.php"); ?>
-		
+			
 			<div class="panel panel-default">
 
 				<div class="panel-body">
 
-					<div class="row"> 
-						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;">En attente de validation</h4>
+					<div class="row">
+						<h4 class="validation-row">En attente de validation</h4>
 					</div>
 
 					<?php 
 					if(!empty($actionArray)){
 
-						foreach ($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
+						foreach($actionArray as list($id,$nom,$prix,$quantite,$date,$img,$description)){
 						?>
 
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container action-details-container"> 
 
 								<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?php echo "'".$img."'" ?>> 
+									 <img class="action-image" src=<?= "'".$img."'" ?>> 
 								</div>
 
 								<div class="col-sm-4">
 									<p>
-				                    Nom de l'action : <?php echo $nom; ?>
+				                    Nom de l'action : <?= $nom; ?>
 				                    <br/><br/>
-				                    Description : <?php echo $description; ?>
+				                    Description : <?= $description; ?>
 				                    <br/><br/>
-				                    Valable à partir du <?php echo $date; ?>
+				                    Valable à partir du <?= $date; ?>
 				                    <br/><br/>
 									</p>
 								</div>
 
 								<div class="col-sm-4">
-									<btn class="btn-form2"><a href="../../controller/action/actionDelete.php?id= <?php echo $id; ?>&path=<?php echo $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
+									<btn class="btn-form2"><a href="../../controller/action/actionDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 								</div>
 
 							</div>

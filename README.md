@@ -27,7 +27,7 @@ Le système est clairement améliorable, faites vous plaiz
     <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=ZmV0ZXMucG9seXRlY2hAZ21haWwuY29t&amp;src=ZW4uYmUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
 </div>
 
-## Dossiers VIEW à nettoyer :
+## Dossiers VIEW dont il faut retravailler l'architecture :
 - action -- OK
 - activities -- OK (tout est statique)
 - cercles -- OK (tout est statique)
@@ -41,3 +41,18 @@ Le système est clairement améliorable, faites vous plaiz
 - news -- OK
 - users -- C'est le bordel ici dedans
 - le reste -- à faire
+
+## Dossier VIEW dont il faut travailler le CSS
+- action -- OK
+- activities
+- cercles
+- contact
+- events
+- federale
+- folklore
+- forum -- (ce sont tous des controllers, il n'y a aucune view mais je ne sais pas quoi en faire, ça marche p-ê même pas.)
+- index
+- mutu
+- news
+- users
+- le reste
