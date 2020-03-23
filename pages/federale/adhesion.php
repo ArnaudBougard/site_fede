@@ -44,7 +44,9 @@ include("../../controller/getConnexionData.php");
 
 				</div>
 
-				<div class="center col-xs-12 col-sm-4"><img src="../../assets/img/reduc.PNG"></div>
+				<div class="center col-xs-12 col-sm-4">
+					<img src="../../assets/img/reduc.PNG">
+				</div>
 
 			</div>
 
@@ -71,9 +73,11 @@ include("../../controller/getConnexionData.php");
 			</p>
 
 	    </div>
-
-		<?php include("../footer.php"); ?>
-
+	    
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

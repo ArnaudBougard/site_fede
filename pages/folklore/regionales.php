@@ -87,7 +87,6 @@ include("../../controller/getConnexionData.php");
 				</p>
 			</div>
 
-
 			<div id="Frontalière" class="col-xs-12 col-md-9 tabcontent">
 			
 				<div class="title-area">
@@ -145,34 +144,39 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 			<div id="Boraine" class="col-xs-12 col-md-9 tabcontent">
+
 				<div class="container">
+
 					<div class="title-area">
-						<h3 class="title2">La Boraine</h3> 
-				  		<span class="title-line2"></span> 
+						<h3 class="title2">La Boraine</h3>  
 					</div>
 
 					<p class="text">
 						Le cercle estudiantin de la F.P.Ms se compose de plusieurs cercles fédérés et de diverses régionales telles que la Carolo, la Frontalière, la Centrale et la Boraine. Chaque étudiant participant à la Bleusaille sera associé à l’une de ces régionales. Ainsi, si tu habites ou si tu es allé dans une école du Borinage, ou encore si tu te sens proche et fier de ce tte région, rejoins-nous ! Nous serons fiers de t’accueillir et de te faire découvrir le folklore borain où rassemblement, amusement et respect des traditions sont les maitres mots. Tu y apprendras en outre divers chants et évènements en l'honneur de cette belle ville qu'est la notre.
 						<br/>
-					</p>	
+					</p>
+
 					<p class="text">	
 						Photo Régionale Boraine
 						Dès le début de l’année, ton comité borain (composé de cinq personnes) te sera présenté, et tu auras également l’occasion de rencontrer d’anciens membres. Si tu t’en montre digne, ceux-ci seront fiers de t’accueillir et te guideront tout au long de ta bleusaille et de ta vie estudiantine. Chacun d’eux pourra t’apprendre, te conseiller, ainsi que t’aider tout au long de l’année dans les bons moments comme dans les mauvais. En effet, quelques conseils lors de l’approche des examens sont toujours bons à prendre. Et oui, nous sommes une vraie petite famille prête à s’agrandir si tu nous fais confiance.
 						<br/>
-					</p>	
+					</p>
+
 					<p class="text">	
 						Durant l’année, nous organisons plusieurs événements, tels qu’un souper et une dégustation où tu seras amené à découvrir les bières et autres spécialités de la région. Tu pourras également profiter des quelques réductions que nous offrons lors du Doudou !
 						<br/>
-					</p>	
+					</p>
+
 					<p class="text">	
 						Photo Régionale Boraine
 						Mis à part la découverte du folklore, le baptême t'offrira l'occasion de créer des liens avec de nombreuses personnes et celui-ci se révèlera pour toi riche en expériences. En effet, les liens que tu créeras lors de ta Bleusaille seront très forts et dureront encore bien des années après la vie facultaire ! La Bleusaille restera un souvenir imprimé dans ta mémoire que tu ne regretteras pas, et qui t’ouvrira les portes de nombreuses expériences.
 						<br/>
-					</p>	
+					</p>
+
 					<p class="text">	
 						Nous espérons qu’après ce petit aperçu, nous t’avons donné envie de venir nous rejoindre et de prendre une grande et belle décision pour ta vie d’étudiant. Les cartes sont désormais entre tes mains pour jongler entre étude mais aussi solidarité et amusement durant tes cinq années à la Faculté Polytechnique de Mons. Ne laisse pas passer cette chance à regarder les autres s’amuser pendant que tu glanderas sur Facebook et 9gag, on n’a qu’une seule vie universitaire !
 						<br/>
-					</p>	
+					</p>
 
 				</div>
 				
@@ -180,11 +184,13 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
+	</body>
+
+	<footer>
 		<?php 
 		include("../../scripts/openCercle.php");
 		include("../footer.php");
 		?>
-
-	</body>
+	</footer>
 
 </html>

@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./events.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -38,10 +39,10 @@ include("../../controller/getConnexionData.php");
 	        				foreach($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)){
 	        					?>
 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container event-validation-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style="width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="event-validation-image" src=<?= "'".$img."'" ?>> 
 		        					</div>
 
 		        					<div class="col-sm-4">
@@ -71,10 +72,11 @@ include("../../controller/getConnexionData.php");
 				                        <br/>
 				                        <br/>
 										</p>
+
 									</div>
 
 									<div class="col-sm-4">
-										<div class="row" style="margin-bottom: 5rem; margin-top: 2rem;">
+										<div class="row" class="event-validation-row">
 											<btn class="btn-form2"><a href="../../controller/events/eventValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
 										</div>
 										<div class="row">
@@ -120,10 +122,10 @@ include("../../controller/getConnexionData.php");
 	        				foreach ($validatedEventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link)) {
 
 	        					?> 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container" class="event-validation-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="event-validation-image" src=<?= "'".$img."'" ?>> 
 		        					</div>
 
 		        					<div class="col-sm-4">
@@ -138,6 +140,7 @@ include("../../controller/getConnexionData.php");
 				                        <br/><br/>
 				                        Lieu : <?= $lieu; ?>
 				                        <br/><br/>
+
 				                        <?php 
 			                        	if(!empty($link)){
 		                        		?>
@@ -146,15 +149,18 @@ include("../../controller/getConnexionData.php");
 				                        <?php
 					                    }
 					                    ?>
+
 				                        <?php if($ouverture==1){echo "ouvert à tous";}else{echo "Réservé aux baptisés";} ?>
+
 				                        <br/><br/>
 										</p>
+
 									</div>
 
 									<div class="col-sm-4">
 
 										<div class="row">
-											<btn class="btn-form2"><a href="../../controller/events/eventDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a> </btn>
+											<btn class="btn-form2"><a href="../../controller/events/eventDeleteModeration.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 										</div>
 										
 		        					</div>
@@ -179,9 +185,11 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 		</div>
-
-		<?php include("../footer.php"); ?>
-
+		
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

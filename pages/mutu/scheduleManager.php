@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./mutu.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -18,8 +19,8 @@ include("../../controller/getConnexionData.php");
 		include("../sideBar.php"); 
 		?>
 
-		<div class="container" style="margin-top: 3vw;">
-
+		<div class="container schedule-manager-container">
+ 
 			<div class="panel panel-default">
 
 				<div class="panel-body">
@@ -31,7 +32,7 @@ include("../../controller/getConnexionData.php");
 							<div class="form-group">
 
 								<p> 
-									<label>Lundi </label>
+									<label>Lundi</label>
 									<input type="time" id="ld" name="ld"> 
 									<input type="time" id="lf" name="lf">
 								</p>
@@ -61,7 +62,7 @@ include("../../controller/getConnexionData.php");
 								</p>
 								
 								<p>
-									<input style="margin-left: 0;" type='submit' class='btn-form2' name='eventform' value="Update l'horaire" />
+									<input type="submit" class="btn-form2 schedule-manager-submit" name="eventform" value="Update l'horaire" />
 								</p>
 
 							</div>	
@@ -84,10 +85,10 @@ include("../../controller/getConnexionData.php");
 		
 		</div>
 
-		<?php 
-		include("../footer.php");
-		?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

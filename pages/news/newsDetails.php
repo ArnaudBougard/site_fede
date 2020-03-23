@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./news.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -38,14 +39,14 @@ include("../../controller/getConnexionData.php");
 
 						<div class="panel-body">
 							
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container news-details-container"> 
 
 								<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+									 <img class="news-details-image" src=<?= "'".$img."'" ?>> 
 		    					</div>
 
 		    					<div class="col-sm-8">
-									<p style="white-space: pre-line"><?= $article; ?><br/><br/></p>
+									<p class="news-details-p"><?= $article; ?><br/><br/></p>
 			                        <p>Publié par <?= $auteur; ?> le <?= $dateCreation; ?><br/><br/></p>
 								</div>
 
@@ -67,9 +68,11 @@ include("../../controller/getConnexionData.php");
 		<?php
 		}
 		?>
-	
-		<?php include("../footer.php");?>
 
 	</body>
+
+	<footer>
+		<?php include("../footer.php");?>
+	</footer>
 
 </html>

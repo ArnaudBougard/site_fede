@@ -48,7 +48,7 @@ if(!empty($futureEvents)){
 
 }
 
-for ($x = 0; $x < 3-$n; $x++){
+for($x = 0; $x < 3-$n; $x++){
 ?>
 
   <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
@@ -72,7 +72,5 @@ for ($x = 0; $x < 3-$n; $x++){
   </div>
 
   <?php 
-
 }
-
 ?>

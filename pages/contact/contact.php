@@ -20,27 +20,27 @@ include("../../controller/getConnexionData.php");
 
     <section class="center-block mb-0 bg-fourth" id="contact">
 
-        <div class="container" style="margin-top: 2em; margin-bottom: 4em;">   
+        <div class="container contact-container">   
 
           <div class="row">
 
             <?php
-                if(!isset($_SESSION['id_utilisateur'])){
-                  ?> 
+            if(!isset($_SESSION['id_utilisateur'])){
+              ?> 
 
-                 <div class="container">
+             <div class="container">
 
-                    <div class="row">
-                      <h3>Vous devez vous connecter afin de pouvoir contacter un cercle.</h3>
-                    </div>
+                <div class="row">
+                  <h3>Vous devez vous connecter afin de pouvoir contacter un cercle.</h3>
+                </div>
 
-                  </div>
-                  <?php 
-                }
-                ?>
+              </div>
+              <?php 
+            }
+            ?>
 
             <div class=col-lg-5>
-              <img src="../../assets/img/contact.png" alt="contact" style="width: 55%; margin-top: 5vw;">
+              <img class="contact-image" src="../../assets/img/contact.png" alt="contact">
             </div>
 
             <div class="col-lg-7 mx-auto">
@@ -117,11 +117,13 @@ include("../../controller/getConnexionData.php");
         
     </section>
 
-  <?php
-  include("../../controller/sendMail.php");
-	include("../footer.php");
-  ?>
-
 	</body>
+
+  <footer>
+    <?php
+    include("../../controller/sendMail.php");
+    include("../footer.php");
+    ?>
+  </footer>
 
 </html>

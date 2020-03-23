@@ -9,6 +9,7 @@ include("../../model/newsDAO.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./news.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -19,7 +20,7 @@ include("../../model/newsDAO.php");
 		include("../sideBar.php");
 		?>
 
-		<div class="container" style="margin-top: 3vw;">
+		<div class="container news-manager-maincontainer">
 
 			<div class="panel panel-default">
 
@@ -55,7 +56,7 @@ include("../../model/newsDAO.php");
                         	<br/>
 
 							<p>
-								<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='eventform' value="Créer un événement" />
+								<input type='submit' class='btn-form2 news-manager-submit' name='eventform' value="Créer un événement" />
 							</p>
 
 						</div>	
@@ -75,7 +76,7 @@ include("../../model/newsDAO.php");
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw;margin-bottom: 1.76vw;">En attente de validation</h4>
+						<h4 class="news-manager-row">En attente de validation</h4>
 					</div>
 
 					<?php 
@@ -84,14 +85,13 @@ include("../../model/newsDAO.php");
 						foreach ($pendingEventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
 							?>
 
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container news-manager-container"> 
 
 								<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+									 <img class="news-manager-image" src=<?= "'".$img."'" ?>> 
 								</div>
 
 								<div class="col-sm-4">
-
 									<p>
 				                    Nom de l'événement : <?= $nom; ?>
 				                    <br/><br/>
@@ -100,11 +100,10 @@ include("../../model/newsDAO.php");
 				                    Publié le: <?= $dateCreation; ?>
 				                    <br/><br/>
 									</p>
-
 								</div>
 
 								<div class="col-sm-4">
-									<btn class="btn-form2"><a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl">Supprimer</a></btn>
+									<btn class="btn-form2"><a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 								</div>
 
 							</div>
@@ -129,7 +128,7 @@ include("../../model/newsDAO.php");
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;">News publiées</h4>
+						<h4 class="news-manager-row">News publiées</h4>
 					</div>
 
 					<?php 
@@ -138,14 +137,13 @@ include("../../model/newsDAO.php");
 						foreach($eventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
 						?>
 
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container news-manager-container"> 
 
 								<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+									 <img class="news-manager-image" src=<?= "'".$img."'" ?>> 
 								</div>
 
 								<div class="col-sm-4">
-
 									<p>
 				                    Nom de l'événement : <?= $nom; ?>
 				                    <br/><br/>
@@ -154,11 +152,10 @@ include("../../model/newsDAO.php");
 				                    Publié le: <?= $dateCreation; ?>
 				                    <br/><br/>
 									</p>
-
 								</div>
 
 								<div class="col-sm-4">
-									<btn class="btn-form2"> <a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?> " class="gras btn btn-xl"> Supprimer</a> </btn>
+									<btn class="btn-form2"><a href="../../controller/news/newsDelete.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Supprimer</a></btn>
 								</div>
 
 							</div>
@@ -180,8 +177,10 @@ include("../../model/newsDAO.php");
 		
 		</div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

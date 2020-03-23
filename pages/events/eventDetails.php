@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./events.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -39,10 +40,10 @@ include("../../controller/getConnexionData.php");
 
 						<div class="panel-body">
 							
-							<div class="container" style="margin-bottom: 5rem;"> 
+							<div class="container event-details-container"> 
 
 								<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+									 <img class="event-details-image" src=<?= "'".$img."'" ?>> 
 		    					</div>
 
 		    					<div class="col-sm-8">
@@ -68,7 +69,7 @@ include("../../controller/getConnexionData.php");
 
 			                        <br/>
 			                        <br/>
-									<p style="white-space: pre-line">
+									<p class="event-details-description">
 										<?= $description; ?>
 									</p>
 			                        <br/>
@@ -93,10 +94,12 @@ include("../../controller/getConnexionData.php");
 			<p>Oups, cet article joue à cache-cache!</p>
 		<?php
 		}
-		?>					
-	
-		<?php include("../footer.php"); ?>
-
+		?>
+		
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

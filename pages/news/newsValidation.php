@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./news.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -37,10 +38,10 @@ include("../../controller/getConnexionData.php");
         				foreach ($pendingEventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
     					?>
 
-        					<div class="container" style="margin-bottom: 5rem;"> 
+        					<div class="container news-validation-container"> 
 
         						<div class="col-sm-4">
-									 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+									 <img class="news-validation-image" src=<?= "'".$img."'" ?>> 
 	        					</div>
 	        					<div class="col-sm-4">
 									<p>
@@ -55,7 +56,7 @@ include("../../controller/getConnexionData.php");
 
 								<div class="col-sm-4">
 
-									<div class="row" style="margin-bottom: 2rem;margin-top: 2rem;">
+									<div class="row news-validation-row">
 										<btn class="btn-form2"><a href="../../controller/news/newsValidate.php?id= <?= $id; ?>&path=<?= $img; ?>" class="gras btn btn-xl">Valider</a></btn>
 									</div>
 
@@ -103,10 +104,10 @@ include("../../controller/getConnexionData.php");
         					foreach ($eventsArray as list($id,$nom,$article,$auteur,$img,$action,$dateCreation,$statut)){
         					?> 
 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container news-validation-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="news-validation-image" src=<?= "'".$img."'" ?>> 
 		        					</div>
 
 		        					<div class="col-sm-4">
@@ -150,8 +151,10 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

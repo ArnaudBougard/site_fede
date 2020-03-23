@@ -20,6 +20,7 @@ include("../../controller/getConnexionData.php");
 		?>
 
 		<div class="bg1">
+
 			<div class="container" id="content"> 
 
 				<div class="title-area">
@@ -100,12 +101,16 @@ include("../../controller/getConnexionData.php");
 				</p>
 				<p class="text">
 					Des informations complémentaires te seront communiquées à la rentrée. Alors maintenant, à toi de jouer... Intègre-toi au mieux dans notre communauté, c'est là notre vœu le plus cher, afin d'assurer très bientôt la relève et de faire de tes études une extraordinaire occasion de rencontres.
-				</p>		
+				</p>
+
 			</div>
+			
 		</div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 	
 </html>

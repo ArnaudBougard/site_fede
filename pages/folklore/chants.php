@@ -23,7 +23,7 @@ include("../../controller/getConnexionData.php");
 		if(isset($_SESSION['id_utilisateur'])){
 
 	        if(is_MDC($bdd,$_SESSION['email_utilisateur'])!= NULL){
-		        ?>
+	        ?>
 
 				<div class="container">
 
@@ -38,11 +38,17 @@ include("../../controller/getConnexionData.php");
 					</div>
 
 					<div class="panel panel-default">
+
 						<div class="panel-body">
+
 							<form method="post" enctype="multipart/form-data" name="formUploadFile" id="uploadForm">
+
 								<div class="form-group">
+
 									<label for="exampleInputFile">Selectionnez une image pour l'événement qui défilera sur la page d'accueil :</label>
+
 									<input type="file" id="exampleInputFile" name="files[]" accept="audio/*">
+
 									<p class="help-block"><span class="label label-info">Note :</span> Please, select WAV, WMA, MP3, m4a or MP4 files</p>
 
 									<p> 
@@ -51,33 +57,36 @@ include("../../controller/getConnexionData.php");
 									</p>
 
 									<p> 
-										<label>Paroles </label><br>
+										<label>Paroles</label><br>
 										<input class='champ' type='text' id='parole' name='parole' placeholder='Obligatoire' maxlength='2000' size='auto' required/>
 									</p>
 
 									<p> 
-										<label>Description </label><br>
+										<label>Description</label><br>
 										<input class='champ' type='text' id='description' name='description' placeholder='si nécessaire' maxlength='50' size='60' />
 									</p>
 
 
 									<p>
-										<input style="margin-left: 0rem;" type='submit' class='btn-form2' name='chantform' value="Submit" />
+										<input type="submit" class="btn-form2 chant-submit" name="chantform" value="Submit" />
 									</p>
+
 								</div>	
 
 							</form>
+
 							<br/>
 							
-							
 						</div>
+
 					</div>
+
 				</div>
+
 			<?php 
-
 			}
-		}
 
+		}
 		?>
 
 		<?php include("../../controller/folklore/chantCreate.php"); ?>
@@ -88,7 +97,7 @@ include("../../controller/getConnexionData.php");
 
 				<div class="row">
 
-				<ul id="chants" style="list-style-type: none;">
+				<ul id="chants" class="unstyled">
 
 					<?php 
 					if(!empty($chants)){
@@ -124,11 +133,13 @@ include("../../controller/getConnexionData.php");
 			</div>
 		</div>
 
+	</body>
+
+	<footer>
 		<?php 
 		include("../../scripts/searchChant.php")
 		include("../footer.php");
 		?>
-
-	</body>
+	</footer>
 	
 </html>

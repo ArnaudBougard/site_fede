@@ -23,13 +23,14 @@ include("../../controller/getConnexionData.php");
 
 			<div class="row">
 			
-					<div class="col-xs-12" >
+					<div class="col-xs-12">
 
 						<p>
 							<?= $cercle['description_cercle']; ?> 
-							<b><a href="../../assets/files/charte2019.pdf" download>
-						  		Charte de baptême de l'UMons 2019
-							</a></b>
+							<b>
+								<a href="../../assets/files/charte2019.pdf" download>
+						  		Charte de baptême de l'UMons 2019</a>
+							</b>
 							<br>
 							<br/> 
 						</p>
@@ -38,27 +39,25 @@ include("../../controller/getConnexionData.php");
 				
 			</div>
 
-			<div class="row ">
-				<div class="col col-sm-3 col-sm-offset-2 center" style="padding-bottom: 20px;">
-					<img src="<?= $cercle['logo_cercle']; ?> ">
+			<div class="row">
 
+				<div class="col col-sm-3 col-sm-offset-2 center folk-col">
+					<img src="<?= $cercle['logo_cercle']; ?> ">
 				</div>
 
-				<div class="col col-sm-3 col-sm-offset-1 center" >
+				<div class="col col-sm-3 col-sm-offset-1 center">
+
 					<ul class="horizontal">	
-
 					<?php
-
-						foreach ($comitardsArray as list($nom_poste,$firstname,$lastname)){
-						?>
-							<li>
-								<?= " $nom_poste: $firstname $lastname";?>
-								<br>
-								
-							</li>
-						<?php
-						} 
-						?>
+					foreach($comitardsArray as list($nom_poste,$firstname,$lastname)){
+					?>
+						<li>
+							<?= "$nom_poste: $firstname $lastname";?>
+							<br>
+						</li>
+					<?php
+					} 
+					?>
 			    	</ul>
 					
 				</div>
@@ -67,8 +66,10 @@ include("../../controller/getConnexionData.php");
 				
 		</div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

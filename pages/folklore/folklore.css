@@ -64,6 +64,18 @@
 	border: 2px solid #1BB4B4;
 }
 
+.folk-col{
+	padding-bottom: 20px;
+}
+
+.chant-submit{
+	margin-left: 0;
+}
+
+.unstyled{
+	list-style-type: none;
+}
+
 audio:hover, audio:focus, audio:active
 {
 -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);

@@ -35,7 +35,7 @@ if(!empty($NewsArray)){
 
 }
 
-for ($x = 0; $x < 2-$n; $x++){
+for($x = 0; $x < 2-$n; $x++){
   ?>
 
   <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-6 tile">

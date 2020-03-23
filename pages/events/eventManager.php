@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+		<link href="./events.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -18,7 +19,7 @@ include("../../controller/getConnexionData.php");
 		include("../sideBar.php"); 
 		?>
 
-		<div class="container" style="margin-top: 3vw;">
+		<div class="container event-manager-maincontainer">
 
 			<div class="panel panel-default">
 
@@ -32,7 +33,7 @@ include("../../controller/getConnexionData.php");
 							<input type="file" id="exampleInputFile" name="files[]" accept="image/*" required>
 
 							<p class="help-block">
-								<span class="label label-info">Note:</span> Please, select png jpg or jpeg files
+								<span class="label label-info">Note :</span> Please, select png jpg or jpeg files
 							</p>
 
 							<p> 
@@ -71,13 +72,13 @@ include("../../controller/getConnexionData.php");
                         	</p>
 
                         	<p>
-                        	<span>* obligatoire </span>
+                        	<span>* obligatoire</span>
                         	</p>
 
                         	<br/>
 
 							<p>
-								<input style="margin-left: 0rem;" type="submit" class="btn-form2" name="eventform" value="Créer un événement" />
+								<input type="submit" class="btn-form2 event-manager-submit" name="eventform" value="Créer un événement" />
 							</p>
 
 						</div>	
@@ -97,7 +98,7 @@ include("../../controller/getConnexionData.php");
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw;margin-bottom: 1.76vw;">En attente de validation</h4>
+						<h4 class="event-manager-row">En attente de validation</h4>
 					</div>
 
 					<?php 
@@ -107,10 +108,10 @@ include("../../controller/getConnexionData.php");
 	        				foreach ($pendingEventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
         					?> 
 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container event-manager-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style=" width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="event-manager-image" src=<?= "'".$img."'" ?>> 
 		        					</div>
 
 		        					<div class="col-sm-4">
@@ -176,20 +177,20 @@ include("../../controller/getConnexionData.php");
 				<div class="panel-body">
 
 					<div class="row"> 
-						<h4 style="margin-left:4vw; margin-bottom: 1.76vw;">Événements publiés</h4>
+						<h4 class="event-manager-row">Événements publiés</h4>
 					</div>
 
 					<?php 
 
 						if(!empty($eventsArray)){
 
-	        				foreach ($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
+	        				foreach($eventsArray as list($id,$nom,$ouverture,$description,$date,$img,$organisateur,$lieu,$link,$dateCreation)){
         					?>
 
-	        					<div class="container" style="margin-bottom: 5rem;"> 
+	        					<div class="container event-manager-container"> 
 
 	        						<div class="col-sm-4">
-										 <img style="width: 80%;" src=<?= "'".$img."'" ?>> 
+										 <img class="event-manager-image" src=<?= "'".$img."'" ?>> 
 		        					</div>
 
 		        					<div class="col-sm-4">
@@ -249,9 +250,11 @@ include("../../controller/getConnexionData.php");
 			</div>
 		
 		</div>
-
-		<?php include("../footer.php"); ?>
-
+		
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

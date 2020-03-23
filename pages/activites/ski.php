@@ -60,9 +60,11 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 		</div>
-
-		<?php include("../footer.php"); ?>
-
+		
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

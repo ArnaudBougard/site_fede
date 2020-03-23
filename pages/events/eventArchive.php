@@ -8,7 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
-    <link href="events.css" rel="stylesheet">
+    <link href="./events.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -139,8 +139,10 @@ include("../../controller/getConnexionData.php");
 
     </div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+  <footer>
+    <?php include("../footer.php"); ?>
+  </footer>
 
 </html>

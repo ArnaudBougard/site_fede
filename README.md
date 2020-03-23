@@ -29,7 +29,7 @@ Le système est clairement améliorable, faites vous plaiz
 
 ## Dossiers VIEW dont il faut retravailler l'architecture :
 - action -- OK
-- activities -- OK (tout est statique)
+- activites -- OK (tout est statique)
 - cercles -- OK (tout est statique)
 - contact -- OK (tout est statique)
 - events -- OK
@@ -44,15 +44,15 @@ Le système est clairement améliorable, faites vous plaiz
 
 ## Dossier VIEW dont il faut travailler le CSS
 - action -- OK
-- activities
-- cercles
-- contact
-- events
-- federale
-- folklore
-- forum -- (ce sont tous des controllers, il n'y a aucune view mais je ne sais pas quoi en faire, ça marche p-ê même pas.)
-- index
-- mutu
-- news
-- users
-- le reste
+- activites -- OK
+- cercles -- OK
+- contact -- OK
+- events -- OK
+- federale -- OK
+- folklore -- OK
+- forum -- OK (ce sont tous des controllers, il n'y a aucune view mais je ne sais pas quoi en faire, ça marche p-ê même pas.)
+- index -- OK
+- mutu -- OK
+- news -- OK
+- users -- à faire
+- le reste -- à faire

@@ -7,7 +7,7 @@ if(!empty($NewsArray)){
 
         <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">
          
-          <div class="slide-front" data-cover="<?php echo "'".$img."'" ?>">
+          <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
 
             <div class="tile-title">
               <h2><?= $nom; ?><h2>
@@ -15,7 +15,7 @@ if(!empty($NewsArray)){
 
           </div>
 
-          <div class="slide-back" data-cover="<?php echo "'".$img."'" ?>">  
+          <div class="slide-back" data-cover="<?= "'".$img."'" ?>">  
 
             <div class="tile-content">
 
@@ -35,7 +35,7 @@ if(!empty($NewsArray)){
 
 }
 
-for ($x = 0; $x < 3-$n; $x++) {
+for($x = 0; $x < 3-$n; $x++){
   ?>
 
   <div data-role="tile" data-size="large" data-effect="hover-slide-up" class="col-sm-4 tile">

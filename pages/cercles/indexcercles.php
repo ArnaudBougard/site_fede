@@ -109,7 +109,7 @@ include("../../controller/getConnexionData.php");
 
 	</body>
 
-	<footer class="page-footer">
+	<footer>
 		<?php include("../footer.php"); ?>
 	</footer>
 

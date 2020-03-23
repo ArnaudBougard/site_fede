@@ -8,6 +8,7 @@ include("../../controller/getConnexionData.php");
 
 	<head>
 		<?php include("../head.php"); ?>
+    <link href="./news.css" rel="stylesheet">
 	</head>
 
 	<body id="body">
@@ -37,7 +38,7 @@ include("../../controller/getConnexionData.php");
                 <div class="slide-front" data-cover="<?= "'".$img."'" ?>">
 
                   <div class="tile-title">
-                    <h2 style="text-align: center; font-size: 3.4vh;"><?= $nom; ?><h2>
+                    <h2 class="news-archive-h2"><?= $nom; ?><h2>
                   </div>
 
                 </div>
@@ -68,8 +69,10 @@ include("../../controller/getConnexionData.php");
 
     </div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+  <footer>
+    <?php include("../footer.php"); ?>
+  </footer>
 
 </html>

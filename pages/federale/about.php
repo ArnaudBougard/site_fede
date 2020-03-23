@@ -31,8 +31,8 @@ include("../../controller/getConnexionData.php");
 			   			<img class= "center" src="<?= $cercle['logo_cercle'] ?>">
 			   		</div>
 
-			   		<div class="center ">
-						<img class="imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité du fédé 180" />
+			   		<div class="center">
+						<img class="imgArticle" src="../../assets/img/comiteFede.jpg" alt="comité fédé 180" />
 					</div>
 
 		  		</p>
@@ -41,8 +41,10 @@ include("../../controller/getConnexionData.php");
 			
 	    </div>
 
-		<?php include("../footer.php"); ?>
-
 	</body>
+
+	<footer>
+		<?php include("../footer.php"); ?>
+	</footer>
 
 </html>

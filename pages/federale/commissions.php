@@ -179,12 +179,14 @@ include("../../controller/getConnexionData.php");
 			</div>
 
 		</div>
+		
+	</body>
 
+	<footer>
 		<?php 
 		include("../../scripts/openCercle.php");
 		include("../footer.php");
 		?>
-
-	</body>
+	</footer>
 
 </html>

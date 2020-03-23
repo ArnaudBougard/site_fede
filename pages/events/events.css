@@ -7,3 +7,49 @@
 	background-position: center top;
 	background-size: 100%;
 }
+
+.event-details-container{
+	margin-bottom: 5em;
+}
+
+.event-details-image{
+	width: 80%;
+}
+
+.event-details-description{
+	white-space: pre-line;
+}
+
+.event-validation-container{
+	margin-bottom: 5em;
+}
+
+.event-validation-image{
+	width: 80%;
+}
+
+.event-validation-row{
+	margin-bottom: 5rem;
+	margin-top: 2rem;
+}
+
+.event-manager-maincontainer{
+	margin-top: 3em;
+}
+
+.event-manager-submit{
+	margin-left: 0;
+}
+
+.event-manager-container{
+	margin-bottom: 5em;
+}
+
+.event-manager-image{
+	width: 80%;
+}
+
+.event-manager-row{
+	margin-left: 4em;
+	margin-bottom: 1.76em;
+}

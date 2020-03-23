@@ -139,109 +139,119 @@ include("../../controller/getConnexionData.php");
 
 <!DOCTYPE html>
 <html>
-<head>
-    <?php include("../head.php"); ?>
-    <link href="./users.css" rel="stylesheet">
-</head>
 
-<body class="bg1">
+    <head>
+        <?php include("../head.php"); ?>
+        <link href="./users.css" rel="stylesheet">
+    </head>
 
-    <?php include ("../network.php") ?>
-    <?php include ("../navbar.php") ?>
+    <body class="bg1">
 
-    <div class = container style="padding-top: 3rem">
-        <div class = row >
-            <div class = "col-md-7">
+        <?php 
+        include ("../network.php")
+        include ("../navbar.php") 
+        ?>
 
-                <div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
+        <div class = container style="padding-top: 3rem">
+            <div class = row >
+                <div class = "col-md-7">
 
-                    <img class="logo" src='../../assets/img/logoFede.png' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
+                    <div class="col-md-10 hidden-xs" style="padding-top: 6rem;">
+
+                        <img class="logo" src='../../assets/img/logoFede.png' style="width:70%;display: block; margin: 0 auto;" alt='Logo du site !'/>
+
+                    </div>
+                    
+                </div>  
+
+                <div class = 'col-md-5 inscription'>
+                    
+                        <h2>Édition du profil</h2>
+                        <br/><br/>
+
+                        <form  class="formulaire" method='post' action=''>
+                            
+                            <p>
+                                
+                                <input class='champ' type='text' id='new_prenom_utilisateur'  name='new_prenom_utilisateur' placeholder='PRÉNOM' maxlength='25' size='45' value='<?php echo $user['prenom_utilisateur'];?>'/>
+                            </p>
+                            <p>
+                                
+                                <input class='champ' type='text' id='new_nom_utilisateur' name='new_nom_utilisateur' placeholder='NOM' maxlength='25' size='45' value='<?php echo $user['nom_utilisateur'];?>' />
+                            </p>
+                            <p>
+                                
+                                <input class='champ' type='text' id='new_pseudo_utilisateur' name='new_pseudo_utilisateur' placeholder='PSEUDO' maxlength='25' size='45' value='<?php echo $user['pseudo_utilisateur'];?>' />
+                            </p>
+
+                            <div class="row group-champ">
+                                    <input class='champ' type='date' id='new_date_utilisateur' name='new_date_utilisateur' maxlength='25' size='45' value='<?php echo $user['date_naissance_utilisateur'];?>' />
+                                    <input class='champ champ2' id='new_promo_utilisateur' type='number' name='new_promo_utilisateur' placeholder='PROMOTION' maxlength='25' size='45' value='<?php echo $user['promotion_utilisateur'];?>' />
+                            </div>
+
+                            <p>
+                                
+                                <input class='champ' type='email' id='new_email1' name='new_email1' placeholder='E-MAIL' maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
+                            </p>
+                            <p>
+                                
+                                <input class='champ' type='email' id='new_email2' name='new_email2' placeholder="CONFIRMATION E-MAIL" maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
+                            </p>
+                            
+                            
+                            <p>
+                                
+                                <input class='champ' type='password' id='new_mdp1' name='new_mdp1' placeholder='MOT DE PASSE' minlength="6" maxlength='25' size='45' />
+                                <!-- On ne met pas de value pour le mot de passe sinon ça affiche le mot de passe haché malgré le type password. -->
+                            </p>
+                            <p>
+                                
+                                <input class='champ' type='password' id='new_mdp2' name='new_mdp2' placeholder='CONFIRMATION MOT DE PASSE' minlength='6' maxlength='25' size='45'/>
+                            </p>
+                            <!-- <p>
+                                <label>S'abonner à la newsletter ? </label>
+                                <input type="radio" id='new_spam_utilisateur' name='new_spam_utilisateur' value='1' id='oui'/><label for='1'> Oui </label>
+                                <input type="radio" id='new_spam_utilisateur' name='new_spam_utilisateur' value='0' id='non'/><label for='0'> Non </label>
+                                <br />
+                            </p>
+                            -->
+                            <p>
+                                <input type='submit' class='btn-form2' name='forminscription' value="Éditer mon profil" />
+                                <br/>
+                            </p>
+
+                        </form>
+
+                        <?php
+                        if(isset($erreur))
+                        {
+                            echo $erreur;
+                        }
+
+                        if(isset($erreur2))
+                        {
+                            echo $erreur2;
+                        }
+
+                        if(isset($erreur3))
+                        {
+                            echo $erreur3;
+                        }
+                        ?>
+
+                        
 
                 </div>
-                
-            </div>  
-
-
-            <div class = 'col-md-5 inscription'>
-                
-                    <h2>Édition du profil</h2> <br /> <br />
-                    <form  class="formulaire" method='post' action=''>
-                        
-                        <p>
-                            
-                            <input class='champ' type='text' id='new_prenom_utilisateur'  name='new_prenom_utilisateur' placeholder='PRÉNOM' maxlength='25' size='45' value='<?php echo $user['prenom_utilisateur'];?>'/>
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='text' id='new_nom_utilisateur' name='new_nom_utilisateur' placeholder='NOM' maxlength='25' size='45' value='<?php echo $user['nom_utilisateur'];?>' />
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='text' id='new_pseudo_utilisateur' name='new_pseudo_utilisateur' placeholder='PSEUDO' maxlength='25' size='45' value='<?php echo $user['pseudo_utilisateur'];?>' />
-                        </p>
-                        <div class="row group-champ">
-                                <input class='champ' type='date' id='new_date_utilisateur' name='new_date_utilisateur' maxlength='25' size='45' value='<?php echo $user['date_naissance_utilisateur'];?>' />
-                                <input class='champ champ2' id='new_promo_utilisateur' type='number' name='new_promo_utilisateur' placeholder='PROMOTION' maxlength='25' size='45' value='<?php echo $user['promotion_utilisateur'];?>' />
-                        </div>
-                        <p>
-                            
-                            <input class='champ' type='email' id='new_email1' name='new_email1' placeholder='E-MAIL' maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='email' id='new_email2' name='new_email2' placeholder="CONFIRMATION E-MAIL" maxlength='35' size='45' value='<?php echo $user['email_utilisateur'];?>' />
-                        </p>
-                        
-                        
-                        <p>
-                            
-                            <input class='champ' type='password' id='new_mdp1' name='new_mdp1' placeholder='MOT DE PASSE' minlength="6" maxlength='25' size='45' />
-                            <!-- On ne met pas de value pour le mot de passe sinon ça affiche le mot de passe haché malgré le type password. -->
-                        </p>
-                        <p>
-                            
-                            <input class='champ' type='password' id='new_mdp2' name='new_mdp2' placeholder='CONFIRMATION MOT DE PASSE' minlength='6' maxlength='25' size='45'/>
-                        </p>
-                        <!-- <p>
-                            <label>S'abonner à la newsletter ? </label>
-                            <input type="radio" id='new_spam_utilisateur' name='new_spam_utilisateur' value='1' id='oui'/><label for='1'> Oui </label>
-                            <input type="radio" id='new_spam_utilisateur' name='new_spam_utilisateur' value='0' id='non'/><label for='0'> Non </label>
-                            <br />
-                        </p>
-                        -->
-                        <p>
-                            <input type='submit' class='btn-form2' name='forminscription' value="Éditer mon profil" />
-                            <br />
-                        </p>
-                    </form>
-                    <?php
-                    if(isset($erreur))
-                    {
-                        echo $erreur;
-                    }
-
-                    if(isset($erreur2))
-                    {
-                        echo $erreur2;
-                    }
-
-                    if(isset($erreur3))
-                    {
-                        echo $erreur3;
-                    }
-                    ?>
-
-                    
 
             </div>
 
         </div>
 
-    </div>
+    </body>
 
-    <?php include ("../footer.php") ?>
-
-</body>
+    <footer>
+        <?php include ("../footer.php") ?>
+    </footer>
 
 </html>
 

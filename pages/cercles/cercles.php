@@ -97,11 +97,13 @@ include("../../controller/getConnexionData.php");
 
 		</div>
 
+	</body>
+
+	<footer class="page-footer">
 		<?php 
 		include("../../scripts/openCercle.php");
 		include("../footer.php");
 		?>
-
-	</body>
+	</footer>
 
 </html>
